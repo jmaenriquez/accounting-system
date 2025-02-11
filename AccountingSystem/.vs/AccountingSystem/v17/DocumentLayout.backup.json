@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwDYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-11T05:38:10.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T02:46:51.634Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
