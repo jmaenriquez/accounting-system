@@ -12,77 +12,64 @@
     </div>
     <nav class="flex-column">
 
-        @* <div class="dropdown"> *@
-        @*     <button class="btn btn-secondary dropdown-toggle" type="button"> *@
-        @*         Accounting *@
-        @*     </button> *@
-        @*     <ul> *@
-        @*          <li></li> *@
-        @*          <li></li> *@
-        @*          <li></li> *@
-        @*     </ul> *@
-
-        @* </div> *@
-
+        <!-- Dropdown Toggle (No Background) -->
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Accounting
-            </NavLink>
+            <a href="#" class="nav-link d-flex align-items-center" @onclick="ToggleAccounting">
+                <span class="bi bi-house-door-fill-nav-menu me-2" aria-hidden="true"></span> Accounting
+            </a>
         </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="journal">
-                <span class="bi journal-icon" aria-hidden="true"></span>Journal Entries
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="ledger">
-                <span class="bi ledger-icon" aria-hidden="true"></span> General Ledger
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="balance">
-                <span class="bi balance-icon" aria-hidden="true"></span> Balance Sheet
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="coa">
-                <span class="bi chart-icon" aria-hidden="true"></span> Chart of Accounts
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="transact">
-                <span class="bi transact-icon" aria-hidden="true"></span> Transactions
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href=" ">
-                <span class="bi payroll-icon" aria-hidden="true"></span> Payroll
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="reports">
-                <span class="bi report-icon" aria-hidden="true"></span> Reports
-            </NavLink>
-        </div>
+        <!-- Collapsible Section -->
+        @if (isAccountingOpen)
+        {
+            <div class="ps-4">
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="journal">
+                        <span class="bi journal-icon me-2" aria-hidden="true"></span> Journal Entries
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="ledger">
+                        <span class="bi ledger-icon me-2" aria-hidden="true"></span> General Ledger
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="balance">
+                        <span class="bi balance-icon me-2" aria-hidden="true"></span> Balance Sheet
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="coa">
+                        <span class="bi chart-icon me-2" aria-hidden="true"></span> Chart of Accounts
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="transact">
+                        <span class="bi transact-icon me-2" aria-hidden="true"></span> Transactions
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href=" ">
+                        <span class="bi payroll-icon me-2" aria-hidden="true"></span> Payroll
+                    </NavLink>
+                </div>
+                <div class="nav-item">
+                    <NavLink class="nav-link" href="reports">
+                        <span class="bi report-icon me-2" aria-hidden="true"></span> Reports
+                    </NavLink>
+                </div>
+            </div>
+        }
 
     </nav>
 
 </div>
 
 @code {
-   
-    
+    private bool isAccountingOpen = false;
 
-
+    void ToggleAccounting()
+    {
+        isAccountingOpen = !isAccountingOpen;
+    }
 }
-
-
-
-

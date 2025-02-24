@@ -1,26 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\",
+  "WorkspaceRootPath": "E:\\accounting-system-main\\AccountingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|e:\\accounting-system-main\\accountingsystem\\accountingsystem\\accountingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|e:\\accounting-system-main\\accountingsystem\\accountingsystem\\accountingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\desktop\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\addrecord.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\addrecord.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|e:\\accounting-system-main\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|e:\\accounting-system-main\\accountingsystem\\accountingsystem\\accountingsystem\\data\\account_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\data\\account_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|e:\\accounting-system-main\\accountingsystem\\accountingsystem\\accountingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,73 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\App.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\App.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T15:06:48.757Z",
+              "DocumentIndex": 3,
+              "Title": "20250224192336_InitialCreate.cs",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Migrations\\20250224192336_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:23:36.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Program.cs",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Program.cs",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:59:36.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\appsettings.json",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\appsettings.json",
               "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\appsettings.json",
-              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\appsettings.json",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\appsettings.json",
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-21T08:28:48.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NavMenu.razor.css",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
-              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Layout\\NavMenu.razor.css",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAuwFYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-21T07:34:17.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Journal.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T03:49:08.81Z",
+              "WhenOpened": "2025-02-24T18:56:20.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AddRecord.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAiAAAAAAAAAA==",
+              "Title": "Account_List.cs",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Data\\Account_List.cs",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Data\\Account_List.cs",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Data\\Account_List.cs",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Data\\Account_List.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:52:40.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Data\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Data\\AppDBContext.cs",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Data\\AppDBContext.cs",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Data\\AppDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:43:46.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Journal.razor",
+              "DocumentMoniker": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
+              "ToolTip": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-17T00:51:06.565Z"
+              "WhenOpened": "2025-02-17T03:49:08.81Z",
+              "EditorCaption": ""
             }
           ]
         }

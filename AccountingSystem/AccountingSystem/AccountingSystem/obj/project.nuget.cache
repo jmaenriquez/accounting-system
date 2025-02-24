@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k+G9OPPNyxY=",
+  "dgSpecHash": "zSOUpaG5ELo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
+  "projectFilePath": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kuro\\.nuget\\packages\\blazored.modal\\7.3.1\\blazored.modal.7.3.1.nupkg.sha512",
     "C:\\Users\\Kuro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

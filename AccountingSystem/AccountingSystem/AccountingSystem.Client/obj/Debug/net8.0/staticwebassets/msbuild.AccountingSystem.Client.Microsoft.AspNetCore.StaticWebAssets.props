@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>WasmResource</AssetTraitName>
       <AssetTraitValue>settings</AssetTraitValue>
-      <Fingerprint>tswichycbp</Fingerprint>
-      <Integrity>c/lfngzrIF/BxNxQwHaX/Pop1wh4aMKu8dUEyzjHcew=</Integrity>
+      <Fingerprint>x0ueugt8gp</Fingerprint>
+      <Integrity>gX2wvy7Mp4NkxB2695Sb8lBM9HocPQ1U876BeP78Aws=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\appsettings.json'))</OriginalItemSpec>
@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>WasmResource</AssetTraitName>
       <AssetTraitValue>settings</AssetTraitValue>
-      <Fingerprint>tswichycbp</Fingerprint>
-      <Integrity>c/lfngzrIF/BxNxQwHaX/Pop1wh4aMKu8dUEyzjHcew=</Integrity>
+      <Fingerprint>x0ueugt8gp</Fingerprint>
+      <Integrity>gX2wvy7Mp4NkxB2695Sb8lBM9HocPQ1U876BeP78Aws=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\appsettings.Development.json'))</OriginalItemSpec>

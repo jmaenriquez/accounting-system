@@ -600,3 +600,16 @@ C:\Users\Kuro\Desktop\AccountingSystem\AccountingSystem\AccountingSystem.Client\
 C:\Users\Kuro\Desktop\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Desktop\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Desktop\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json

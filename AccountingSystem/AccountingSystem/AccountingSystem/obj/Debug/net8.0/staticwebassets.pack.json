@@ -1,31 +1,31 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
       "PackagePath": "staticwebassets\\AccountingSystem.e7sp2who07.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
       "PackagePath": "staticwebassets\\Metalogo.png"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalong.png",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalong.png",
       "PackagePath": "staticwebassets\\Metalong.png"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\favicon.png",
+      "Id": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
