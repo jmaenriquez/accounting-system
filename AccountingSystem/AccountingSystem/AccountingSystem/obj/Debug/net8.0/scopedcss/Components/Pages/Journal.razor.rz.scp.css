@@ -1,0 +1,45 @@
+.rounded-3[b-c16h26qowt] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.top-container[b-c16h26qowt] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items:center;
+}
+
+.buttons[b-c16h26qowt] {
+  display:flex;
+  justify-content: end;
+  width:80%;
+  
+}
+
+.searchbar[b-c16h26qowt], .add[b-c16h26qowt] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    border:none;
+    font-size: 12px;
+    margin:5px;
+    
+}
+
+.add[b-c16h26qowt] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+}
+
+.searchbar[b-c16h26qowt] {
+    width:200px;
+    height:33px;
+}

@@ -2,7 +2,15 @@
   "Files": [
     {
       "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AccountingSystem.6laloc3qec.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AccountingSystem.e7sp2who07.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
+      "PackagePath": "staticwebassets\\Metalogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalong.png",
+      "PackagePath": "staticwebassets\\Metalong.png"
     },
     {
       "Id": "C:\\Users\\Kuro\\Desktop\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",

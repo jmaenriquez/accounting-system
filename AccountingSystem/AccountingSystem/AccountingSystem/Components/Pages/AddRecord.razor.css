@@ -1,0 +1,18 @@
+﻿.form-group{
+    width:20rem;
+    height:90px;
+}
+.rounded {
+    width:300px;
+    height:45px;
+}
+
+.save{
+    width:90px;
+    height: 30px;
+    font-size:15px
+}
+
+.accounts{
+    justify-content:space-between
+}

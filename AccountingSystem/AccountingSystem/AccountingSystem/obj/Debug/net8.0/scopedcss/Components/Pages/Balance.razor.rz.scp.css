@@ -1,0 +1,32 @@
+.rounded-3[b-fw64h8oam3] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.top-container[b-fw64h8oam3] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.buttons[b-fw64h8oam3] {
+    display: flex;
+    justify-content: end;
+    width: 79.57%;
+}
+
+.searchbar[b-fw64h8oam3] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    border: none;
+    font-size: 12px;
+    margin: 5px;
+    width: 200px;
+    height: 33px;
+}

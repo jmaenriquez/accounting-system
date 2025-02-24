@@ -1,5 +1,6 @@
 using AccountingSystem.Client.Pages;
 using AccountingSystem.Components;
+using Blazored.Modal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddBlazoredModal();
 
 var app = builder.Build();
 
