@@ -1,0 +1,57 @@
+﻿@page "/acclist"
+
+@inject NavigationManager Navigate
+
+<PageTitle>Account List</PageTitle>
+
+<div class="rounded-3">
+
+    <div class="top-container">
+
+        <h3 class="m-4">Account List</h3>
+
+        <div class="buttons">
+            <input class="searchbar" type="text" placeholder="Search..." />
+            <button class="btn add" @onclick="navigateToAddAcc">Add Account</button>
+        </div>
+    </div>
+
+    <table class="mt-3 table table-borderless table-sm">
+        <thead class="table-info ">
+            <tr>
+                <th>Date</th>
+                <th>Account Id</th>
+                <th>Account Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>This is a date</td>
+                <td>This is ID</td>
+                <td>This is Account Name</td>
+                <td>This is the Description</td>
+                <td>Active or Inactive</td>
+                <td>Actions</td>
+            </tr>
+
+            <tr>
+                <td>This is a date</td>
+                <td>This is ID</td>
+                <td>This is Account Name</td>
+                <td>This is the Description</td>
+                <td>Active or Inactive</td>
+                <td>Actions</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@code {
+    public void navigateToAddAcc()
+    {
+        Navigate.NavigateTo("/addacc");
+    }
+}

@@ -263,6 +263,53 @@ fa-solid[b-sdekxj40it], fa-file-circle-plus[b-sdekxj40it]{
         overflow-y: auto;
     }
 }
+/* _content/AccountingSystem/Components/Pages/AccList.razor.rz.scp.css */
+.rounded-3[b-itkg4wyyqc] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.top-container[b-itkg4wyyqc] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.buttons[b-itkg4wyyqc] {
+    display: flex;
+    justify-content: end;
+    width: 85%;
+}
+
+.searchbar[b-itkg4wyyqc], .add[b-itkg4wyyqc] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    border: none;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.add[b-itkg4wyyqc] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+}
+
+.searchbar[b-itkg4wyyqc] {
+    width: 200px;
+    height: 33px;
+}
+/* _content/AccountingSystem/Components/Pages/AddAcc.razor.rz.scp.css */
+body[b-405pd1o2ng] {
+}
 /* _content/AccountingSystem/Components/Pages/AddRecord.razor.rz.scp.css */
 .form-group[b-5eldr3qlgw]{
     width:20rem;
@@ -321,6 +368,50 @@ body[b-c2flj7i1r6] {
 /* _content/AccountingSystem/Components/Pages/Dashboard.razor.rz.scp.css */
 body[b-tquthsc8me] {
 }
+/* _content/AccountingSystem/Components/Pages/GrpList.razor.rz.scp.css */
+.rounded-3[b-m0ve9n932a] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.top-container[b-m0ve9n932a] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.buttons[b-m0ve9n932a] {
+    display: flex;
+    justify-content: end;
+    width: 85%;
+}
+
+.searchbar[b-m0ve9n932a], .add[b-m0ve9n932a] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    border: none;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.add[b-m0ve9n932a] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+}
+
+.searchbar[b-m0ve9n932a] {
+    width: 200px;
+    height: 33px;
+}
 /* _content/AccountingSystem/Components/Pages/Journal.razor.rz.scp.css */
 .rounded-3[b-c16h26qowt] {
     width: 100%;
@@ -341,7 +432,8 @@ body[b-tquthsc8me] {
 .buttons[b-c16h26qowt] {
   display:flex;
   justify-content: end;
-  width:80%;
+  width:100%;
+  margin-right: 2rem;
   
 }
 
@@ -387,7 +479,8 @@ body[b-tquthsc8me] {
 .buttons[b-dtvkh2wzg0] {
     display: flex;
     justify-content: end;
-    width: 77%;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar[b-dtvkh2wzg0] {

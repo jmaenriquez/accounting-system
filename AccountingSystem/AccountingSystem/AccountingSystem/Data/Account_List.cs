@@ -4,11 +4,17 @@ namespace AccountingSystem.Data
 {
     public class Account_List
     {
+        public required DateOnly date{ get; set; }
+
         [Key]
-        public int accountId { get; set; }
-        public required string date { get; set; } 
-        public required string name { get; set; } 
-        public required string description { get; set; } 
-        public required string status { get; set; } 
+        public required int accountId { get; set; }
+
+        
+        public required string name { get; set; } = string.Empty;
+
+        
+        public required string description { get; set; }=string.Empty;
+
+        public required string status { get; set; } = "Active";
     }
 }

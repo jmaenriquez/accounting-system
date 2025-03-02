@@ -87,6 +87,10 @@
               "version": "[9.0.0, )",
               "autoReferenced": true
             },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -197,6 +201,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[8.3.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

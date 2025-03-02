@@ -1,0 +1,78 @@
+﻿@page "/addgrp"
+@using AccountingSystem.Data;
+
+<PageTitle>Add Groups</PageTitle>
+<h3>Add New Group</h3>
+
+
+
+<EditForm Model="@newGroup" OnInvalidSubmit="SubmitGrp">
+
+    <div class="m-3">
+        <label>Name</label>
+        <InputText class="form-control" @bind-Value="newGroup.name" />
+    </div>
+
+
+    <div class="m-3">
+        <label>Description</label>
+        <InputText class="form-control" @bind-Value="newGroup.description" />
+    </div>
+
+    <div class="m-3">
+        <label>Account Type</label>
+        <select class="form-control" @bind="newGroup.type">
+            <option value="Debit">Debit</option>
+            <option value="Credit">Credit</option>
+        </select>
+    </div>
+
+    <div class="m-3">
+        <label>Status</label>
+        <select class="form-control" @bind="newGroup.status">
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
+        </select>
+    </div>
+
+
+
+
+    <button class="m-3 btn btn-primary" type="submit">Submit</button>
+
+    @if (added)
+    {
+        <p>Group has been added successfully</p>
+    }
+
+</EditForm>
+
+@inject Data.AppDbContext Database
+@code {
+    public Group_List newGroup = new Group_List{
+
+            datetime = DateOnly.FromDateTime(DateTime.Now),
+            groupId = 0,
+            name = "",
+            description = "",
+            type = "",
+            status = ""
+    };
+
+    public bool added = false;
+
+    private async Task SubmitGrp(){
+ try
+        {
+            Database.Groups.Add(newGroup);
+            await Database.SaveChangesAsync();
+            added = true;
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+    }
+}

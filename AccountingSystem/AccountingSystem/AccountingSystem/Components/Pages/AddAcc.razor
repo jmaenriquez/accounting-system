@@ -1,0 +1,82 @@
+﻿@page "/addacc"
+@using AccountingSystem.Data
+@using MudBlazor
+@inject IDialogService DialogService
+@inject Data.AppDbContext DbContext
+
+<h3>Add New Account</h3>
+
+<MudForm Model="@newAccount" @ref="mudForm">
+    <MudGrid>
+        <MudItem xs="12" sm="6">
+            <MudTextField Label="Name" @bind-Value="newAccount.name" Required="true" />
+        </MudItem>
+
+        <MudItem xs="12" sm="6">
+            <MudTextField Label="Description" @bind-Value="newAccount.description" Required="true" />
+        </MudItem>
+
+        <MudItem xs="12" sm="6">
+            <MudSelect Label="Status" @bind-Value="newAccount.status" Required="true">
+                <MudSelectItem Value="Active">Active</MudSelectItem>
+                <MudSelectItem Value="Inactive">Inactive</MudSelectItem>
+            </MudSelect>
+        </MudItem>
+
+        <MudItem xs="12">
+            <MudButton OnClick="Submit" Color="Color.Primary" Variant="Variant.Filled">
+                Submit
+            </MudButton>
+        </MudItem>
+    </MudGrid>
+</MudForm>
+
+@code {
+    private MudForm? mudForm;
+    private Account_List newAccount = new Account_List
+    {
+        date = DateOnly.FromDateTime(DateTime.Now),
+        accountId = 0,
+        name = "",
+        description = "",
+        status = ""
+    };
+
+    private async Task Submit()
+    {
+        await mudForm.Validate();
+
+        if (mudForm.IsValid)
+        {
+            try
+            {
+                DbContext.Accounts.Add(newAccount);
+                await DbContext.SaveChangesAsync();
+
+                await DialogService.ShowMessageBox(
+                    "Success",
+                    "Account has been added successfully!",
+                    "OK"
+                );
+
+                // Reset form
+                newAccount = new Account_List
+                {
+                    date = DateOnly.FromDateTime(DateTime.Now),
+                    accountId = 0,
+                    name = "",
+                    description = "",
+                    status = ""
+                };
+            }
+            catch (Exception ex)
+            {
+                await DialogService.ShowMessageBox("Error", $"Error: {ex.Message}", "OK");
+            }
+        }
+        else
+        {
+            await DialogService.ShowMessageBox("Validation Error", "Please fill all required fields.", "OK");
+        }
+    }
+}

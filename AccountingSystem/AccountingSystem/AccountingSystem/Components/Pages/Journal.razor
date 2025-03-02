@@ -1,6 +1,5 @@
 ﻿@page "/journal"
 @inject NavigationManager Navigate
-
 @inject IModalService Modal
 
 <PageTitle>Journal Entries</PageTitle>
@@ -9,11 +8,12 @@
 
 	<div class="top-container">
 
-		<h3 class="m-4">Journal Entries</h3>
+		@* <h3 class="m-4">Journal Entries</h3> *@
+        <h4 class="m-4">Journal Entries</h4>
 
 		<div class="buttons">
 			<input class = "searchbar" type="text" placeholder="Search..." />
-			<button class="btn add" onclick="@(()=>Modal.Show<AddRecord>("Add Record Modal"))">Add New Record</button>
+            @* <button class="btn add" @onclick="ShowModal">Add New Record</button> *@
 			<button class="btn add" @onclick="goToAddRec">Add New Record</button>
 
 		</div>
@@ -57,4 +57,9 @@
 	{
 		Navigate.NavigateTo("/addrecords");
 	}
+
+    private void ShowModal()
+    {
+        Modal.Show<AddRecord>("/addrecords");
+    }
 }
