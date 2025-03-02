@@ -30,12 +30,10 @@
     <div class="m-3">
         <label>Status</label>
         <select class="form-control" @bind="newGroup.status">
-            <option value="true">Active</option>
-            <option value="false">Inactive</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
         </select>
     </div>
-
-
 
 
     <button class="m-3 btn btn-primary" type="submit">Submit</button>
@@ -62,7 +60,7 @@
     public bool added = false;
 
     private async Task SubmitGrp(){
- try
+        try
         {
             Database.Groups.Add(newGroup);
             await Database.SaveChangesAsync();

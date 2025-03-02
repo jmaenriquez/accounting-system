@@ -720,3 +720,13 @@ E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Cli
 E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json

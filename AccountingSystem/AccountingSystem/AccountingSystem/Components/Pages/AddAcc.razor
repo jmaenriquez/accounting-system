@@ -1,39 +1,46 @@
 ﻿@page "/addacc"
+
 @using AccountingSystem.Data
-@using MudBlazor
-@inject IDialogService DialogService
-@inject Data.AppDbContext DbContext
+@using System.ComponentModel.DataAnnotations
 
 <h3>Add New Account</h3>
 
-<MudForm Model="@newAccount" @ref="mudForm">
-    <MudGrid>
-        <MudItem xs="12" sm="6">
-            <MudTextField Label="Name" @bind-Value="newAccount.name" Required="true" />
-        </MudItem>
+<EditForm Model="@newAccount" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
 
-        <MudItem xs="12" sm="6">
-            <MudTextField Label="Description" @bind-Value="newAccount.description" Required="true" />
-        </MudItem>
+    <div class="m-3">
+        <label>Name</label>
+        <InputText class="form-control" @bind-Value="newAccount.name" />
+        <ValidationMessage For="@(() => newAccount.name)" />
+    </div>
 
-        <MudItem xs="12" sm="6">
-            <MudSelect Label="Status" @bind-Value="newAccount.status" Required="true">
-                <MudSelectItem Value="Active">Active</MudSelectItem>
-                <MudSelectItem Value="Inactive">Inactive</MudSelectItem>
-            </MudSelect>
-        </MudItem>
+    <div class="m-3">
+        <label>Description</label>
+        <InputText class="form-control" @bind-Value="newAccount.description" />
+        <ValidationMessage For="@(() => newAccount.description)" />
+    </div>
 
-        <MudItem xs="12">
-            <MudButton OnClick="Submit" Color="Color.Primary" Variant="Variant.Filled">
-                Submit
-            </MudButton>
-        </MudItem>
-    </MudGrid>
-</MudForm>
+    <div class="m-3">
+        <label>Status</label>
+        <select class="form-control" @bind="newAccount.status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+        <ValidationMessage For="@(() => newAccount.status)" />
+    </div>
 
+    <button class="m-3 btn btn-primary" type="submit">Submit</button>
+
+    @if (submitted)
+    {
+        <p>Account has been added successfully</p>
+    }
+</EditForm>
+
+@inject Data.AppDbContext DbContext
 @code {
-    private MudForm? mudForm;
-    private Account_List newAccount = new Account_List
+    public Account_List newAccount = new Account_List
     {
         date = DateOnly.FromDateTime(DateTime.Now),
         accountId = 0,
@@ -42,41 +49,19 @@
         status = ""
     };
 
+    public bool submitted = false;
+
     private async Task Submit()
     {
-        await mudForm.Validate();
-
-        if (mudForm.IsValid)
+        try
         {
-            try
-            {
-                DbContext.Accounts.Add(newAccount);
-                await DbContext.SaveChangesAsync();
-
-                await DialogService.ShowMessageBox(
-                    "Success",
-                    "Account has been added successfully!",
-                    "OK"
-                );
-
-                // Reset form
-                newAccount = new Account_List
-                {
-                    date = DateOnly.FromDateTime(DateTime.Now),
-                    accountId = 0,
-                    name = "",
-                    description = "",
-                    status = ""
-                };
-            }
-            catch (Exception ex)
-            {
-                await DialogService.ShowMessageBox("Error", $"Error: {ex.Message}", "OK");
-            }
+            DbContext.Accounts.Add(newAccount);
+            await DbContext.SaveChangesAsync();
+            submitted = true;
         }
-        else
+        catch (Exception ex)
         {
-            await DialogService.ShowMessageBox("Validation Error", "Please fill all required fields.", "OK");
+            Console.WriteLine(ex.Message);
         }
     }
 }
