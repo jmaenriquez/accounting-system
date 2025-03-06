@@ -10,11 +10,9 @@ namespace AccountingSystem.Data
         // Define your tables here
         public DbSet<Account_List> Accounts { get; set; }
         public DbSet<Group_List> Groups { get; set; }
-        public DbSet<Credited_Accounts> Credit { get; set; }
-        public DbSet<Debit_Accounts> Debit { get; set; }
-        public DbSet<Amount> Amounts { get; set; }
+        public DbSet <ChartofAccs> Charts { get; set; }
         public DbSet<Journal_Entry> Journal { get; set; }
-        public DbSet<Trial_Balance> Balance { get; set; }
+        
 
         // If necessary, configure options inside OnConfiguring
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

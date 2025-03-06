@@ -20,93 +20,93 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AccountingSystem
 build_property.RootNamespace = AccountingSystem
-build_property.ProjectDir = C:\Users\Kuro\Desktop\AS\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\
+build_property.ProjectDir = C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kuro\Desktop\AS\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem
+build_property.MSBuildProjectDirectory = C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/App.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Component.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Component.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Error.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Weather.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Routes.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/_Imports.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Layout/MainLayout.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-sy38zyqdxq
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Layout/NavMenu.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-sdekxj40it
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AccList.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AccList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-itkg4wyyqc
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddAcc.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddAcc.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRBY2MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-405pd1o2ng
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddGrp.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddGrp.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRHcnAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jx5ziyf1f7
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddRecord.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/AddRecord.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZGRSZWNvcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5eldr3qlgw
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Balance.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Balance.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYWxhbmNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-fw64h8oam3
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/COA.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/COA.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDT0EucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-c2flj7i1r6
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Dashboard.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tquthsc8me
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/GrpList.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/GrpList.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHcnBMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-m0ve9n932a
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Journal.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Journal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKb3VybmFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-c16h26qowt
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Ledger.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Ledger.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMZWRnZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-dtvkh2wzg0
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Reports.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Reports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXBvcnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-q559me807p
 
-[C:/Users/Kuro/Desktop/AS/accounting-system-main/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Transact.razor]
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Transact.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUcmFuc2FjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-8f4pubi449

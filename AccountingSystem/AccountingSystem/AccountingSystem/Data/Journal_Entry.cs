@@ -7,19 +7,17 @@ namespace AccountingSystem.Data
     {
         public DateOnly datetime { get; set; }
 
-        [Key]
-        public int journal_code { get; set; }
+        
+        public int id { get; set; }
 
         
-        public string description { get; set; }
+        public required string description { get; set; }
 
-        [ForeignKey("accountId")]
+        [ForeignKey("id")]
         public virtual Account_List? AccName { get; set; }
 
-        [ForeignKey("debitId")]
-        public virtual Debit_Accounts? Debit { get; set; }
+        public decimal debit { get; set; } = 0;
 
-        [ForeignKey("creditId")]
-        public virtual Credited_Accounts? Credit { get; set; }
+        public decimal credit { get; set; } = 0;
     }
 }

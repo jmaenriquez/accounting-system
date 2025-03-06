@@ -8,9 +8,8 @@ namespace AccountingSystem.Data
     {
         public DateOnly datetime { get; set; }
 
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int groupId { get; set; }
+
+        public int id { get; set; }
 
         [Required]
         public required string name { get; set; } = string.Empty;
@@ -19,9 +18,9 @@ namespace AccountingSystem.Data
         public required string description { get; set; } = string.Empty;
 
         [Required]
-        public required string type { get; set; }
+        public AccountType type { get; set; }
 
         [Required]
-        public required string status { get; set; }
+        public Status status { get; set; }
     }
 }

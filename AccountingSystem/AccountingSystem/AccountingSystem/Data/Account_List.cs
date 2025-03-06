@@ -5,9 +5,7 @@ namespace AccountingSystem.Data
     public class Account_List
     {
         public required DateOnly date{ get; set; }
-
-        [Key]
-        public int accountId { get; set; }
+        public int id { get; set; }
 
         [Required]
         public string name { get; set; } = string.Empty;
