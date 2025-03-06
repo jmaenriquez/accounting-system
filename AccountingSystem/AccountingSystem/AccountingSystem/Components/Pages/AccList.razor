@@ -1,6 +1,8 @@
 ﻿@page "/acclist"
 @inject NavigationManager Navigate
 
+
+
 <PageTitle>Account List</PageTitle>
 
 <div class="rounded-3">
@@ -27,31 +29,55 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>This is a date</td>
-                <td>This is ID</td>
-                <td>This is Account Name</td>
-                <td>This is the Description</td>
-                <td>Active or Inactive</td>
-                <td>Actions</td>
-            </tr>
 
-            <tr>
-                <td>This is a date</td>
-                <td>This is ID</td>
-                <td>This is Account Name</td>
-                <td>This is the Description</td>
-                <td>Active or Inactive</td>
-                <td>Actions</td>
-            </tr>
+            @foreach (var acc in AccountList)
+            {
+                <tr>
+                    <td>@acc.date</td>
+                    <td>@acc.accountId</td>
+                    <td>@acc.name</td>
+                    <td>@acc.description</td>
+                    <td>@acc.status</td>
+                    <td>Actions</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
 
+
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject AccountService accountService;
+
 @code {
+
     public void navigateToAddAcc()
     {
         Navigate.NavigateTo("/addacc");
     }
 
+    List<Account_List> AccountList = new List<Account_List>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAccounts();
+        await Refresh();
+
+    }
+
+    private async Task LoadAccounts()
+    {
+        AccountList = (await accountService.GetAllAccounts()).ToList();
+        StateHasChanged();
+    }
+
+    private async Task Refresh()
+    {
+        while (true)
+        {
+            await Task.Delay(500);
+            await LoadAccounts();
+        }
+    }
 }

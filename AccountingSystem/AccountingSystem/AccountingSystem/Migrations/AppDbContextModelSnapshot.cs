@@ -176,6 +176,10 @@ namespace AccountingSystem.Migrations
                     b.Property<int?>("debitId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("journal_code");
 
                     b.HasIndex("accountId");

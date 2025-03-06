@@ -3826,11 +3826,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Kuro\\Desktop\\AS\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
       "projectName": "AccountingSystem",
-      "projectPath": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
+      "projectPath": "C:\\Users\\Kuro\\Desktop\\AS\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\AccountingSystem.csproj",
       "packagesPath": "C:\\Users\\Kuro\\.nuget\\packages\\",
-      "outputPath": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\",
+      "outputPath": "C:\\Users\\Kuro\\Desktop\\AS\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3852,8 +3852,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\AccountingSystem.Client.csproj": {
-              "projectPath": "E:\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\AccountingSystem.Client.csproj"
+            "C:\\Users\\Kuro\\Desktop\\AS\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\AccountingSystem.Client.csproj": {
+              "projectPath": "C:\\Users\\Kuro\\Desktop\\AS\\accounting-system-main\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\AccountingSystem.Client.csproj"
             }
           }
         }
@@ -3868,7 +3868,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -3926,7 +3926,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

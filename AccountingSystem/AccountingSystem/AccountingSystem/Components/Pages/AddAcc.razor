@@ -1,45 +1,51 @@
 ﻿@page "/addacc"
 
+@inject NavigationManager Nav
+
 @using AccountingSystem.Data
 @using System.ComponentModel.DataAnnotations
+@using MudBlazor
 
 <h3>Add New Account</h3>
 
 <EditForm Model="@newAccount" OnValidSubmit="Submit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
 
-    <div class="m-3">
-        <label>Name</label>
-        <InputText class="form-control" @bind-Value="newAccount.name" />
-        <ValidationMessage For="@(() => newAccount.name)" />
-    </div>
 
-    <div class="m-3">
-        <label>Description</label>
-        <InputText class="form-control" @bind-Value="newAccount.description" />
-        <ValidationMessage For="@(() => newAccount.description)" />
-    </div>
+    <MudGrid Gutter.Small>
+        <MudItem xs="12" sm="6" md="8" lg = "10">
+            <MudTextField Label="Name" @bind-Value="newAccount.name" />
+        </MudItem>
 
-    <div class="m-3">
-        <label>Status</label>
-        <select class="form-control" @bind="newAccount.status">
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-        </select>
-        <ValidationMessage For="@(() => newAccount.status)" />
-    </div>
+        <MudItem xs="12" sm="6" md="8" lg = "10">
+            <MudTextField Label="Description" @bind-Value="newAccount.description" />
+        </MudItem>
 
-    <button class="m-3 btn btn-primary" type="submit">Submit</button>
+        <MudItem xs="12" sm="6" md="8" lg = "10">
+            <MudSelect T="string" Label="Status" @bind-Value="newAccount.status">
+                <MudSelectItem Value="@("Active")">Active</MudSelectItem>
+                <MudSelectItem Value="@("Inactive")">Inactive</MudSelectItem>
+            </MudSelect>
+        </MudItem>
+    </MudGrid>
 
-    @if (submitted)
-    {
-        <p>Account has been added successfully</p>
-    }
+
+    <MudGrid Gutter.mall Class="mt-5">
+        <MudButton OnClick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+        <MudButton Class="ml-2" OnClick="goBack" Color = "Color.Error" Variant="Variant.Outlined" >Cancel</MudButton>
+    </MudGrid>
+
 </EditForm>
+
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
 
 @inject Data.AppDbContext DbContext
 @code {
+
+    public void goBack()
+    {
+        Nav.NavigateTo("/acclist");
+    }
     public Account_List newAccount = new Account_List
     {
         date = DateOnly.FromDateTime(DateTime.Now),
@@ -58,10 +64,24 @@
             DbContext.Accounts.Add(newAccount);
             await DbContext.SaveChangesAsync();
             submitted = true;
+            await Task.Delay(500); // Simulate processing delay
+            Snackbar.Add("Transaction successful!", Severity.Success);
+
+            newAccount = new Account_List
+            {
+                date = DateOnly.FromDateTime(DateTime.Now),
+                accountId = 0,
+                name = "",
+                description = "",
+                status = ""
+            };
+
+            StateHasChanged();
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
     }
+
 }

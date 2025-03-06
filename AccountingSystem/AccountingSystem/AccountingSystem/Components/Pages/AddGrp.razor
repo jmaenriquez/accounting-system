@@ -1,52 +1,58 @@
-﻿@page "/addgrp"
-@using AccountingSystem.Data;
+@page "/addgrp"
+@using AccountingSystem.Data
+@using MudBlazor
+
+@inject NavigationManager Navigate
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
 
 <PageTitle>Add Groups</PageTitle>
 <h3>Add New Group</h3>
 
 
+<EditForm Model="@newGroup" OnValidSubmit="SubmitGrp">
 
-<EditForm Model="@newGroup" OnInvalidSubmit="SubmitGrp">
+    
+    <MudGrid Gutter.Small>
+        <MudItem xs="12" sm="6" md="8" lg="10">
+            <MudTextField Label="Name" @bind-Value="newGroup.name" />
+        </MudItem>
 
-    <div class="m-3">
-        <label>Name</label>
-        <InputText class="form-control" @bind-Value="newGroup.name" />
-    </div>
+        <MudItem xs="12" sm="6" md="8" lg="10">
+            <MudTextField Label="Description" @bind-Value="newGroup.description" />
+        </MudItem>
 
+        <MudItem xs="12" sm="6" md="8" lg="10">
+            <MudSelect T="string" Label="Account Type" @bind-Value="newGroup.type">
+                <MudSelectItem Value="@("Debit")">Debit</MudSelectItem>
+                <MudSelectItem Value="@("Credit")">Credit</MudSelectItem>
+            </MudSelect>
+        </MudItem>
 
-    <div class="m-3">
-        <label>Description</label>
-        <InputText class="form-control" @bind-Value="newGroup.description" />
-    </div>
+        <MudItem xs="12" sm="6" md="8" lg="10">
+            <MudSelect T="string" Label="Status" @bind-Value="newGroup.status">
+                <MudSelectItem Value="@("Active")">Active</MudSelectItem>
+                <MudSelectItem Value="@("Inactive")">Inactive</MudSelectItem>
+            </MudSelect>
+        </MudItem>
+    </MudGrid>
 
-    <div class="m-3">
-        <label>Account Type</label>
-        <select class="form-control" @bind="newGroup.type">
-            <option value="Debit">Debit</option>
-            <option value="Credit">Credit</option>
-        </select>
-    </div>
-
-    <div class="m-3">
-        <label>Status</label>
-        <select class="form-control" @bind="newGroup.status">
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-        </select>
-    </div>
-
-
-    <button class="m-3 btn btn-primary" type="submit">Submit</button>
-
-    @if (added)
-    {
-        <p>Group has been added successfully</p>
-    }
+    <MudGrid Gutter.Small Class="mt-5">
+        <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+        <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+    </MudGrid>
 
 </EditForm>
 
 @inject Data.AppDbContext Database
 @code {
+
+    public void goBack()
+    {
+        Navigate.NavigateTo("/accgrp");
+    }
+
     public Group_List newGroup = new Group_List{
 
             datetime = DateOnly.FromDateTime(DateTime.Now),
@@ -65,11 +71,26 @@
             Database.Groups.Add(newGroup);
             await Database.SaveChangesAsync();
             added = true;
+            await Task.Delay(500); // Simulate processing delay
+            Snackbar.Add("Transaction successful!", Severity.Success);
 
+
+            newGroup = new Group_List
+        {
+            datetime = DateOnly.FromDateTime(DateTime.Now), 
+            groupId = 0,
+            name = "",
+            description = "",
+            type = "",
+            status = ""
+        };
+
+            StateHasChanged();
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+            Snackbar.Add($"Error: {ex.Message}", Severity.Error);
+            Console.WriteLine(ex);
         }
 
     }

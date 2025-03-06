@@ -8,7 +8,7 @@ namespace AccountingSystem.Data
         public DateOnly datetime { get; set; }
 
         [Key]
-        public int balance_Id { get; set; }
+        public int balanceId { get; set; }
         public required string description { get; set; }
 
         [ForeignKey("groupId")]
@@ -17,7 +17,6 @@ namespace AccountingSystem.Data
         [ForeignKey("accountId")]
         public virtual Account_List? AccName { get; set; }
 
-        [ForeignKey("amountId")]
-        public virtual Amount? Amount  { get; set; }
+        public decimal Amounts { get; set; }
     }
 }

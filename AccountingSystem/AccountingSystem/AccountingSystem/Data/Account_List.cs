@@ -7,14 +7,15 @@ namespace AccountingSystem.Data
         public required DateOnly date{ get; set; }
 
         [Key]
-        public required int accountId { get; set; }
+        public int accountId { get; set; }
 
-        
-        public required string name { get; set; } = string.Empty;
+        [Required]
+        public string name { get; set; } = string.Empty;
 
-        
-        public required string description { get; set; }=string.Empty;
+        [Required]
+        public string description { get; set; }=string.Empty;
 
-        public required string status { get; set; } = "Active";
+        [Required]
+        public string status { get; set; } = "Active";
     }
 }

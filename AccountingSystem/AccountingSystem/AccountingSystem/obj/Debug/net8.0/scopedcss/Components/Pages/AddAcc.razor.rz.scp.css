@@ -1,2 +1,19 @@
-body[b-405pd1o2ng] {
+.form-group[b-405pd1o2ng] {
+    width: 20rem;
+    height: 90px;
+}
+
+.rounded[b-405pd1o2ng] {
+    width: 300px;
+    height: 45px;
+}
+
+.save[b-405pd1o2ng] {
+    width: 90px;
+    height: 30px;
+    font-size: 15px
+}
+
+.accounts[b-405pd1o2ng] {
+    justify-content: space-between
 }

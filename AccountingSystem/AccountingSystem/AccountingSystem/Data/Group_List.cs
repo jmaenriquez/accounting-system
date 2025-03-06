@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AccountingSystem.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AccountingSystem.Data
@@ -11,16 +12,16 @@ namespace AccountingSystem.Data
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int groupId { get; set; }
 
-        [Required(ErrorMessage = "Name is Empty!")]
+        [Required]
         public required string name { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Description is Empty!")]
+        [Required]
         public required string description { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Group Type is Required!")]
+        [Required]
         public required string type { get; set; }
 
-        [Required(ErrorMessage = "Status is Required!")]
+        [Required]
         public required string status { get; set; }
     }
 }

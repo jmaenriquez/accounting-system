@@ -167,7 +167,7 @@ main[b-sy38zyqdxq] {
 
 /*for COA*/
 .chart-icon[b-sdekxj40it] {
-    background-image: url("data:image/svg+xml;utf8,<svg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 2.67456C10.5226 1.40467 8.38025 1.21343 6.43098 1.41004C4.15983 1.63912 1.86688 2.41849 0.439648 3.06723C0.171902 3.18893 0 3.4559 0 3.75001V20.25C0 20.505 0.129564 20.7425 0.343961 20.8806C0.558357 21.0187 0.82821 21.0383 1.06035 20.9328C2.38312 20.3315 4.51517 19.6109 6.58152 19.4025C8.69348 19.1895 10.4662 19.5333 11.4143 20.7185C11.5567 20.8964 11.7722 21 12 21C12.2278 21 12.4433 20.8964 12.5857 20.7185C13.5338 19.5333 15.3065 19.1895 17.4185 19.4025C19.4848 19.6109 21.6169 20.3315 22.9396 20.9328C23.1718 21.0383 23.4416 21.0187 23.656 20.8806C23.8704 20.7425 24 20.505 24 20.25V3.75001C24 3.4559 23.8281 3.18893 23.5604 3.06723C22.1331 2.41849 19.8402 1.63912 17.569 1.41004C15.6198 1.21343 13.4774 1.40467 12 2.67456Z' fill='white'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg width='16' height='16' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 2.67456C10.5226 1.40467 8.38025 1.21343 6.43098 1.41004C4.15983 1.63912 1.86688 2.41849 0.439648 3.06723C0.171902 3.18893 0 3.4559 0 3.75001V20.25C0 20.505 0.129564 20.7425 0.343961 20.8806C0.558357 21.0187 0.82821 21.0383 1.06035 20.9328C2.38312 20.3315 4.51517 19.6109 6.58152 19.4025C8.69348 19.1895 10.4662 19.5333 11.4143 20.7185C11.5567 20.8964 11.7722 21 12 21C12.2278 21 12.4433 20.8964 12.5857 20.7185C13.5338 19.5333 15.3065 19.1895 17.4185 19.4025C19.4848 19.6109 21.6169 20.3315 22.9396 20.9328C23.1718 21.0383 23.4416 21.0187 23.656 20.8806C23.8704 20.7425 24 20.505 24 20.25V3.75001C24 3.4559 23.8281 3.18893 23.5604 3.06723C22.1331 2.41849 19.8402 1.63912 17.569 1.41004C15.6198 1.21343 13.4774 1.40467 12 2.67456Z' fill='white'/></svg>");
 }
 
 /*for Transactions*/
@@ -187,12 +187,12 @@ main[b-sy38zyqdxq] {
 
 /*for Accounts List*/
 .account-icon[b-sdekxj40it] {
-    background-image: url("data: image/svg+xml;utf8, ")
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.375 2.25C12.375 1.62868 12.8787 1.125 13.5 1.125H15.75C16.3713 1.125 16.875 1.62868 16.875 2.25V15.75H17.4375C17.7482 15.75 18 16.0018 18 16.3125C18 16.6232 17.7482 16.875 17.4375 16.875H0.5625C0.25184 16.875 0 16.6232 0 16.3125C0 16.0018 0.25184 15.75 0.5625 15.75H1.125V12.375C1.125 11.7537 1.62868 11.25 2.25 11.25H4.5C5.12132 11.25 5.625 11.7537 5.625 12.375V15.75H6.75V7.875C6.75 7.25368 7.25368 6.75 7.875 6.75H10.125C10.7463 6.75 11.25 7.25368 11.25 7.875V15.75H12.375V2.25ZM13.5 15.75H15.75V2.25H13.5V15.75ZM10.125 15.75V7.875H7.875V15.75H10.125ZM4.5 15.75V12.375H2.25V15.75H4.5Z' fill='%23FFF1F1'/%3E%3C/svg%3E");
 }
 
 /*for Group List*/
-.group-icon[b-sdekxj40it]{
-    background-image: url("data: image/svg+xml;utf8, ")
+.group-icon[b-sdekxj40it] {
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.375 1.27198C4.8342 1.59244 1.25 5.37765 1.25 10C1.25 12.1915 2.055 14.1941 3.38657 15.7295L9.375 9.74112V1.27198ZM10.625 1.27198V9.375H18.728C18.4221 5.04064 14.9594 1.57787 10.625 1.27198ZM18.728 10.625H10.2589L4.27045 16.6134C5.80593 17.945 7.80847 18.75 10 18.75C14.6223 18.75 18.4076 15.1658 18.728 10.625ZM0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C7.23875 20 4.73789 18.88 2.92893 17.0711C1.11997 15.2621 0 12.7613 0 10Z' fill='white'/%3E%3C/svg%3E");
 }
 /*End of Icons*/
 
@@ -308,27 +308,29 @@ fa-solid[b-sdekxj40it], fa-file-circle-plus[b-sdekxj40it]{
     height: 33px;
 }
 /* _content/AccountingSystem/Components/Pages/AddAcc.razor.rz.scp.css */
-body[b-405pd1o2ng] {
+.form-group[b-405pd1o2ng] {
+    width: 20rem;
+    height: 90px;
+}
+
+.rounded[b-405pd1o2ng] {
+    width: 300px;
+    height: 45px;
+}
+
+.save[b-405pd1o2ng] {
+    width: 90px;
+    height: 30px;
+    font-size: 15px
+}
+
+.accounts[b-405pd1o2ng] {
+    justify-content: space-between
+}
+/* _content/AccountingSystem/Components/Pages/AddGrp.razor.rz.scp.css */
+body[b-jx5ziyf1f7] {
 }
 /* _content/AccountingSystem/Components/Pages/AddRecord.razor.rz.scp.css */
-.form-group[b-5eldr3qlgw]{
-    width:20rem;
-    height:90px;
-}
-.rounded[b-5eldr3qlgw] {
-    width:300px;
-    height:45px;
-}
-
-.save[b-5eldr3qlgw]{
-    width:90px;
-    height: 30px;
-    font-size:15px
-}
-
-.accounts[b-5eldr3qlgw]{
-    justify-content:space-between
-}
 /* _content/AccountingSystem/Components/Pages/Balance.razor.rz.scp.css */
 .rounded-3[b-fw64h8oam3] {
     width: 100%;

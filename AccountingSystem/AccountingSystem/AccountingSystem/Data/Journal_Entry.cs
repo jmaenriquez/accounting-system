@@ -10,6 +10,9 @@ namespace AccountingSystem.Data
         [Key]
         public int journal_code { get; set; }
 
+        
+        public string description { get; set; }
+
         [ForeignKey("accountId")]
         public virtual Account_List? AccName { get; set; }
 

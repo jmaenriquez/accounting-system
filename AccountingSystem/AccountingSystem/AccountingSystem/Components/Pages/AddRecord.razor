@@ -1,58 +1,48 @@
 ﻿@page "/addrecords"
+@using AccountingSystem.Data
+@using AccountingSystem.Services
 @inject NavigationManager Navigate
 
 <h3>Add Records</h3>
 
-<form>
-    <div class="form-group">
-        <label >Date</label>
-        <input type="date" class="rounded" placeholder="Date">
-    </div>
 
-    <div class="form-group">
-        <label>Description</label>
-        <input type="text" class="rounded" placeholder="Enter description here">
-    </div>
+<EditForm Model = "@tbalance" OnValidSubmit="Save">
 
-    <div class="d-sm-inline-flex accounts">
-        <div class="form-group">
-            <label>Account Name</label>
-            <select class="rounded" placeholder = "Enter an Account">
-                <option>Accounts Payable</option>
-                <option>Accounts Receivable </option>
-                <option>Cash</option>
-                <option>Commisions Earned</option>
-                <option>Depletion Expense</option>
-                <option>Cash Equivalents</option>
-                <option>Revenue</option>
-            </select>
-        </div>
+    <MudItem Gutter.Small xs="12" sm="6" md="8" lg="10">
 
-        <div class="form-group">
-            <label>Account Group</label>
-            <select class="rounded">
-                <option>Please Select an Option...</option>
-                <option>Asset</option>
-                <option>Withdrawal</option>
-                <option>Expenses</option>
-                <option>Liability</option>
-                <option>Owner's Equity</option>
-                <option>Revenue</option>
-                <option>Accounts Payable</option>
-                <option>Accounts Receivable</option>
-            </select>
-        </div>
+        <MudItem>
+            <MudDatePicker Label="Date" @bind-Value="tbalance.datetime" />
+        </MudItem>
 
-        <div class="form-group">
-            <label>Amount</label>
-            <input type="text" class="rounded" placeholder="0.00">
-        </div>
-    </div>
+        <MudItem>
+            <MudTextField Label="Description" @bind-Value="tbalance.description" />
+        </MudItem>
 
-    <div class="mt-2">
-        <input type="submit" class="save btn" name="save" value="Save" />
-    </div>
-</form>
+        <MudItem>
+            <MudSelect T="Account_List" Label = "Account Name" @bind-Value="tbalance.AccName" >
+                @foreach(var accs in AccountNames){
+                    <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem>
+            <MudSelect T="Group_List" Label = "Account Group" @bind-Value="tbalance.AccGrp">
+                @foreach (var gnames in GroupList){
+                    <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
+                }
+            </MudSelect>
+        </MudItem>
+
+        <MudItem>
+            Mud
+        </MudItem>
+
+    </MudItem>
+
+    <MudButton OnClick="Save">Save</MudButton>
+</EditForm>
+
 
 <table class="mt-3 table table-responsive table-responsive-lg">
     <thead class="">
@@ -65,48 +55,167 @@
         </tr>
     </thead>
     <tbody class="table-light">
-        <tr>
-            <td>*Remove icon</td>
-            <td>Account Name</td>
-            <td>Account Group</td>
-            <td>number of debit</td>
-            <td></td>
-        </tr>
 
-        <tr>
-            <td>*Remove icon</td>
-            <td>Account Name</td>
-            <td>Account Group</td>
-            <td></td>
-            <td>number of credit</td>
-        </tr>
+        @* This Trial Balance needs a Service cs  *@
+        @* @foreach(var trial in tbalance)  *@
+        @* { *@
+        @*     <tr> *@
+        @*         <td>*Remove icon</td> *@
+        @*         <td>Account Name</td> *@
+        @*         <td>Account Group</td> *@
+        @*         <td>number of debit</td> *@
+        @*         <td></td> *@
+        @*     </tr> *@
+        @* } *@
+
     </tbody>
 </table>
 
 <div>
     <div class="justify-content-lg-end d-flex">
-        @* <button class="btn btn-primary">Add</button> *@
-        @* <button class="btn btn-outline-danger">Cancel</button> *@
-        <input type="submit" name="add" value="Add" class="btn" />
-        <input type="submit" name="cancel" value="Cancel" class="btn" @onclick = "goBack" />
+        <MudGrid Gutter.Small Class="mt-5">
+            <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        </MudGrid>
     </div>
 </div>
 
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject Data.AppDbContext DbContext
+@inject GroupService grpService
+@inject AccountService accountService;
+@inject BalanceService balanceService;
+
+
 @code {
+    List<Journal_Entry> entries = new List<Journal_Entry>();
+    //This section is for the back button
 
     private void goBack()
     {
         Navigate.NavigateTo("/journal");
     }
 
-    private void save()
-    {
-        //This is a code to add to Trail Balance
-    }
+    //End of back button section
 
-    private void add()
+
+    //Global Functions for the Journal Entry and Trial Balance
+    public Journal_Entry newEntry = new Journal_Entry
     {
-        //This is a code to add to the journal entries
+            description = "",
+    };
+
+    public Trial_Balance tbalance = new Trial_Balance
+    {
+            description = "",
+    };
+    //End of Global Functions
+
+
+
+    //This section is for saving the Trial Balance
+
+    private async Task Save()
+    {
+        if (tbalance.AccGrp != null)
+        {
+            if(tbalance.AccGrp.type == "Debit")
+            {
+                var debitacc = new Debit_Accounts
+                    {
+                        debitId = tbalance.AccName.accountId,
+                        amount = tbalance.Amount.Debit?.amount ?? 0
+                    };
+
+                DbContext.Debit.Add(debitacc);
+            }
+
+            else if(tbalance.AccGrp.type == "Credit")
+            {
+                var creditacc = new Credited_Accounts
+                    {
+                        creditId = tbalance.AccName.accountId,
+                        amount = tbalance.Amount.Credit?.amount ?? 0
+                    };
+            }
+
+
+            await DbContext.SaveChangesAsync();
+            Snackbar.Add("New Entry Added", Severity.Success);
+
+        }
+
+        else
+        {
+            Snackbar.Add("Please select both Account Type and Account Name!", Severity.Warning);
+            return;
+        }
+        
+
+
+        DbContext.Balance.Add(tbalance);
+        await DbContext.SaveChangesAsync();
+        Snackbar.Add("New Entry Added", Severity.Success);
+
+        tbalance = new Trial_Balance
+        {
+                description = "",
+        };
+
+        StateHasChanged();
     }
+    //End of Trial Balance Section
+
+
+    //This section is for submitting the Journal Entry
+    private async Task Submit()
+    {
+
+        try {
+            DbContext.Journal.Add(newEntry);
+            await DbContext.SaveChangesAsync();
+            Snackbar.Add("New Entry Added", Severity.Success);
+            Navigate.NavigateTo("/journal");
+
+            newEntry = new Journal_Entry
+            {
+                    description = "",
+            };
+
+            StateHasChanged();
+        }
+
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+
+    }
+    //End of Journal Entry Section
+
+
+    //This section is for the Fetching of Data
+
+    List<Group_List> GroupList = new List<Group_List>();
+    List<Account_List> AccountNames = new List<Account_List>();
+    List<Trial_Balance> Trial = new List<Trial_Balance>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var filterName = await grpService.GroupItems();
+        GroupList = filterName.ToList();
+
+        var filterAcc = await accountService.GetAllAccounts();
+        AccountNames = filterAcc.ToList();
+
+        Trial = new List<Trial_Balance>();
+    }
+    //End of Fetching Sectionz
+
+    
+
+
 
 }

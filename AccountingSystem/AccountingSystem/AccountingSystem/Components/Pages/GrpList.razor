@@ -1,4 +1,4 @@
-﻿@page "/accgrp"
+@page "/accgrp"
 
 @inject NavigationManager Navigate
 
@@ -23,35 +23,64 @@
                 <th>Account Id</th>
                 <th>Account Name</th>
                 <th>Description</th>
+                <th>Account Type</th>
                 <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>This is a date</td>
-                <td>This is ID</td>
-                <td>This is Account Name</td>
-                <td>This is the Description</td>
-                <td>Active or Inactive</td>
-                <td>Actions</td>
-            </tr>
 
-            <tr>
-                <td>This is a date</td>
-                <td>This is ID</td>
-                <td>This is Account Name</td>
-                <td>This is the Description</td>
-                <td>Active or Inactive</td>
-                <td>Actions</td>
-            </tr>
+            @foreach (var grp in GroupList)
+            {
+                <tr>
+                    <td>@grp.datetime</td>
+                    <td>@grp.groupId</td>
+                    <td>@grp.name</td>
+                    <td>@grp.description</td>
+                    <td>@grp.type</td>
+                    <td>@grp.status</td>
+                    <td>Actions</td>
+                </tr>
+            }
+            
         </tbody>
     </table>
 </div>
 
+
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject GroupService grpService
+
 @code {
+
+
+
     private void navigateToAddGrp()
     {
         Navigate.NavigateTo("/addgrp");
+    }
+
+    List<Group_List> GroupList = new List<Group_List>();
+
+     protected override async Task OnInitializedAsync()
+    {
+        await LoadAccounts();
+        await Refresh();
+
+    }
+
+    private async Task LoadAccounts()
+    {
+        GroupList = (await grpService.GroupItems()).ToList();
+        StateHasChanged();
+    }
+
+    private async Task Refresh()
+    {
+        while (true)
+        {
+            await LoadAccounts();
+        }
     }
 }
