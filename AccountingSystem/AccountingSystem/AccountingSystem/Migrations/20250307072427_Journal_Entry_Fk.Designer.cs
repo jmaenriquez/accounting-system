@@ -3,6 +3,7 @@ using System;
 using AccountingSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250307072427_Journal_Entry_Fk")]
+    partial class Journal_Entry_Fk
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -152,7 +155,7 @@ namespace AccountingSystem.Migrations
                         .IsRequired();
 
                     b.HasOne("AccountingSystem.Data.Account_List", "AccName")
-                        .WithMany("Journal_Entries")
+                        .WithMany()
                         .HasForeignKey("AccNameId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -160,11 +163,6 @@ namespace AccountingSystem.Migrations
                     b.Navigation("AccGrp");
 
                     b.Navigation("AccName");
-                });
-
-            modelBuilder.Entity("AccountingSystem.Data.Account_List", b =>
-                {
-                    b.Navigation("Journal_Entries");
                 });
 
             modelBuilder.Entity("AccountingSystem.Data.Group_List", b =>

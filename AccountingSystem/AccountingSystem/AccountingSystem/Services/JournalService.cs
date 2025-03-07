@@ -15,7 +15,11 @@ namespace AccountingSystem.Services
         public async Task<IEnumerable<Journal_Entry>> GroupItems()
         {
             using var dbContext = _dbContextFactory.CreateDbContext(); // Create new instance
-            return await dbContext.Journal.AsNoTracking().ToListAsync();
+            
+            
+            return await dbContext.Journal.AsNoTracking()
+                .Include(journal => journal.AccGrp)
+                .ToListAsync();
         }
     }
 }

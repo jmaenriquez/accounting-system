@@ -190,26 +190,29 @@
     //This section is for submitting the Journal Entry
     private async Task Submit()
     {
+        Console.WriteLine("1");
         var TransactId = Guid.NewGuid().GetHashCode();
-
+        Console.WriteLine("2");
         if (Overall == 0){
-
+            Console.WriteLine("3");
             foreach (var entries in Trial)
             {
                 var journal = new Journal_Entry
                 {
-                    
+
                     datetime = entries.datetime,
                     description = entries.description,
-                    AccName = entries.AccName,
-                    AccGrp = entries.AccGrp,
+                    AccGrpId = entries.AccGrp!.id,
+                    AccNameId = entries.AccName!.id,
+                    // AccName = entries.AccName,
+                    // AccGrp = entries.AccGrp,
                     debit = entries.Debit,
                     credit = entries.Credit
                 };
-
+                Console.WriteLine(journal.AccNameId);
                 DbContext.Journal.Add(journal);
             }
-
+            Console.WriteLine("4");
             await DbContext.SaveChangesAsync();
             Snackbar.Add("New Entry Added", Severity.Success);
             Navigate.NavigateTo("/journal");

@@ -22,5 +22,11 @@ namespace AccountingSystem.Data
 
         [Required]
         public Status status { get; set; }
+
+
+        [InverseProperty("AccGrp")]
+        public virtual ICollection<Journal_Entry> Journal_Entries { get; set; } = new List<Journal_Entry>();
+
+
     }
 }

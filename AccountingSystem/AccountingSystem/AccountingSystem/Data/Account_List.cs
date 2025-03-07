@@ -1,5 +1,6 @@
 ﻿using AccountingSystem.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AccountingSystem.Data
 {
@@ -14,5 +15,8 @@ namespace AccountingSystem.Data
         [Required]
         public string description { get; set; }=string.Empty;
         public Status status { get; set; }
+
+        [InverseProperty("AccName")]
+        public virtual ICollection<Journal_Entry> Journal_Entries { get; set; } = new List<Journal_Entry>();
     }
 }

@@ -14,11 +14,21 @@ namespace AccountingSystem.Data
         
         public string description { get; set; }
 
-        [ForeignKey("id")]
+
+        public int AccGrpId { get; set; }
+        public int AccNameId { get; set; }
+
+
+
+        [ForeignKey("AccGrpId")]
         public virtual Group_List? AccGrp { get; set; }
 
-        [ForeignKey("id")]
+        [ForeignKey("AccNameId")]
         public virtual Account_List? AccName { get; set; }
+
+        //public string? AccName { get; set; }
+
+        //public string? AccGrp { get; set; }
 
         public decimal? debit { get; set; } = 0;
 
@@ -28,5 +38,7 @@ namespace AccountingSystem.Data
         [NotMapped]
         public AccountType Type => AccGrp?.type ?? AccountType.Debit;
 
+
     }
+    
 }
