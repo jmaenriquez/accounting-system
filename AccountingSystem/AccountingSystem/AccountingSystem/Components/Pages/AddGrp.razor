@@ -14,7 +14,7 @@
 <EditForm Model="@newGroup" OnValidSubmit="SubmitGrp">
 
     
-    <MudGrid Gutter.Small>
+    <MudGrid>
         <MudItem xs="12" sm="6" md="8" lg="10">
             <MudTextField Label="Name" @bind-Value="newGroup.name" />
         </MudItem>
@@ -24,16 +24,16 @@
         </MudItem>
 
         <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudSelect T="AccountType" Label="Account Type" @bind-Value="newGroup.type">
-                <MudSelectItem Value="@("Debit")">Debit</MudSelectItem>
-                <MudSelectItem Value="@("Credit")">Credit</MudSelectItem>
+            <MudSelect T="AccountType" Label="Select an Account Type" @bind-Value="newGroup.type">
+                <MudSelectItem Value="@AccountType.Debit"></MudSelectItem>
+                <MudSelectItem Value="@AccountType.Credit"></MudSelectItem>
             </MudSelect>
         </MudItem>
 
         <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudSelect T="Status" Label="Status" @bind-Value="newGroup.status">
-                <MudSelectItem Value="@("Active")">Active</MudSelectItem>
-                <MudSelectItem Value="@("Inactive")">Inactive</MudSelectItem>
+            <MudSelect T="Status" Label="Select a Status" @bind-Value="newGroup.status">
+                <MudSelectItem Value="@Status.Active">Active</MudSelectItem>
+                <MudSelectItem Value="@Status.Inactive">Inactive</MudSelectItem>
             </MudSelect>
         </MudItem>
     </MudGrid>

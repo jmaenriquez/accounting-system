@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AccountingSystem.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace AccountingSystem.Data
 {
@@ -12,8 +13,6 @@ namespace AccountingSystem.Data
 
         [Required]
         public string description { get; set; }=string.Empty;
-
-        [Required]
-        public string status { get; set; } = "Active";
+        public Status status { get; set; }
     }
 }

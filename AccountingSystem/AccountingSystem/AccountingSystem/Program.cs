@@ -14,6 +14,7 @@ builder.Services.Configure<CircuitOptions>(options => { options.DetailedErrors =
 
 builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<GroupService>();
+builder.Services.AddScoped<JournalService>();
 
 
 // Add services to the container.

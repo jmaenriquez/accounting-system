@@ -10,7 +10,7 @@ namespace AccountingSystem.Data
 
         
         public int id { get; set; }
-        public required string description { get; set; }
+        public string description { get; set; }
 
         [ForeignKey("id")]
         public virtual Group_List? AccGrp  { get; set; }
@@ -20,8 +20,6 @@ namespace AccountingSystem.Data
 
         public decimal? Debit{ get; set; }
         public decimal? Credit { get; set; }
-
-
 
 
         [NotMapped]

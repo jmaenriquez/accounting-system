@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AccountingSystem.Data
 {
@@ -6,7 +7,9 @@ namespace AccountingSystem.Data
     {
         public int id { get; set; }
         public required string AccountName { get; set; }
-        public required string AccountGroup { get; set; }
+
+        [ForeignKey ("id")]
+        public virtual Journal_Entry? group { get; set; }
         public DateOnly date { get; set; }
     }
 }

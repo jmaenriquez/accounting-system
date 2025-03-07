@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AccountingSystem.Enums;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AccountingSystem.Data
@@ -11,13 +12,21 @@ namespace AccountingSystem.Data
         public int id { get; set; }
 
         
-        public required string description { get; set; }
+        public string description { get; set; }
+
+        [ForeignKey("id")]
+        public virtual Group_List? AccGrp { get; set; }
 
         [ForeignKey("id")]
         public virtual Account_List? AccName { get; set; }
 
-        public decimal debit { get; set; } = 0;
+        public decimal? debit { get; set; } = 0;
 
-        public decimal credit { get; set; } = 0;
+        public decimal? credit { get; set; } = 0;
+
+
+        [NotMapped]
+        public AccountType Type => AccGrp?.type ?? AccountType.Debit;
+
     }
 }

@@ -48,9 +48,9 @@
 
         </MudItem>
 
-
-        <MudButton OnClick="async () => await Save()">Save</MudButton>
     </MudGrid>
+
+    <MudButton Class="mt-3" OnClick="Save" Style="background-color: #F9F9F9;">Save</MudButton>
 
 
 </EditForm>
@@ -72,20 +72,31 @@
         @foreach(var trial in Trial) 
         {
             <tr>
-                <td>Remove icon</td>
-                <td>@trial.AccName</td>
-                <td>@trial.AccGrp</td>
+                <td>
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="() => RemoveTrial(trial)" />
+                </td>
+                <td>@trial.AccName?.name</td>
+                <td>@trial.AccGrp?.name</td>
                 <td>@(trial.Debit.HasValue ? trial.Debit.Value.ToString("N2") : "")</td>
                 <td>@(trial.Credit.HasValue ? trial.Credit.Value.ToString("N2") : "")</td>
             </tr>
         }
 
     </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>@Overall.ToString("N2")</td>
+        </tr>
+    </tfoot>
 </table>
 
 <div>
-    <div class="justify-content-lg-end d-flex">
-        <MudGrid Gutter.Small Class="mt-5">
+    <div class="justify-content-lg-end d-flex m-5">
+        <MudGrid Gutter.Small>
             <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
             <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
         </MudGrid>
@@ -97,11 +108,20 @@
 
 @code {
 
+    //Global Functions for the Journal Entry and Trial Balance
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Group_List> GroupList = new List<Group_List>();
+    List<Account_List> AccountNames = new List<Account_List>();
+
+    public Journal_Entry newEntry = new Journal_Entry();
+
     private decimal TotalDebit => Trial.Where(a => a.AccGrp?.type == AccountType.Debit).Sum(a => a.Debit ?? 0);
     private decimal TotalCredit => Trial.Where(a => a.AccGrp?.type == AccountType.Credit).Sum(a => a.Credit ?? 0);
 
     public decimal Overall => TotalDebit - TotalCredit;
     private decimal? tempAcc;
+
+    //End of Global Functions
 
 
 
@@ -117,29 +137,25 @@
     //End of back button section
 
 
-    //Global Functions for the Journal Entry and Trial Balance
-    public Journal_Entry newEntry = new Journal_Entry
+    private void RemoveTrial(Trial_Balance trial)
     {
-            description = "",
-    };
-    //End of Global Functions
+        Trial.Remove(trial);
+        StateHasChanged();
+    }
 
 
 
     //This section is for saving the Trial Balance
     private List<Trial_Balance> Trial = new List<Trial_Balance>();
 
-    public Trial_Balance tbalance = new Trial_Balance
-        {
-            description = "",
-        };
+    public Trial_Balance tbalance = new Trial_Balance();
 
 
     private async Task Save()
     {
-        if (tbalance.AccGrp == null)
+        if (tbalance.AccGrp == null || tbalance.AccName == null)
         {
-            Snackbar.Add("Select an Account Group", Severity.Warning);
+            Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
             return;
         }
 
@@ -164,6 +180,7 @@
         tempAcc = null;
         StateHasChanged();
 
+        await Task.CompletedTask;
 
 
     }
@@ -173,32 +190,38 @@
     //This section is for submitting the Journal Entry
     private async Task Submit()
     {
+        var TransactId = Guid.NewGuid().GetHashCode();
 
         if (Overall == 0){
 
-            try
+            foreach (var entries in Trial)
             {
-                DbContext.Journal.Add(newEntry);
-                await DbContext.SaveChangesAsync();
-                Snackbar.Add("New Entry Added", Severity.Success);
-                Navigate.NavigateTo("/journal");
+                var journal = new Journal_Entry
+                {
+                    
+                    datetime = entries.datetime,
+                    description = entries.description,
+                    AccName = entries.AccName,
+                    AccGrp = entries.AccGrp,
+                    debit = entries.Debit,
+                    credit = entries.Credit
+                };
 
-                newEntry = new Journal_Entry
-                    {
-                        description = "",
-                    };
-
-                StateHasChanged();
+                DbContext.Journal.Add(journal);
             }
 
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            await DbContext.SaveChangesAsync();
+            Snackbar.Add("New Entry Added", Severity.Success);
+            Navigate.NavigateTo("/journal");
+
+            Trial.Clear();
+            tempAcc = null;
+
+            StateHasChanged();
 
         }
         else{
-            Snackbar.Add("Debit and Credit must be equal", Severity.Error);
+            Snackbar.Add("Trial Balance must be Balanced!", Severity.Error);
             return;
         }
 
@@ -208,9 +231,7 @@
 
     //This section is for the Fetching of Data
 
-    List<Journal_Entry> entries = new List<Journal_Entry>();
-    List<Group_List> GroupList = new List<Group_List>();
-    List<Account_List> AccountNames = new List<Account_List>();
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -231,7 +252,7 @@
         }
 
     }
-    //End of Fetching Sectionz
+    //End of Fetching Section
 
     
 
