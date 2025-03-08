@@ -7,18 +7,10 @@ namespace AccountingSystem.Data
     public class Journal_Entry
     {
         public DateOnly datetime { get; set; }
-
-        
         public int id { get; set; }
-
-        
         public string description { get; set; }
-
-
         public int AccGrpId { get; set; }
         public int AccNameId { get; set; }
-
-
 
         [ForeignKey("AccGrpId")]
         public virtual Group_List? AccGrp { get; set; }
@@ -33,6 +25,8 @@ namespace AccountingSystem.Data
         public decimal? debit { get; set; } = 0;
 
         public decimal? credit { get; set; } = 0;
+
+        public Guid TransactId { get; set;}
 
 
         [NotMapped]

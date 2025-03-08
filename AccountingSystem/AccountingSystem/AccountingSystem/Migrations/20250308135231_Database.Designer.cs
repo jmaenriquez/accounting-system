@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250307074218_acoount_list_nav_prop")]
-    partial class acoount_list_nav_prop
+    [Migration("20250308135231_Database")]
+    partial class Database
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,6 +112,9 @@ namespace AccountingSystem.Migrations
 
                     b.Property<int>("AccNameId")
                         .HasColumnType("integer");
+
+                    b.Property<Guid>("TransactId")
+                        .HasColumnType("uuid");
 
                     b.Property<decimal?>("credit")
                         .HasColumnType("numeric");

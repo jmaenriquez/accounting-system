@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Database : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -49,24 +49,28 @@ namespace AccountingSystem.Migrations
                 name: "Journal",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "integer", nullable: false),
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     datetime = table.Column<DateOnly>(type: "date", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
+                    AccGrpId = table.Column<int>(type: "integer", nullable: false),
+                    AccNameId = table.Column<int>(type: "integer", nullable: false),
                     debit = table.Column<decimal>(type: "numeric", nullable: true),
-                    credit = table.Column<decimal>(type: "numeric", nullable: true)
+                    credit = table.Column<decimal>(type: "numeric", nullable: true),
+                    TransactId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Journal", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Journal_Accounts_id",
-                        column: x => x.id,
+                        name: "FK_Journal_Accounts_AccNameId",
+                        column: x => x.AccNameId,
                         principalTable: "Accounts",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Journal_Groups_id",
-                        column: x => x.id,
+                        name: "FK_Journal_Groups_AccGrpId",
+                        column: x => x.AccGrpId,
                         principalTable: "Groups",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -90,6 +94,16 @@ namespace AccountingSystem.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Journal_AccGrpId",
+                table: "Journal",
+                column: "AccGrpId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Journal_AccNameId",
+                table: "Journal",
+                column: "AccNameId");
         }
 
         /// <inheritdoc />

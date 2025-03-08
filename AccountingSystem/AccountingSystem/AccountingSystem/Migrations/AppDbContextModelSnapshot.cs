@@ -110,6 +110,9 @@ namespace AccountingSystem.Migrations
                     b.Property<int>("AccNameId")
                         .HasColumnType("integer");
 
+                    b.Property<Guid>("TransactId")
+                        .HasColumnType("uuid");
+
                     b.Property<decimal?>("credit")
                         .HasColumnType("numeric");
 
