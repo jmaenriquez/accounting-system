@@ -11,52 +11,49 @@
 <h3>Add Records</h3>
 
 
-<EditForm Model = "@newEntry" OnValidSubmit="Save">
+@* <EditForm Model = "@newEntry" OnValidSubmit="Save"> *@
 
+
+@* </EditForm> *@
+
+<MudForm Model="@newEntry">
     <MudGrid>
-        <MudItem Gutter.Small xs="12" sm="6" md="8" lg="10">
+        <MudContainer>
 
-            <MudItem>
-                <MudDatePicker Label="Date" @bind-Value="newEntry.datetime" 
-                DateFormat="MM-dd-yyyy"
-                Onclosed="UpdateDateOnly"/>
-            </MudItem>
+            <MudDatePicker Label="Date" @bind-Value="newEntry.datetime"
+                           DateFormat="MM-dd-yyyy"
+                           Onclosed="UpdateDateOnly"
+                           Required="true" />
 
-            <MudItem>
-                <MudTextField Label="Description" @bind-Value="newEntry.description" />
-            </MudItem>
+            <MudTextField Label="Description"
+                          @bind-Value="newEntry.description"
+                          Required="true" MaxLength="20" />
 
-            <MudItem>
-                <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName">
-                    @foreach (var accs in AccountNames)
-                    {
-                        <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
-                    }
-                </MudSelect>
-            </MudItem>
+            <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName">
+                @foreach (var accs in AccountNames)
+                {
+                    <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
+                }
+            </MudSelect>
 
-            <MudItem>
-                <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
-                    @foreach (var gnames in GroupList)
-                    {
-                        <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
-                    }
-                </MudSelect>
-            </MudItem>
+            <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
+                @foreach (var gnames in GroupList)
+                {
+                    <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
+                }
+            </MudSelect>
 
-            <MudItem>
-                <MudTextField Label="Amount" Type="number" @bind-Value="tempAcc" />
-            </MudItem>
+            <MudTextField Label="Amount" Type="number"
+                          @bind-Value="tempAcc"
+                          Required="true" />
 
-        </MudItem>
-
+        </MudContainer>
     </MudGrid>
 
-    <MudButton Class="mt-3" OnClick="Save" Style="background-color: #F9F9F9;">Save</MudButton>
-
-
-</EditForm>
-
+    <MudContainer>
+        <MudButton OnClick="Save" Style="background-color: #F9F9F9;">Save</MudButton>
+    </MudContainer>
+</MudForm>
 
 <table class="mt-3 table table-responsive table-responsive-lg">
     <thead class="">
@@ -107,9 +104,11 @@
 
 
 
-@code {
 
+@code {
     //Global Functions for the Journal Entry and Trial Balance
+
+    MudForm? form = new MudForm();
 
     List<Group_List> GroupList = new List<Group_List>();
     List<Account_List> AccountNames = new List<Account_List>();
@@ -122,8 +121,6 @@
     private decimal? tempAcc;
 
     //End of Global Functions
-
-
 
 
 
@@ -154,6 +151,12 @@
         if (newEntry.AccGrp == null || newEntry.AccName == null || newEntry.description == null)
         {
             Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
+            return;
+        }
+
+        if (dateTimeValue == default || dateTimeValue < new DateTime(1900, 1, 1) || dateTimeValue > DateTime.Now)
+        {
+            Snackbar.Add("Please select a valid date", Severity.Warning);
             return;
         }
 
@@ -256,6 +259,9 @@
         newEntry.datetime = DateOnly.FromDateTime(dateTimeValue);
     }
 
-
+    private void UpdateDateOnly(DateTime date)
+    {
+        newEntry.datetime = DateOnly.FromDateTime(dateTimeValue);
+    }
 
 }
