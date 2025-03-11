@@ -62,8 +62,6 @@
     </table>
 </div>
 
-
-
 @code {
 	private void goToAddRec()
 	{
@@ -79,23 +77,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadAccounts();
-        await Refresh();
-
-    }
-
-    private async Task LoadAccounts()
-    {
         Entries = (await jservice.journalentries()).ToList();
-        StateHasChanged();
     }
-
-    private async Task Refresh()
-    {
-        while (true)
-        {
-            await LoadAccounts();
-        }
-    }
-
 }

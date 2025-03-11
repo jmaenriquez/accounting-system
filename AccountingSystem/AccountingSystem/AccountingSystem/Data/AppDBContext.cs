@@ -10,7 +10,6 @@ namespace AccountingSystem.Data
         // Define your tables here
         public DbSet<Account_List> Accounts { get; set; }
         public DbSet<Group_List> Groups { get; set; }
-        public DbSet <ChartofAccs> Charts { get; set; }
         public DbSet<Journal_Entry> Journal { get; set; }
         
 
@@ -26,6 +25,13 @@ namespace AccountingSystem.Data
                 var connectionString = configuration.GetConnectionString("DefaultConnection");
                 optionsBuilder.UseNpgsql(connectionString);
             }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Journal_Entry>()
+                .Property(c => c.datetime)
+                .HasColumnType("date"); // Ensure correct PostgreSQL storage
         }
     }
 }

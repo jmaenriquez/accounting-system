@@ -887,3 +887,7 @@ C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSyst
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.genruntimeconfig.cache
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AccList.razor.rz.scp.css
+C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\MudBlazor.dll
+C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AddGrp.razor.rz.scp.css

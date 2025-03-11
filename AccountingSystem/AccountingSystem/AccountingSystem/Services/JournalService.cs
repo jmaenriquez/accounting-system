@@ -26,7 +26,7 @@ namespace AccountingSystem.Services
                 .Select(j => new Journal_Entry
                 {
                     TransactId = j.TransactId,
-                    datetime = j.datetime,
+                    datetime = j.datetime.Date,
                     AccName = j.AccName,
                     description = j.description,
                     debit = j.debit,

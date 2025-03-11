@@ -49,23 +49,6 @@ namespace AccountingSystem.Migrations
                     b.ToTable("Accounts");
                 });
 
-            modelBuilder.Entity("AccountingSystem.Data.ChartofAccs", b =>
-                {
-                    b.Property<int>("id")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("AccountName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateOnly>("date")
-                        .HasColumnType("date");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Charts");
-                });
-
             modelBuilder.Entity("AccountingSystem.Data.Group_List", b =>
                 {
                     b.Property<int>("id")
@@ -116,7 +99,7 @@ namespace AccountingSystem.Migrations
                     b.Property<decimal?>("credit")
                         .HasColumnType("numeric");
 
-                    b.Property<DateOnly>("datetime")
+                    b.Property<DateTime>("datetime")
                         .HasColumnType("date");
 
                     b.Property<decimal?>("debit")
@@ -133,17 +116,6 @@ namespace AccountingSystem.Migrations
                     b.HasIndex("AccNameId");
 
                     b.ToTable("Journal");
-                });
-
-            modelBuilder.Entity("AccountingSystem.Data.ChartofAccs", b =>
-                {
-                    b.HasOne("AccountingSystem.Data.Journal_Entry", "group")
-                        .WithMany()
-                        .HasForeignKey("id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("group");
                 });
 
             modelBuilder.Entity("AccountingSystem.Data.Journal_Entry", b =>
