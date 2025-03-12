@@ -43,7 +43,7 @@
                     <tr class="border-bottom">
                         @if (firstRow)
                         {
-                            <td rowspan="@group.Count()">@jlist.datetime</td>
+                            <td rowspan="@group.Count()">@jlist.datetime.Date</td>
                             <td rowspan="@group.Count()">@group.Key</td>
                             
                             firstRow = false;

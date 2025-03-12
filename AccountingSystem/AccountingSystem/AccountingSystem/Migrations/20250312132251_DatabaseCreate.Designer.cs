@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250311082432_Journal-Update")]
-    partial class JournalUpdate
+    [Migration("20250312132251_DatabaseCreate")]
+    partial class DatabaseCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -980,3 +980,15 @@ C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\A
 C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Desktop\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json

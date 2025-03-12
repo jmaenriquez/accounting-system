@@ -20,8 +20,8 @@
     <MudGrid>
         <MudContainer>
 
-            <MudDatePicker Label="Date" @bind-DateTime="newEntry.datetime"
-                           DateFormat="MM-dd-yyyy" Required="true" />
+            <MudDatePicker Label="Date" @bind-Date="dateTime"
+            DateFormat="MM-dd-yyyy" Required="true" Clearable ="true" />
 
             <MudTextField Label="Description"
             @bind-Value="newEntry.description"
@@ -117,7 +117,7 @@
 
     public decimal Overall => TotalDebit - TotalCredit;
     private decimal? tempAcc;
-
+    DateTime? dateTime;
     //End of Global Functions
 
 
@@ -155,13 +155,13 @@
             return;
         }
 
-
+        newEntry.datetime = dateTime ?? newEntry.datetime;
         newEntry.debit = newEntry.Type == AccountType.Debit ? tempAcc ?? 0 : 0;
         newEntry.credit = newEntry.Type == AccountType.Credit ? tempAcc ?? 0 : 0;
 
         Entries.Add(new Journal_Entry
             {
-                datetime = newEntry.datetime.Date,
+                datetime = newEntry.datetime,
                 description = newEntry.description,
                 AccName = newEntry.AccName,
                 AccGrp = newEntry.AccGrp,
@@ -199,7 +199,7 @@
                 var journal = new Journal_Entry
                 {
                     TransactId = TransactId,
-                    datetime = entry.datetime.Date,
+                    datetime = entry.datetime,
                     description = entry.description,
                     AccGrpId = entry.AccGrp!.id,
                     AccNameId = entry.AccName!.id,
