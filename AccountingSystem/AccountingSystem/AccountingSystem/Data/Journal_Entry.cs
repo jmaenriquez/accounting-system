@@ -22,6 +22,8 @@ namespace AccountingSystem.Data
 
         public decimal? credit { get; set; } = 0;
 
+        public string enterRemark { get; set; } = string.Empty;
+
         public Guid TransactId { get; set;}
 
 

@@ -73,8 +73,8 @@
                 </td>
                 <td>@trial.AccName?.name</td>
                 <td>@trial.AccGrp?.name</td>
-                <td>@(trial.debit.HasValue ? trial.debit.Value.ToString("N2") : "")</td>
-                <td>@(trial.credit.HasValue ? trial.credit.Value.ToString("N2") : "")</td>
+                <td>@(trial.debit > 0 ? $"{trial.debit:N0}" : "")</td>
+                <td>@(trial.credit > 0 ? $"{trial.credit:N0}" : "")</td>
             </tr>
         }
 
@@ -84,11 +84,22 @@
         <tr>
             <td></td>
             <td></td>
-            <td>Total</td>
+            <td class="fw-bold">Total</td>
             <td>@Overall.ToString("N2")</td>
         </tr>
     </tfoot>
 </table>
+
+<MudItem>
+    @if (Overall == 0)
+    {
+        
+        <MudTextField Label="Remarks"
+                      @bind-Value="enterRemark"
+                      Required="true" MaxLength="200" />
+    })
+
+</MudItem>
 
 <div>
     <div class="justify-content-lg-end d-flex m-5">
@@ -105,6 +116,9 @@
 @code {
 
     //Global Functions for the Journal Entry and Trial Balance
+
+    public string enterRemark { get; set; }
+
 
     MudForm? form = new MudForm();
 
@@ -137,8 +151,6 @@
         Entries.Remove(trial);
         StateHasChanged();
     }
-
-
 
     //This section is for saving the Trial Balance
     List<Journal_Entry> Entries = new List<Journal_Entry>();
@@ -204,7 +216,8 @@
                     AccGrpId = entry.AccGrp!.id,
                     AccNameId = entry.AccName!.id,
                     debit = entry.debit,
-                    credit = entry.credit
+                    credit = entry.credit,
+                    
                 };
 
                 Console.WriteLine(journal.datetime);

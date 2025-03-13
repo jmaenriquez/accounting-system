@@ -22,44 +22,50 @@
         </div>
     </div>
 
-    <table class="mt-3 table table-borderless table-sm">
-        <thead class="table-info ">
-            <tr>
-                <th>Date</th>
-                <th>Journal Code</th>
-                <th>Description</th>
-                <th>Account Name</th>
-                <th>Debit</th>
-                <th>Credit</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var group in Entries.GroupBy(j => j.TransactId))
-            {
-                bool firstRow = true; // Track first row to merge date column
-                foreach (var jlist in group)
+    <div id="Tables" class="mt-2">
+        <table class="mt-3 table table-borderless table-sm">
+            <thead class="table-info ">
+                <tr>
+                    <th>Date</th>
+                    <th>Journal Code</th>
+                    <th>Description</th>
+                    <th>Account Name</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                    <th>Comments</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var group in Entries.GroupBy(j => j.TransactId))
                 {
-                    <tr class="border-bottom">
-                        @if (firstRow)
-                        {
-                            <td rowspan="@group.Count()">@jlist.datetime.Date</td>
-                            <td rowspan="@group.Count()">@group.Key</td>
-                            
-                            firstRow = false;
-                        }
-                        <td>@(jlist.description)</td>
-                        <td>@(jlist.debit > 0 ? jlist.AccName!.name : " " + jlist.AccName!.name )</td>
-                        <td>@(jlist.debit > 0 ? $"{jlist.debit:N0}" : "")</td>
-                        <td>@(jlist.credit > 0 ? $"{jlist.credit:N0}" : "")</td>
-                        <td>Actions</td>
-                        
-                    </tr>
-                }
-            }
+                    bool firstRow = true;
+                    foreach (var jlist in group)
+                    {
+                        <tr class="border-bottom">
+                            @if (firstRow)
+                            {
+                                <td rowspan="@group.Count()">@jlist.datetime.ToString("MM-dd-yyyy")</td>
+                                <td rowspan="@group.Count()">@group.Key</td>
 
-        </tbody>
-    </table>
+                                firstRow = false;
+                            }
+                            <td>@(jlist.description)</td>
+                            <td>@(jlist.debit > 0 ? jlist.AccName!.name : " " + jlist.AccName!.name)</td>
+                            <td>@(jlist.debit > 0 ? $"{jlist.debit:N0}" : "")</td>
+                            <td>@(jlist.credit > 0 ? $"{jlist.credit:N0}" : "")</td>
+                            <td><i>@jlist.enterRemark</i></td>
+                            <td>Actions</td>
+                        </tr>
+                    }
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+    
 </div>
 
 @code {

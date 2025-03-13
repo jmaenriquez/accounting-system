@@ -37,20 +37,32 @@
                     </NavLink>
                 </div>
                 <div class="nav-item">
-                    <NavLink class="nav-link" href="coa">
+                    <a class="nav-link" @onclick = "Chart">
                         <span class="bi chart-icon me-2" aria-hidden="true"></span> Chart of Accounts
-                    </NavLink>
+                    </a>
                 </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="transact">
-                        <span class="bi transact-icon me-2" aria-hidden="true"></span> Transactions
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href=" ">
-                        <span class="bi payroll-icon me-2" aria-hidden="true"></span> Payroll
-                    </NavLink>
-                </div>
+
+                @if (isCoaOpen)
+                {
+                    <div class="ps-5">
+                        <div class="nav-item">
+                            <NavLink class="nav-link" href="acclist">
+                                <span class="bi account-icon me-2" aria-hidden="true"></span> Accounts
+                            </NavLink>
+                        </div>
+
+                        <div class="nav-item">
+                            <NavLink class="nav-link" href="accgrp">
+                                <span class="bi group-icon me-2" aria-hidden="true"></span> Groups
+                            </NavLink>
+                        </div>
+                    </div>
+                }
+                @* <div class="nav-item"> *@
+                @*     <NavLink class="nav-link" href=" "> *@
+                @*         <span class="bi payroll-icon me-2" aria-hidden="true"></span> Payroll *@
+                @*     </NavLink> *@
+                @* </div> *@
                 <div class="nav-item">
                     <NavLink class="nav-link" href="reports">
                         <span class="bi report-icon me-2" aria-hidden="true"></span> Reports
@@ -58,21 +70,11 @@
                 </div>
 
 
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="acclist">
-                        <span class="bi account-icon me-2" aria-hidden="true"></span> Accounts
-                    </NavLink>
-                </div>
-
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="accgrp">
-                        <span class="bi group-icon me-2" aria-hidden="true"></span> Groups
-                    </NavLink>
-                </div>
+                
 
             </div>
-        }
-
+        
+         }
     </nav>
 
 </div>
@@ -85,10 +87,16 @@
 
     //Dropdown Toggle
     private bool isAccountingOpen = false;
+    private bool isCoaOpen = false;
 
     void ToggleAccounting()
     {
         isAccountingOpen = !isAccountingOpen;
+    }
+
+    void Chart()
+    {
+        isCoaOpen = !isCoaOpen;
     }
 
 

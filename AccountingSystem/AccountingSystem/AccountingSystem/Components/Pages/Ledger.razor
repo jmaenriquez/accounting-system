@@ -19,64 +19,50 @@
 
 	<div>
 		<div class="container">
-			@foreach(var ledger in Entries.GroupBy(l => l.AccName!.name))
-			{
-				@foreach (var data in Entries)
-				{
-					<h5>@data.AccName!.name</h5>
-					<table class="mt-3 table table-borderless table-sm">
-						<thead class="table-info">
-							<tr>
-								<td>Date</td>
-								<td>Account Name</td>
-								<td>Description</td>
-								<td>Sum of Debit</td>
-								<td>Sum of Credit</td>
-							</tr>
-						</thead>
+			@foreach(var ledgerGroup in Entries.GroupBy(l => l.AccName!.name))
+{
+    <h5>@ledgerGroup.Key</h5>
+    <table class="mt-3 table table-borderless table-sm">
+        <thead class="table-info">
+            <tr>
+                <td>Date</td>
+                <td>Account Name</td>
+                <td>Description</td>
+                <td>Sum of Debit</td>
+                <td>Sum of Credit</td>
+                <td>Sum of Balance</td>
+            </tr>
+        </thead>
 
-						<tbody>
-							<tr>
-								<td>@data.datetime</td>
-								<td>@data.AccName!.name</td>
-								<td>@data.description</td>
-								<td>@data.debit</td>
-								<td>@data.credit</td>
-							</tr>
-						</tbody>
-					</table>
+        <tbody>
+            @foreach (var data in ledgerGroup)
+            {
+                <tr>
+                    <td>@data.datetime.ToString("MM-dd-yyyy")</td>
+                    <td>@data.AccName!.name</td>
+                    <td>@data.description</td>
+                    <td>@(data.debit > 0 ? $"{data.debit}" : "" )</td>
+                    <td>@(data.credit > 0 ? $"{data.credit}" : "")</td>
+                    <td>@(data.debit > 0 ? $"{data.debit}" : data.credit > 0 ? $"{data.credit}" : "")</td>
+
+                </tr>
+            }
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td class="fw-bold">Grand Total</td>
+                <td></td>
+                <td></td>
+                <td>@ledgerGroup.Sum(l => l.debit ?? 0).ToString("N2")</td>
+                <td>@ledgerGroup.Sum(l => l.credit ?? 0).ToString("N2")</td>
+                 <td>@ledgerGroup.Sum(total => (total.debit ?? 0) - (total.credit ?? 0)).ToString("N2")</td>
+            </tr>
+        </tfoot>
+    </table>
 				}
 			}
-			
-            <div class="container">
-                @foreach (var ledgerGroup in Entries.GroupBy(l => l.AccName))
-                {
-                    <h5>@ledgerGroup.Key</h5>
-                    <table class="mt-3 table table-borderless table-sm">
-                        <thead class="table-info">
-                            <tr>
-                                <td>Date</td>
-                                <td>Account Name</td>
-                                <td>Description</td>
-                                <td>Sum of Debit</td>
-                                <td>Sum of Credit</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var data in ledgerGroup)
-                            {
-                                <tr>
-                                    <td>@data.datetime</td>
-                                    <td>@data.AccName!.name</td>
-                                    <td>@data.description</td>
-                                    <td>@data.debit</td>
-                                    <td>@data.credit</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                }
-            </div>
+
 		</div>
 	</div>
 </div>

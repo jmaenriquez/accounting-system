@@ -870,7 +870,6 @@ C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSyst
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Journal.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Ledger.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Reports.razor.rz.scp.css
-C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Transact.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\bundle\AccountingSystem.styles.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\projectbundle\AccountingSystem.bundle.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\staticwebassets.build.json

@@ -109,6 +109,10 @@ namespace AccountingSystem.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("remarks")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("id");
 
                     b.HasIndex("AccGrpId");
