@@ -1,81 +1,51 @@
-﻿
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable navbar shadow-lg" onclick="document.querySelector('.navbar-toggler').click()">
-    <div class="container-fluid">
-        <a class="navbar-brand" href=""><img class="logo" src="/Metalong.png" alt="Metaverse Logo" /></a>
-    </div>
-    <nav class="flex-column">
-
-        <!-- Dropdown Toggle (No Background) -->
-        <div class="nav-item px-3">
-            <a href="#" class="nav-link d-flex align-items-center" @onclick="ToggleAccounting">
-                <span class="bi bi-house-door-fill-nav-menu me-2" aria-hidden="true"></span> Accounting
-            </a>
-        </div>
-
-        <!-- Collapsible Section -->
-        @if (isAccountingOpen)
-        {
-            <div class="ps-4">
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="journal">
-                        <span class="bi journal-icon me-2" aria-hidden="true"></span> Journal Entries
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="ledger">
-                        <span class="bi ledger-icon me-2" aria-hidden="true"></span> General Ledger
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="balance">
-                        <span class="bi balance-icon me-2" aria-hidden="true"></span> Trial Balance
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="coa">
-                        <span class="bi chart-icon me-2" aria-hidden="true"></span> Chart of Accounts
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="transact">
-                        <span class="bi transact-icon me-2" aria-hidden="true"></span> Transactions
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href=" ">
-                        <span class="bi payroll-icon me-2" aria-hidden="true"></span> Payroll
-                    </NavLink>
-                </div>
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="reports">
-                        <span class="bi report-icon me-2" aria-hidden="true"></span> Reports
-                    </NavLink>
-                </div>
-
-
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="acclist">
-                        <span class="bi account-icon me-2" aria-hidden="true"></span> Accounts
-                    </NavLink>
-                </div>
-
-                <div class="nav-item">
-                    <NavLink class="nav-link" href="accgrp">
-                        <span class="bi group-icon me-2" aria-hidden="true"></span> Groups
-                    </NavLink>
-                </div>
-
+﻿<MudContainer Style="margin:0px;padding:0px;width:100%;background-color:#00acc1;height:100%;display:flex;flex-direction:column;overflow-x:hidden;">
+    @if (!isAccountingOpen)
+    {
+        <MudLink Href="/" Class="d-flex align-items-center justify-content-center" Style="padding:10px;">
+            <div style="width:fit-content;width:100%;max-width:90%;background:rgba(255,255,255,0.3);padding: 0px 10px; border-radius:5px;">
+                <MudImage Src="Metalong.png" Style="width:100%;" />
             </div>
-        }
+        </MudLink>
+    }
+    else
+    {
+        <MudLink Href="/" Class="d-flex align-items-center justify-content-center" Style="padding:10px;">
+            <div style="max-height:196px;background:rgba(255,255,255,0.3);padding: 0px; border-radius:5px;">
+                <MudImage Src="favico.png" Style="max-height:196px;" />
+            </div>
+        </MudLink>
+    }
 
-    </nav>
+    <MudNavMenu Style="width:100%;background-color:#00acc1;height:100%;flex:1;color:white;">
 
-</div>
+        <MudNavGroup Title="Accounting" Icon="@Icons.Material.Filled.MenuBook" Style="color:white;" IconColor="Color.Inherit">
+            <MudNavLink Href="/journal" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Addchart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Journal</MudNavLink>
+            <MudNavLink Href="/ledger" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AutoStories" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Ledger</MudNavLink>
+            <MudNavLink Href="/balance" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Balance" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Balance</MudNavLink>
+
+            <MudNavGroup Title="Chart of Accounts" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">
+                <MudNavLink Href="/acclist" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account List</MudNavLink>
+                <MudNavLink Href="/accgrp" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account Group</MudNavLink>
+            </MudNavGroup>
+
+            <MudNavLink Href="/report" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.ImportContacts" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>
+        </MudNavGroup>
+    </MudNavMenu>
+</MudContainer>
+
+<style>
+    .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+        color: white !important;
+    }
+
+    mud-navmenu {
+        color: white;
+    }
+
+    .mud-nav-link:hover {
+        color: #dddddd;
+    }
+</style>
 
 @code {
     private bool isAccountingOpen = false;
@@ -84,4 +54,7 @@
     {
         isAccountingOpen = !isAccountingOpen;
     }
+
+    [Parameter]
+    public bool IsOpen { get; set; }
 }
