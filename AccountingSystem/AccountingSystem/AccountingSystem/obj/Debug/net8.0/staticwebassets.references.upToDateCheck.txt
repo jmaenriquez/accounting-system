@@ -1043,3 +1043,5 @@ C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSyst
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json

@@ -11,10 +11,9 @@
 <h3>Add Records</h3>
 
 
-@* <EditForm Model = "@newEntry" OnValidSubmit="Save"> *@
+<MudOverlay>
 
-
-@* </EditForm> *@
+</MudOverlay>
 
 <MudForm Model="@newEntry" Class = "mt-5">
     <MudGrid>
@@ -97,7 +96,7 @@
         <MudTextField Label="Remarks"
                       @bind-Value="enterRemark"
                       Required="true" MaxLength="200" />
-    })
+    }
 
 </MudItem>
 

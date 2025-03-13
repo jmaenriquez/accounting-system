@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Gky+mzloB9joIgRJftjC2SIC75RVazv/4hk9rg9fx8o=",
+  "Hash": "uXokp588RKUE+xeCXeOZzIOYOB2b5zvK6obiiHMBO9E=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -134,8 +134,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "z5ouqtpr4a",
-      "Integrity": "1xNqHcJBcTlQGeEyoBgKV29QlukcWsC/Fs/hpPOqMJA=",
+      "Fingerprint": "zhy1b3mwp6",
+      "Integrity": "55tvkTPs6H4phhtlYJjlMp9C+BK3FyW6pqYIL/lsTV8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.pdb"
@@ -155,8 +155,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "z2rhvu2ifx",
-      "Integrity": "pQVYNg11+UTRz6a9rHl32GR9BVCBn+NTFw8XsCu4bJw=",
+      "Fingerprint": "qrtyubhrpj",
+      "Integrity": "NoVkNXdNKb9x4RtMuvWh0JLecwWHBeo1QuEgkNQDnZo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.wasm"
@@ -176,8 +176,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "kdmna91qmr",
-      "Integrity": "+JBL5xWGf4j7+AAc82TfE5++54vPWkWkBmi2nus+1jk=",
+      "Fingerprint": "75kric4wqt",
+      "Integrity": "u+ASPmcoP7E/zytfc0mWtB6NhgIE28UNyhAkoJ+HHyg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -449,8 +449,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "e6k7xfdaau",
-      "Integrity": "5g43DpXoq/EPjBshtY1gY6UFB4miwSSM1QvlGgCfcIc=",
+      "Fingerprint": "rjv86n1vnh",
+      "Integrity": "t6MIg/H8TR8b0Ph4sa9zNbaP//7O4QW5dU60rtK/80k=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
@@ -470,8 +470,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tnan68zf6t",
-      "Integrity": "R5ShsomE/7mvlWgU4EsJZxNTTUpEIMcgRRXDpG1QwiM=",
+      "Fingerprint": "fehcz0phpj",
+      "Integrity": "F7Y5eAa+U4kkNMW0u6Qo4sp9JuwcL0fZXIMzgi/54x4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
@@ -491,8 +491,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "40gf29hf51",
-      "Integrity": "xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w=",
+      "Fingerprint": "xby11c49lh",
+      "Integrity": "DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.js"
@@ -512,8 +512,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "2ga3tor50q",
-      "Integrity": "XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0=",
+      "Fingerprint": "o87b29klf7",
+      "Integrity": "mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
@@ -533,8 +533,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "native",
-      "Fingerprint": "jh681y48v9",
-      "Integrity": "13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0=",
+      "Fingerprint": "91rxfhehz3",
+      "Integrity": "44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js"
@@ -554,8 +554,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "09mjsiceu8",
-      "Integrity": "nKR67pWc+P6b5hmPwVmQQ0dVCQ6s4aonUoLxlCOcZVw=",
+      "Fingerprint": "f0wmdzjb9o",
+      "Integrity": "cSt6BoD3oAqHUXj86Jz1/IqRHdwCEisDpiIRp99iAAo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
@@ -6588,7 +6588,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\1uqz9prcrr-itrvy704bc.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-z2rhvu2ifx.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-qrtyubhrpj.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -6602,11 +6602,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ocyhnec6ce",
-      "Integrity": "KHf9oIhkbPFYdeyGfnsDqsjmupaxgyQHU+HFENie9P4=",
+      "Fingerprint": "7awawl6m4q",
+      "Integrity": "7zUbfn3fJZZo4J9aBSf+ha/DTqiYCH7XItRDBZsI7A4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-z2rhvu2ifx.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-qrtyubhrpj.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\21p1m8rdcf-73vu9r2x77.gz",
@@ -7806,7 +7806,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\85bk7xsx9v-icotprrmdv.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-09mjsiceu8.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-f0wmdzjb9o.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7820,11 +7820,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "sab2ibn4ol",
-      "Integrity": "tHODiv5qvYFMd5omsp8XqTWj3Tz7x1YkbnvVOWbq4h8=",
+      "Fingerprint": "wqhjkd31iv",
+      "Integrity": "mDgiZ2hfsfhEqEEKS04gAwKHjxv1+3s0Q9KUuao9rX4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-09mjsiceu8.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-f0wmdzjb9o.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\90txzze7k9-mf2cowjhoa.gz",
@@ -8394,7 +8394,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhlenoiesf-3d5s8ng6rd.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-jh681y48v9.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-91rxfhehz3.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -8408,11 +8408,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "be7qcruna7",
-      "Integrity": "DeD4pDZGgUmAQjwbJ7qSZ7o7lEMt0AHy7Y3TfA11UcU=",
+      "Fingerprint": "lz24f0e6e7",
+      "Integrity": "30hq+q6k0SzlyO3ZzvgrQawSEPz/RfDirAX1GHwCy5g=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-jh681y48v9.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-91rxfhehz3.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bjbhdl03dl-5fp0oljzi0.gz",
@@ -9990,7 +9990,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl6jpgplod-ssczgd3kkf.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-e6k7xfdaau.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-rjv86n1vnh.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -10004,11 +10004,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vfoxbwlyc5",
-      "Integrity": "+zSHDc/tULx9VraIqJSlVO/j1NSsbOKRBBprjCNAM4s=",
+      "Fingerprint": "1gkzg9qm3p",
+      "Integrity": "v7k0skQqlnC0Otp+mnFZyJF0sZ2RU5B+EKOQxNvrcV8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-e6k7xfdaau.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-rjv86n1vnh.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kpdgqjee9p-10m8bvi7w0.gz",
@@ -10263,7 +10263,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\luh40w7jcf-vceumzhqml.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-40gf29hf51.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-xby11c49lh.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -10277,11 +10277,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "atk8cwtzfs",
-      "Integrity": "XrdkmnEnLzQvCohlgYjpMbqym4NGdVcYPVReFEMq6ME=",
+      "Fingerprint": "7579ww42z6",
+      "Integrity": "a+wSZu8HlN5ENd2Mdrm/2yLQSQFWRKxgKdvTU1zIgQ0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-40gf29hf51.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-xby11c49lh.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\m19gaszrg4-vs71t1wjr3.gz",
@@ -10494,7 +10494,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\mq2gxwiuno-6ezvdcd7vr.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-2ga3tor50q.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-o87b29klf7.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -10508,11 +10508,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "re9m6bdq1e",
-      "Integrity": "I/v9nDdJVQYWAh3uQl0yeimoa9QYrL9Ek11Q0reoXd8=",
+      "Fingerprint": "ls9vxzokxp",
+      "Integrity": "qw+stNSD8rXd+UE+0ExyCFMI0GoaNeoY2wusqYcBIPw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-2ga3tor50q.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-o87b29klf7.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\n0psax2a11-oqup3v7t3k.gz",
@@ -11376,7 +11376,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sounnm5m0u-q7dusk3ciy.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-z5ouqtpr4a.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-zhy1b3mwp6.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -11390,11 +11390,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3pvml2tb7n",
-      "Integrity": "91ZEiqmou6g+hhYoGqlhcc71BZppM0F18KRhcoJX0Iw=",
+      "Fingerprint": "o3mo7h8ha5",
+      "Integrity": "5JACQSuOmVYBwKSh4wgrqJN37sOspx6X8b74MdVGrVQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-z5ouqtpr4a.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-zhy1b3mwp6.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sv1kij4a7o-e1cup4w8dy.gz",
@@ -12237,7 +12237,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xir9tj7y7l-xhtdgvk1iw.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-kdmna91qmr.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-75kric4wqt.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -12251,11 +12251,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fcaivab6up",
-      "Integrity": "3xvvK2Z5twoJpl1ukCpRFY8MPfjlrTRw9OpjcSDz8xg=",
+      "Fingerprint": "qew3iaj1d5",
+      "Integrity": "0vCHMXWA8yxLxE4SD2wuZ2vMOaKo6qpczPTHe/ZfIxw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-kdmna91qmr.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-75kric4wqt.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xo8fadjtpu-j0owt1qd8i.gz",
@@ -12447,7 +12447,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ygvm4sugcj-tjcz0u77k5.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-tnan68zf6t.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-fehcz0phpj.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -12461,11 +12461,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "w0u1vrifw1",
-      "Integrity": "wAZs6OepbZ63yIFY2dWMG6NCUJZIafd99FZkK5Md9no=",
+      "Fingerprint": "m4hwfu4yw3",
+      "Integrity": "toUjyyLxfghHcpxelhDqACuSjGgJF3zijGwF8+hySds=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-tnan68zf6t.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-fehcz0phpj.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\yxbegxv9ow-g9n8inf49e.gz",
@@ -12734,8 +12734,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "y1s33gef9e",
-      "Integrity": "xnOTfRLe50sTfmBCJLXURrKjHHb7lTZKg5siSoBoEU0=",
+      "Fingerprint": "gcnkpq31jh",
+      "Integrity": "MISmx/US8AIoRIzEEyFUh47yP65aj6NYuPBaTfI4+00=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12755,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "1vkzjzoe5a",
-      "Integrity": "XbPiHyqK8o8LpG0wu2HXCeh2c33xyWhwbaKu932b3zA=",
+      "Fingerprint": "xewfjociy1",
+      "Integrity": "2eS8Gct0gw4SgVfkEz4WQZ3lPmBCcQkq4S/1LiOFWEg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -13150,28 +13150,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1xNqHcJBcTlQGeEyoBgKV29QlukcWsC/Fs/hpPOqMJA=\""
+          "Value": "\"55tvkTPs6H4phhtlYJjlMp9C+BK3FyW6pqYIL/lsTV8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:34:15 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:19 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1xNqHcJBcTlQGeEyoBgKV29QlukcWsC/Fs/hpPOqMJA="
+          "Value": "sha256-55tvkTPs6H4phhtlYJjlMp9C+BK3FyW6pqYIL/lsTV8="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.pdb",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-z5ouqtpr4a.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-zhy1b3mwp6.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000099970009"
+          "Quality": "0.000100050025"
         }
       ],
       "ResponseHeaders": [
@@ -13189,15 +13189,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10002"
+          "Value": "9994"
         },
         {
           "Name": "ETag",
-          "Value": "\"91ZEiqmou6g+hhYoGqlhcc71BZppM0F18KRhcoJX0Iw=\""
+          "Value": "\"5JACQSuOmVYBwKSh4wgrqJN37sOspx6X8b74MdVGrVQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13209,19 +13209,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"1xNqHcJBcTlQGeEyoBgKV29QlukcWsC/Fs/hpPOqMJA=\""
+          "Value": "W/\"55tvkTPs6H4phhtlYJjlMp9C+BK3FyW6pqYIL/lsTV8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1xNqHcJBcTlQGeEyoBgKV29QlukcWsC/Fs/hpPOqMJA="
+          "Value": "sha256-55tvkTPs6H4phhtlYJjlMp9C+BK3FyW6pqYIL/lsTV8="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-z5ouqtpr4a.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-zhy1b3mwp6.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13238,7 +13238,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10002"
+          "Value": "9994"
         },
         {
           "Name": "Content-Type",
@@ -13246,11 +13246,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"91ZEiqmou6g+hhYoGqlhcc71BZppM0F18KRhcoJX0Iw=\""
+          "Value": "\"5JACQSuOmVYBwKSh4wgrqJN37sOspx6X8b74MdVGrVQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13260,7 +13260,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-91ZEiqmou6g+hhYoGqlhcc71BZppM0F18KRhcoJX0Iw="
+          "Value": "sha256-5JACQSuOmVYBwKSh4wgrqJN37sOspx6X8b74MdVGrVQ="
         }
       ]
     },
@@ -13287,28 +13287,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pQVYNg11+UTRz6a9rHl32GR9BVCBn+NTFw8XsCu4bJw=\""
+          "Value": "\"NoVkNXdNKb9x4RtMuvWh0JLecwWHBeo1QuEgkNQDnZo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:19 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pQVYNg11+UTRz6a9rHl32GR9BVCBn+NTFw8XsCu4bJw="
+          "Value": "sha256-NoVkNXdNKb9x4RtMuvWh0JLecwWHBeo1QuEgkNQDnZo="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.wasm",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-z2rhvu2ifx.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-qrtyubhrpj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000269614451"
+          "Quality": "0.000269687163"
         }
       ],
       "ResponseHeaders": [
@@ -13326,15 +13326,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3708"
+          "Value": "3707"
         },
         {
           "Name": "ETag",
-          "Value": "\"KHf9oIhkbPFYdeyGfnsDqsjmupaxgyQHU+HFENie9P4=\""
+          "Value": "\"7zUbfn3fJZZo4J9aBSf+ha/DTqiYCH7XItRDBZsI7A4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13346,19 +13346,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"pQVYNg11+UTRz6a9rHl32GR9BVCBn+NTFw8XsCu4bJw=\""
+          "Value": "W/\"NoVkNXdNKb9x4RtMuvWh0JLecwWHBeo1QuEgkNQDnZo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pQVYNg11+UTRz6a9rHl32GR9BVCBn+NTFw8XsCu4bJw="
+          "Value": "sha256-NoVkNXdNKb9x4RtMuvWh0JLecwWHBeo1QuEgkNQDnZo="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-z2rhvu2ifx.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-qrtyubhrpj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13375,7 +13375,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3708"
+          "Value": "3707"
         },
         {
           "Name": "Content-Type",
@@ -13383,11 +13383,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KHf9oIhkbPFYdeyGfnsDqsjmupaxgyQHU+HFENie9P4=\""
+          "Value": "\"7zUbfn3fJZZo4J9aBSf+ha/DTqiYCH7XItRDBZsI7A4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13397,7 +13397,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KHf9oIhkbPFYdeyGfnsDqsjmupaxgyQHU+HFENie9P4="
+          "Value": "sha256-7zUbfn3fJZZo4J9aBSf+ha/DTqiYCH7XItRDBZsI7A4="
         }
       ]
     },
@@ -13424,23 +13424,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+JBL5xWGf4j7+AAc82TfE5++54vPWkWkBmi2nus+1jk=\""
+          "Value": "\"u+ASPmcoP7E/zytfc0mWtB6NhgIE28UNyhAkoJ+HHyg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:34:16 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:20 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+JBL5xWGf4j7+AAc82TfE5++54vPWkWkBmi2nus+1jk="
+          "Value": "sha256-u+ASPmcoP7E/zytfc0mWtB6NhgIE28UNyhAkoJ+HHyg="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-kdmna91qmr.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-75kric4wqt.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -13467,11 +13467,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3xvvK2Z5twoJpl1ukCpRFY8MPfjlrTRw9OpjcSDz8xg=\""
+          "Value": "\"0vCHMXWA8yxLxE4SD2wuZ2vMOaKo6qpczPTHe/ZfIxw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13483,19 +13483,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+JBL5xWGf4j7+AAc82TfE5++54vPWkWkBmi2nus+1jk=\""
+          "Value": "W/\"u+ASPmcoP7E/zytfc0mWtB6NhgIE28UNyhAkoJ+HHyg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+JBL5xWGf4j7+AAc82TfE5++54vPWkWkBmi2nus+1jk="
+          "Value": "sha256-u+ASPmcoP7E/zytfc0mWtB6NhgIE28UNyhAkoJ+HHyg="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-kdmna91qmr.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-75kric4wqt.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13520,11 +13520,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3xvvK2Z5twoJpl1ukCpRFY8MPfjlrTRw9OpjcSDz8xg=\""
+          "Value": "\"0vCHMXWA8yxLxE4SD2wuZ2vMOaKo6qpczPTHe/ZfIxw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 00:26:03 GMT"
+          "Value": "Thu, 13 Mar 2025 08:17:09 GMT"
         },
         {
           "Name": "Vary",
@@ -13534,7 +13534,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3xvvK2Z5twoJpl1ukCpRFY8MPfjlrTRw9OpjcSDz8xg="
+          "Value": "sha256-0vCHMXWA8yxLxE4SD2wuZ2vMOaKo6qpczPTHe/ZfIxw="
         }
       ]
     },
@@ -15205,28 +15205,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5g43DpXoq/EPjBshtY1gY6UFB4miwSSM1QvlGgCfcIc=\""
+          "Value": "\"t6MIg/H8TR8b0Ph4sa9zNbaP//7O4QW5dU60rtK/80k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:16 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:10 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5g43DpXoq/EPjBshtY1gY6UFB4miwSSM1QvlGgCfcIc="
+          "Value": "sha256-t6MIg/H8TR8b0Ph4sa9zNbaP//7O4QW5dU60rtK/80k="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.js",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-e6k7xfdaau.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-rjv86n1vnh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000087389671"
+          "Quality": "0.000087366766"
         }
       ],
       "ResponseHeaders": [
@@ -15244,11 +15244,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11442"
+          "Value": "11445"
         },
         {
           "Name": "ETag",
-          "Value": "\"+zSHDc/tULx9VraIqJSlVO/j1NSsbOKRBBprjCNAM4s=\""
+          "Value": "\"v7k0skQqlnC0Otp+mnFZyJF0sZ2RU5B+EKOQxNvrcV8=\""
         },
         {
           "Name": "Last-Modified",
@@ -15264,19 +15264,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"5g43DpXoq/EPjBshtY1gY6UFB4miwSSM1QvlGgCfcIc=\""
+          "Value": "W/\"t6MIg/H8TR8b0Ph4sa9zNbaP//7O4QW5dU60rtK/80k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5g43DpXoq/EPjBshtY1gY6UFB4miwSSM1QvlGgCfcIc="
+          "Value": "sha256-t6MIg/H8TR8b0Ph4sa9zNbaP//7O4QW5dU60rtK/80k="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.js.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-e6k7xfdaau.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\kl7l7kt9xd-rjv86n1vnh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15293,7 +15293,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11442"
+          "Value": "11445"
         },
         {
           "Name": "Content-Type",
@@ -15301,7 +15301,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+zSHDc/tULx9VraIqJSlVO/j1NSsbOKRBBprjCNAM4s=\""
+          "Value": "\"v7k0skQqlnC0Otp+mnFZyJF0sZ2RU5B+EKOQxNvrcV8=\""
         },
         {
           "Name": "Last-Modified",
@@ -15315,7 +15315,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+zSHDc/tULx9VraIqJSlVO/j1NSsbOKRBBprjCNAM4s="
+          "Value": "sha256-v7k0skQqlnC0Otp+mnFZyJF0sZ2RU5B+EKOQxNvrcV8="
         }
       ]
     },
@@ -15342,23 +15342,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"R5ShsomE/7mvlWgU4EsJZxNTTUpEIMcgRRXDpG1QwiM=\""
+          "Value": "\"F7Y5eAa+U4kkNMW0u6Qo4sp9JuwcL0fZXIMzgi/54x4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:16 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:10 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-R5ShsomE/7mvlWgU4EsJZxNTTUpEIMcgRRXDpG1QwiM="
+          "Value": "sha256-F7Y5eAa+U4kkNMW0u6Qo4sp9JuwcL0fZXIMzgi/54x4="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.js.map",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-tnan68zf6t.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-fehcz0phpj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -15385,7 +15385,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wAZs6OepbZ63yIFY2dWMG6NCUJZIafd99FZkK5Md9no=\""
+          "Value": "\"toUjyyLxfghHcpxelhDqACuSjGgJF3zijGwF8+hySds=\""
         },
         {
           "Name": "Last-Modified",
@@ -15401,19 +15401,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"R5ShsomE/7mvlWgU4EsJZxNTTUpEIMcgRRXDpG1QwiM=\""
+          "Value": "W/\"F7Y5eAa+U4kkNMW0u6Qo4sp9JuwcL0fZXIMzgi/54x4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-R5ShsomE/7mvlWgU4EsJZxNTTUpEIMcgRRXDpG1QwiM="
+          "Value": "sha256-F7Y5eAa+U4kkNMW0u6Qo4sp9JuwcL0fZXIMzgi/54x4="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.js.map.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-tnan68zf6t.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ylak63tsw7-fehcz0phpj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15438,7 +15438,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wAZs6OepbZ63yIFY2dWMG6NCUJZIafd99FZkK5Md9no=\""
+          "Value": "\"toUjyyLxfghHcpxelhDqACuSjGgJF3zijGwF8+hySds=\""
         },
         {
           "Name": "Last-Modified",
@@ -15452,7 +15452,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wAZs6OepbZ63yIFY2dWMG6NCUJZIafd99FZkK5Md9no="
+          "Value": "sha256-toUjyyLxfghHcpxelhDqACuSjGgJF3zijGwF8+hySds="
         }
       ]
     },
@@ -15479,28 +15479,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w=\""
+          "Value": "\"DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:48 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
+          "Value": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.js",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-40gf29hf51.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-xby11c49lh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000027656397"
+          "Quality": "0.000027654867"
         }
       ],
       "ResponseHeaders": [
@@ -15518,11 +15518,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36157"
+          "Value": "36159"
         },
         {
           "Name": "ETag",
-          "Value": "\"XrdkmnEnLzQvCohlgYjpMbqym4NGdVcYPVReFEMq6ME=\""
+          "Value": "\"a+wSZu8HlN5ENd2Mdrm/2yLQSQFWRKxgKdvTU1zIgQ0=\""
         },
         {
           "Name": "Last-Modified",
@@ -15538,19 +15538,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w=\""
+          "Value": "W/\"DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
+          "Value": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.js.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-40gf29hf51.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\lxtd0ose4z-xby11c49lh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15567,7 +15567,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "36157"
+          "Value": "36159"
         },
         {
           "Name": "Content-Type",
@@ -15575,7 +15575,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XrdkmnEnLzQvCohlgYjpMbqym4NGdVcYPVReFEMq6ME=\""
+          "Value": "\"a+wSZu8HlN5ENd2Mdrm/2yLQSQFWRKxgKdvTU1zIgQ0=\""
         },
         {
           "Name": "Last-Modified",
@@ -15589,7 +15589,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XrdkmnEnLzQvCohlgYjpMbqym4NGdVcYPVReFEMq6ME="
+          "Value": "sha256-a+wSZu8HlN5ENd2Mdrm/2yLQSQFWRKxgKdvTU1zIgQ0="
         }
       ]
     },
@@ -15616,28 +15616,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0=\""
+          "Value": "\"mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:48 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:42 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0="
+          "Value": "sha256-mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.wasm",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-2ga3tor50q.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-o87b29klf7.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000000867030"
+          "Quality": "0.000000866979"
         }
       ],
       "ResponseHeaders": [
@@ -15655,11 +15655,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1153361"
+          "Value": "1153430"
         },
         {
           "Name": "ETag",
-          "Value": "\"I/v9nDdJVQYWAh3uQl0yeimoa9QYrL9Ek11Q0reoXd8=\""
+          "Value": "\"qw+stNSD8rXd+UE+0ExyCFMI0GoaNeoY2wusqYcBIPw=\""
         },
         {
           "Name": "Last-Modified",
@@ -15675,19 +15675,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0=\""
+          "Value": "W/\"mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XhsharnkthjahGEiBkFjCLc/87/Tecti9860TIEq0H0="
+          "Value": "sha256-mICh/Z0HwmHNDnkBnBbRTyDkRYBu3OBkhmuy2F7aUSU="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.native.wasm.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-2ga3tor50q.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\ms0rfq5wae-o87b29klf7.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15704,7 +15704,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1153361"
+          "Value": "1153430"
         },
         {
           "Name": "Content-Type",
@@ -15712,7 +15712,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I/v9nDdJVQYWAh3uQl0yeimoa9QYrL9Ek11Q0reoXd8=\""
+          "Value": "\"qw+stNSD8rXd+UE+0ExyCFMI0GoaNeoY2wusqYcBIPw=\""
         },
         {
           "Name": "Last-Modified",
@@ -15726,7 +15726,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I/v9nDdJVQYWAh3uQl0yeimoa9QYrL9Ek11Q0reoXd8="
+          "Value": "sha256-qw+stNSD8rXd+UE+0ExyCFMI0GoaNeoY2wusqYcBIPw="
         }
       ]
     },
@@ -15753,28 +15753,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0=\""
+          "Value": "\"44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:24 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:18 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0="
+          "Value": "sha256-44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.runtime.js",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-jh681y48v9.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-91rxfhehz3.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000015397644"
+          "Quality": "0.000015396459"
         }
       ],
       "ResponseHeaders": [
@@ -15792,11 +15792,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "64944"
+          "Value": "64949"
         },
         {
           "Name": "ETag",
-          "Value": "\"DeD4pDZGgUmAQjwbJ7qSZ7o7lEMt0AHy7Y3TfA11UcU=\""
+          "Value": "\"30hq+q6k0SzlyO3ZzvgrQawSEPz/RfDirAX1GHwCy5g=\""
         },
         {
           "Name": "Last-Modified",
@@ -15812,19 +15812,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0=\""
+          "Value": "W/\"44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-13vqU3hueOALvSTEM8xnJkJj2exVJYtNc1KZelMCDf0="
+          "Value": "sha256-44Vu7OSX4JP89eoc3oTYbYfC5C7USoIWuCw1W9IG6N4="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.runtime.js.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-jh681y48v9.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\bhve0afk7a-91rxfhehz3.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15841,7 +15841,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "64944"
+          "Value": "64949"
         },
         {
           "Name": "Content-Type",
@@ -15849,7 +15849,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DeD4pDZGgUmAQjwbJ7qSZ7o7lEMt0AHy7Y3TfA11UcU=\""
+          "Value": "\"30hq+q6k0SzlyO3ZzvgrQawSEPz/RfDirAX1GHwCy5g=\""
         },
         {
           "Name": "Last-Modified",
@@ -15863,7 +15863,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DeD4pDZGgUmAQjwbJ7qSZ7o7lEMt0AHy7Y3TfA11UcU="
+          "Value": "sha256-30hq+q6k0SzlyO3ZzvgrQawSEPz/RfDirAX1GHwCy5g="
         }
       ]
     },
@@ -15890,28 +15890,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nKR67pWc+P6b5hmPwVmQQ0dVCQ6s4aonUoLxlCOcZVw=\""
+          "Value": "\"cSt6BoD3oAqHUXj86Jz1/IqRHdwCEisDpiIRp99iAAo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:57:24 GMT"
+          "Value": "Wed, 12 Feb 2025 04:43:18 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nKR67pWc+P6b5hmPwVmQQ0dVCQ6s4aonUoLxlCOcZVw="
+          "Value": "sha256-cSt6BoD3oAqHUXj86Jz1/IqRHdwCEisDpiIRp99iAAo="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.runtime.js.map",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-09mjsiceu8.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-f0wmdzjb9o.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000009973073"
+          "Quality": "0.000009973172"
         }
       ],
       "ResponseHeaders": [
@@ -15929,11 +15929,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "100269"
+          "Value": "100268"
         },
         {
           "Name": "ETag",
-          "Value": "\"tHODiv5qvYFMd5omsp8XqTWj3Tz7x1YkbnvVOWbq4h8=\""
+          "Value": "\"mDgiZ2hfsfhEqEEKS04gAwKHjxv1+3s0Q9KUuao9rX4=\""
         },
         {
           "Name": "Last-Modified",
@@ -15949,19 +15949,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"nKR67pWc+P6b5hmPwVmQQ0dVCQ6s4aonUoLxlCOcZVw=\""
+          "Value": "W/\"cSt6BoD3oAqHUXj86Jz1/IqRHdwCEisDpiIRp99iAAo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nKR67pWc+P6b5hmPwVmQQ0dVCQ6s4aonUoLxlCOcZVw="
+          "Value": "sha256-cSt6BoD3oAqHUXj86Jz1/IqRHdwCEisDpiIRp99iAAo="
         }
       ]
     },
     {
       "Route": "_framework/dotnet.runtime.js.map.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-09mjsiceu8.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\8ucegbjme3-f0wmdzjb9o.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15978,7 +15978,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "100269"
+          "Value": "100268"
         },
         {
           "Name": "Content-Type",
@@ -15986,7 +15986,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tHODiv5qvYFMd5omsp8XqTWj3Tz7x1YkbnvVOWbq4h8=\""
+          "Value": "\"mDgiZ2hfsfhEqEEKS04gAwKHjxv1+3s0Q9KUuao9rX4=\""
         },
         {
           "Name": "Last-Modified",
@@ -16000,7 +16000,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tHODiv5qvYFMd5omsp8XqTWj3Tz7x1YkbnvVOWbq4h8="
+          "Value": "sha256-mDgiZ2hfsfhEqEEKS04gAwKHjxv1+3s0Q9KUuao9rX4="
         }
       ]
     },
@@ -16031,7 +16031,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 16 Jan 2025 18:56:52 GMT"
+          "Value": "Wed, 12 Feb 2025 04:42:38 GMT"
         }
       ],
       "EndpointProperties": [
@@ -54091,51 +54091,6 @@
       ]
     },
     {
-      "Route": "AccountingSystem.1vkzjzoe5a.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22466"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XbPiHyqK8o8LpG0wu2HXCeh2c33xyWhwbaKu932b3zA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 02:46:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1vkzjzoe5a"
-        },
-        {
-          "Name": "label",
-          "Value": "AccountingSystem.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-XbPiHyqK8o8LpG0wu2HXCeh2c33xyWhwbaKu932b3zA="
-        }
-      ]
-    },
-    {
       "Route": "AccountingSystem.bundle.scp.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
       "Selectors": [],
@@ -54146,7 +54101,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22466"
+          "Value": "8673"
         },
         {
           "Name": "Content-Type",
@@ -54154,11 +54109,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"XbPiHyqK8o8LpG0wu2HXCeh2c33xyWhwbaKu932b3zA=\""
+          "Value": "\"2eS8Gct0gw4SgVfkEz4WQZ3lPmBCcQkq4S/1LiOFWEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 02:46:55 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54168,7 +54123,56 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-XbPiHyqK8o8LpG0wu2HXCeh2c33xyWhwbaKu932b3zA="
+          "Value": "sha256-2eS8Gct0gw4SgVfkEz4WQZ3lPmBCcQkq4S/1LiOFWEg="
+        }
+      ]
+    },
+    {
+      "Route": "AccountingSystem.gcnkpq31jh.styles.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8741"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MISmx/US8AIoRIzEEyFUh47yP65aj6NYuPBaTfI4+00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 08:21:25 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazored.Modal/Blazored.Modal.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcnkpq31jh"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MISmx/US8AIoRIzEEyFUh47yP65aj6NYuPBaTfI4+00="
+        },
+        {
+          "Name": "label",
+          "Value": "AccountingSystem.styles.css"
         }
       ]
     },
@@ -54187,7 +54191,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22534"
+          "Value": "8741"
         },
         {
           "Name": "Content-Type",
@@ -54195,11 +54199,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xnOTfRLe50sTfmBCJLXURrKjHHb7lTZKg5siSoBoEU0=\""
+          "Value": "\"MISmx/US8AIoRIzEEyFUh47yP65aj6NYuPBaTfI4+00=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 02:46:55 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:25 GMT"
         },
         {
           "Name": "Link",
@@ -54209,13 +54213,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xnOTfRLe50sTfmBCJLXURrKjHHb7lTZKg5siSoBoEU0="
+          "Value": "sha256-MISmx/US8AIoRIzEEyFUh47yP65aj6NYuPBaTfI4+00="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.y1s33gef9e.styles.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
+      "Route": "AccountingSystem.xewfjociy1.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -54223,12 +54227,8 @@
           "Value": "bytes"
         },
         {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
           "Name": "Content-Length",
-          "Value": "22534"
+          "Value": "8673"
         },
         {
           "Name": "Content-Type",
@@ -54236,29 +54236,29 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xnOTfRLe50sTfmBCJLXURrKjHHb7lTZKg5siSoBoEU0=\""
+          "Value": "\"2eS8Gct0gw4SgVfkEz4WQZ3lPmBCcQkq4S/1LiOFWEg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 02:46:55 GMT"
+          "Value": "Thu, 13 Mar 2025 08:21:25 GMT"
         },
         {
-          "Name": "Link",
-          "Value": "<_content/Blazored.Modal/Blazored.Modal.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "y1s33gef9e"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-xnOTfRLe50sTfmBCJLXURrKjHHb7lTZKg5siSoBoEU0="
+          "Value": "xewfjociy1"
         },
         {
           "Name": "label",
-          "Value": "AccountingSystem.styles.css"
+          "Value": "AccountingSystem.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2eS8Gct0gw4SgVfkEz4WQZ3lPmBCcQkq4S/1LiOFWEg="
         }
       ]
     },
