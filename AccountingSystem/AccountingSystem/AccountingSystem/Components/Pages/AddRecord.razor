@@ -89,16 +89,7 @@
     </tfoot>
 </table>
 
-<MudItem>
-    @if (Overall == 0)
-    {
-        
-        <MudTextField Label="Remarks"
-                      @bind-Value="enterRemark"
-                      Required="true" MaxLength="200" />
-    }
 
-</MudItem>
 
 <div>
     <div class="justify-content-lg-end d-flex m-5">
@@ -116,7 +107,6 @@
 
     //Global Functions for the Journal Entry and Trial Balance
 
-    public string enterRemark { get; set; }
 
 
     MudForm? form = new MudForm();
@@ -131,6 +121,7 @@
     public decimal Overall => TotalDebit - TotalCredit;
     private decimal? tempAcc;
     DateTime? dateTime;
+
     //End of Global Functions
 
 

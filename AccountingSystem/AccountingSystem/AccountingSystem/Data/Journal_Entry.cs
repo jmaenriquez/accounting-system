@@ -29,8 +29,8 @@ namespace AccountingSystem.Data
 
         [NotMapped]
         public AccountType Type => AccGrp?.type ?? AccountType.Debit;
-
-
+ 
+        public bool isDeleted { get; set; } = false;
     }
     
 }

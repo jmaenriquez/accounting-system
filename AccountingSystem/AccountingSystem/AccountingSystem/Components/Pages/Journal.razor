@@ -4,6 +4,7 @@
 @inject JournalService jservice
 @inject NavigationManager Navigate
 @inject IModalService Modal
+@inject ISnackbar Snackbar
 
 <PageTitle>Journal Entries</PageTitle>
 
@@ -15,7 +16,7 @@
         <h4 class="m-4">Journal Entries</h4>
 
         <div class="buttons">
-            <input class = "searchbar" type="text" placeholder="Search..." />
+            <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
             @* <button class="btn add" @onclick="ShowModal">Add New Record</button> *@
             <button class="btn add" @onclick="goToAddRec">Add New Record</button>
 
@@ -33,11 +34,11 @@
                     <th>Debit</th>
                     <th>Credit</th>
                     <th>Comments</th>
-                    <th> </th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var group in Entries.GroupBy(j => j.TransactId))
+                @foreach (var group in FilteredEntries.GroupBy(j => j.TransactId))
                 {
                     bool firstRow = true;
                     foreach (var jlist in group)
@@ -47,15 +48,27 @@
                             {
                                 <td rowspan="@group.Count()">@jlist.datetime.ToString("MM-dd-yyyy")</td>
                                 <td rowspan="@group.Count()">@group.Key</td>
-
-                                firstRow = false;
                             }
                             <td>@(jlist.description)</td>
                             <td>@(jlist.debit > 0 ? jlist.AccName!.name : " " + jlist.AccName!.name)</td>
                             <td>@(jlist.debit > 0 ? $"{jlist.debit:N0}" : "")</td>
                             <td>@(jlist.credit > 0 ? $"{jlist.credit:N0}" : "")</td>
-                            <td><i>@jlist.enterRemark</i></td>
-                            <td>Actions</td>
+
+
+                            @if(firstRow)
+                            {
+                                <td rowspan="@group.Count()" class="align-middle">@jlist.enterRemark</td>
+                                <td rowspan="@group.Count()" class="align-middle">
+                                    <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                                        <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(group.Key)" />
+                                    </MudMenu>
+                                </td>
+
+
+                                firstRow = false;
+                            }
+
                         </tr>
                     }
                 }
@@ -65,24 +78,57 @@
             </tbody>
         </table>
     </div>
-    
+
 </div>
 
 @code {
-	private void goToAddRec()
-	{
-		Navigate.NavigateTo("/addrecords");
-	}
+    private void goToAddRec()
+    {
+        Navigate.NavigateTo("/addrecords");
+    }
 
     private void ShowModal()
     {
         Modal.Show<AddRecord>("/addrecords");
     }
 
+    private async Task Delete(Guid transactId)
+    {
+        var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();
+        foreach (var entry in entriesToRemove)
+        {
+            entry.isDeleted = true; // Set the IsDeleted flag
+        }
+
+        await jservice.UpdateJournalEntries(entriesToRemove); // Ensure the changes are saved to the database
+        Entries = Entries.Where(e => !e.isDeleted).ToList(); // Update the Entries list
+        FilteredEntries = Entries; // Update the FilteredEntries list
+        StateHasChanged();
+
+        Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);
+    }
+
     List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
 
     protected override async Task OnInitializedAsync()
     {
-        Entries = (await jservice.journalentries()).ToList();
+        Entries = (await jservice.journalentries())
+        .Where(x => !x.isDeleted)
+        .ToList();
+        FilteredEntries = Entries;
+    }
+
+    private void FilterEntries(ChangeEventArgs e)
+    {
+        var searchTerm = e.Value?.ToString();
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredEntries = Entries;
+        }
+        else
+        {
+            FilteredEntries = Entries.Where(entry => entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }
