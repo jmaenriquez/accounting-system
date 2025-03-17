@@ -21,6 +21,7 @@ namespace AccountingSystem.Services
                 .AsNoTracking()
                 .Include(j => j.AccGrp)
                 .Include(j => j.AccName)
+                .Where(x => !x.isDeleted)
                 .OrderBy(j => j.TransactId)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
                 .Select(j => new Journal_Entry
@@ -30,9 +31,10 @@ namespace AccountingSystem.Services
                     AccName = j.AccName,
                     description = j.description,
                     debit = j.debit,
-                    credit = j.credit
+                    credit = j.credit,
+                    isDeleted = j.isDeleted
                 })
-                .Where(x => !x.isDeleted)
+                
                 .ToListAsync();
         }
 
@@ -44,6 +46,7 @@ namespace AccountingSystem.Services
                 .AsNoTracking()
                 .Include(j => j.AccGrp)
                 .Include(j => j.AccName)
+                .Where(x => x.isDeleted)
                 .OrderBy(j => j.TransactId)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
                 .Select(j => new Journal_Entry
@@ -53,9 +56,9 @@ namespace AccountingSystem.Services
                     AccName = j.AccName,
                     description = j.description,
                     debit = j.debit,
-                    credit = j.credit
+                    credit = j.credit,
+                    isDeleted = j.isDeleted
                 })
-                .Where(x => x.isDeleted)
                 .ToListAsync();
         }
 
@@ -65,8 +68,22 @@ namespace AccountingSystem.Services
 
             foreach (var entry in entries)
             {
-                dbContext.Journal.Update(entry);
+                var existingData = await dbContext.Journal
+                    .Where(e => e.TransactId == entry.TransactId)
+                    .ToListAsync();
+                if (existingData.Any())
+                {
+                    foreach (var existingEntry in existingData)
+                    {
+                        existingEntry.isDeleted = entry.isDeleted; // Update all entries
+                    }
+                }
             }
+
+            // Update the database
+
+
+            //End of Updating the database
 
             await dbContext.SaveChangesAsync();
         }

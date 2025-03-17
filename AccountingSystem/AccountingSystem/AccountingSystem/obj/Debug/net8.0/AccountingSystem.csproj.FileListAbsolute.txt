@@ -864,7 +864,6 @@ C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSyst
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AddGrp.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AddRecord.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Balance.razor.rz.scp.css
-C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\COA.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Dashboard.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\GrpList.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Journal.razor.rz.scp.css
@@ -1071,3 +1070,4 @@ E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\re
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.pdb
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.genruntimeconfig.cache
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Statement.razor.rz.scp.css

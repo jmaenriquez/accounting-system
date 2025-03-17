@@ -35,16 +35,8 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Component.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wb25lbnQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Routes.razor]
@@ -83,10 +75,6 @@ build_metadata.AdditionalFiles.CssScope = b-5eldr3qlgw
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCYWxhbmNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-fw64h8oam3
 
-[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/COA.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDT0EucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-c2flj7i1r6
-
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tquthsc8me
@@ -106,3 +94,7 @@ build_metadata.AdditionalFiles.CssScope = b-dtvkh2wzg0
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Reports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXBvcnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-q559me807p
+
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Statement.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTdGF0ZW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-n2ah7os6g4
