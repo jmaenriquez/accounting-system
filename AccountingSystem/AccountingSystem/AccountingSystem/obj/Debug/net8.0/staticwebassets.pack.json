@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AccountingSystem.uwx7ecyqr1.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AccountingSystem.q9cs5rvj0j.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
@@ -11,6 +11,10 @@
     {
       "Id": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalong.png",
       "PackagePath": "staticwebassets\\Metalong.png"
+    },
+    {
+      "Id": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 transparent.png",
+      "PackagePath": "staticwebassets\\MetaverseLogo3 transparent.png"
     },
     {
       "Id": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",

@@ -23,7 +23,6 @@
 .searchbar {
     display: flex;
     display: inline-block;
-    justify-content: end;
     border: none;
     font-size: 12px;
     margin: 5px;

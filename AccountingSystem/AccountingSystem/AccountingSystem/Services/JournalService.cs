@@ -1,6 +1,9 @@
-﻿using AccountingSystem.Data;
+﻿using AccountingSystem.Components.Pages;
+using AccountingSystem.Data;
+using AccountingSystem.DTOs;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace AccountingSystem.Services
 {
@@ -12,11 +15,26 @@ namespace AccountingSystem.Services
         {
             _dbContextFactory = dbContextFactory;
         }
-
+        public async Task<IEnumerable<LedgerDto>> GetLedger()
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+            return await dbContext.Journal
+                .Include(j => j.AccName)
+                .Where(j => !j.isDeleted)
+                .GroupBy(j => j.AccNameId)
+                .Select(entries => new LedgerDto
+                {
+                    AccountName = entries.First().AccName!.name,
+                    Debit = entries.Sum(e => e.debit ?? 0),
+                    Credit = entries.Sum(e => e.credit ?? 0)
+                })
+                
+                .ToListAsync();
+        }
         public async Task<IEnumerable<Journal_Entry>> journalentries()
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
-
+            
             return await dbContext.Journal
                 .AsNoTracking()
                 .Include(j => j.AccGrp)
@@ -24,16 +42,16 @@ namespace AccountingSystem.Services
                 .Where(x => !x.isDeleted)
                 .OrderBy(j => j.TransactId)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
-                .Select(j => new Journal_Entry
-                {
-                    TransactId = j.TransactId,
-                    datetime = j.datetime.Date,
-                    AccName = j.AccName,
-                    description = j.description,
-                    debit = j.debit,
-                    credit = j.credit,
-                    isDeleted = j.isDeleted
-                })
+                //.Select(j => new Journal_Entry
+                //{
+                //    TransactId = j.TransactId,
+                //    datetime = j.datetime.Date,
+                //    AccName = j.AccName,
+                //    description = j.description,
+                //    debit = j.debit,
+                //    credit = j.credit,
+                //    isDeleted = j.isDeleted
+                //})
                 
                 .ToListAsync();
         }

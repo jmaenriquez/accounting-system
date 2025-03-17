@@ -4,3 +4,4 @@ wwwroot\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
 wwwroot\Metalogo.png
 wwwroot\Metalong.png
+wwwroot\MetaverseLogo3 transparent.png

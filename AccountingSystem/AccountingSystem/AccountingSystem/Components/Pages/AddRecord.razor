@@ -10,11 +10,6 @@
 
 <h3>Add Records</h3>
 
-
-<MudOverlay>
-
-</MudOverlay>
-
 <MudForm Model="@newEntry" Class = "mt-5">
     <MudGrid>
         <MudContainer>
@@ -85,6 +80,7 @@
             <td></td>
             <td class="fw-bold">Total</td>
             <td>@Overall.ToString("N2")</td>
+            <td></td>
         </tr>
     </tfoot>
 </table>
@@ -92,22 +88,18 @@
 
 
 <div>
-    <div class="justify-content-lg-end d-flex m-5">
-        <MudGrid Gutter.Small>
+    
+        <MudGrid Class="w-100 justify-content-end mt-3">
             <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
             <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
         </MudGrid>
-    </div>
+    
 </div>
-
-
 
 
 @code {
 
     //Global Functions for the Journal Entry and Trial Balance
-
-
 
     MudForm? form = new MudForm();
 

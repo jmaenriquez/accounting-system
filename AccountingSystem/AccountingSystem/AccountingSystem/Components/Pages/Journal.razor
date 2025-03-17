@@ -13,11 +13,10 @@
    <div class="top-container">  
 
        @* <h3 class="m-4">Journal Entries</h3> *@  
-       <h4 class="m-4">Journal Entries</h4>  
+       <h4 class="m-3 w-25">Journal Entries</h4>  
 
        <div class="buttons">  
            <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />  
-           @* <button class="btn add" @onclick="ShowModal">Add New Record</button> *@  
            <button class="btn add" @onclick="goToAddRec">Add New Record</button>  
 
        </div>  
@@ -123,7 +122,7 @@
        }  
        else  
        {  
-           FilteredEntries = Entries.Where(entry => entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();  
+            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
        }  
    }  
 }

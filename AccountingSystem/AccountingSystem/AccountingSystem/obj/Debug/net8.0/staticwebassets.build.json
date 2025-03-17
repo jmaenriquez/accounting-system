@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T7stOL/yh/+IVoppOBSM/ksIj3nYLPpRjsF2b/eZwEs=",
+  "Hash": "IkCn6afwvjgQW5gkXdN5hTTQpbiBo9AC15ih4qpPVrw=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -12734,8 +12734,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "j84wd2975z",
-      "Integrity": "jV16hRA2jyitOOU5UHuyfMM8ucECE17VSCGvDGpyRBY=",
+      "Fingerprint": "p5x0y3r8aw",
+      "Integrity": "3aXaV7AzCYFPVK9vPLMWuY5jM8HOjtyrEL7ra25X7sM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12755,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "uwx7ecyqr1",
-      "Integrity": "kjpSfOCLRoPjcmH2uNdMf1o2uozfkaxnNVPoPDkA+WU=",
+      "Fingerprint": "q9cs5rvj0j",
+      "Integrity": "Hk6xPjSZNTkSfYRD0euogT01bQzpT1qpi1NgJACKvJI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -12839,8 +12839,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "Fingerprint": "2by68wf1jf",
+      "Integrity": "Lqs14HsFqCA4A93tJ66PXLgYYqbe7Ww/pqfxT4p95y8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
@@ -12886,6 +12886,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Metalong.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 transparent.png",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "MetaverseLogo3 transparent#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gwnpjjigo2",
+      "Integrity": "QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MetaverseLogo3 transparent.png"
     }
   ],
   "Endpoints": [
@@ -54101,7 +54122,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8679"
+          "Value": "8652"
         },
         {
           "Name": "Content-Type",
@@ -54109,11 +54130,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kjpSfOCLRoPjcmH2uNdMf1o2uozfkaxnNVPoPDkA+WU=\""
+          "Value": "\"Hk6xPjSZNTkSfYRD0euogT01bQzpT1qpi1NgJACKvJI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 01:49:03 GMT"
+          "Value": "Mon, 17 Mar 2025 07:56:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54123,12 +54144,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kjpSfOCLRoPjcmH2uNdMf1o2uozfkaxnNVPoPDkA+WU="
+          "Value": "sha256-Hk6xPjSZNTkSfYRD0euogT01bQzpT1qpi1NgJACKvJI="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.j84wd2975z.styles.css",
+      "Route": "AccountingSystem.p5x0y3r8aw.styles.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54142,7 +54163,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8747"
+          "Value": "8720"
         },
         {
           "Name": "Content-Type",
@@ -54150,11 +54171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jV16hRA2jyitOOU5UHuyfMM8ucECE17VSCGvDGpyRBY=\""
+          "Value": "\"3aXaV7AzCYFPVK9vPLMWuY5jM8HOjtyrEL7ra25X7sM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 01:49:03 GMT"
+          "Value": "Mon, 17 Mar 2025 07:56:57 GMT"
         },
         {
           "Name": "Link",
@@ -54164,15 +54185,60 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "j84wd2975z"
+          "Value": "p5x0y3r8aw"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-jV16hRA2jyitOOU5UHuyfMM8ucECE17VSCGvDGpyRBY="
+          "Value": "sha256-3aXaV7AzCYFPVK9vPLMWuY5jM8HOjtyrEL7ra25X7sM="
         },
         {
           "Name": "label",
           "Value": "AccountingSystem.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "AccountingSystem.q9cs5rvj0j.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8652"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Hk6xPjSZNTkSfYRD0euogT01bQzpT1qpi1NgJACKvJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 07:56:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q9cs5rvj0j"
+        },
+        {
+          "Name": "label",
+          "Value": "AccountingSystem.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Hk6xPjSZNTkSfYRD0euogT01bQzpT1qpi1NgJACKvJI="
         }
       ]
     },
@@ -54191,7 +54257,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8747"
+          "Value": "8720"
         },
         {
           "Name": "Content-Type",
@@ -54199,11 +54265,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"jV16hRA2jyitOOU5UHuyfMM8ucECE17VSCGvDGpyRBY=\""
+          "Value": "\"3aXaV7AzCYFPVK9vPLMWuY5jM8HOjtyrEL7ra25X7sM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 01:49:03 GMT"
+          "Value": "Mon, 17 Mar 2025 07:56:57 GMT"
         },
         {
           "Name": "Link",
@@ -54213,52 +54279,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-jV16hRA2jyitOOU5UHuyfMM8ucECE17VSCGvDGpyRBY="
-        }
-      ]
-    },
-    {
-      "Route": "AccountingSystem.uwx7ecyqr1.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "8679"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kjpSfOCLRoPjcmH2uNdMf1o2uozfkaxnNVPoPDkA+WU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 01:49:03 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uwx7ecyqr1"
-        },
-        {
-          "Name": "label",
-          "Value": "AccountingSystem.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-kjpSfOCLRoPjcmH2uNdMf1o2uozfkaxnNVPoPDkA+WU="
+          "Value": "sha256-3aXaV7AzCYFPVK9vPLMWuY5jM8HOjtyrEL7ra25X7sM="
         }
       ]
     },
@@ -54673,7 +54694,7 @@
       ]
     },
     {
-      "Route": "favicon.ifv42okdf2.png",
+      "Route": "favicon.2by68wf1jf.png",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54683,7 +54704,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "1374"
         },
         {
           "Name": "Content-Type",
@@ -54691,11 +54712,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"Lqs14HsFqCA4A93tJ66PXLgYYqbe7Ww/pqfxT4p95y8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 13:52:48 GMT"
+          "Value": "Mon, 17 Mar 2025 03:45:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54705,7 +54726,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ifv42okdf2"
+          "Value": "2by68wf1jf"
         },
         {
           "Name": "label",
@@ -54713,7 +54734,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-Lqs14HsFqCA4A93tJ66PXLgYYqbe7Ww/pqfxT4p95y8="
         }
       ]
     },
@@ -54728,7 +54749,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1148"
+          "Value": "1374"
         },
         {
           "Name": "Content-Type",
@@ -54736,11 +54757,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+          "Value": "\"Lqs14HsFqCA4A93tJ66PXLgYYqbe7Ww/pqfxT4p95y8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 13:52:48 GMT"
+          "Value": "Mon, 17 Mar 2025 03:45:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54750,7 +54771,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+          "Value": "sha256-Lqs14HsFqCA4A93tJ66PXLgYYqbe7Ww/pqfxT4p95y8="
         }
       ]
     },
@@ -54915,6 +54936,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-NQYr000hTmw5WO3Po9266B1M3je4Y0YQXBHym5YOvHg="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogo3 transparent.gwnpjjigo2.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 transparent.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 05:10:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gwnpjjigo2"
+        },
+        {
+          "Name": "label",
+          "Value": "MetaverseLogo3 transparent.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogo3 transparent.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 transparent.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 17 Mar 2025 05:10:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg="
         }
       ]
     }
