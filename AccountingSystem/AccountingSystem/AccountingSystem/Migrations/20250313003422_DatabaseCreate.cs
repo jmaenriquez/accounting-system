@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Database : Migration
+    public partial class DatabaseCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,7 @@ namespace AccountingSystem.Migrations
                 {
                     id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    datetime = table.Column<DateOnly>(type: "date", nullable: false),
+                    datetime = table.Column<DateTime>(type: "date", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
                     AccGrpId = table.Column<int>(type: "integer", nullable: false),
                     AccNameId = table.Column<int>(type: "integer", nullable: false),
@@ -76,25 +76,6 @@ namespace AccountingSystem.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Charts",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false),
-                    AccountName = table.Column<string>(type: "text", nullable: false),
-                    date = table.Column<DateOnly>(type: "date", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Charts", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Charts_Journal_id",
-                        column: x => x.id,
-                        principalTable: "Journal",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Journal_AccGrpId",
                 table: "Journal",
@@ -109,9 +90,6 @@ namespace AccountingSystem.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Charts");
-
             migrationBuilder.DropTable(
                 name: "Journal");
 

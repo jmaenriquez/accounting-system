@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AccountingSystem.26ox94cnt7.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AccountingSystem.1vkzjzoe5a.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
@@ -11,6 +11,10 @@
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalong.png",
       "PackagePath": "staticwebassets\\Metalong.png"
+    },
+    {
+      "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 Transparent.png",
+      "PackagePath": "staticwebassets\\MetaverseLogo3 Transparent.png"
     },
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",
@@ -25,8 +29,8 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\metasmol.png",
+      "PackagePath": "staticwebassets\\metasmol.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AccountingSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

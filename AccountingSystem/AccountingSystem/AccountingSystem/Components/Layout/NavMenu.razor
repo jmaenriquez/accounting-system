@@ -1,9 +1,9 @@
 ﻿<MudContainer Style="margin:0px;padding:0px;width:100%;background-color:#00acc1;height:100%;display:flex;flex-direction:column;overflow-x:hidden;">
-    @if (!isAccountingOpen)
+    @if (IsOpen)
     {
         <MudLink Href="/" Class="d-flex align-items-center justify-content-center" Style="padding:10px;">
             <div style="width:fit-content;width:100%;max-width:90%;background:rgba(255,255,255,0.3);padding: 0px 10px; border-radius:5px;">
-                <MudImage Src="Metalong.png" Style="width:100%;" />
+                <MudImage Src="MetaverseLogo3 Transparent.png" Style="width:100%;" />
             </div>
         </MudLink>
     }
@@ -11,24 +11,23 @@
     {
         <MudLink Href="/" Class="d-flex align-items-center justify-content-center" Style="padding:10px;">
             <div style="max-height:196px;background:rgba(255,255,255,0.3);padding: 0px; border-radius:5px;">
-                <MudImage Src="favico.png" Style="max-height:196px;" />
+                <MudImage Src="metasmol.png" Style="max-height:196px;" />
             </div>
         </MudLink>
     }
 
     <MudNavMenu Style="width:100%;background-color:#00acc1;height:100%;flex:1;color:white;">
-
-        <MudNavGroup Title="Accounting" Icon="@Icons.Material.Filled.MenuBook" Style="color:white;" IconColor="Color.Inherit">
+        <MudNavGroup Title="Accounting" Icon="@Icons.Material.Filled.MenuBook" Style="color:white;" IconColor="Color.Inherit" Class="@(!IsOpen ? "collapsed" : null)">
             <MudNavLink Href="/journal" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Addchart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Journal</MudNavLink>
             <MudNavLink Href="/ledger" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AutoStories" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Ledger</MudNavLink>
             <MudNavLink Href="/balance" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Balance" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Balance</MudNavLink>
 
-            <MudNavGroup Title="Chart of Accounts" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">
-                <MudNavLink Href="/acclist" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account List</MudNavLink>
+            <MudNavGroup Title="Chart of Accounts" Icon="@Icons.Material.Filled.TableChart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit" Class="@(!IsOpen ? "collapsed" : null)">
+                <MudNavLink Href="/acclist" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.ListAlt" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account List</MudNavLink>
                 <MudNavLink Href="/accgrp" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account Group</MudNavLink>
             </MudNavGroup>
 
-            <MudNavLink Href="/report" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.ImportContacts" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>
+            <MudNavLink Href="/report" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.InsertChartOutlined" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>
         </MudNavGroup>
     </MudNavMenu>
 </MudContainer>
@@ -45,16 +44,25 @@
     .mud-nav-link:hover {
         color: #dddddd;
     }
+
+    .collapsed .mud-nav-link-text {
+        display: none;
+    }
+
+    .collapsed .mud-nav-group-text {
+        display: none;
+    }
+
+    .collapsed .mud-nav-group {
+        padding-right: 16px; /* Adjust padding to ensure dropdown icon is visible */
+    }
+
+    .collapsed .mud-nav-link {
+        padding-right: 16px; /* Adjust padding to ensure icons are visible */
+    }
 </style>
 
 @code {
-    private bool isAccountingOpen = false;
-
-    void ToggleAccounting()
-    {
-        isAccountingOpen = !isAccountingOpen;
-    }
-
     [Parameter]
     public bool IsOpen { get; set; }
 }

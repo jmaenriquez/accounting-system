@@ -1,305 +1,74 @@
 ﻿@inherits LayoutComponentBase
-@inject IJSRuntime JsRuntime
-@inject WebPushService WebPushService
 <PageTitle>MHC Portal</PageTitle>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudPopoverProvider />
 
 <style>
     :root {
         --zindex-overlay: 1351;
     }
+
     .mud-overlay {
         z-index: var(--zindex-overlay);
-
     }
 
     .mud-popover {
         z-index: calc(var(--zindex-overlay) + 3) !important;
     }
-</style>
 
-<AuthorizeView>
-    <Authorized>
-
-        <MudLayout>
-            <MudAppBar Dense="true" >
-                <MudContainer Class="d-flex justify-content-between align-items-center" Style="padding:0; margin:0;max-width:100%;">
-                    <MudContainer Class="d-flex align-items-center" Style="padding:0px;margin:0px;gap:5px;">
-                        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-                        <MudNavLink Style="height:fit-content;width:fit-content;padding:0px;" Class="app-title" Href="/">
-                            <MudImage Src="favicon.png" />
-                            MHC Portal
-                        </MudNavLink>
-                    </MudContainer>
-                    <MudMenu Variant="Variant.Outlined" AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight" Color="Color.Primary">
-
-                        <ActivatorContent>
-                            @if (user != null && user.FirstName != null && user.LastName != null)
-                            {
-                                <MudChip Color="Color.Primary" Style="padding:5px;">
-                                    <MudAvatar Style="margin:0px;">
-                                        @if (user.AvatarPhoto != null)
-                                        {
-                                            <MudImage Src="@avatarUrl" Alt="@($"{user.FirstName.First()}{user.LastName.First()}")" />
-                                        }
-                                        else
-                                        {
-                                            @($"{user.FirstName.First()}{user.LastName.First()}")
-                                        }
-                                    </MudAvatar>
-                                    <MudHidden Breakpoint="Breakpoint.SmAndDown">
-                                        <span style="margin:0px 5px;">@(user.FirstName) @user.LastName</span>
-                                    </MudHidden>
-                                </MudChip>                                
-                            }
-                        </ActivatorContent>
-                        <ChildContent>
-                            <MudMenuItem Href="@($"/employee/{user.Id}/profile")"><MudIcon Icon="@Icons.Material.Outlined.Person" Style="margin-right:5px;"></MudIcon> Profile</MudMenuItem>
-                            <MudMenuItem OnClick="@(() => {changePasswordIsShown = true;})" OnTouch="@(() => {changePasswordIsShown = true;})"><MudIcon Icon="@Icons.Material.Outlined.Key" Style="margin-right:5px;"></MudIcon> Change Password</MudMenuItem>
-                            <MudMenuItem Href="/usersettings"><MudIcon Icon="@Icons.Material.Outlined.Settings" Style="margin-right:5px;"></MudIcon>Settings</MudMenuItem>
-                            @if (user.IsAdmin)
-                            {
-                                <MudMenuItem Href="/admin/logs"><MudIcon Icon="@Icons.Material.Outlined.List" Style="margin-right:5px;"></MudIcon>Logs</MudMenuItem>
-                            }
-                            <MudMenuItem OnClick="Logout" OnTouch="Logout"><MudIcon Icon="@Icons.Material.Outlined.Logout" Style="margin-right:5px;"></MudIcon>Logout</MudMenuItem>
-                        </ChildContent>
-
-
-                    </MudMenu>
-                </MudContainer>
-            </MudAppBar>
-            <MudHidden Breakpoint="Breakpoint.SmAndDown">
-                <MudDrawer @bind-Open="@_drawerOpen" Variant="@DrawerVariant.Mini">
-                    @if (user != null)
-                    {
-
-                        <CascadingValue Name="User" Value="@user" >
-                            <NavMenu IsOpen="_drawerOpen" OnLogout="Logout"/>
-                        </CascadingValue>
-                    }
-                    
-                </MudDrawer>
-            </MudHidden>
-            <MudHidden Breakpoint="Breakpoint.MdAndUp">
-                <MudDrawer @bind-Open="@_drawerOpen" Variant="DrawerVariant.Temporary">
-                    @if (user != null)
-                    {
-
-                        <CascadingValue Name="User" Value="@user">
-                            <NavMenu IsOpen="_drawerOpen" OnLogout="Logout"/>
-                        </CascadingValue>
-                    }
-                    
-                </MudDrawer>
-            </MudHidden>
-            <MudMainContent>
-                <div style="overflow:hidden;background-color:azure;min-height:100vh;">
-                    <CascadingValue Name="User" Value="@user">
-                        @Body
-                        <ChangePassword CurrentUser="user" User="user" Visible="changePasswordIsShown" OnCancel="@(() => changePasswordIsShown = false)"  OnSave="@(() => changePasswordIsShown = false)" />
-                    </CascadingValue>
-                </div>
-            </MudMainContent>
-        </MudLayout>
-
-        @* <div class="page">
-            <div class="sidebar" style="overflow-y:hidden;">
-                <CascadingValue Name="User" Value="@user">
-                    <NavMenu />
-                </CascadingValue>
-                
-            </div>
-
-            <main>
-                <div style="overflow:hidden;">
-                    <CascadingValue Name="User" Value="@user">
-                        @Body
-                    </CascadingValue>
-                </div>
-                
-            </main>
-        </div> *@
-    </Authorized>
-    <NotAuthorized>
-        <MudLayout Style="height:100vh; justify-content:center; display:flex;">
-            <MudMainContent Style="width:100vw; max-width:100vw;min-width:90%; height:100vh;margin:0px;padding:0px;background-color:azure;">
-                <MudContainer Style="width:100%; height:80%; max-width:100%; display:flex;justify-content:center;align-items:center;">
-                    <MudImage Src="/MetaverseLogoOnly.png" Style="filter: blur(12px);
-                      -webkit-filter: blur(12px);height:100%;display: block;background-position: center;
-                      background-repeat: no-repeat;
-                      background-size: cover;" />
-                </MudContainer>
-
-            </MudMainContent>
-
-        </MudLayout>
-    </NotAuthorized>
-    <Authorizing>
-        <MudLayout Style="height:100vh; justify-content:center; display:flex;">
-            <MudMainContent Style="width:100vw; max-width:100vw;min-width:90%; height:100vh;margin:0px;padding:0px;background-color:azure;">
-                <MudContainer Style="width:100%; height:80%; max-width:100%; display:flex;justify-content:center;align-items:center;">
-                    <MudImage Src="/MetaverseLogoOnly.png" Style="filter: blur(12px);
-                      -webkit-filter: blur(12px);height:100%;display: block;background-position: center;
-                      background-repeat: no-repeat;
-                      background-size: cover;" />
-                    <LoaderMessage Message="Logging in..." Visible="true"></LoaderMessage>
-                </MudContainer>
-
-            </MudMainContent>
-
-        </MudLayout>
-    </Authorizing>
-</AuthorizeView>
-
-
-
-
-<MudThemeProvider Theme="theme" />
-<MudDialogProvider />
-<MudSnackbarProvider />
-
-<BrowserDetect @bind-BrowserInfo="@Info"
-               OSArchitectureUpdate="OSArchitectureString"
-               OSVersionUpdate="OSUpdateString" />
-
-<style>
+    /* Ensure layout responsiveness */
     .app-title .mud-nav-link {
         padding: 8px 10px;
     }
 
-    .app-title .mud-nav-link .mud-nav-link-text {
-        padding: 0px;
-        margin:0px;
-    }
+        .app-title .mud-nav-link .mud-nav-link-text {
+            padding: 0px;
+            margin: 0px;
+        }
 </style>
 
+<MudLayout>
+    <MudAppBar Dense="true" Style="background-color:#00acc1;">
+        <MudContainer Class="d-flex justify-content-between align-items-center" Style="padding:0px;margin:0px;width:100%;max-width:100vw;">
+            <MudContainer Class="d-flex align-items-center" Style="padding:0px;margin:0px;gap:5px;background-color:#00acc1;">
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
+                <MudNavLink Style="height:fit-content;width:fit-content;padding:0px;" Class="app-title" Href="/">
+                    <MudImage Src="metasmol.png" />
+                    MHC Portal
+                </MudNavLink>
+            </MudContainer>
+        </MudContainer>
+    </MudAppBar>
+
+    <!-- Responsive Drawer -->
+    <MudHidden Breakpoint="Breakpoint.SmAndDown">
+        <MudDrawer @bind-Open="_drawerOpen" Variant="@DrawerVariant.Mini">
+            <NavMenu IsOpen="_drawerOpen" />
+        </MudDrawer>
+    </MudHidden>
+
+    <MudHidden Breakpoint="Breakpoint.MdAndUp">
+        <MudDrawer @bind-Open="_drawerOpen" Variant="DrawerVariant.Temporary">
+            <NavMenu IsOpen="_drawerOpen" />
+        </MudDrawer>
+    </MudHidden>
+
+    <MudMainContent>
+        <div style="overflow:hidden;background-color:azure;min-height:100vh;margin-top:26px;margin-left:26px;">
+            @Body
+        </div>
+    </MudMainContent>
+</MudLayout>
+
 @code {
-    [CascadingParameter] private Task<AuthenticationState> authenticationStateTask { get; set; }
-    User user = new User();
-    bool changePasswordIsShown = false;
-    bool _drawerOpen = false;
-    string avatarUrl = string.Empty;
+    bool _drawerOpen = true; // Set to true to make the drawer open by default
 
-    public BrowserInfo? Info { get; set; }
-    public string? OSInfo { get; set; } = "";
-    public string? CPUInfoString { get; set; }
-
-
-
-
-    private void OSArchitectureString(string cpu)
-    {
-        CPUInfoString = cpu;
-    }
-
-    private void OSUpdateString(string version)
-    {
-        OSInfo = version;
-    }
-
-
-    MudTheme theme = new MudTheme()
-            {
-                Palette = new PaletteLight()
-                {
-                    Primary = Colors.Cyan.Darken1,
-                    Secondary = Colors.Grey.Lighten4,
-                    Tertiary = Colors.Grey.Lighten5,
-                AppbarBackground = "#00838F",
-
-                },
-                LayoutProperties = new LayoutProperties()
-                {
-                    DrawerWidthLeft = "260px",
-                    DrawerWidthRight = "300px"
-                }
-            };
-
-    protected override async Task OnInitializedAsync()
-    {
-
-        var customAuth = (CustomAuthenticationStateProvider)AuthStateProvider;
-        var auth = await customAuth.GetAuthenticationStateAsync();
-        customAuth.AuthenticationStateChanged += (state) =>
-        {
-            try
-            {
-                if (!state.Result.User.Identity.IsAuthenticated)
-                {
-                    NavigationManager.NavigateTo("/login", true);
-                }
-            }
-            catch
-            {
-                NavigationManager.NavigateTo("/login", true);
-            }
-
-        };
-        var User = auth.User;
-        if (User == null || User.Identity == null || !User.Identity.IsAuthenticated)
-        {
-            //Console.WriteLine(JsonConvert.SerializeObject(User.Identity));
-            NavigationManager.NavigateTo("/login", true);
-        }
-
-
-        var currentUser = await UserService.GetCurrent(true);
-
-        user = currentUser!.Result!;
-
-        if (user == null)
-        {
-            NavigationManager.NavigateTo("/login", true);
-            return;
-        }
-
-
-        if (user.AvatarPhoto != null)
-        {
-            //avatarUrl = await JSRuntime.InvokeAsync<string>("GetURL", user.AvatarPhoto.FileContent);
-            avatarUrl = await JSRuntime.InvokeAsync<string>("GetObjectUrl", user.AvatarPhoto.FileName, Convert.ToBase64String(user.AvatarPhoto.FileContent));
-        }
-
-        if (!(await JSRuntime.InvokeAsync<bool>("IsMobileView")))
-        {
-            DrawerToggle();
-        }
-
-        try
-        {
-            var lDotNetReference = DotNetObjectReference.Create(this);
-            await JSRuntime.InvokeVoidAsync("GLOBAL.SetDotnetReference", lDotNetReference);
-            var notificationPermission = await JsRuntime.InvokeAsync<string>("BlazorWebPush.getNotificationPermission");
-            if (notificationPermission == "granted")
-            {
-                PushSubscription sub = await JsRuntime.InvokeAsync<PushSubscription>("BlazorWebPush.checkSubscription");
-
-                if (sub != null)
-                {
-                    var Subscription = sub;
-                    await WebPushService.CreateUserSubscription(Subscription, Info);
-                    StateHasChanged();
-                }
-            }
-        }
-        catch
-        {
-            
-        }
-
-        
-
-    }
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
         StateHasChanged();
     }
-
-    async Task Logout()
-    {
-        var customAuth = (CustomAuthenticationStateProvider)AuthStateProvider;
-        await customAuth.UpdateAuthenticationState(null);
-    }
-
 }
-

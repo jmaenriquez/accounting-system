@@ -6,7 +6,7 @@ namespace AccountingSystem.Data
 {
     public class Journal_Entry
     {
-        public DateOnly datetime { get; set; }
+        public DateTime datetime { get; set; } = DateTime.Now;
         public int id { get; set; }
         public string description { get; set; }
         public int AccGrpId { get; set; }
@@ -18,13 +18,11 @@ namespace AccountingSystem.Data
         [ForeignKey("AccNameId")]
         public virtual Account_List? AccName { get; set; }
 
-        //public string? AccName { get; set; }
-
-        //public string? AccGrp { get; set; }
-
         public decimal? debit { get; set; } = 0;
 
         public decimal? credit { get; set; } = 0;
+
+        public string enterRemark { get; set; } = string.Empty;
 
         public Guid TransactId { get; set;}
 
