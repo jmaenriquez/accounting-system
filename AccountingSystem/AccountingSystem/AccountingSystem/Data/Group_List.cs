@@ -23,6 +23,8 @@ namespace AccountingSystem.Data
         [Required]
         public Status status { get; set; }
 
+        public bool isDeleted { get; set; } = false;
+
 
         [InverseProperty("AccGrp")]
         public virtual ICollection<Journal_Entry> Journal_Entries { get; set; } = new List<Journal_Entry>();

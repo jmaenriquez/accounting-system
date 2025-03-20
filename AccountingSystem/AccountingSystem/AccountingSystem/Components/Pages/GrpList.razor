@@ -1,6 +1,9 @@
 @page "/accgrp"
-
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject GroupService grpService
 @inject NavigationManager Navigate
+@inject ISnackbar Snackbar
 
 <PageTitle>Account Groups</PageTitle>
 
@@ -16,45 +19,38 @@
         </div>
     </div>
 
-    <table class="mt-3 table table-borderless table-sm">
-        <thead class="table-info ">
-            <tr>
-                <th>Date</th>
-                <th>Account Id</th>
-                <th>Account Name</th>
-                <th>Description</th>
-                <th>Account Type</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
 
-            @foreach (var grp in GroupList)
-            {
-                <tr>
-                    <td>@grp.datetime</td>
-                    <td>@grp.id</td>
-                    <td>@grp.name</td>
-                    <td>@grp.description</td>
-                    <td>@grp.type</td>
-                    <td>@grp.status</td>
-                    <td>Actions</td>
-                </tr>
-            }
-            
-        </tbody>
-    </table>
+   <MudTable Class="mt-4" Items="@GroupList" Dense="true"
+            Breakpoint="Breakpoint.Sm">
+        <HeaderContent>
+            <MudTh Class="fw-bold">Account Id</MudTh>
+            <MudTh Class="fw-bold">Account Name</MudTh>
+            <MudTh Class="fw-bold">Description</MudTh>
+            <MudTh Class="fw-bold">Account Type</MudTh>
+            <MudTh Class="fw-bold">Status</MudTh>
+            <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.id</MudTd>
+            <MudTd>@context.name</MudTd>
+            <MudTd>@context.description</MudTd>
+            <MudTd>@context.type</MudTd>
+            <MudTd>@context.status</MudTd>
+            <MudTd>
+                <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                    <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                    <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(context.id)" />
+                </MudMenu>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+
 </div>
 
 
-@using AccountingSystem.Data
-@using AccountingSystem.Services
-@inject GroupService grpService
+
 
 @code {
-
-
 
     private void navigateToAddGrp()
     {
@@ -63,24 +59,29 @@
 
     List<Group_List> GroupList = new List<Group_List>();
 
-     protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-        await LoadAccounts();
-        await Refresh();
+        GroupList = (await grpService.GroupItems())
 
-    }
-
-    private async Task LoadAccounts()
-    {
-        GroupList = (await grpService.GroupItems()).ToList();
+        .ToList();
         StateHasChanged();
+
     }
 
-    private async Task Refresh()
+    private async Task Delete(int grpId)
     {
-        while (true)
+        var group = GroupList.Where(g => g.id == grpId).ToList();
+
+        foreach (var grp in group)
         {
-            await LoadAccounts();
+            grp.isDeleted = true;
         }
+
+        await grpService.UpdateGrpList(group);
+        GroupList = GroupList.Where(g => !g.isDeleted).ToList();
+        StateHasChanged();
+
+        Snackbar.Add("A Group has been marked as Deleted", Severity.Success);
     }
+
 }

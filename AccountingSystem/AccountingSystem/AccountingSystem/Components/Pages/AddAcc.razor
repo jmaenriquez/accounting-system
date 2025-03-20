@@ -58,7 +58,12 @@
 
     private async Task Submit()
     {
-        try
+        if (string.IsNullOrWhiteSpace(newAccount.name) || string.IsNullOrWhiteSpace(newAccount.name))
+        {
+            Snackbar.Add("Please fill empty fields.", Severity.Warning);
+        }
+
+        else
         {
             DbContext.Accounts.Add(newAccount);
             await DbContext.SaveChangesAsync();
@@ -69,17 +74,13 @@
             newAccount = new Account_List
             {
                 date = DateOnly.FromDateTime(DateTime.Now),
-                id = 0,
                 name = "",
                 description = "",
             };
 
             StateHasChanged();
         }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
+        
     }
 
 }

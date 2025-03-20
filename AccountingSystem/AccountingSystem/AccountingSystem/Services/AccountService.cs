@@ -15,7 +15,37 @@ namespace AccountingSystem.Services
         public async Task<IEnumerable<Account_List>> GetAllAccounts()
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
-            return await dbContext.Accounts.AsNoTracking().ToListAsync();
+            return await dbContext.Accounts
+                .AsNoTracking()
+                .Where(x => !x.isDeleted)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<Account_List>> AccArchives()
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+            return await dbContext.Accounts
+                .AsNoTracking()
+                .Where(x => x.isDeleted)
+                .ToListAsync();
+        }
+
+        public async Task UpdateAccount(IEnumerable<Account_List> accounts)
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+            foreach (var account in accounts)
+            {
+                var existingAccount = await dbContext.Accounts.FindAsync(account.id);
+                if (existingAccount != null)
+                {
+                    existingAccount.name = account.name;
+                    existingAccount.description = account.description;
+                    existingAccount.status = account.status;
+                    existingAccount.isDeleted = account.isDeleted;
+                    dbContext.Accounts.Update(existingAccount);
+                }
+            }
+            await dbContext.SaveChangesAsync();
         }
     }
 }

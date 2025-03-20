@@ -16,6 +16,8 @@ namespace AccountingSystem.Data
         public string description { get; set; }=string.Empty;
         public Status status { get; set; }
 
+        public bool isDeleted { get; set; } = false;
+
         [InverseProperty("AccName")]
         public virtual ICollection<Journal_Entry> Journal_Entries { get; set; } = new List<Journal_Entry>();
     }

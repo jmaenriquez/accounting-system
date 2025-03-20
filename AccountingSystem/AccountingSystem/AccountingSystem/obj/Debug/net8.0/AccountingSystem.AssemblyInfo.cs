@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AccountingSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2216a97a43deed0331da8cbd981ffdd909e04f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2c19e90efa8ea1ff944c526694f05018ed4abd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AccountingSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AccountingSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

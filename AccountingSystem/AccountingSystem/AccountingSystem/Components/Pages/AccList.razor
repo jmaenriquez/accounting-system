@@ -1,4 +1,9 @@
 ﻿@page "/acclist"
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject AccountService accountService;
+@inject IModalService Modal  
+@inject ISnackbar Snackbar  
 @inject NavigationManager Navigate
 
 
@@ -17,38 +22,31 @@
         </div>
     </div>
 
-    <table class="mt-3 table table-borderless table-sm">
-        <thead class="table-info ">
-            <tr>
-                <th>Date</th>
-                <th>Account Id</th>
-                <th>Account Name</th>
-                <th>Description</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var acc in AccountList)
-            {
-                <tr>
-                    <td>@acc.date</td>
-                    <td>@acc.id</td>
-                    <td>@acc.name</td>
-                    <td>@acc.description</td>
-                    <td>@acc.status</td>
-                    <td>Actions</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <MudTable Class="mt-4" Items="@AccountList" Dense="true"
+            Breakpoint="Breakpoint.Sm">
+        <HeaderContent>
+            <MudTh Class="fw-bold">Account Id</MudTh>
+            <MudTh Class="fw-bold">Account Name</MudTh>
+            <MudTh Class="fw-bold">Description</MudTh>
+            <MudTh Class="fw-bold">Status</MudTh>
+            <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.id</MudTd>
+            <MudTd>@context.name</MudTd>
+            <MudTd>@context.description</MudTd>
+            <MudTd>@context.status</MudTd>
+            <MudTd>
+                <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                    <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                    <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => isDeleted(context.id)" />
+                </MudMenu>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
 </div>
 
 
-@using AccountingSystem.Data
-@using AccountingSystem.Services
-@inject AccountService accountService;
 
 @code {
 
@@ -61,23 +59,23 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadAccounts();
-        await Refresh();
-
-    }
-
-    private async Task LoadAccounts()
-    {
-        AccountList = (await accountService.GetAllAccounts()).ToList();
+        AccountList = (await accountService.GetAllAccounts())
+        .Where(a => !a.isDeleted)
+        .ToList();
         StateHasChanged();
+
     }
 
-    private async Task Refresh()
+    private async Task isDeleted(int accountId)
     {
-        while (true)
+        var account = AccountList.FirstOrDefault(e => e.id == accountId);
+        if (account != null)
         {
-            await Task.Delay(500);
-            await LoadAccounts();
+            account.isDeleted = true;
+            await accountService.UpdateAccount(new List<Account_List> { account });
+            AccountList = AccountList.Where(e => !e.isDeleted).ToList();
+            StateHasChanged();
+            Snackbar.Add("An Account has been marked as Deleted", Severity.Success);
         }
     }
 }
