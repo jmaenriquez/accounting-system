@@ -17,7 +17,8 @@
 .buttons[b-fw64h8oam3] {
     display: flex;
     justify-content: end;
-    width: 79.57%;
+    width: 100%;
+    margin-right: 2rem
 }
 
 .searchbar[b-fw64h8oam3] {

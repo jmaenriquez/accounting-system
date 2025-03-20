@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AccountingSystem.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250319011600_AccList_AccGroupDlt")]
-    partial class AccList_AccGroupDlt
+    [Migration("20250320112759_DatabaseCreate")]
+    partial class DatabaseCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,9 @@ namespace AccountingSystem.Migrations
                     b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -66,6 +69,9 @@ namespace AccountingSystem.Migrations
                     b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("name")
                         .IsRequired()

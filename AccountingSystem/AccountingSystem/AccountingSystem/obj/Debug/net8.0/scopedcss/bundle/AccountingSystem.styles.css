@@ -179,7 +179,7 @@ main[b-sy38zyqdxq] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-itkg4wyyqc] {
@@ -194,7 +194,8 @@ main[b-sy38zyqdxq] {
 .buttons[b-itkg4wyyqc] {
     display: flex;
     justify-content: end;
-    width: 85%;
+    width: 100%;
+    margin-right:2rem;
 }
 
 .searchbar[b-itkg4wyyqc], .add[b-itkg4wyyqc] {
@@ -262,7 +263,8 @@ body[b-jx5ziyf1f7] {
 .buttons[b-fw64h8oam3] {
     display: flex;
     justify-content: end;
-    width: 79.57%;
+    width: 100%;
+    margin-right: 2rem
 }
 
 .searchbar[b-fw64h8oam3] {
@@ -282,7 +284,7 @@ body[b-tquthsc8me] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-m0ve9n932a] {
@@ -297,7 +299,8 @@ body[b-tquthsc8me] {
 .buttons[b-m0ve9n932a] {
     display: flex;
     justify-content: end;
-    width: 85%;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar[b-m0ve9n932a], .add[b-m0ve9n932a] {
@@ -326,7 +329,7 @@ body[b-tquthsc8me] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-c16h26qowt] {
@@ -373,7 +376,7 @@ body[b-tquthsc8me] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-dtvkh2wzg0] {
@@ -389,7 +392,7 @@ body[b-tquthsc8me] {
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right: 2rem;
+    margin-right: 2rem
 }
 
 .searchbar[b-dtvkh2wzg0] {

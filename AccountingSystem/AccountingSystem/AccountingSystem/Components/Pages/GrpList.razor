@@ -15,35 +15,36 @@
 
         <div class="buttons">
             <input class="searchbar" type="text" placeholder="Search..." />
-            <button class="btn add" @onclick="navigateToAddGrp">Add New</button>
+            <button class="btn add" @onclick="navigateToAddGrp">Add New Group</button>
         </div>
     </div>
 
-
-   <MudTable Class="mt-4" Items="@GroupList" Dense="true"
-            Breakpoint="Breakpoint.Sm">
-        <HeaderContent>
-            <MudTh Class="fw-bold">Account Id</MudTh>
-            <MudTh Class="fw-bold">Account Name</MudTh>
-            <MudTh Class="fw-bold">Description</MudTh>
-            <MudTh Class="fw-bold">Account Type</MudTh>
-            <MudTh Class="fw-bold">Status</MudTh>
-            <MudTh></MudTh>
-        </HeaderContent>
-        <RowTemplate>
-            <MudTd>@context.id</MudTd>
-            <MudTd>@context.name</MudTd>
-            <MudTd>@context.description</MudTd>
-            <MudTd>@context.type</MudTd>
-            <MudTd>@context.status</MudTd>
-            <MudTd>
-                <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                    <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
-                    <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(context.id)" />
-                </MudMenu>
-            </MudTd>
-        </RowTemplate>
-    </MudTable>
+    <div class="container-fluid">
+        <MudTable Class="mt-4" Items="@GroupList" Dense="true"
+                  Breakpoint="Breakpoint.Sm">
+            <HeaderContent>
+                <MudTh Class="fw-bold">Account Id</MudTh>
+                <MudTh Class="fw-bold">Account Name</MudTh>
+                <MudTh Class="fw-bold">Description</MudTh>
+                <MudTh Class="fw-bold">Account Type</MudTh>
+                <MudTh Class="fw-bold">Status</MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.id</MudTd>
+                <MudTd>@context.name</MudTd>
+                <MudTd>@context.description</MudTd>
+                <MudTd>@context.type</MudTd>
+                <MudTd>@context.status</MudTd>
+                <MudTd>
+                    <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                        <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(context.id)" />
+                    </MudMenu>
+                </MudTd>
+            </RowTemplate>
+        </MudTable>
+    </div>
 
 </div>
 

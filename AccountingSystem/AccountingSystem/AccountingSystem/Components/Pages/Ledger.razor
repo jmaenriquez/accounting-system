@@ -2,80 +2,66 @@
 @using AccountingSystem.Data
 @using AccountingSystem.Services
 @inject JournalService jservice
+@using MudBlazor
 
 <PageTitle>General Ledger</PageTitle>
 
-<div class="rounded-3">
+<div class="rounded-3" style="overflow-y: auto; max-height: 80vh;">
 
-	<div class="top-container">
+    <div class="top-container" style="position: sticky; top: 0; z-index: 1;">
 
         <h4 class="m-3 w-25">General Ledger</h4>
 
-		<div class="buttons">
-			<input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
-		</div>
+        <div class="buttons">
+            <input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
+        </div>
 
-	</div>
+    </div>
 
-	<div>
-		<div class="container">
-			@foreach(var ledgerGroup in Entries.GroupBy(l => l.AccName!.name))
-                {
-                    <h5 class="m-3">@ledgerGroup.Key</h5>
-                    <table class="mt-3 table table-borderless table-sm fww-bold">
-                        <thead class="table-info">
-                            <tr>
-                                <th>Date</th>
-                                <th>Account Name</th>
-                                <th>Description</th>
-                                <th>Sum of Debit</th>
-                                <th>Sum of Credit</th>
-                                <th>Sum of Balance</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            @foreach (var data in ledgerGroup)
-                            {
-                                <tr>
-                                    <td>@data.datetime.ToString("MM-dd-yyyy")</td>
-                                    <td>@data.AccName!.name</td>
-                                    <td>@data.description</td>
-                                    <td>@(data.debit > 0 ? $"{data.debit}" : "" )</td>
-                                    <td>@(data.credit > 0 ? $"{data.credit}" : "")</td>
-                                    <td>@(data.debit > 0 ? $"{data.debit}" : data.credit > 0 ? $"{data.credit}" : "")</td>
-
-                                </tr>
-                            }
-                        </tbody>
-
-                        <tfoot>
-                            <tr>
-                                <td class="fw-bold">Grand Total</td>
-                                <td></td>
-                                <td></td>
-                            <td class="fw-bold">@ledgerGroup.Sum(l => l.debit ?? 0).ToString("N2")</td>
-                            <td class="fw-bold">@ledgerGroup.Sum(l => l.credit ?? 0).ToString("N2")</td>
-                            <td class="fw-bold">@ledgerGroup.Sum(total => (total.debit ?? 0) - (total.credit ?? 0)).ToString("N2")</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-				}
-			
-
-		</div>
-	</div>
+    <div>
+        <div class="container-fluid">
+            @foreach(var ledgerGroup in FilteredEntries.GroupBy(l => l.AccName!.name))
+            {
+                <MudTable Class ="mt-3" Items="ledgerGroup" Hover="true" Bordered="true">
+                    <ToolBarContent>
+                        <MudText Typo = "Typo.h5">@ledgerGroup.Key</MudText>
+                    </ToolBarContent>
+                    <HeaderContent>
+                        <MudTh Class="fw-bold">Date</MudTh>
+                        <MudTh Class="fw-bold">Account Name</MudTh>
+                        <MudTh Class="fw-bold">Description</MudTh>
+                        <MudTh Class="fw-bold">Sum of Debit</MudTh>
+                        <MudTh Class="fw-bold">Sum of Credit</MudTh>
+                        <MudTh Class="fw-bold">Sum of Balance</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd DataLabel="Date">@context.datetime.ToString("MM-dd-yyyy")</MudTd>
+                        <MudTd DataLabel="Account Name">@context.AccName!.name</MudTd>
+                        <MudTd DataLabel="Description">@context.description</MudTd>
+                        <MudTd DataLabel="Sum of Debit">@((context.debit ?? 0) > 0 ? $"{context.debit}" : "" )</MudTd>
+                        <MudTd DataLabel="Sum of Credit">@((context.credit ?? 0) > 0 ? $"{context.credit}" : "")</MudTd>
+                        <MudTd DataLabel="Sum of Balance">@((context.debit ?? 0) > 0 ? $"{context.debit}" : (context.credit ?? 0) > 0 ? $"{context.credit}" : "")</MudTd>
+                    </RowTemplate>
+                    <FooterContent>
+                        <MudTd ColSpan="3" Align="Right" Class="fw-bold">Grand Total</MudTd>
+                        <MudTd Align="Right" Class="fw-bold">@ledgerGroup.Sum(l => l.debit ?? 0).ToString("N2")</MudTd>
+                        <MudTd Align="Right" Class="fw-bold">@ledgerGroup.Sum(l => l.credit ?? 0).ToString("N2")</MudTd>
+                        <MudTd Align="Right" Class="fw-bold">@ledgerGroup.Sum(total => (total.debit ?? 0) - (total.credit ?? 0)).ToString("N2")</MudTd>
+                    </FooterContent>
+                </MudTable>
+            }
+        </div>
+    </div>
 </div>
 
-
 @code {
-	List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
     List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
-	protected override async Task OnInitializedAsync()
-	{
-		Entries = (await jservice.journalentries()).ToList();
+    protected override async Task OnInitializedAsync()
+    {
+        Entries = (await jservice.journalentries()).ToList();
         FilteredEntries = Entries;
-	}
+    }
 
     private void FilterEntries(ChangeEventArgs e)
     {

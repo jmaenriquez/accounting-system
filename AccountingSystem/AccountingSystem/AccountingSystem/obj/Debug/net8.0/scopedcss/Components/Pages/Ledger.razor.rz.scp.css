@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-dtvkh2wzg0] {
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right: 2rem;
+    margin-right: 2rem
 }
 
 .searchbar[b-dtvkh2wzg0] {

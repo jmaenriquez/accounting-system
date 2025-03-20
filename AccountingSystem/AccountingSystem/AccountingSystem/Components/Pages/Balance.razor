@@ -19,43 +19,33 @@
 
 	@if(Entries.Count > 0)
 	{
-		<div>
-			<div>
-				<table class= "mt-3 table table-borderless table-sm">
-					<thead class="table-info">
-						<tr>
-							<th>Accounts</th>
-							<th>Sum of Debit</th>
-							<th>Sum of Credit</th>
-							<th>Sum of Balance</th>
-						</tr>
-					</thead>
+		<div class="container-fluid mt-3">
+			<MudTable Items ="Entries">
+				<HeaderContent>
+					<MudTh Class="fw-bold">Account</MudTh>
+					<MudTh Class="fw-bold">Sum of Debit</MudTh>
+					<MudTh Class="fw-bold">Sum of Credit</MudTh>
+					<MudTh Class="fw-bold">Sum of Balance</MudTh>
+				</HeaderContent>
 
-					@foreach (var balance in Entries)
-					{
-						<tbody>
-							<tr>
-								<td>@balance.AccountName</td>
-								<td>@(balance.Debit > 0 ? $"{balance.Debit}" : "") </td>
-								<td>@(balance.Credit > 0 ? $"{balance.Credit}" : "")</td>
-								<td>@(balance.Debit - balance.Credit)</td>
-							</tr>
-						</tbody>
-					}
+				<RowTemplate Context="balance">
+					<MudTd>@balance.AccountName</MudTd>
+					<MudTd>@(balance.Debit > 0 ? $"{balance.Debit}" : "")</MudTd>
+					<MudTd>@(balance.Credit > 0 ? $"{balance.Credit}" : "")</MudTd>
+					<MudTd>@(balance.Debit - balance.Credit)</MudTd>
+				</RowTemplate>
+				<FooterContent>
+						<MudTd Class="fw-bold">Grand Total</MudTd>
+						<MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
+						<MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
+				</FooterContent>
 
-                            <tfoot class="table-light">
-                                <tr>
-                                    <td class="fw-bold">Grand Total</td>
-							<td class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</td>
-							<td class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</td>
-                                    <td></td>
-                                </tr>
-                            </tfoot>
-				</table>
-			</div>
+			</MudTable>
 		</div>
 	}
 </div>
+
+
 
 
 @code {

@@ -21,7 +21,8 @@ namespace AccountingSystem.Migrations
                     date = table.Column<DateOnly>(type: "date", nullable: false),
                     name = table.Column<string>(type: "text", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
-                    status = table.Column<int>(type: "integer", nullable: false)
+                    status = table.Column<int>(type: "integer", nullable: false),
+                    isDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,7 +39,8 @@ namespace AccountingSystem.Migrations
                     name = table.Column<string>(type: "text", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
                     type = table.Column<int>(type: "integer", nullable: false),
-                    status = table.Column<int>(type: "integer", nullable: false)
+                    status = table.Column<int>(type: "integer", nullable: false),
+                    isDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,7 +59,9 @@ namespace AccountingSystem.Migrations
                     AccNameId = table.Column<int>(type: "integer", nullable: false),
                     debit = table.Column<decimal>(type: "numeric", nullable: true),
                     credit = table.Column<decimal>(type: "numeric", nullable: true),
-                    TransactId = table.Column<Guid>(type: "uuid", nullable: false)
+                    enterRemark = table.Column<string>(type: "text", nullable: false),
+                    TransactId = table.Column<Guid>(type: "uuid", nullable: false),
+                    isDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

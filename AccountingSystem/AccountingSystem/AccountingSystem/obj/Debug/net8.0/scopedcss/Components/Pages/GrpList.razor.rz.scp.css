@@ -2,7 +2,7 @@
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
 }
 
 .top-container[b-m0ve9n932a] {
@@ -17,7 +17,8 @@
 .buttons[b-m0ve9n932a] {
     display: flex;
     justify-content: end;
-    width: 85%;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar[b-m0ve9n932a], .add[b-m0ve9n932a] {
