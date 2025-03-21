@@ -1091,3 +1091,16 @@ C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\Accountin
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json

@@ -24,10 +24,10 @@
 
             <MudNavGroup Title="Chart of Accounts" Icon="@Icons.Material.Filled.TableChart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit" Class="@(!IsOpen ? "collapsed" : null)">
                 <MudNavLink Href="/acclist" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.ListAlt" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account List</MudNavLink>
-                <MudNavLink Href="/accgrp" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account Group</MudNavLink>
+                <MudNavLink Href="/accgrp" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account Group</MudNavLink>
             </MudNavGroup>
 
-            <MudNavLink Href="/report" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.InsertChartOutlined" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>
+            <MudNavLink Href="/report" Match="NavLinkMatch.All" @Icons.Material.Filled.InsertChartOutlined" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>
         </MudNavGroup>
     </MudNavMenu>
 </MudContainer>
@@ -51,14 +51,6 @@
 
     .collapsed .mud-nav-group-text {
         display: none;
-    }
-
-    .collapsed .mud-nav-group {
-        padding-right: 16px; /* Adjust padding to ensure dropdown icon is visible */
-    }
-
-    .collapsed .mud-nav-link {
-        padding-right: 16px; /* Adjust padding to ensure icons are visible */
     }
 </style>
 

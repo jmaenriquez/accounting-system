@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AccountingSystem",
+    "\\AccountingSystem\\AccountingSystem",
+    "\\AccountingSystem\\AccountingSystem\\Components",
+    "\\AccountingSystem\\AccountingSystem\\Components\\Layout"
   ],
-  "SelectedNode": "\\AccountingSystem.sln",
+  "SelectedNode": "\\AccountingSystem\\AccountingSystem\\Components\\Layout\\MainLayout.razor.css",
   "PreviewInSolutionExplorer": false
 }
