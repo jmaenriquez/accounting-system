@@ -10,17 +10,17 @@
 
 <div class = "rounded-3">  
 
- <div class="top-container">  
+    <div class="top-container">  
 
-     @* <h3 class="m-4">Journal Entries</h3> *@  
-     <h4 class="m-3 w-25">Journal Entries</h4>  
+        @* <h3 class="m-4">Journal Entries</h3> *@  
+        <h4 class="m-3 w-25">Journal Entries</h4>  
 
-     <div class="buttons">  
-         <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />  
-         <button class="btn add" @onclick="goToAddRec">Add New Record</button>  
+        <div class="buttons">  
+            <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />  
+            <button class="btn add" @onclick="goToAddRec">Add New Record</button>  
 
-     </div>  
- </div>  
+        </div>  
+    </div>  
 
     <div id="Tables" class="mt-2">
         <table class="mt-3 table table-borderless table-sm">
@@ -74,7 +74,8 @@
     </div>
 </div>  
 
-@code {  
+@code {
+
  private void goToAddRec()  
  {  
      Navigate.NavigateTo("/addrecords");  

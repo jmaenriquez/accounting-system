@@ -3,6 +3,8 @@
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-dtvkh2wzg0] {
@@ -12,6 +14,9 @@
     color: #ffffff;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-dtvkh2wzg0] {

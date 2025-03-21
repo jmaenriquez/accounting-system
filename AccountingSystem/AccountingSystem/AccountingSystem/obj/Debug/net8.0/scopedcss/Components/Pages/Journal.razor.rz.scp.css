@@ -3,6 +3,8 @@
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-c16h26qowt] {
@@ -11,7 +13,10 @@
     background-color: #00AAC1;
     color: #ffffff;
     display: flex;
-    align-items:center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-c16h26qowt] {
@@ -19,7 +24,6 @@
   justify-content: end;
   width:100%;
   margin-right: 2rem;
-  
 }
 
 .searchbar[b-c16h26qowt], .add[b-c16h26qowt] {
@@ -43,4 +47,18 @@
 .searchbar[b-c16h26qowt] {
     width:200px;
     height:33px;
+}
+
+.mud-table[b-c16h26qowt] {
+    width: 100% !important;
+}
+
+.mud-table-container[b-c16h26qowt] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mud-table tr[b-c16h26qowt] {
+    width: 100%;
 }

@@ -1,31 +1,74 @@
 ﻿@inherits LayoutComponentBase
+<PageTitle>MHC Portal</PageTitle>
 
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 <MudPopoverProvider />
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<style>
+    :root {
+        --zindex-overlay: 1351;
+    }
 
-    <main>
-        <div class="top-row px-4">
-            
-            <div class="user">
-               This is a user
-            </div>
-        </div>
+    .mud-overlay {
+        z-index: var(--zindex-overlay);
+    }
 
-        <article class="content px-4">
+    .mud-popover {
+        z-index: calc(var(--zindex-overlay) + 3) !important;
+    }
+
+    /* Ensure layout responsiveness */
+    .app-title .mud-nav-link {
+        padding: 8px 10px;
+    }
+
+        .app-title .mud-nav-link .mud-nav-link-text {
+            padding: 0px;
+            margin: 0px;
+        }
+</style>
+
+<MudLayout>
+    <MudAppBar Dense="true" Style="background-color:#00828F;">
+        <MudContainer Class="d-flex justify-content-between align-items-center" Style="padding:0px;margin:0px;width:100%;max-width:100vw;">
+            <MudContainer Class="d-flex align-items-center" Style="padding:0px;margin:0px;gap:5px;">
+                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
+                <MudNavLink Style="height:fit-content;width:fit-content;padding:0px;" Class="app-title" Href="/">
+                    <MudImage Src="favicon.png" />
+                    MHC Portal
+                </MudNavLink>
+            </MudContainer>
+        </MudContainer>
+    </MudAppBar>
+
+    <!-- Responsive Drawer -->
+    <MudHidden Breakpoint="Breakpoint.SmAndDown">
+        <MudDrawer @bind-Open="_drawerOpen" Variant="@DrawerVariant.Mini">
+            <NavMenu IsOpen="_drawerOpen" />
+        </MudDrawer>
+    </MudHidden>
+
+    <MudHidden Breakpoint="Breakpoint.MdAndUp">
+        <MudDrawer @bind-Open="_drawerOpen" Variant="DrawerVariant.Temporary">
+            <NavMenu IsOpen="_drawerOpen" />
+        </MudDrawer>
+    </MudHidden>
+
+    <MudMainContent>
+        <div style="overflow:hidden;background-color:azure;min-height:100vh;margin-top:26px;margin-left:26px;">
             @Body
-        </article>
-    </main>
-</div>
+        </div>
+    </MudMainContent>
+</MudLayout>
 
-<div id="blazor-error-ui">
-    An unhandled error has occurred.
-    <a href="" class="reload">Reload</a>
-    <a class="dismiss">🗙</a>
-</div>
+@code {
+    bool _drawerOpen = true; // Set to true to make the drawer open by default
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+        StateHasChanged();
+    }
+}

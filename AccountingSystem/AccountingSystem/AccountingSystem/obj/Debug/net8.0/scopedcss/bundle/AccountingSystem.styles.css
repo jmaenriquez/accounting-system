@@ -180,6 +180,8 @@ main[b-sy38zyqdxq] {
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-itkg4wyyqc] {
@@ -189,6 +191,9 @@ main[b-sy38zyqdxq] {
     color: #ffffff;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-itkg4wyyqc] {
@@ -249,6 +254,8 @@ body[b-jx5ziyf1f7] {
     background-color: #f9f9f9;
     overflow: hidden;
     height: 90vh;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-fw64h8oam3] {
@@ -258,6 +265,9 @@ body[b-jx5ziyf1f7] {
     color: #ffffff;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-fw64h8oam3] {
@@ -285,6 +295,8 @@ body[b-tquthsc8me] {
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-m0ve9n932a] {
@@ -294,6 +306,9 @@ body[b-tquthsc8me] {
     color: #ffffff;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-m0ve9n932a] {
@@ -330,6 +345,8 @@ body[b-tquthsc8me] {
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-c16h26qowt] {
@@ -338,7 +355,10 @@ body[b-tquthsc8me] {
     background-color: #00AAC1;
     color: #ffffff;
     display: flex;
-    align-items:center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-c16h26qowt] {
@@ -346,7 +366,6 @@ body[b-tquthsc8me] {
   justify-content: end;
   width:100%;
   margin-right: 2rem;
-  
 }
 
 .searchbar[b-c16h26qowt], .add[b-c16h26qowt] {
@@ -371,12 +390,28 @@ body[b-tquthsc8me] {
     width:200px;
     height:33px;
 }
+
+.mud-table[b-c16h26qowt] {
+    width: 100% !important;
+}
+
+.mud-table-container[b-c16h26qowt] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mud-table tr[b-c16h26qowt] {
+    width: 100%;
+}
 /* _content/AccountingSystem/Components/Pages/Ledger.razor.rz.scp.css */
 .rounded-3[b-dtvkh2wzg0] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-dtvkh2wzg0] {
@@ -386,6 +421,9 @@ body[b-tquthsc8me] {
     color: #ffffff;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons[b-dtvkh2wzg0] {

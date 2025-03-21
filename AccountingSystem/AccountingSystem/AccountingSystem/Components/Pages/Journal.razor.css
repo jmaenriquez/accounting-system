@@ -3,6 +3,8 @@
     background-color: #f9f9f9;
     overflow: hidden;
     height: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container {
@@ -11,7 +13,10 @@
     background-color: #00AAC1;
     color: #ffffff;
     display: flex;
-    align-items:center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .buttons {
@@ -19,7 +24,6 @@
   justify-content: end;
   width:100%;
   margin-right: 2rem;
-  
 }
 
 .searchbar, .add {
@@ -43,4 +47,18 @@
 .searchbar {
     width:200px;
     height:33px;
+}
+
+.mud-table {
+    width: 100% !important;
+}
+
+.mud-table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mud-table tr {
+    width: 100%;
 }
