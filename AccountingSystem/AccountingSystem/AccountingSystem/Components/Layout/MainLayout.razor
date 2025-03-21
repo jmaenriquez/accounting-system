@@ -16,7 +16,7 @@
     }
 
     .mud-popover {
-        z-index: calc(var(--zindex-overlay) + 3) !important;
+        z-index: calc(var(--zindex-overlay) + 3);
     }
 
     /* Ensure layout responsiveness */
@@ -57,7 +57,7 @@
     </MudHidden>
 
     <MudMainContent>
-        <div style="overflow:hidden;background-color:azure;min-height:100vh;margin-top:26px;margin-left:26px;">
+        <div style="overflow:hidden;margin-top:26px;margin-left:26px;">
             @Body
         </div>
     </MudMainContent>

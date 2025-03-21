@@ -71,58 +71,103 @@
                 }
             </tbody>
         </table>
+
+        <MudTable Items="FilteredEntries" GroupBy="@transact">
+            <HeaderContent>
+                <MudTh Class="fw-bold">Date</MudTh>
+                <MudTh Class="fw-bold">Journal Code</MudTh>
+                <MudTh Class="fw-bold">Description</MudTh>
+                <MudTh Class="fw-bold">Account Name</MudTh>
+                <MudTh Class="fw-bold">Total Debit</MudTh>
+                <MudTh Class="fw-bold">Total Credit</MudTh>
+                <MudTh Class="fw-bold">Comments</MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+
+            @* Grouped Row *@
+            <GroupHeaderTemplate Context="group">
+                @* Aggregate data *@
+                @{
+                    var firstEntry = group.Items.FirstOrDefault();
+                    var totalDebit = group.Items.Sum(e => e.debit);
+                    var totalCredit = group.Items.Sum(e => e.credit);
+
+                    bool firstRow = true;
+                }
+
+
+         
+            <MudTd>@firstEntry?.datetime.ToString("MM-dd-yyyy")</MudTd>
+            <MudTd>@firstEntry?.TransactId</MudTd>
+            <MudTd>@firstEntry?.description</MudTd>
+            <MudTd>@firstEntry?.AccName?.name</MudTd>
+            <MudTd>@(totalDebit > 0 ? $"{totalDebit:N0}" : "")</MudTd>
+            <MudTd>@(totalCredit > 0 ? $"{totalCredit:N0}" : "")</MudTd>
+            <MudTd>@firstEntry?.enterRemark</MudTd>
+            <MudTd>
+                <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                    <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                    <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(firstEntry!.TransactId)" />
+                </MudMenu>
+            </MudTd>
+        
+    </GroupHeaderTemplate>
+</MudTable>
     </div>
 </div>  
 
 @code {
+    private TableGroupDefinition<Journal_Entry> transact = new()
+        {
+            
+            Selector = entry => entry.TransactId
 
- private void goToAddRec()  
- {  
-     Navigate.NavigateTo("/addrecords");  
- }  
+        };
 
- private void ShowModal()  
- {  
-     Modal.Show<AddRecord>("/addrecords");  
- }  
+    private void goToAddRec()  
+    {  
+        Navigate.NavigateTo("/addrecords");  
+    }   
 
- private async Task Delete(Guid transactId)  
- {  
-     var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();  
-     foreach (var entry in entriesToRemove)  
+    private async Task Delete(Guid transactId)  
+    {  
+        var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();  
+        foreach (var entry in entriesToRemove)  
+        {  
+            entry.isDeleted = true; // Set the IsDeleted flag  
+        }  
+
+        await jservice.UpdateJournalEntries(entriesToRemove); // Ensure the changes are saved to the database  
+        Entries = Entries.Where(e => !e.isDeleted).ToList(); // Update the Entries list  
+        FilteredEntries = Entries; // Update the FilteredEntries list  
+        StateHasChanged();  
+
+        Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);  
+    }  
+
+    List<Journal_Entry> Entries = new List<Journal_Entry>();  
+    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
+
+    protected override async Task OnInitializedAsync()  
+    {  
+        Entries = (await jservice.journalentries())  
+        .Where(x => !x.isDeleted)  
+        .ToList();
+        FilteredEntries = Entries;
+
+        Console.WriteLine($"Entries Count{Entries.Count}");
+    }  
+
+     private void FilterEntries(ChangeEventArgs e)  
      {  
-         entry.isDeleted = true; // Set the IsDeleted flag  
+         var searchTerm = e.Value?.ToString();  
+         if (string.IsNullOrEmpty(searchTerm))  
+         {  
+             FilteredEntries = Entries;  
+         }  
+         else  
+         {  
+              FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+         }  
      }  
-
-     await jservice.UpdateJournalEntries(entriesToRemove); // Ensure the changes are saved to the database  
-     Entries = Entries.Where(e => !e.isDeleted).ToList(); // Update the Entries list  
-     FilteredEntries = Entries; // Update the FilteredEntries list  
-     StateHasChanged();  
-
-     Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);  
- }  
-
- List<Journal_Entry> Entries = new List<Journal_Entry>();  
- List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
-
- protected override async Task OnInitializedAsync()  
- {  
-     Entries = (await jservice.journalentries())  
-     .Where(x => !x.isDeleted)  
-     .ToList();  
-     FilteredEntries = Entries;  
- }  
-
- private void FilterEntries(ChangeEventArgs e)  
- {  
-     var searchTerm = e.Value?.ToString();  
-     if (string.IsNullOrEmpty(searchTerm))  
-     {  
-         FilteredEntries = Entries;  
-     }  
-     else  
-     {  
-          FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
-     }  
- }  
 }
