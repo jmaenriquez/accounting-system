@@ -42,17 +42,6 @@ namespace AccountingSystem.Services
                 .Where(x => !x.isDeleted)
                 .OrderBy(j => j.TransactId)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
-                //.Select(j => new Journal_Entry
-                //{
-                //    TransactId = j.TransactId,
-                //    datetime = j.datetime.Date,
-                //    AccName = j.AccName,
-                //    description = j.description,
-                //    debit = j.debit,
-                //    credit = j.credit,
-                //    isDeleted = j.isDeleted
-                //})
-                
                 .ToListAsync();
         }
 
@@ -67,16 +56,6 @@ namespace AccountingSystem.Services
                 .Where(x => x.isDeleted)
                 .OrderBy(j => j.TransactId)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
-                //.Select(j => new Journal_Entry
-                //{
-                //    TransactId = j.TransactId,
-                //    datetime = j.datetime.Date,
-                //    AccName = j.AccName,
-                //    description = j.description,
-                //    debit = j.debit,
-                //    credit = j.credit,
-                //    isDeleted = j.isDeleted
-                //})
                 .ToListAsync();
         }
 

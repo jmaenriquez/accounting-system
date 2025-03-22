@@ -20,130 +20,76 @@
             <button class="btn add" @onclick="goToAddRec">Add New Record</button>  
 
         </div>  
-    </div>  
+    </div>
 
-    <div id="Tables" class="mt-2">
-        <table class="mt-3 table table-borderless table-sm">
-            <thead class="table-info ">
-                <tr>
-                    <th>Date</th>
-                    <th>Journal Code</th>
-                    <th>Description</th>
-                    <th>Account Name</th>
-                    <th>Debit</th>
-                    <th>Credit</th>
-                    <th>Comments</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var group in FilteredEntries.GroupBy(j => j.TransactId))
-                {
-                    bool firstRow = true;
-                    foreach (var jlist in group)
+    <div id="Tables" class="mt-3 shadow-lg">
+        <div class="table-responsive container-fluid">
+            <table class="table custom-mud-table shadow rounded-1">
+                <thead class="custom-table-header">
+                    <MudTh Class="fw-bold">Date</MudTh>
+                    <MudTh Class="fw-bold">Journal Code</MudTh>
+                    <MudTh Class="fw-bold">Description</MudTh>
+                    <MudTh Class="fw-bold">Account Name</MudTh>
+                    <MudTh Class="fw-bold">Debit</MudTh>
+                    <MudTh Class="fw-bold">Credit</MudTh>
+                    <MudTh Class="fw-bold">Comments</MudTh>
+                    <MudTh Class="fw-bold"></MudTh>
+                </thead>
+                <tbody>
+                    @foreach (var group in FilteredEntries.GroupBy(j => j.TransactId))
                     {
-                        <tr class="border-bottom">
+                        bool firstRow = true;
+
+                        foreach (var jlist in group)
+                        {
+                            <tr>
                             @if (firstRow)
                             {
-                                <td rowspan="@group.Count()">@jlist.datetime.ToString("MM-dd-yyyy")</td>
-                                <td rowspan="@group.Count()">@group.Key</td>
+                                    <td rowspan="@group.Count()">
+                                        @group.First().datetime.ToString("MM-dd-yyyy")
+                                    </td>
+
+                                    <td rowspan="@group.Count()">
+                                        @group.Key
+                                    </td>
                             }
-                            <td>@(jlist.description)</td>
-                            <td>@(jlist.debit > 0 ? jlist.AccName!.name : " " + jlist.AccName!.name)</td>
-                            <td>@(jlist.debit > 0 ? $"{jlist.debit:N0}" : "")</td>
-                            <td>@(jlist.credit > 0 ? $"{jlist.credit:N0}" : "")</td>
+                                <td>@jlist.description</td>
+                                <td>@jlist.AccName?.name</td>
+                                <td>@((jlist.debit > 0) ? $"{jlist.debit:N2}" : "")</td>
+                                <td>@((jlist.credit > 0) ? $"{jlist.credit:N2}" : "")</td>
 
-                            @if (firstRow)
-                            {
-                                <td rowspan="@group.Count()" class="align-middle">@jlist.enterRemark</td>
-                                <td rowspan="@group.Count()" class="align-middle">
-                                    <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
-                                        <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(group.Key)" />
-                                    </MudMenu>
-                                </td>
 
-                                firstRow = false;
-                            }
+                                @if(firstRow)
+                                {
+                                    <td rowspan="@group.Count()">@jlist.enterRemark</td>
+                                    <td rowspan="@group.Count()">
+                                        <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                                            <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete"
+                                                         OnClick="() => Delete(group.Key)" />
+                                        </MudMenu>
+                                    </td>
 
-                        </tr>
+                                    firstRow = false;
+                                }
+                            </tr>
+                        }
                     }
-                }
-            </tbody>
-        </table>
-
-        <MudTable Items="FilteredEntries" GroupBy="@transact">
-            <HeaderContent>
-                <MudTh Class="fw-bold">Date</MudTh>
-                <MudTh Class="fw-bold">Journal Code</MudTh>
-                <MudTh Class="fw-bold">Description</MudTh>
-                <MudTh Class="fw-bold">Account Name</MudTh>
-                <MudTh Class="fw-bold">Total Debit</MudTh>
-                <MudTh Class="fw-bold">Total Credit</MudTh>
-                <MudTh Class="fw-bold">Comments</MudTh>
-                <MudTh></MudTh>
-            </HeaderContent>
-
-            @* Grouped Row *@
-            <GroupHeaderTemplate Context="group">
-                @* Aggregate data *@
-                @{
-                    var firstEntry = group.Items.FirstOrDefault();
-                    var totalDebit = group.Items.Sum(e => e.debit);
-                    var totalCredit = group.Items.Sum(e => e.credit);
-
-                    bool firstRow = true;
-                }
-
-
-         
-            <MudTd>@firstEntry?.datetime.ToString("MM-dd-yyyy")</MudTd>
-            <MudTd>@firstEntry?.TransactId</MudTd>
-            <MudTd>@firstEntry?.description</MudTd>
-            <MudTd>@firstEntry?.AccName?.name</MudTd>
-            <MudTd>@(totalDebit > 0 ? $"{totalDebit:N0}" : "")</MudTd>
-            <MudTd>@(totalCredit > 0 ? $"{totalCredit:N0}" : "")</MudTd>
-            <MudTd>@firstEntry?.enterRemark</MudTd>
-            <MudTd>
-                <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                    <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
-                    <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(firstEntry!.TransactId)" />
-                </MudMenu>
-            </MudTd>
-        
-    </GroupHeaderTemplate>
-</MudTable>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>  
 
-@code {
-    private TableGroupDefinition<Journal_Entry> transact = new()
-        {
-            
-            Selector = entry => entry.TransactId
 
-        };
+
+@code {
 
     private void goToAddRec()  
     {  
         Navigate.NavigateTo("/addrecords");  
     }   
 
-    private async Task Delete(Guid transactId)  
-    {  
-        var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();  
-        foreach (var entry in entriesToRemove)  
-        {  
-            entry.isDeleted = true; // Set the IsDeleted flag  
-        }  
-
-        await jservice.UpdateJournalEntries(entriesToRemove); // Ensure the changes are saved to the database  
-        Entries = Entries.Where(e => !e.isDeleted).ToList(); // Update the Entries list  
-        FilteredEntries = Entries; // Update the FilteredEntries list  
-        StateHasChanged();  
-
-        Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);  
-    }  
 
     List<Journal_Entry> Entries = new List<Journal_Entry>();  
     List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
@@ -169,5 +115,26 @@
          {  
               FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
          }  
-     }  
+     }
+     
+    private async Task Delete(Guid transactId)
+    {
+        var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();
+        foreach (var entry in entriesToRemove)
+        {
+            entry.isDeleted = true;
+        }
+
+        await jservice.UpdateJournalEntries(entriesToRemove);
+        Entries = Entries.Where(e => !e.isDeleted).ToList();
+        FilteredEntries = Entries;
+        StateHasChanged();
+
+        Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);
+    }
+
+    private async Task Edit()
+    {
+
+    }
 }
