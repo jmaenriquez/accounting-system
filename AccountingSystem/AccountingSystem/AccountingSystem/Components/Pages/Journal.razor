@@ -2,9 +2,9 @@
 @using AccountingSystem.Data  
 @using AccountingSystem.Services  
 @inject JournalService jservice  
-@inject NavigationManager Navigate  
-@inject IModalService Modal  
+@inject NavigationManager Navigate    
 @inject ISnackbar Snackbar  
+@inject IDialogService DialogService
 
 <PageTitle>Journal Entries</PageTitle>  
 
@@ -17,7 +17,7 @@
 
         <div class="buttons">  
             <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />  
-            <button class="btn add" @onclick="goToAddRec">Add New Record</button>  
+            <button class="btn add" @onclick="OpenAddRecDialog">Add New Record</button>
 
         </div>  
     </div>
@@ -135,6 +135,15 @@
 
     private async Task Edit()
     {
+        //edit
+    }
+
+    private async Task OpenAddRecDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Large, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<AddRecord>("Add New Record", parameters, options);
+        var result = await dialog.Result;
 
     }
 }

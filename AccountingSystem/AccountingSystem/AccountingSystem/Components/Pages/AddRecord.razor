@@ -8,8 +8,6 @@
 @inject GroupService grpService
 @inject AccountService accountService;
 
-<h3>Add Records</h3>
-
 <MudForm Model="@newEntry" Class = "mt-5">
     <MudGrid>
         <MudContainer>
@@ -79,16 +77,15 @@
             <td></td>
             <td></td>
             <td class="fw-bold">Total</td>
-            <td>@Overall.ToString("N2")</td>
+            <td class="fw-bold">@Overall.ToString("N2")</td>
             <td></td>
         </tr>
     </tfoot>
 </table>
 
 
-<div>
-    
-        <MudGrid Class="w-100 justify-content-end mt-3">
+<div class="w-100 d-flex justify-content-around">
+        <MudGrid Class="w-100 justify-content-end m-3 d-flex">
             <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
             <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
         </MudGrid>

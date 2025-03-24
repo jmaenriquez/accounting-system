@@ -4,6 +4,7 @@
 @inject GroupService grpService
 @inject NavigationManager Navigate
 @inject ISnackbar Snackbar
+@inject IDialogService DialogService
 
 <PageTitle>Account Groups</PageTitle>
 
@@ -15,7 +16,7 @@
 
         <div class="buttons">
             <input class="searchbar" type="text" placeholder="Search..." />
-            <button class="btn add" @onclick="navigateToAddGrp">Add New Group</button>
+            <button class="btn add" @onclick="OpenAddGrpDialog">Add New Group</button>
         </div>
     </div>
 
@@ -83,6 +84,21 @@
         StateHasChanged();
 
         Snackbar.Add("A Group has been marked as Deleted", Severity.Success);
+    }
+
+    //Edit
+    private async Task Edit()
+    {
+
+    }
+
+    private async Task OpenAddGrpDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<AddGrp>("Add New Group", parameters, options);
+        var result = await dialog.Result;
+
     }
 
 }

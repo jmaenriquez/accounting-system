@@ -5,12 +5,9 @@
 @inject NavigationManager Navigate
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
-
-
 <PageTitle>Add Groups</PageTitle>
-<h3>Add New Group</h3>
 
-<MudForm Model="@newGroup">
+<MudForm Model="@newGroup" Class="m-4">
     <MudGrid>
         <MudItem xs="12" sm="6" md="8" lg="10">
             <MudTextField Label="Name" @bind-Value="newGroup.name" />
@@ -35,10 +32,13 @@
         </MudItem>
     </MudGrid>
 
-    <MudGrid Class="mt-5 d-flex">
-        <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
-        <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
-    </MudGrid>
+    <div class="w-100 d-flex justify-content-end">
+        <MudGrid Class="w-100 mt-5 d-flex justify-content-end">
+            <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        </MudGrid>
+    </div>
+
 </MudForm>
 
 
