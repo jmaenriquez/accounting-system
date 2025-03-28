@@ -48,7 +48,7 @@
 <table class="mt-3 table table-responsive table-responsive-lg">
     <thead class="">
         <tr>
-            <th>   </th>
+            <th></th>
             <th>Account</th>
             <th>Group</th>
             <th>Debit</th>
@@ -85,15 +85,19 @@
 
 
 <div class="w-100 d-flex justify-content-around">
-        <MudGrid Class="w-100 justify-content-end m-3 d-flex">
-            <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
-            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
-        </MudGrid>
-    
+    <MudGrid Class="w-100 justify-content-end m-3 d-flex">
+        <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+        <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+    </MudGrid>
 </div>
 
 
 @code {
+
+
+    [Parameter]
+    public Journal_Entry journalRecords { get; set; }
+
 
     //Global Functions for the Journal Entry and Trial Balance
 
@@ -137,7 +141,7 @@
 
     private async Task Save()
     {
-        
+
 
         if (newEntry.AccGrp == null || newEntry.AccName == null || newEntry.description == null)
         {
@@ -195,7 +199,7 @@
                     AccNameId = entry.AccName!.id,
                     debit = entry.debit,
                     credit = entry.credit,
-                    
+
                 };
 
                 Console.WriteLine(journal.datetime);

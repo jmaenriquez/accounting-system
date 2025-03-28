@@ -40,6 +40,16 @@
 
 @code {
 
+    [Parameter]
+    public Account_List accData { get; set; } = new Account_List
+        {
+            date = DateOnly.FromDateTime(DateTime.Now),
+            id = 0,
+            name = "",
+            description = "",
+        };
+
+
     public void goBack()
     {
         Nav.NavigateTo("/acclist");

@@ -1,5 +1,52 @@
 ﻿@page "/"
 
-<PageTitle>Dashboard</PageTitle>
+<h3 class="dashboard-title">Dashboard</h3>
 
-<h3>This is the Dashboard Pips!</h3>
+<div class="rounded-3">
+    <div class="top-container">
+        <h4 class="m-3 w-25">Accounts</h4>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <!-- Large Account Summary -->
+    <a href="#" class="view-all">View all &gt;</a>
+    <br />
+    <div class="account-summary">
+        <div class="account-card-large">
+            <h4>Bank 1</h4>
+            <p>Status:</p>
+            <h2>₱0.00</h2>
+        </div>
+        <div class="account-card-large">
+            <h4>Bank 2</h4>
+            <p>Status:</p>
+            <h2>₱0.00</h2>
+        </div>
+        <div class="account-card-large">
+            <h4>Bank 3</h4>
+            <p>Status:</p>
+            <h2>₱0.00</h2>
+        </div>
+
+    </div>
+</div>
+
+<!-- Small Account Cards -->
+<div class="account-section">
+    <div class="account-card">
+        <h4>Accounts Payables</h4>
+        <p>Amount</p>
+        <h2>₱0.00</h2>
+    </div>
+    <div class="account-card">
+        <h4>Accounts Receivables</h4>
+        <p>Amount</p>
+        <h2>₱0.00</h2>
+    </div>
+</div>
+
+@code {
+ 
+
+}

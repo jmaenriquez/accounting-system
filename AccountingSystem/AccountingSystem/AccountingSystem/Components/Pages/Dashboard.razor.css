@@ -1,2 +1,156 @@
-﻿body {
+﻿.dashboard-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dashboard-container {
+    background-color: #e0f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Large Account Summary */
+.account-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    background-color: #dff7f7;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.account-card-large {
+    background: #4DC5D4;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    flex: 1;
+    text-align: center;
+}
+
+    .account-card-large h4 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .account-card-large h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+/* View all button */
+.view-all {
+    text-decoration: none;
+    color: #008b8b;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    transform: translateY(-50%);
+    right: 10px; /* Adjust this value as needed */
+}
+
+    .view-all:hover {
+        color: #0056b3;
+    }
+
+/* Small Account Cards */
+.account-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.account-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 80px;
+    flex: 1;
+    border-color: #00AAC1;
+}
+
+    .account-card h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .account-card h2 {
+        font-size: 22px;
+        font-weight: bold;
+        color: #008b8b;
+    }
+
+.icon {
+    font-size: 30px;
+}
+
+/* Chart of Accounts */
+.chart-container {
+    margin-top: 30px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.top-container {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+/* Top Container for Chart of Accounts */
+.searchbar {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .account-summary {
+        flex-direction: column;
+    }
+
+    .account-card-large {
+        min-width: 100%;
+    }
+
+    .account-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .view-all {
+        white-space: nowrap; /* Prevents line breaks */
+        font-size: 12px; /* Adjust size if too small */
+    }
 }

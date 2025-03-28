@@ -22,7 +22,7 @@
         <div class="container-fluid">
             @foreach(var ledgerGroup in FilteredEntries.GroupBy(l => l.AccName!.name))
             {
-                <MudTable Class ="mt-3" Items="ledgerGroup" Hover="true" Bordered="true">
+                <MudTable Class ="mt-3" Items="ledgerGroup">
                     <ToolBarContent>
                         <MudText Typo = "Typo.h5">@ledgerGroup.Key</MudText>
                     </ToolBarContent>
@@ -72,7 +72,8 @@
         }
         else
         {
-            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
         }
     }
 }

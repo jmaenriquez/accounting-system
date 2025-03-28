@@ -12,66 +12,71 @@
 
 <div class="rounded-3">
 
-   <div class="top-container">
+    <div class="top-container">
 
-       <h4 class="m-4 w-25">Account List</h4>
+        <h4 class="m-4 w-25">Account List</h4>
 
-       <div class="buttons">
-           <input class="searchbar" type="text" placeholder="Search..." />
-           <button class="btn add" @onclick="OpenAddAccDialog">Add New Account</button>
-       </div>
-   </div>
+        <div class="buttons">
+            <input class="searchbar" type="text" placeholder="Search..." />
+            <button class="btn add" @onclick="OpenAddAccDialog">Add New Account</button>
+        </div>
+    </div>
 
-   <div>
-       <div class="container-fluid">
-           <MudTable Class="mt-4" Items="@AccountList" Dense="true"
-           Breakpoint="Breakpoint.Sm">
-               <HeaderContent>
-                   <MudTh Class="fw-bold">Account Id</MudTh>
-                   <MudTh Class="fw-bold">Account Name</MudTh>
-                   <MudTh Class="fw-bold">Description</MudTh>
-                   <MudTh Class="fw-bold">Status</MudTh>
-                   <MudTh></MudTh>
-               </HeaderContent>
-               <RowTemplate>
-                   <MudTd>@context.id</MudTd>
-                   <MudTd>@context.name</MudTd>
-                   <MudTd>@context.description</MudTd>
-                   <MudTd>@context.status</MudTd>
-                   <MudTd>
-                       <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                           <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context.id)" />
-                           <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => isDeleted(context.id)" />
-                       </MudMenu>
-                   </MudTd>
-               </RowTemplate>
-           </MudTable>
-       </div>
-   </div>
+    <div>
+        <div class="container-fluid">
+            <MudTable Class="mt-4" Items="@AccountList" Dense="true"
+            Breakpoint="Breakpoint.Sm">
+                <HeaderContent>
+                    <MudTh Class="fw-bold">Account Id</MudTh>
+                    <MudTh Class="fw-bold">Account Name</MudTh>
+                    <MudTh Class="fw-bold">Description</MudTh>
+                    <MudTh Class="fw-bold">Status</MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd>@context.id</MudTd>
+                    <MudTd>@context.name</MudTd>
+                    <MudTd>@context.description</MudTd>
+                    <MudTd>@context.status</MudTd>
+                    <MudTd>
+                        <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context.id)" />
+                            <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => isDeleted(context.id)" />
+                        </MudMenu>
+                    </MudTd>
+                </RowTemplate>
+            </MudTable>
+        </div>
+    </div>
 </div>
 
 @code {
-   public bool Overlay = false; 
-   public void navigateToAddAcc()
-   {
-       Navigate.NavigateTo("/addacc");
-   }
+    public bool Overlay = false; 
+    public void navigateToAddAcc()
+    {
+        Navigate.NavigateTo("/addacc");
+    }
 
-   List<Account_List> AccountList = new List<Account_List>();
+    List<Account_List> AccountList = new List<Account_List>();
 
-   public Account_List updateAcc = new Account_List
+    public Account_List updateAcc = new Account_List
    {
            date = DateOnly.FromDateTime(DateTime.Now),
            name = "",
            description = "",
    };
 
-   protected override async Task OnInitializedAsync()
-   {
-       AccountList = (await accountService.GetAllAccounts())
-       .Where(a => !a.isDeleted)
-       .ToList();
-       StateHasChanged();
+    protected override async Task OnInitializedAsync()
+    {
+        while (true)
+        {
+            AccountList = (await accountService.GetAllAccounts())
+            .Where(a => !a.isDeleted)
+            .ToList();
+
+            await Task.Delay(5000);
+            StateHasChanged();
+        }
 
    }
 

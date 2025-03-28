@@ -1,5 +1,5 @@
 ﻿@inherits LayoutComponentBase
-<PageTitle>MHC Portal</PageTitle>
+<PageTitle>MHC Accounting</PageTitle>
 
 <MudThemeProvider />
 <MudDialogProvider />
@@ -13,10 +13,6 @@
 
     .mud-overlay {
         z-index: var(--zindex-overlay);
-    }
-
-    .mud-popover {
-        z-index: calc(var(--zindex-overlay) + 3);
     }
 
     /* Ensure layout responsiveness */
@@ -43,7 +39,7 @@
         </MudContainer>
     </MudAppBar>
 
-    <!-- Responsive Drawer -->
+   
     <MudHidden Breakpoint="Breakpoint.SmAndDown">
         <MudDrawer @bind-Open="_drawerOpen" Variant="@DrawerVariant.Mini">
             <NavMenu IsOpen="_drawerOpen" />
@@ -64,7 +60,7 @@
 </MudLayout>
 
 @code {
-    bool _drawerOpen = true; // Set to true to make the drawer open by default
+    bool _drawerOpen = true;
 
     void DrawerToggle()
     {

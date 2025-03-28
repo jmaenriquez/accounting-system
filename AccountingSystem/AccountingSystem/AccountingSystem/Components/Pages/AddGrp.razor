@@ -1,7 +1,7 @@
 @page "/addgrp"
 @using AccountingSystem.Data
 @using MudBlazor
-
+@inject Data.AppDbContext Database
 @inject NavigationManager Navigate
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
@@ -42,25 +42,42 @@
 </MudForm>
 
 
-@inject Data.AppDbContext Database
+
 @code {
+    [Parameter]
+    public Group_List grpData { get; set; } = new Group_List
+    {
+            datetime = DateOnly.FromDateTime(DateTime.Now),
+            id = 0,
+            name = "",
+            description = "",
+    };
+    public bool Visible { get; set; }
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+    [Parameter]
+    public EventCallback OnUpdate { get; set; }
+
+
 
     public void goBack()
     {
         Navigate.NavigateTo("/accgrp");
     }
 
-    public Group_List newGroup = new Group_List{
+    public Group_List newGroup = new Group_List
+        {
 
             datetime = DateOnly.FromDateTime(DateTime.Now),
             id = 0,
             name = "",
             description = "",
-    };
+        };
 
     public bool added = false;
 
-    private async Task SubmitGrp(){
+    private async Task SubmitGrp()
+    {
 
         if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
         {
@@ -70,23 +87,23 @@
 
         else
         {
-                Database.Groups.Add(newGroup);
-                await Database.SaveChangesAsync();
-                added = true;
-                await Task.Delay(500);
-                Snackbar.Add("Transaction successful!", Severity.Success);
+            Database.Groups.Add(newGroup);
+            await Database.SaveChangesAsync();
+            added = true;
+            await Task.Delay(500);
+            Snackbar.Add("Transaction successful!", Severity.Success);
 
 
-                newGroup = new Group_List
-                    {
-                        datetime = DateOnly.FromDateTime(DateTime.Now),
-                        id = 0,
-                        name = "",
-                        description = "",
+            newGroup = new Group_List
+                {
+                    datetime = DateOnly.FromDateTime(DateTime.Now),
+                    id = 0,
+                    name = "",
+                    description = "",
 
-                    };
+                };
 
-                StateHasChanged();
-            }      
+            StateHasChanged();
+        }
     }
 }

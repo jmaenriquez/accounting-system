@@ -22,7 +22,7 @@
 
     <div class="container-fluid">
         <MudTable Class="mt-4" Items="@GroupList" Dense="true"
-                  Breakpoint="Breakpoint.Sm">
+        Breakpoint="Breakpoint.Sm">
             <HeaderContent>
                 <MudTh Class="fw-bold">Account Id</MudTh>
                 <MudTh Class="fw-bold">Account Name</MudTh>
@@ -39,7 +39,7 @@
                 <MudTd>@context.status</MudTd>
                 <MudTd>
                     <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" />
+                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context)" />
                         <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(context.id)" />
                     </MudMenu>
                 </MudTd>
@@ -87,8 +87,14 @@
     }
 
     //Edit
-    private async Task Edit()
+    private async Task Edit(Group_List editgrp)
     {
+
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<AddGrp>("Edit Group", parameters, options);
+
+        var result = await dialog.Result;
 
     }
 

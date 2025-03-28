@@ -28,24 +28,26 @@ namespace AccountingSystem.Services
                 .ToListAsync();
         }
 
-        public async Task UpdateGrpList(IEnumerable <Group_List> groups)
+        public async Task UpdateGrpList(IEnumerable<Group_List> groups)
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
 
             foreach (var group in groups)
             {
-                var existingGroup = await dbContext.Groups
-                    .Where(x => x.id == group.id)
-                    .ToListAsync();
+                var existingGroup = await dbContext.Groups.FirstOrDefaultAsync(x => x.id == group.id);
 
-                if (existingGroup.Any())
+                if (existingGroup != null)
                 {
-                    foreach(var data in existingGroup)
-                    {
-                        data.isDeleted = group.isDeleted;
-                    }
+                    existingGroup.name = group.name;
+                    existingGroup.description = group.description;
+                    existingGroup.type = group.type;
+                    existingGroup.status = group.status;
+                    existingGroup.isDeleted = group.isDeleted;
+
+                    dbContext.Groups.Update(existingGroup); // Ensure EF tracks changes
                 }
             }
+
             await dbContext.SaveChangesAsync();
         }
     }
