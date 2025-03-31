@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R5Ggro5n7FB0cW4e/eAz1cgkR4W2ttIFYO7nsP7716w=",
+  "Hash": "ywdBfA7YqYIUFLxxRL9uxj90Okjot2ppYpCJHkqlTBE=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -12734,8 +12734,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "v02pbqjxe6",
-      "Integrity": "gSaF71uXTQCHR0h8bOAhC51/h5f8VsmOPvNzAACetpQ=",
+      "Fingerprint": "fdjszp0pqc",
+      "Integrity": "7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12755,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "j7ykh8cfve",
-      "Integrity": "LzupvQh+9BJKpnbC2DccKtCLIgy0H1jN8OJK3pqQ7WU=",
+      "Fingerprint": "dvcjj9x37h",
+      "Integrity": "F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -54122,7 +54122,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13252"
+          "Value": "12919"
         },
         {
           "Name": "Content-Type",
@@ -54130,11 +54130,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LzupvQh+9BJKpnbC2DccKtCLIgy0H1jN8OJK3pqQ7WU=\""
+          "Value": "\"F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 03:03:59 GMT"
+          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54144,12 +54144,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LzupvQh+9BJKpnbC2DccKtCLIgy0H1jN8OJK3pqQ7WU="
+          "Value": "sha256-F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.j7ykh8cfve.bundle.scp.css",
+      "Route": "AccountingSystem.dvcjj9x37h.bundle.scp.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54159,7 +54159,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13252"
+          "Value": "12919"
         },
         {
           "Name": "Content-Type",
@@ -54167,11 +54167,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LzupvQh+9BJKpnbC2DccKtCLIgy0H1jN8OJK3pqQ7WU=\""
+          "Value": "\"F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 03:03:59 GMT"
+          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54181,7 +54181,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "j7ykh8cfve"
+          "Value": "dvcjj9x37h"
         },
         {
           "Name": "label",
@@ -54189,7 +54189,56 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LzupvQh+9BJKpnbC2DccKtCLIgy0H1jN8OJK3pqQ7WU="
+          "Value": "sha256-F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo="
+        }
+      ]
+    },
+    {
+      "Route": "AccountingSystem.fdjszp0pqc.styles.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12987"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Blazored.Modal/Blazored.Modal.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fdjszp0pqc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
+        },
+        {
+          "Name": "label",
+          "Value": "AccountingSystem.styles.css"
         }
       ]
     },
@@ -54208,7 +54257,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13320"
+          "Value": "12987"
         },
         {
           "Name": "Content-Type",
@@ -54216,11 +54265,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gSaF71uXTQCHR0h8bOAhC51/h5f8VsmOPvNzAACetpQ=\""
+          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 03:03:59 GMT"
+          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
         },
         {
           "Name": "Link",
@@ -54230,56 +54279,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-gSaF71uXTQCHR0h8bOAhC51/h5f8VsmOPvNzAACetpQ="
-        }
-      ]
-    },
-    {
-      "Route": "AccountingSystem.v02pbqjxe6.styles.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13320"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gSaF71uXTQCHR0h8bOAhC51/h5f8VsmOPvNzAACetpQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 03:03:59 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/Blazored.Modal/Blazored.Modal.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "v02pbqjxe6"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gSaF71uXTQCHR0h8bOAhC51/h5f8VsmOPvNzAACetpQ="
-        },
-        {
-          "Name": "label",
-          "Value": "AccountingSystem.styles.css"
+          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
         }
       ]
     },
@@ -54306,7 +54306,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 13:52:48 GMT"
+          "Value": "Mon, 31 Mar 2025 02:39:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54351,7 +54351,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 10 Mar 2025 13:52:48 GMT"
+          "Value": "Mon, 31 Mar 2025 02:39:54 GMT"
         },
         {
           "Name": "Cache-Control",

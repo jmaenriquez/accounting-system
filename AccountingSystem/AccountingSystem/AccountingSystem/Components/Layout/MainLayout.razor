@@ -20,7 +20,7 @@
         padding: 8px 10px;
     }
 
-        .app-title .mud-nav-link .mud-nav-link-text {
+    .app-title .mud-nav-link .mud-nav-link-text {
             padding: 0px;
             margin: 0px;
         }
@@ -33,7 +33,7 @@
                 <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle" />
                 <MudNavLink Style="height:fit-content;width:fit-content;padding:0px;" Class="app-title" Href="/">
                     <MudImage Src="favicon.png" />
-                    MHC Portal
+                    MHC Accounting
                 </MudNavLink>
             </MudContainer>
         </MudContainer>
@@ -51,12 +51,18 @@
             <NavMenu IsOpen="_drawerOpen" />
         </MudDrawer>
     </MudHidden>
-
+    
     <MudMainContent>
-        <div style="overflow:hidden;margin-top:26px;margin-left:26px;">
+        <div style="overflow:hidden;background-color:azure;height:100%; padding-top:26px;padding-left:26px; padding-right: 26px;">
             @Body
-        </div>
+    </div>
     </MudMainContent>
+@* <MudMainContent Style="width:100vw; max-width:100vw;min-width:90%; height:100vh;margin:0px;padding:0px;background-color:azure;">
+        @Body
+        <div style="overflow:hidden;margin-top:26px;margin-left:26px; margin-right: 26px;">
+            
+         </div>
+    </MudMainContent> *@
 </MudLayout>
 
 @code {

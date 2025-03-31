@@ -1,49 +1,73 @@
 ﻿@page "/"
 
-<h3 class="dashboard-title">Dashboard</h3>
-
 <div class="rounded-3">
     <div class="top-container">
-        <h4 class="m-3 w-25">Accounts</h4>
+        <h4 class="m-3 w-25">Dashboard</h4>
     </div>
 </div>
 
-<div class="dashboard-container">
-    <!-- Large Account Summary -->
-    <a href="#" class="view-all">View all &gt;</a>
-    <br />
-    <div class="account-summary">
-        <div class="account-card-large">
-            <h4>Bank 1</h4>
-            <p>Status:</p>
-            <h2>₱0.00</h2>
-        </div>
-        <div class="account-card-large">
-            <h4>Bank 2</h4>
-            <p>Status:</p>
-            <h2>₱0.00</h2>
-        </div>
-        <div class="account-card-large">
-            <h4>Bank 3</h4>
-            <p>Status:</p>
-            <h2>₱0.00</h2>
-        </div>
 
-    </div>
-</div>
+<div class="mt-3 container-fluid justify-content-center">
 
-<!-- Small Account Cards -->
-<div class="account-section">
-    <div class="account-card">
-        <h4>Accounts Payables</h4>
-        <p>Amount</p>
-        <h2>₱0.00</h2>
+    <div class="w-100">
+
+        <MudCard class="w-50 text-center rounded-3">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Current Capital</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText>Status:</MudText>
+                <MudText Typo="Typo.h5">₱0.00</MudText>
+            </MudCardContent>
+        </MudCard>
+
+        <MudCard class="w-50 text-center rounded-3">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Total Asset</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText>Status:</MudText>
+                <MudText Typo="Typo.h5">₱0.00</MudText>
+            </MudCardContent>
+        </MudCard>
     </div>
-    <div class="account-card">
-        <h4>Accounts Receivables</h4>
-        <p>Amount</p>
-        <h2>₱0.00</h2>
+
+    <div>
+        <MudCard class="w-50 text-center rounded-3">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Payables</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText>Status:</MudText>
+                <MudText Typo="Typo.h5">₱0.00</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Href="/ledger">Go to Payables</MudButton>
+            </MudCardActions>
+        </MudCard>
+
+        <MudCard class="w-50 text-center rounded-3">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">Receivables</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText>Status:</MudText>
+                <MudText Typo="Typo.h5">₱0.00</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Href="/ledger">Go to Receivables</MudButton>
+            </MudCardActions>
+        </MudCard>
     </div>
+
 </div>
 
 @code {

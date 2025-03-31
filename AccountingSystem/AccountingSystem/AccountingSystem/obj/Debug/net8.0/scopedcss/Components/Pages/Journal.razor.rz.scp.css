@@ -2,9 +2,9 @@
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 100% !important;
+    height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-c16h26qowt] {

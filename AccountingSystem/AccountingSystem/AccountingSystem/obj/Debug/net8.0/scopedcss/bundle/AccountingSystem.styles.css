@@ -181,7 +181,7 @@ main[b-sy38zyqdxq] {
     overflow: hidden;
     height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-itkg4wyyqc] {
@@ -253,9 +253,9 @@ body[b-jx5ziyf1f7] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-fw64h8oam3] {
@@ -287,110 +287,38 @@ body[b-jx5ziyf1f7] {
     height: 33px;
 }
 /* _content/AccountingSystem/Components/Pages/Dashboard.razor.rz.scp.css */
-.dashboard-title[b-tquthsc8me] {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+body[b-tquthsc8me] {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.page-container[b-tquthsc8me] {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1300px;
 }
 
 .dashboard-container[b-tquthsc8me] {
-    background-color: #e0f7f7;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Large Account Summary */
-.account-summary[b-tquthsc8me] {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
     align-items: center;
-    background-color: #dff7f7;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    gap: 20px;
+    width: 100%;
 }
 
-.account-card-large[b-tquthsc8me] {
-    background: #4DC5D4;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 200px;
-    flex: 1;
-    text-align: center;
-}
-
-    .account-card-large h4[b-tquthsc8me] {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-
-    .account-card-large h2[b-tquthsc8me] {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-/* View all button */
-.view-all[b-tquthsc8me] {
-    text-decoration: none;
-    color: #008b8b;
-    font-weight: bold;
-    margin-top: 10px;
-    display: block;
-    transform: translateY(-50%);
-    right: 10px; /* Adjust this value as needed */
-}
-
-    .view-all:hover[b-tquthsc8me] {
-        color: #0056b3;
-    }
-
-/* Small Account Cards */
-.account-section[b-tquthsc8me] {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.account-card[b-tquthsc8me] {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    min-width: 80px;
-    flex: 1;
-    border-color: #00AAC1;
-}
-
-    .account-card h4[b-tquthsc8me] {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-
-    .account-card h2[b-tquthsc8me] {
-        font-size: 22px;
-        font-weight: bold;
-        color: #008b8b;
-    }
-
-.icon[b-tquthsc8me] {
-    font-size: 30px;
-}
-
-/* Chart of Accounts */
-.chart-container[b-tquthsc8me] {
-    margin-top: 30px;
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
+.rounded-3[b-tquthsc8me] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100% !important;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .top-container[b-tquthsc8me] {
@@ -400,49 +328,100 @@ body[b-jx5ziyf1f7] {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+.view-all[b-tquthsc8me] {
+    display: inline-block;
+    padding: 10px 13px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 0 15px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 15px;
 }
 
-/* Top Container for Chart of Accounts */
-.searchbar[b-tquthsc8me] {
-    padding: 8px;
-    border: none;
+    .view-all:hover[b-tquthsc8me] {
+        background-color: #008A9A;
+        transform: scale(1.05);
+    }
+
+    .view-all:active[b-tquthsc8me] {
+        background-color: #007382;
+        transform: scale(0.98);
+    }
+
+.account-summary[b-tquthsc8me],
+.account-section[b-tquthsc8me] {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: 100px;
+}
+
+.account-card-large[b-tquthsc8me] { /* Use this for ALL cards */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 48%;
+    margin-right: 80px;
+}
+
+    .account-card-large h4[b-tquthsc8me] {
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .account-card-large h2[b-tquthsc8me] {
+        margin-top: 10px;
+    }
+
+    .account-card-large h2[b-tquthsc8me] {
+        color: #28a745;
+    }
+
+        .account-card-large h2.receivables[b-tquthsc8me] {
+            color: #dc3545;
+        }
+
+        .account-card-large h2.payables[b-tquthsc8me] {
+            color: #dc3545;
+        }
+
+.navigate-button[b-tquthsc8me] {
+    display: inline-block;
+    padding: 10px 13px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    text-decoration: none;
     border-radius: 5px;
-    width: 200px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 15px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .account-summary[b-tquthsc8me] {
-        flex-direction: column;
+    .navigate-button:hover[b-tquthsc8me] {
+        background-color: #008A9A;
+        transform: scale(1.05);
     }
 
-    .account-card-large[b-tquthsc8me] {
-        min-width: 100%;
+    .navigate-button:active[b-tquthsc8me] {
+        background-color: #007382;
+        transform: scale(0.98);
     }
-
-    .account-section[b-tquthsc8me] {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-container[b-tquthsc8me] {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .view-all[b-tquthsc8me] {
-        white-space: nowrap; /* Prevents line breaks */
-        font-size: 12px; /* Adjust size if too small */
-    }
-}
 /* _content/AccountingSystem/Components/Pages/GrpList.razor.rz.scp.css */
 .rounded-3[b-m0ve9n932a] {
     width: 100%;
@@ -450,7 +429,7 @@ body[b-jx5ziyf1f7] {
     overflow: hidden;
     height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-m0ve9n932a] {
@@ -498,9 +477,9 @@ body[b-jx5ziyf1f7] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 100% !important;
+    height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-c16h26qowt] {
@@ -557,7 +536,7 @@ body[b-jx5ziyf1f7] {
     overflow: hidden;
     height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-dtvkh2wzg0] {
@@ -598,9 +577,9 @@ body[b-q559me807p] {
     width: 100%;
     background-color: #f9f9f9;
     overflow: hidden;
-    height: 90vh;
+    height: 100%;
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 75vh;
 }
 
 .top-container[b-n2ah7os6g4] {

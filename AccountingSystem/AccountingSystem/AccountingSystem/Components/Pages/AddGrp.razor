@@ -1,45 +1,45 @@
-@page "/addgrp"
 @using AccountingSystem.Data
 @using MudBlazor
 @inject Data.AppDbContext Database
 @inject NavigationManager Navigate
 @inject ISnackbar Snackbar
-@inject IDialogService DialogService
-<PageTitle>Add Groups</PageTitle>
 
-<MudForm Model="@newGroup" Class="m-4">
-    <MudGrid>
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudTextField Label="Name" @bind-Value="newGroup.name" />
-        </MudItem>
 
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudTextField Label="Description" @bind-Value="newGroup.description" />
-        </MudItem>
+<MudOverlay @bind-Visible ="Visible" DarkBackground="true">
+    <MudForm Model="@newGroup" Class="m-4">
+        <MudGrid>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudTextField Label="Name" @bind-Value="newGroup.name" />
+            </MudItem>
 
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudSelect T="AccountType" Label="Select an Account Type" @bind-Value="newGroup.type">
-                <MudSelectItem Value="@AccountType.Debit"></MudSelectItem>
-                <MudSelectItem Value="@AccountType.Credit"></MudSelectItem>
-            </MudSelect>
-        </MudItem>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudTextField Label="Description" @bind-Value="newGroup.description" />
+            </MudItem>
 
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudSelect T="Status" Label="Select a Status" @bind-Value="newGroup.status">
-                <MudSelectItem Value="@Status.Active">Active</MudSelectItem>
-                <MudSelectItem Value="@Status.Inactive">Inactive</MudSelectItem>
-            </MudSelect>
-        </MudItem>
-    </MudGrid>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudSelect T="AccountType" Label="Select an Account Type" @bind-Value="newGroup.type">
+                    <MudSelectItem Value="@AccountType.Debit"></MudSelectItem>
+                    <MudSelectItem Value="@AccountType.Credit"></MudSelectItem>
+                </MudSelect>
+            </MudItem>
 
-    <div class="w-100 d-flex justify-content-end">
-        <MudGrid Class="w-100 mt-5 d-flex justify-content-end">
-            <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
-            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudSelect T="Status" Label="Select a Status" @bind-Value="newGroup.status">
+                    <MudSelectItem Value="@Status.Active">Active</MudSelectItem>
+                    <MudSelectItem Value="@Status.Inactive">Inactive</MudSelectItem>
+                </MudSelect>
+            </MudItem>
         </MudGrid>
-    </div>
 
-</MudForm>
+        <div class="w-100 d-flex justify-content-end">
+            <MudGrid Class="w-100 mt-5 d-flex justify-content-end">
+                <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+                <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+            </MudGrid>
+        </div>
+
+    </MudForm>
+</MudOverlay>
 
 
 
@@ -58,6 +58,16 @@
     [Parameter]
     public EventCallback OnUpdate { get; set; }
 
+
+    public void showOverlay()
+    {
+        Visible = true;
+    }
+
+    public void hideOverlay()
+    {
+        Visible = false;
+    }
 
 
     public void goBack()

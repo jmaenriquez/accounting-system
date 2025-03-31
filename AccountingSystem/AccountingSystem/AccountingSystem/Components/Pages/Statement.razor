@@ -1,4 +1,7 @@
 @page "/statement"
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject JournalService jservice
 
 <PageTitle>Income Statement</PageTitle>
 
@@ -10,7 +13,56 @@
 		<div class="buttons">
 			<input class="searchbar" type="text" placeholder="Search..."/>
 		</div>
-
 	</div>
+
+	<MudTable Items="@FilteredEntries">
+
+        <HeaderContent>
+                <MudTh>Description</MudTh>
+                <MudTh></MudTh>
+                <MudTh>Amount (PHP)</MudTh>
+                <MudTh></MudTh>
+        </HeaderContent>
+        <RowTemplate>
+                <MudTd></MudTd>
+                <MudTd></MudTd>
+                <MudTd></MudTd>
+                <MudTd></MudTd>
+        </RowTemplate>
+        <FooterContent>
+                <MudTFootRow>
+                    <MudTd>Net Income (Loss)</MudTd>
+                    <MudTd></MudTd>
+                    <MudTd></MudTd>
+                </MudTFootRow>
+        </FooterContent>
+    </MudTable>
+
 </div>
+
+@code{
+
+
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
+    protected override async Task OnInitializedAsync()
+    {
+        Entries = (await jservice.journalentries()).ToList();
+        FilteredEntries = Entries;
+    }
+
+    private void FilterEntries(ChangeEventArgs e)
+    {
+        var searchTerm = e.Value?.ToString();
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredEntries = Entries;
+        }
+        else
+        {
+            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+    }
+}
 
