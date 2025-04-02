@@ -40,7 +40,7 @@
                     <MudTd>@context.status</MudTd>
                     <MudTd>
                         <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context.id)" />
+                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context)" />
                             <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => isDeleted(context.id)" />
                         </MudMenu>
                     </MudTd>
@@ -51,7 +51,8 @@
 </div>
 
 @code {
-    public bool Overlay = false; 
+    public bool Overlay = false;
+
     public void navigateToAddAcc()
     {
         Navigate.NavigateTo("/addacc");
@@ -68,55 +69,53 @@
 
     protected override async Task OnInitializedAsync()
     {
-        while (true)
+        AccountList = (await accountService.GetAllAccounts())
+        .Where(a => !a.isDeleted)
+        .ToList();
+
+    }
+
+    private async Task isDeleted(int accountId)
+    {
+        var account = AccountList.FirstOrDefault(e => e.id == accountId);
+        if (account != null)
         {
-            AccountList = (await accountService.GetAllAccounts())
-            .Where(a => !a.isDeleted)
-            .ToList();
-
-            await Task.Delay(5000);
+            account.isDeleted = true;
+            await accountService.UpdateAccount(new List<Account_List> { account });
+            AccountList = AccountList.Where(e => !e.isDeleted).ToList();
             StateHasChanged();
+            Snackbar.Add("An Account has been marked as Deleted", Severity.Success);
         }
+    }
 
-   }
-
-   private async Task isDeleted(int accountId)
-   {
-       var account = AccountList.FirstOrDefault(e => e.id == accountId);
-       if (account != null)
-       {
-           account.isDeleted = true;
-           await accountService.UpdateAccount(new List<Account_List> { account });
-           AccountList = AccountList.Where(e => !e.isDeleted).ToList();
-           StateHasChanged();
-           Snackbar.Add("An Account has been marked as Deleted", Severity.Success);
-       }
-   }
-
-   private async Task Edit(int accountId)
-   {
-
-       var account = AccountList.FirstOrDefault(x => x.id == accountId);
-
-       if(account != null)
-       {
-           updateAcc = new Account_List
-               {
-                   date = DateOnly.FromDateTime(DateTime.Now),
-                   name = "",
-                   description = "",
-               };
-
-           await accountService.UpdateAccount(new List<Account_List> { account });
-           StateHasChanged();
-           Snackbar.Add("An Account has been Edited", Severity.Success);
-       }
-   }
+    private async Task Edit(Account_List accs)
+    {
+        var parameters = new DialogParameters
+    {
+        { "accs", accs }
+    };
+        var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Small,
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                BackdropClick = true
+            };
+        var dialog = await DialogService.ShowAsync<AddAcc>("Edit Account", parameters, options);
+        var result = await dialog.Result;
+    }
 
    private async Task OpenAddAccDialog()
    {
        var parameters = new DialogParameters();
-       var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+       var options = new DialogOptions { 
+           CloseButton = true, 
+           MaxWidth = MaxWidth.Small, 
+           FullWidth = true,
+           Position = DialogPosition.Center,
+           BackdropClick = true
+       };
        var dialog = await DialogService.ShowAsync<AddAcc>("Add New Account", parameters, options);
        var result = await dialog.Result;
 

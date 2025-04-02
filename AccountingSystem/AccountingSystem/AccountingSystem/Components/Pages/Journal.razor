@@ -144,10 +144,16 @@
         }
         var parameters = new DialogParameters
     {
-        { "JournalEntry", entryToEdit }
+        { "journalRecord", entryToEdit }
     };
 
-        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Large, FullWidth = true };
+        var options = new DialogOptions { 
+            CloseButton = true, 
+            MaxWidth = MaxWidth.Large, 
+            FullWidth = true,
+            Position = DialogPosition.Center,
+            BackdropClick = true
+        };
         var dialog = await DialogService.ShowAsync<AddRecord>("Edit Records", parameters, options);
         var result = await dialog.Result;
 
@@ -166,7 +172,13 @@
     private async Task OpenAddRecDialog()
     {
         var parameters = new DialogParameters();
-        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Large, FullWidth = true };
+        var options = new DialogOptions { 
+            CloseButton = true, 
+            MaxWidth = MaxWidth.Large, 
+            FullWidth = true,
+            Position = DialogPosition.Center,
+            BackdropClick = true
+        };
         var dialog = await DialogService.ShowAsync<AddRecord>("Add New Record", parameters, options);
         var result = await dialog.Result;
 

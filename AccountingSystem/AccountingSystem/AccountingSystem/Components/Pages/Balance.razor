@@ -35,9 +35,9 @@
 					<MudTd>@(balance.Debit - balance.Credit)</MudTd>
 				</RowTemplate>
 				<FooterContent>
-						<MudTd Class="fw-bold">Grand Total</MudTd>
-						<MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
-						<MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
+					<MudTd Class="fw-bold">Grand Total</MudTd>
+					<MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
+					<MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
 				</FooterContent>
 			</MudTable>
 		</div>

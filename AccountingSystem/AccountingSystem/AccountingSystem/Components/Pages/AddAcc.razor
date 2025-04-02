@@ -8,52 +8,48 @@
 @inject IDialogService DialogService
 @inject Data.AppDbContext DbContext
 
-<MudForm Model="@newAccount" OnValidSubmit="Submit" Class="m-4">
+<MudDialog>
+    <DialogContent>
+        <MudForm Model="@newAccount" OnValidSubmit="Submit" Class="m-4">
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudTextField Label="Name" @bind-Value="newAccount.name" />
+            </MudItem>
 
-    <MudGrid>
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudTextField Label="Name" @bind-Value="newAccount.name" />
-        </MudItem>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudTextField Label="Description" @bind-Value="newAccount.description" />
+            </MudItem>
 
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudTextField Label="Description" @bind-Value="newAccount.description" />
-        </MudItem>
+            <MudItem xs="12" sm="6" md="8" lg="10">
+                <MudSelect T="Status" Label="Status" @bind-Value="newAccount.status">
+                    <MudSelectItem Value="@Status.Active"></MudSelectItem>
+                    <MudSelectItem Value="@Status.Inactive"></MudSelectItem>
+                </MudSelect>
+            </MudItem>
+        </MudForm>
+    </DialogContent>
 
-        <MudItem xs="12" sm="6" md="8" lg="10">
-            <MudSelect T="Status" Label="Status" @bind-Value="newAccount.status">
-                <MudSelectItem Value="@Status.Active"></MudSelectItem>
-                <MudSelectItem Value="@Status.Inactive"></MudSelectItem>
-            </MudSelect>
-        </MudItem>
-    </MudGrid>
-
-    <div class="w-100 d-flex justify-content-end">
-        <MudGrid Class="w-100 mt-5 d-flex justify-content-end">
+    <DialogActions>
+        @if (accs == null)
+        {
             <MudButton OnClick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
             <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
-        </MudGrid>
-    </div>
+        }
+        else
+        {
+            <MudButton OnClick="Submit" Style="background-color: #00828F; color:#ffffff;">Save</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        }
+    </DialogActions>
 
-
-</MudForm>
-
+</MudDialog>
 
 @code {
-
-    [Parameter]
-    public Account_List accData { get; set; } = new Account_List
-        {
-            date = DateOnly.FromDateTime(DateTime.Now),
-            id = 0,
-            name = "",
-            description = "",
-        };
-
 
     public void goBack()
     {
         Nav.NavigateTo("/acclist");
     }
+
     public Account_List newAccount = new Account_List
     {
         date = DateOnly.FromDateTime(DateTime.Now),
@@ -62,33 +58,87 @@
         description = "",
     };
 
+    [Parameter]
+    public Account_List? accs { get; set; }
+
     public bool submitted = false;
+
+
+    protected override void OnInitialized()
+    {
+        if (accs != null)
+        {
+            newAccount = new Account_List
+                {
+                    id = accs.id,
+                    name = accs.name,
+                    description = accs.description,
+                    status = accs.status,
+                    date = accs.date
+                };
+        }
+        else
+        {
+            newAccount = new Account_List
+                {
+                    date = DateOnly.FromDateTime(DateTime.Now),
+                    name = "",
+                    description = ""
+                };
+        }
+    }
 
     private async Task Submit()
     {
-        if (string.IsNullOrWhiteSpace(newAccount.name) || string.IsNullOrWhiteSpace(newAccount.name))
+        if(accs == null)
         {
-            Snackbar.Add("Please fill empty fields.", Severity.Warning);
-        }
-
-        else
-        {
-            DbContext.Accounts.Add(newAccount);
-            await DbContext.SaveChangesAsync();
-            submitted = true;
-            await Task.Delay(500); // Simulate processing delay
-            Snackbar.Add("Transaction successful!", Severity.Success);
-
-            newAccount = new Account_List
+            if (string.IsNullOrWhiteSpace(newAccount.name) || string.IsNullOrWhiteSpace(newAccount.description))
             {
-                date = DateOnly.FromDateTime(DateTime.Now),
-                name = "",
-                description = "",
-            };
+                Snackbar.Add("Please fill empty fields.", Severity.Warning);
+            }
+            else
+            {
+                DbContext.Accounts.Add(newAccount);
+                await DbContext.SaveChangesAsync();
+                submitted = true;
+                Snackbar.Add("Transaction successful!", Severity.Success);
 
+                newAccount = new Account_List
+                    {
+                        date = DateOnly.FromDateTime(DateTime.Now),
+                        name = "",
+                        description = "",
+                    };
+
+                StateHasChanged();
+
+            }
             StateHasChanged();
         }
-        
-    }
+        else
+        {
 
+            if (string.IsNullOrWhiteSpace(newAccount.name) || string.IsNullOrWhiteSpace(newAccount.description))
+            {
+                Snackbar.Add("Please fill empty fields.", Severity.Warning);
+            }
+            else
+            {
+                var existingAccount = await DbContext.Accounts.FindAsync(accs.id);
+                if (existingAccount != null)
+                {
+                    existingAccount.name = newAccount.name;
+                    existingAccount.description = newAccount.description;
+                    existingAccount.status = newAccount.status;
+
+                    DbContext.Update(existingAccount);
+                    await DbContext.SaveChangesAsync();
+
+                    Snackbar.Add("Edit successful!", Severity.Success);
+                }
+                Nav.NavigateTo("/acclist");
+                StateHasChanged();
+            }
+        }
+    }
 }

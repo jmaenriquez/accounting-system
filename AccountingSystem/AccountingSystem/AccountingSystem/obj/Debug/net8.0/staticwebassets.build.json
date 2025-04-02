@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ywdBfA7YqYIUFLxxRL9uxj90Okjot2ppYpCJHkqlTBE=",
+  "Hash": "Tw0R8ZvXQo+B5ctxAZt13H38fukTMLCBY/4+lcNSBvc=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -12734,8 +12734,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "fdjszp0pqc",
-      "Integrity": "7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=",
+      "Fingerprint": "snnuz2jeym",
+      "Integrity": "SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12755,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "dvcjj9x37h",
-      "Integrity": "F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=",
+      "Fingerprint": "vcae5wsgoi",
+      "Integrity": "EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -54130,11 +54130,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=\""
+          "Value": "\"EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54144,57 +54144,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo="
+          "Value": "sha256-EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.dvcjj9x37h.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12919"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "dvcjj9x37h"
-        },
-        {
-          "Name": "label",
-          "Value": "AccountingSystem.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo="
-        }
-      ]
-    },
-    {
-      "Route": "AccountingSystem.fdjszp0pqc.styles.css",
+      "Route": "AccountingSystem.snnuz2jeym.styles.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54216,11 +54171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
+          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
         },
         {
           "Name": "Link",
@@ -54230,11 +54185,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fdjszp0pqc"
+          "Value": "snnuz2jeym"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
+          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
         },
         {
           "Name": "label",
@@ -54265,11 +54220,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
+          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
         },
         {
           "Name": "Link",
@@ -54279,7 +54234,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
+          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
+        }
+      ]
+    },
+    {
+      "Route": "AccountingSystem.vcae5wsgoi.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vcae5wsgoi"
+        },
+        {
+          "Name": "label",
+          "Value": "AccountingSystem.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY="
         }
       ]
     },

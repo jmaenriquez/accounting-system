@@ -15,40 +15,48 @@
 		</div>
 	</div>
 
-	<MudTable Items="@FilteredEntries">
+    <div class ="container-fluid mt-3">
+        <MudTable Items="@State">
 
-        <HeaderContent>
-                <MudTh>Description</MudTh>
+            <ToolBarContent>
+                <MudText Typo="Typo.h5" Class="text-center">Metaverse Holdings Corporation</MudText>
+            </ToolBarContent>
+
+            <HeaderContent>
                 <MudTh></MudTh>
-                <MudTh>Amount (PHP)</MudTh>
-                <MudTh></MudTh>
-        </HeaderContent>
-        <RowTemplate>
+                <MudTh Class="fw-bold">Description</MudTh>
+                <MudTh Class="fw-bold">Amount</MudTh>
+            </HeaderContent>
+            <RowTemplate>
                 <MudTd></MudTd>
+                <MudTd>@context.AccountName</MudTd>
                 <MudTd></MudTd>
+            </RowTemplate>
+            <FooterContent>
                 <MudTd></MudTd>
-                <MudTd></MudTd>
-        </RowTemplate>
-        <FooterContent>
-                <MudTFootRow>
-                    <MudTd>Net Income (Loss)</MudTd>
-                    <MudTd></MudTd>
-                    <MudTd></MudTd>
-                </MudTFootRow>
-        </FooterContent>
-    </MudTable>
+                <MudTd Class="fw-bold">Net Income (Loss)</MudTd>
+                <MudTd Class="fw-bold"></MudTd>
+            </FooterContent>
+        </MudTable>
+    </div>
 
 </div>
 
 @code{
 
-
+    List<LedgerDto> State = new List<LedgerDto>();
     List<Journal_Entry> Entries = new List<Journal_Entry>();
     List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
+
+
+
     protected override async Task OnInitializedAsync()
     {
-        Entries = (await jservice.journalentries()).ToList();
+        State = (await jservice.GetLedger()).ToList();
+
+        StateHasChanged();
         FilteredEntries = Entries;
+
     }
 
     private void FilterEntries(ChangeEventArgs e)

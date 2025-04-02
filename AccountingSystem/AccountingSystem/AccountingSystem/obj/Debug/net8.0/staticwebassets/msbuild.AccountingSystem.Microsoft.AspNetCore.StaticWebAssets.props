@@ -1,22 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AccountingSystem.dvcjj9x37h.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AccountingSystem.vcae5wsgoi.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AccountingSystem</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AccountingSystem</BasePath>
-      <RelativePath>AccountingSystem.dvcjj9x37h.bundle.scp.css</RelativePath>
+      <RelativePath>AccountingSystem.vcae5wsgoi.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>dvcjj9x37h</Fingerprint>
-      <Integrity>F7GEAU3j6WbVo6RhiMyClg5saihC1Vr7URnnQaTk5Oo=</Integrity>
+      <Fingerprint>vcae5wsgoi</Fingerprint>
+      <Integrity>EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AccountingSystem.dvcjj9x37h.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AccountingSystem.vcae5wsgoi.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))">
       <SourceType>Package</SourceType>

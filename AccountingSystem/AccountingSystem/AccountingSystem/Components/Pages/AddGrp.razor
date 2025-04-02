@@ -1,13 +1,13 @@
+@page "/addgrp"
 @using AccountingSystem.Data
 @using MudBlazor
 @inject Data.AppDbContext Database
 @inject NavigationManager Navigate
 @inject ISnackbar Snackbar
 
-
-<MudOverlay @bind-Visible ="Visible" DarkBackground="true">
-    <MudForm Model="@newGroup" Class="m-4">
-        <MudGrid>
+<MudDialog>
+    <DialogContent>
+        <MudForm Model="@newGroup" Class="m-4">
             <MudItem xs="12" sm="6" md="8" lg="10">
                 <MudTextField Label="Name" @bind-Value="newGroup.name" />
             </MudItem>
@@ -29,46 +29,26 @@
                     <MudSelectItem Value="@Status.Inactive">Inactive</MudSelectItem>
                 </MudSelect>
             </MudItem>
-        </MudGrid>
+        </MudForm>
+    </DialogContent>
 
-        <div class="w-100 d-flex justify-content-end">
-            <MudGrid Class="w-100 mt-5 d-flex justify-content-end">
-                <MudButton Onclick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
-                <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
-            </MudGrid>
-        </div>
-
-    </MudForm>
-</MudOverlay>
+    <DialogActions>
+        @if (grpData == null)
+        {
+            <MudButton OnClick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        }
+        else
+        {
+            <MudButton OnClick="SubmitGrp" Style="background-color: #00828F; color:#ffffff;">Save</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        }
+    </DialogActions>
+</MudDialog>
 
 
 
 @code {
-    [Parameter]
-    public Group_List grpData { get; set; } = new Group_List
-    {
-            datetime = DateOnly.FromDateTime(DateTime.Now),
-            id = 0,
-            name = "",
-            description = "",
-    };
-    public bool Visible { get; set; }
-    [Parameter]
-    public EventCallback OnClose { get; set; }
-    [Parameter]
-    public EventCallback OnUpdate { get; set; }
-
-
-    public void showOverlay()
-    {
-        Visible = true;
-    }
-
-    public void hideOverlay()
-    {
-        Visible = false;
-    }
-
 
     public void goBack()
     {
@@ -84,36 +64,85 @@
             description = "",
         };
 
-    public bool added = false;
+
+    [Parameter]
+    public Group_List grpData { get; set; } = new Group_List
+        {
+            id = 0,
+            name = "",
+            description = "",
+        };
+
+
+    protected override void OnInitialized()
+    {
+        if (grpData != null)
+        {
+            newGroup = new Group_List
+                {
+                    id = grpData.id,
+                    name = grpData.name,
+                    description = grpData.description,
+                    type = grpData.type,
+                    status = grpData.status,
+                };
+        }
+    }
 
     private async Task SubmitGrp()
     {
-
-        if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
+        if(grpData == null)
         {
-            Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
-            return;
-        }
+            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
+            {
+                Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
+                return;
+            }
 
+            else
+            {
+                Database.Groups.Add(newGroup);
+                await Database.SaveChangesAsync();
+                Snackbar.Add("Transaction successful!", Severity.Success);
+
+
+                newGroup = new Group_List
+                    {
+                        datetime = DateOnly.FromDateTime(DateTime.Now),
+                        id = 0,
+                        name = "",
+                        description = "",
+
+                    };
+
+                StateHasChanged();
+            }
+        }
         else
         {
-            Database.Groups.Add(newGroup);
-            await Database.SaveChangesAsync();
-            added = true;
-            await Task.Delay(500);
-            Snackbar.Add("Transaction successful!", Severity.Success);
-
-
-            newGroup = new Group_List
+            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
+            {
+                Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
+                return;
+            }
+            else
+            {
+                var existingGroup = await Database.Groups.FindAsync(grpData.id);
+                if (existingGroup != null)
                 {
-                    datetime = DateOnly.FromDateTime(DateTime.Now),
-                    id = 0,
-                    name = "",
-                    description = "",
+                    existingGroup.name = newGroup.name;
+                    existingGroup.description = newGroup.description;
+                    existingGroup.type = newGroup.type;
+                    existingGroup.status = newGroup.status;
 
-                };
+                    Database.Update(existingGroup);
+                    await Database.SaveChangesAsync();
 
-            StateHasChanged();
+                    Snackbar.Add("Edit successful!", Severity.Success);
+                }
+                Navigate.NavigateTo("/accgrp");
+                StateHasChanged();
+            }
         }
     }
 }

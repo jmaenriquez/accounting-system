@@ -72,7 +72,7 @@ namespace AccountingSystem.Services
                 {
                     foreach (var existingEntry in existingData)
                     {
-                        existingEntry.isDeleted = entry.isDeleted; // Update all entries
+                        existingEntry.isDeleted = entry.isDeleted;
                     }
                 }
             }

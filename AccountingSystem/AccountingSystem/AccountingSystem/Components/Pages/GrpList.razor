@@ -6,9 +6,6 @@
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
 
-
-<AddGrp @ref="addGrp" />
-
 <PageTitle>Account Groups</PageTitle>
 
 <div class="rounded-3">
@@ -19,7 +16,7 @@
 
         <div class="buttons">
             <input class="searchbar" type="text" placeholder="Search..." />
-            <button class="btn add" @onclick="TriggerOverlay">Add New Group</button>
+            <button class="btn add" @onclick="OpenAddGrpDialog">Add New Group</button>
         </div>
     </div>
 
@@ -53,19 +50,6 @@
 </div>
 
 @code {
-    private AddGrp? addGrp;
-
-    private void TriggerOverlay()
-    {
-        if (addGrp != null)
-        {
-            addGrp.showOverlay();
-        }
-        else
-        {
-            Snackbar.Add("AddGrp component is not initialized.", Severity.Error);
-        }
-    }
 
     private void navigateToAddGrp()
     {
@@ -99,8 +83,17 @@
     //Edit
     private async Task Edit(Group_List editgrp)
     {
-        var parameters = new DialogParameters();
-        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var parameters = new DialogParameters
+        {
+            {"grpData", editgrp}
+        };
+        var options = new DialogOptions { 
+            CloseButton = true, 
+            MaxWidth = MaxWidth.Small, 
+            FullWidth = true,
+            Position = DialogPosition.Center,
+            BackdropClick = true
+        };
         var dialog = await DialogService.ShowAsync<AddGrp>("Edit Group", parameters, options);
 
         var result = await dialog.Result;
@@ -109,7 +102,13 @@
     private async Task OpenAddGrpDialog()
     {
         var parameters = new DialogParameters();
-        var options = new DialogOptions { CloseButton = true, MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var options = new DialogOptions { 
+            CloseButton = true, 
+            MaxWidth = MaxWidth.Medium, 
+            FullWidth = true,
+            Position = DialogPosition.Center,
+            BackdropClick = true
+        };
         var dialog = await DialogService.ShowAsync<AddGrp>("Add New Group", parameters, options);
         var result = await dialog.Result;
     }

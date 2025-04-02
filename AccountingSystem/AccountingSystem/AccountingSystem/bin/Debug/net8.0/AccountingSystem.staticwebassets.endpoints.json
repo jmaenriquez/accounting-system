@@ -3,7 +3,7 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "AccountingSystem.fdjszp0pqc.styles.css",
+      "Route": "AccountingSystem.snnuz2jeym.styles.css",
       "AssetFile": "AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -25,11 +25,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
+          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
         },
         {
           "Name": "Link",
@@ -39,11 +39,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fdjszp0pqc"
+          "Value": "snnuz2jeym"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
+          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
         },
         {
           "Name": "label",
@@ -74,11 +74,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI=\""
+          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 03:38:55 GMT"
+          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
         },
         {
           "Name": "Link",
@@ -88,7 +88,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7WfC9RIgIML1RfLcId6f2PH191c9qYHbNSVPWFw+JSI="
+          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
         }
       ]
     },
