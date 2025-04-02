@@ -89,11 +89,12 @@
         }
     }
 
+
     private async Task SubmitGrp()
     {
         if(grpData == null)
         {
-            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
+            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.description))
             {
                 Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
                 return;
@@ -112,15 +113,13 @@
                         id = 0,
                         name = "",
                         description = "",
-
                     };
-
                 StateHasChanged();
             }
         }
         else
         {
-            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.name))
+            if (string.IsNullOrWhiteSpace(newGroup.name) || string.IsNullOrWhiteSpace(newGroup.description))
             {
                 Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
                 return;
@@ -137,11 +136,11 @@
 
                     Database.Update(existingGroup);
                     await Database.SaveChangesAsync();
-
+                    StateHasChanged();
                     Snackbar.Add("Edit successful!", Severity.Success);
                 }
                 Navigate.NavigateTo("/accgrp");
-                StateHasChanged();
+                
             }
         }
     }
