@@ -137,11 +137,6 @@
     {
         
         var entryToEdit = Entries.FirstOrDefault(e => e.TransactId == transactId);
-        if (entryToEdit == null)
-        {
-            Snackbar.Add("Entry not found", Severity.Error);
-            return;
-        }
         var parameters = new DialogParameters
     {
         { "journalRecord", entryToEdit }
@@ -149,23 +144,13 @@
 
         var options = new DialogOptions { 
             CloseButton = true, 
-            MaxWidth = MaxWidth.Large, 
+            MaxWidth = MaxWidth.Medium, 
             FullWidth = true,
             Position = DialogPosition.Center,
             BackdropClick = true
         };
         var dialog = await DialogService.ShowAsync<AddRecord>("Edit Records", parameters, options);
         var result = await dialog.Result;
-
-        var updatedEntry = (Journal_Entry)result!.Data!;
-        var index = Entries.FindIndex(e => e.TransactId == transactId);
-        if (index != -1)
-        {
-            Entries[index] = updatedEntry!;
-            FilteredEntries = Entries;
-            StateHasChanged();
-            Snackbar.Add("Entry updated successfully", Severity.Success);
-        }
         
     }
 
@@ -174,7 +159,7 @@
         var parameters = new DialogParameters();
         var options = new DialogOptions { 
             CloseButton = true, 
-            MaxWidth = MaxWidth.Large, 
+            MaxWidth = MaxWidth.Medium, 
             FullWidth = true,
             Position = DialogPosition.Center,
             BackdropClick = true

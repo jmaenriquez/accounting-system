@@ -1,4 +1,5 @@
 ﻿@page "/addrecords"
+@using Microsoft.EntityFrameworkCore;
 @using AccountingSystem.Data
 @using AccountingSystem.Services
 @inject NavigationManager Navigate
@@ -8,88 +9,91 @@
 @inject GroupService grpService
 @inject AccountService accountService;
 
-<MudForm Model="@newEntry" Class = "mt-5">
-    <MudGrid>
-        <MudContainer>
 
-            <MudDatePicker Label="Date" @bind-Date="dateTime"
-            DateFormat="MM-dd-yyyy" Required="true" Clearable ="true" />
+<MudDialog>
+    <DialogContent>
+        <MudForm Model="@newEntry" Class="mt-5">
 
-            <MudTextField Label="Description"
-            @bind-Value="newEntry.description"
-            Required="true" MaxLength="50" />
+            <MudContainer>
 
-            <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName">
-                @foreach (var accs in AccountNames)
+                <MudDatePicker Label="Date" @bind-Date="dateTime"
+                DateFormat="MM-dd-yyyy" Required="true" Clearable="true" />
+
+                <MudTextField Label="Description"
+                @bind-Value="newEntry.description"
+                Required="true" MaxLength="50" />
+
+                <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName">
+                    @foreach (var accs in AccountNames)
+                    {
+                        <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
+                    }
+                </MudSelect>
+
+                <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
+                    @foreach (var gnames in GroupList)
+                    {
+                        <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
+                    }
+                </MudSelect>
+
+                <MudTextField Label="Amount" Type="number"
+                @bind-Value="tempAcc"
+                Required="true" />
+
+            </MudContainer>
+
+            <MudContainer>
+                @if(journalRecord == null)
                 {
-                    <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
+                    <MudButton Class="mt-4" OnClick="Save" Style="background-color: #F9F9F9;">Save</MudButton>
                 }
-            </MudSelect>
-
-            <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
-                @foreach (var gnames in GroupList)
+                else
                 {
-                    <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
+                    <MudButton Class="mt-4" OnClick="Save" Style="background-color: #F9F9F9;">Confirm</MudButton>
                 }
-            </MudSelect>
+            </MudContainer>
+        </MudForm>
 
-            <MudTextField Label="Amount" Type="number"
-            @bind-Value="tempAcc"
-            Required="true" />
+        <MudTable T="Journal_Entry" Items="@Entries" Class="mt-3" Dense="true" Hover="true"
+        OnRowClick="SelectEntry">
+            <HeaderContent>
+                <MudTh></MudTh>
+                <MudTh>Account</MudTh>
+                <MudTh>Group</MudTh>
+                <MudTh>Debit</MudTh>
+                <MudTh>Credit</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd><MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="() => RemoveTrial(context)" /></MudTd>
+                <MudTd>@context.AccName?.name</MudTd>
+                <MudTd>@context.AccGrp?.name</MudTd>
+                <MudTd>@(context.debit > 0 ? $"{context.debit:N0}" : "")</MudTd>
+                <MudTd>@(context.credit > 0 ? $"{context.credit:N0}" : "")</MudTd>
+            </RowTemplate>
+            <FooterContent>
+                <MudTd></MudTd>
+                <MudTd></MudTd>
+                <MudTd>Total</MudTd>
+                <MudTd>@Overall.ToString("N2")</MudTd>
+            </FooterContent>
+        </MudTable>
+    </DialogContent>
 
-        </MudContainer>
-    </MudGrid>
-
-    <MudContainer>
-        <MudButton Class = "mt-4" OnClick="Save" Style="background-color: #F9F9F9;">Save</MudButton>
-    </MudContainer>
-</MudForm>
-
-<table class="mt-3 table table-responsive table-responsive-lg">
-    <thead class="">
-        <tr>
-            <th></th>
-            <th>Account</th>
-            <th>Group</th>
-            <th>Debit</th>
-            <th>Credit</th>
-        </tr>
-    </thead>
-    <tbody class="table-light">
-
-        @foreach(var trial in Entries) 
+    <DialogActions>
+        @if(journalRecord == null)
         {
-            <tr>
-                <td>
-                    <MudIconButton Icon="@Icons.Material.Filled.Delete" OnClick="() => RemoveTrial(trial)" />
-                </td>
-                <td>@trial.AccName?.name</td>
-                <td>@trial.AccGrp?.name</td>
-                <td>@(trial.debit > 0 ? $"{trial.debit:N0}" : "")</td>
-                <td>@(trial.credit > 0 ? $"{trial.credit:N0}" : "")</td>
-            </tr>
+            <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
+        }
+        else
+        {
+            <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Save</MudButton>
+            <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
         }
 
-    </tbody>
-
-    <tfoot>
-        <tr>
-            <td></td>
-            <td></td>
-            <td class="fw-bold">Total</td>
-            <td class="fw-bold">@Overall.ToString("N2")</td>
-            <td></td>
-        </tr>
-    </tfoot>
-</table>
-
-
-<div class="w-100 d-flex justify-content-around">
-    <MudGrid Class="w-100 justify-content-end m-3 d-flex">
-        <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Add</MudButton>
-        <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
-    </MudGrid>
-</div>
+    </DialogActions>
+</MudDialog>
 
 
 @code {
@@ -98,7 +102,7 @@
     List<Account_List> AccountNames = new List<Account_List>();
 
     [Parameter]
-    public Journal_Entry journalRecords { get; set; }
+    public Journal_Entry journalRecord { get; set; }
 
 
     private decimal TotalDebit => Entries.Where(a => a.AccGrp?.type == AccountType.Debit).Sum(a => a.debit ?? 0);
@@ -129,87 +133,160 @@
 
     private async Task Save()
     {
-        if (newEntry.AccGrp == null || newEntry.AccName == null || newEntry.description == null)
-        {
-            Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
-            return;
-        }
-
         newEntry.datetime = dateTime ?? newEntry.datetime;
         newEntry.debit = newEntry.Type == AccountType.Debit ? tempAcc ?? 0 : 0;
         newEntry.credit = newEntry.Type == AccountType.Credit ? tempAcc ?? 0 : 0;
 
-        Entries.Add(new Journal_Entry
+        if (journalRecord != null)
+        {
+            var existingEntry = Entries.FirstOrDefault(e => e.id == newEntry.id);
+            if (existingEntry != null)
             {
-                datetime = newEntry.datetime,
-                description = newEntry.description,
-                AccName = newEntry.AccName,
-                AccGrp = newEntry.AccGrp,
-                debit = newEntry.debit,
-                credit = newEntry.credit,
-            });
+                existingEntry.datetime = newEntry.datetime;
+                existingEntry.description = newEntry.description;
+                existingEntry.AccName = newEntry.AccName;
+                existingEntry.AccGrp = newEntry.AccGrp;
+                existingEntry.debit = newEntry.debit;
+                existingEntry.credit = newEntry.credit;
+            };
+
+            newEntry = new Journal_Entry();
+            tempAcc = null;
+            StateHasChanged();
+
+            await Task.CompletedTask;
+        }
+        else
+        {
+            if (newEntry.AccGrp == null || newEntry.AccName == null || newEntry.description == null)
+            {
+                Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
+                return;
+            }
+            else
+            {
+                Entries.Add(new Journal_Entry
+                    {
+                        datetime = newEntry.datetime,
+                        description = newEntry.description,
+                        AccName = newEntry.AccName,
+                        AccGrp = newEntry.AccGrp,
+                        debit = newEntry.debit,
+                        credit = newEntry.credit,
+                    });
 
 
-        newEntry = new Journal_Entry();
-        tempAcc = null;
-        StateHasChanged();
+                newEntry = new Journal_Entry();
+                tempAcc = null;
+                StateHasChanged();
 
-        await Task.CompletedTask;
+                await Task.CompletedTask;
+            }
+        }
+
+
+
     }
-
-
-
 
 
     private async Task Submit()
     {
-
         newEntry.datetime = newEntry.datetime.Date;
-
         var TransactId = Guid.NewGuid();
 
-        if (Overall == 0){
-
-            foreach (var entry in Entries)
+        if(journalRecord == null)
+        {
+            if (Overall == 0)
             {
-                var journal = new Journal_Entry
+
+                foreach (var entry in Entries)
                 {
-                    TransactId = TransactId,
-                    datetime = entry.datetime,
-                    description = entry.description,
-                    AccGrpId = entry.AccGrp!.id,
-                    AccNameId = entry.AccName!.id,
-                    debit = entry.debit,
-                    credit = entry.credit,
+                    var journal = new Journal_Entry
+                        {
+                            TransactId = TransactId,
+                            datetime = entry.datetime,
+                            description = entry.description,
+                            AccGrpId = entry.AccGrp!.id,
+                            AccNameId = entry.AccName!.id,
+                            debit = entry.debit,
+                            credit = entry.credit,
 
-                };
+                        };
 
-                Console.WriteLine(journal.datetime);
-                Console.WriteLine(journal.AccNameId);
-                DbContext.Journal.Add(journal);
+                    DbContext.Journal.Add(journal);
+                }
+
+                await DbContext.SaveChangesAsync();
+                Snackbar.Add("New Entry Added", Severity.Success);
+
+
+                Entries.Clear();
+                tempAcc = null;
+
             }
-
-            Console.WriteLine("Saving Date: " + newEntry.datetime);
-
-            await DbContext.SaveChangesAsync();
-            Snackbar.Add("New Entry Added", Severity.Success);
-            Navigate.NavigateTo("/journal");
-
-            Entries.Clear();
-            tempAcc = null;
-
+            else
+            {
+                Snackbar.Add("Record Must Be Balanced!", Severity.Error);
+                return;
+            }
         }
-        else{
-            Snackbar.Add("Record Must Be Balanced!", Severity.Error);
-            return;
+
+        else
+        {
+            if (Overall == 0)
+            {
+                var existingEntries = await DbContext.Journal
+                    .Where(j => j.TransactId == journalRecord.TransactId)
+                    .ToListAsync();
+
+                if (existingEntries.Any())
+                {
+                    foreach (var entry in existingEntries)
+                    {
+                        entry.datetime = newEntry.datetime;
+                        entry.description = newEntry.description;
+                        entry.AccGrpId = newEntry.AccGrp?.id ?? 0;
+                        entry.AccNameId = newEntry.AccName?.id ?? 0;
+                        entry.debit = newEntry.debit;
+                        entry.credit = newEntry.credit;
+                    }
+
+                    await DbContext.SaveChangesAsync();
+                    StateHasChanged();
+                    Snackbar.Add("Edit successfully!", Severity.Success);
+                }
+                Navigate.NavigateTo("/journal");
+            }
         }
 
     }
 
-
-
     protected override async Task OnInitializedAsync()
     {
+        if (journalRecord != null)
+        {
+            newEntry = new Journal_Entry
+                {
+                    datetime = journalRecord.datetime,
+                    id = journalRecord.id,
+                    TransactId = journalRecord.TransactId,
+                    description = journalRecord.description,
+                    AccNameId = journalRecord.AccName!.id,
+                    AccGrpId = journalRecord.AccGrp!.id,
+                    debit = journalRecord.debit,
+                    credit = journalRecord.credit
+                };
+
+            Entries = await DbContext.Journal
+                .Where(j => j.TransactId == journalRecord.TransactId)
+                .Include(j => j.AccGrp)
+                .Include(j => j.AccName)
+                .ToListAsync();
+        }
+        else
+        {
+            Entries = new List<Journal_Entry>();
+        }
 
         try
         {
@@ -218,14 +295,39 @@
 
             var filterAcc = await accountService.GetAllAccounts();
             AccountNames = filterAcc.ToList();
-
-            Entries = new List<Journal_Entry>();
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
-
     }
+
+    private void SelectEntry(TableRowClickEventArgs<Journal_Entry> e)
+    {
+        var selectedEntry = e.Item;
+
+        if (selectedEntry != null)
+        {
+            var accName = selectedEntry.AccName!.name;
+            var accGrp = selectedEntry.AccGrp!.name;
+            newEntry = new Journal_Entry
+                {
+                    datetime = selectedEntry.datetime,
+                    id = selectedEntry.id,
+                    TransactId = selectedEntry.TransactId,
+                    description = selectedEntry.description,
+                    AccName = selectedEntry.AccName,
+                    AccGrp = selectedEntry.AccGrp,
+                    debit = selectedEntry.debit,
+                    credit = selectedEntry.credit
+                };
+
+            dateTime = newEntry.datetime;
+            tempAcc = newEntry.debit > 0 ? newEntry.debit : newEntry.credit;
+
+            StateHasChanged();
+        }
+    }
+
 
 }
