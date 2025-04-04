@@ -15,6 +15,8 @@ namespace AccountingSystem.Services
         {
             _dbContextFactory = dbContextFactory;
         }
+
+        //DTO for Trial Balance Page
         public async Task<IEnumerable<LedgerDto>> GetLedger()
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
@@ -31,6 +33,28 @@ namespace AccountingSystem.Services
                 
                 .ToListAsync();
         }
+
+        //DTO for Income Statement
+        public async Task <IEnumerable <StatementDTO>> GetStatement()
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+            return await dbContext.Journal
+                .Include(j => j.AccName)
+                .Include(j => j.AccGrp)
+                .Where(j => !j.isDeleted)
+                .Where(j => j.AccGrp!.name == "Expense" || j.AccGrp.name == "Revenue")
+                .GroupBy(j => j.AccNameId)
+                .Select(entries => new StatementDTO
+                {
+                    AccountName = entries.First().AccName!.name,
+                    AccountGroup = entries.First().AccGrp!.name,
+                    Debit = entries.Sum(e => e.debit ?? 0),
+                    Credit = entries.Sum(e => e.credit ?? 0)
+                })
+                .ToListAsync();
+        }
+
+        //Fetch data from Journal Table
         public async Task<IEnumerable<Journal_Entry>> journalentries()
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
@@ -40,11 +64,13 @@ namespace AccountingSystem.Services
                 .Include(j => j.AccGrp)
                 .Include(j => j.AccName)
                 .Where(x => !x.isDeleted)
-                .OrderBy(j => j.TransactId)
+                .OrderBy(j => j.datetime)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
                 .ToListAsync();
         }
 
+
+        //Send all "deleted" data to Archives
         public async Task<IEnumerable<Journal_Entry>> archive()
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
@@ -54,11 +80,12 @@ namespace AccountingSystem.Services
                 .Include(j => j.AccGrp)
                 .Include(j => j.AccName)
                 .Where(x => x.isDeleted)
-                .OrderBy(j => j.TransactId)
+                .OrderBy(j => j.datetime)
                 .ThenBy(j => j.debit > 0 ? 0 : 1)
                 .ToListAsync();
         }
 
+        //Update database if data is soft deleted
         public async Task UpdateJournalEntries(IEnumerable<Journal_Entry> entries)
         {
             using var dbContext = _dbContextFactory.CreateDbContext();

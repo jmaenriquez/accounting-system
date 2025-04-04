@@ -19,6 +19,7 @@ namespace AccountingSystem.Services
             return await dbContext.Accounts
                 .AsNoTracking()
                 .Where(x => !x.isDeleted)
+                .OrderBy(a => a.id)
                 .ToListAsync();
         }
 
@@ -28,6 +29,7 @@ namespace AccountingSystem.Services
             return await dbContext.Accounts
                 .AsNoTracking()
                 .Where(x => x.isDeleted)
+                .OrderBy(a => a.id)
                 .ToListAsync();
         }
 

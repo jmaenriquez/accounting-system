@@ -14,9 +14,10 @@ namespace AccountingSystem.Services
 
         public async Task<IEnumerable<Group_List>> GroupItems()
         {
-            using var dbContext = _dbContextFactory.CreateDbContext(); // Create new instance
+            using var dbContext = _dbContextFactory.CreateDbContext();
             return await dbContext.Groups.AsNoTracking()
                 .Where(x => !x.isDeleted)
+                .OrderBy(g => g.id)
                 .ToListAsync();
         }
 
@@ -25,6 +26,7 @@ namespace AccountingSystem.Services
             using var dbContext = _dbContextFactory.CreateDbContext();
             return await dbContext.Groups.AsNoTracking()
                 .Where(x => x.isDeleted)
+                .OrderBy(g => g.id)
                 .ToListAsync();
         }
 
@@ -44,7 +46,7 @@ namespace AccountingSystem.Services
                     existingGroup.status = group.status;
                     existingGroup.isDeleted = group.isDeleted;
 
-                    dbContext.Groups.Update(existingGroup); // Ensure EF tracks changes
+                    dbContext.Groups.Update(existingGroup);
                 }
             }
 

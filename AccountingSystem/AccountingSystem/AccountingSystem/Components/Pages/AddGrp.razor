@@ -66,13 +66,7 @@
 
 
     [Parameter]
-    public Group_List grpData { get; set; } = new Group_List
-        {
-            id = 0,
-            name = "",
-            description = "",
-        };
-
+    public Group_List? grpData { get; set; }
 
     protected override void OnInitialized()
     {
@@ -105,7 +99,6 @@
                 Database.Groups.Add(newGroup);
                 await Database.SaveChangesAsync();
                 Snackbar.Add("Transaction successful!", Severity.Success);
-
 
                 newGroup = new Group_List
                     {
