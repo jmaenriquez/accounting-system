@@ -1,14 +1,14 @@
-@page "/statement"
+﻿@page "/sheet"
 @using AccountingSystem.Data
 @using AccountingSystem.DTOs
 @using AccountingSystem.Services
 @inject JournalService jservice
 
-<PageTitle>Income Statement</PageTitle>
+<PageTitle>Balance Sheet</PageTitle>
 
 <div class="rounded-3">
     <div class="top-container">
-        <h4 class="m-3 w-25">Income Statement</h4>
+        <h4 class="m-3 w-25">Balance Sheet</h4>
     </div>
 
     <div class="container-fluid mt-3">
@@ -24,7 +24,7 @@
                 <RowTemplate>
                     @if (context.IsSectionHeader)
                     {
-                        <MudTd ColSpan="2" Class="fw-bold">@context.AccountName</MudTd>
+                        <MudTd ColSpan="2" >@context.AccountName</MudTd>
                     }
                     else if (context.IsSubtotal)
                     {
@@ -43,7 +43,8 @@
 </div>
 
 @code {
-    public class IncomeRow
+
+    public class Balancesheet
     {
         public string? AccountName { get; set; }
         public decimal? Amount { get; set; }
@@ -52,32 +53,54 @@
     }
 
     List<StatementDTO> State = new();
-    List<IncomeRow> IncomeRows = new();
+    List<Balancesheet> IncomeRows = new();
 
     protected override async Task OnInitializedAsync()
     {
-        State = (await jservice.GetStatement()).ToList();
+        State = (await jservice.BalanceSheet()).ToList();
+
+        var asset = State
+            .Where(s => s.AccountGroup == "Asset" || s.AccountGroup == "Asset (Credit)")
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance});
+
+        var liability = State
+            .Where(s => s.AccountGroup == "Liability")
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance });
+
+        var equity = State
+            .Where(s => s.AccountGroup == "Equity")
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance });
+
 
         var revenue = State
             .Where(s => s.AccountGroup == "Revenue")
-            .Select(s => new IncomeRow { AccountName = s.AccountName, Amount = s.Credit });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Credit });
 
         var expenses = State
             .Where(s => s.AccountGroup == "Expense")
-            .Select(s => new IncomeRow { AccountName = s.AccountName, Amount = s.Debit });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Debit });
 
         var totalRevenue = revenue.Sum(r => r.Amount ?? 0);
         var totalExpenses = expenses.Sum(e => e.Amount ?? 0);
         var netIncome = totalRevenue - totalExpenses;
 
-        IncomeRows.Add(new IncomeRow { AccountName = "Revenue", IsSectionHeader = true });
-        IncomeRows.AddRange(revenue);
-        IncomeRows.Add(new IncomeRow { AccountName = "Total Revenue", Amount = totalRevenue, IsSubtotal = true });
+        var totalAsset = asset.Sum(a => a.Amount ?? 0);
+        var totalLiab = liability.Sum(l => l.Amount ?? 0);
+        var totalEquity = equity.Sum(e => e.Amount ?? 0);
+        
 
-        IncomeRows.Add(new IncomeRow { AccountName = "Expenses", IsSectionHeader = true });
-        IncomeRows.AddRange(expenses);
-        IncomeRows.Add(new IncomeRow { AccountName = "Total Expenses", Amount = totalExpenses, IsSubtotal = true });
+        IncomeRows.Add(new Balancesheet { AccountName = "Asset", IsSectionHeader = true });
+        IncomeRows.AddRange(asset);
+        IncomeRows.Add(new Balancesheet { AccountName = "Total Asset", Amount = totalAsset, IsSubtotal = true });
 
-        IncomeRows.Add(new IncomeRow { AccountName = "Net Income", Amount = netIncome, IsSubtotal = true });
+        IncomeRows.Add(new Balancesheet { AccountName = "Liability and Equity", IsSectionHeader = true });
+        IncomeRows.AddRange(liability);
+        IncomeRows.AddRange(equity);
+        
+ 
+        IncomeRows.Add(new Balancesheet { AccountName = "Total Liabilities and Equity", Amount = totalLiab + totalEquity + netIncome, IsSubtotal = true });
+
     }
 }
+
+

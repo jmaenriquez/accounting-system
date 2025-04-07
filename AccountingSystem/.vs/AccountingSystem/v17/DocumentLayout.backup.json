@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\statement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\statement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\sheet.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\sheet.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\dtos\\statementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\dtos\\statementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\services\\journalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\journal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\components\\pages\\addrecord.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\components\\pages\\addrecord.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|c:\\users\\kuro\\documents\\github\\accounting-system\\accountingsystem\\accountingsystem\\accountingsystem\\dtos\\ledgerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212E754D-E98B-4BD8-AC28-08DEE8E312CA}|AccountingSystem\\AccountingSystem\\AccountingSystem.csproj|solutionrelative:accountingsystem\\accountingsystem\\dtos\\ledgerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LedgerDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\DTOs\\LedgerDto.cs",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\DTOs\\LedgerDto.cs",
+              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\DTOs\\LedgerDto.cs",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\DTOs\\LedgerDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T08:04:35.922Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -40,61 +45,22 @@
               "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\DTOs\\StatementDTO.cs",
               "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\DTOs\\StatementDTO.cs",
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\DTOs\\StatementDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T06:22:42.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JournalService.cs",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Services\\JournalService.cs",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Services\\JournalService.cs",
-              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Services\\JournalService.cs",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Services\\JournalService.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAADwvzEAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T02:04:52.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddRecord.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\AddRecord.razor",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAADoBAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T07:56:27.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Journal.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T02:53:32.504Z",
+              "WhenOpened": "2025-04-07T07:32:09.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Statement.razor",
-              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Statement.razor",
-              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Statement.razor",
-              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Statement.razor",
-              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Statement.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Title": "Sheet.razor",
+              "DocumentMoniker": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Sheet.razor",
+              "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Sheet.razor",
+              "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Sheet.razor",
+              "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Sheet.razor",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwD4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T00:05:45.623Z",
+              "WhenOpened": "2025-04-07T01:12:12.875Z",
               "EditorCaption": ""
             }
           ]

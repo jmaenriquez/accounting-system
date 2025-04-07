@@ -28,7 +28,8 @@ namespace AccountingSystem.Services
                 {
                     AccountName = entries.First().AccName!.name,
                     Debit = entries.Sum(e => e.debit ?? 0),
-                    Credit = entries.Sum(e => e.credit ?? 0)
+                    Credit = entries.Sum(e => e.credit ?? 0),
+                    SumOfBalance = entries.Sum(e => e.debit ?? 0) - entries.Sum(e => e.credit ?? 0)
                 })
                 
                 .ToListAsync();
@@ -53,6 +54,50 @@ namespace AccountingSystem.Services
                 })
                 .ToListAsync();
         }
+
+        //Balance Sheet
+        public async Task<IEnumerable<StatementDTO>> BalanceSheet()
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+
+            var groups = await dbContext.Journal
+                .Include(j => j.AccName)
+                .Include(j => j.AccGrp)
+                .Where(j => !j.isDeleted)
+                .Where(j => j.AccGrp!.name == "Asset" || j.AccGrp.name == "Liability" ||
+                            j.AccGrp.name == "Equity" || j.AccGrp.name == "Revenue" || j.AccGrp.name == "Expense")
+                .GroupBy(j => j.AccNameId)
+                .Select(entries => new StatementDTO
+                {
+                    AccountName = entries.First().AccName!.name,
+                    AccountGroup = entries.First().AccGrp!.name,
+                    Debit = entries.Sum(e => e.debit ?? 0),
+                    Credit = entries.Sum(e => e.credit ?? 0)
+                })
+                .ToListAsync();
+
+            foreach (var item in groups)
+            {
+                switch (item.AccountGroup)
+                {
+                    case "Asset":
+                    case "Expense":
+                        item.SumOfBalance = item.Debit - item.Credit;
+                        break;
+                    case "Liability":
+                    case "Equity":
+                    case "Revenue":
+                        item.SumOfBalance = item.Credit - item.Debit;
+                        break;
+                    default:
+                        item.SumOfBalance = 0;
+                        break;
+                }
+            }
+
+            return groups;
+        }
+
 
         //Fetch data from Journal Table
         public async Task<IEnumerable<Journal_Entry>> journalentries()

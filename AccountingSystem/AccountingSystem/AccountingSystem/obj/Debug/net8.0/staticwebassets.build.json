@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Tw0R8ZvXQo+B5ctxAZt13H38fukTMLCBY/4+lcNSBvc=",
+  "Hash": "GPHxbiUHLd2sjQQUk4vMm3CmvkNPPDACLHdWT2ZTwKw=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -12734,8 +12734,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "snnuz2jeym",
-      "Integrity": "SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=",
+      "Fingerprint": "sculkmc1e1",
+      "Integrity": "7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12755,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "vcae5wsgoi",
-      "Integrity": "EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=",
+      "Fingerprint": "y0cnkru87c",
+      "Integrity": "olwtLXSa8MdzZkYLAsL/G2Pz8p7K51VGlLdzxQhdNFI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -54122,7 +54122,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12919"
+          "Value": "13511"
         },
         {
           "Name": "Content-Type",
@@ -54130,11 +54130,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=\""
+          "Value": "\"olwtLXSa8MdzZkYLAsL/G2Pz8p7K51VGlLdzxQhdNFI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
+          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54144,12 +54144,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY="
+          "Value": "sha256-olwtLXSa8MdzZkYLAsL/G2Pz8p7K51VGlLdzxQhdNFI="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.snnuz2jeym.styles.css",
+      "Route": "AccountingSystem.sculkmc1e1.styles.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54163,7 +54163,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12987"
+          "Value": "13579"
         },
         {
           "Name": "Content-Type",
@@ -54171,11 +54171,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
+          "Value": "\"7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
+          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
         },
         {
           "Name": "Link",
@@ -54185,11 +54185,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "snnuz2jeym"
+          "Value": "sculkmc1e1"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
+          "Value": "sha256-7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg="
         },
         {
           "Name": "label",
@@ -54212,7 +54212,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12987"
+          "Value": "13579"
         },
         {
           "Name": "Content-Type",
@@ -54220,11 +54220,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c=\""
+          "Value": "\"7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
+          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
         },
         {
           "Name": "Link",
@@ -54234,12 +54234,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SM6LaPrFA6k67ip+o5/c/jAqsfZYkCzShMiKTCGTi9c="
+          "Value": "sha256-7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg="
         }
       ]
     },
     {
-      "Route": "AccountingSystem.vcae5wsgoi.bundle.scp.css",
+      "Route": "AccountingSystem.y0cnkru87c.bundle.scp.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54249,7 +54249,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12919"
+          "Value": "13511"
         },
         {
           "Name": "Content-Type",
@@ -54257,11 +54257,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY=\""
+          "Value": "\"olwtLXSa8MdzZkYLAsL/G2Pz8p7K51VGlLdzxQhdNFI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 06:19:08 GMT"
+          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54271,7 +54271,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vcae5wsgoi"
+          "Value": "y0cnkru87c"
         },
         {
           "Name": "label",
@@ -54279,7 +54279,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EW/HmjfJLBfM2VfCa/H/AyONdmuaXwxaOlKrURbh3zY="
+          "Value": "sha256-olwtLXSa8MdzZkYLAsL/G2Pz8p7K51VGlLdzxQhdNFI="
         }
       ]
     },

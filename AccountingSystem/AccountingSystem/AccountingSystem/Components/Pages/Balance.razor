@@ -32,7 +32,7 @@
 					<MudTd>@balance.AccountName</MudTd>
 					<MudTd>@(balance.Debit > 0 ? $"{balance.Debit}" : "")</MudTd>
 					<MudTd>@(balance.Credit > 0 ? $"{balance.Credit}" : "")</MudTd>
-					<MudTd>@(balance.Debit - balance.Credit)</MudTd>
+					<MudTd>@(balance.SumOfBalance)</MudTd>
 				</RowTemplate>
 				<FooterContent>
 					<MudTd Class="fw-bold">Grand Total</MudTd>

@@ -18,16 +18,23 @@
 
     <MudNavMenu Style="width:100%;background-color:#00acc1;height:100%;flex:1;color:white;">
         <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Accounting</MudNavLink>
+
         <MudNavLink Href="/journal" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Addchart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Journal Entry</MudNavLink>
+
         <MudNavLink Href="/ledger" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AutoStories" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">General Ledger</MudNavLink>
+
         <MudNavLink Href="/balance" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Balance" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Trial Balance</MudNavLink>
+
         <MudNavLink Href="/statement" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AttachMoney" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Income Statement</MudNavLink>
 
-        <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.PieChartOutline" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Balance Sheet</MudNavLink>
+        <MudNavLink Href="/sheet" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.PieChartOutline" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Balance Sheet</MudNavLink>
 
         <MudNavGroup Title="Chart of Accounts" Icon="@Icons.Material.Filled.TableChart" Style="margin-left:5px;color:white;" IconColor="Color.Inherit" Class="@(!IsOpen ? "collapsed" : null)">
+
             <MudNavLink Href="/acclist" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.ListAlt" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account List</MudNavLink>
+
             <MudNavLink Href="/accgrp" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.LibraryBooks" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Account Group</MudNavLink>
+
         </MudNavGroup>
 
         <MudNavLink Href="/reports" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.InsertChartOutlined" Style="margin-left:5px;color:white;" IconColor="Color.Inherit">Reports</MudNavLink>

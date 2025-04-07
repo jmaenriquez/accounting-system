@@ -1071,3 +1071,4 @@ E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\Ac
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.genruntimeconfig.cache
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Statement.razor.rz.scp.css
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Sheet.razor.rz.scp.css

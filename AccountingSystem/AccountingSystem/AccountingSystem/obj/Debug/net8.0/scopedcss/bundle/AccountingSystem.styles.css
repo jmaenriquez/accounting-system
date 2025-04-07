@@ -572,6 +572,36 @@ body[b-tquthsc8me] {
 /* _content/AccountingSystem/Components/Pages/Reports.razor.rz.scp.css */
 body[b-q559me807p] {
 }
+/* _content/AccountingSystem/Components/Pages/Sheet.razor.rz.scp.css */
+.rounded-3[b-p63sunam8w] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 75vh;
+}
+
+.top-container[b-p63sunam8w] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.buttons[b-p63sunam8w] {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem
+}
+
+
 /* _content/AccountingSystem/Components/Pages/Statement.razor.rz.scp.css */
 .rounded-3[b-n2ah7os6g4] {
     width: 100%;
