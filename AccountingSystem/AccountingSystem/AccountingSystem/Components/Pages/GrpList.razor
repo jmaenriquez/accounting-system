@@ -10,9 +10,35 @@
 
         <h3 class="m-4">Account Groups</h3>
 
+<<<<<<< Updated upstream
         <div class="buttons">
             <input class="searchbar" type="text" placeholder="Search..." />
             <button class="btn add" @onclick="navigateToAddGrp">Add New</button>
+=======
+        <div class="buttons" style="display: flex; align-items: center;">
+
+            <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                <input class="searchbar" type="text" placeholder="Search..." />
+            </MudHidden>
+
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <div class="mobile-search">
+                    <MudButton Variant="Variant.Filled" OnClick="ToggleSearch" Style=" width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                        <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" />
+                    </MudButton>
+                    <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="Search..." autofocus />
+                </div>
+            </MudHidden>
+
+            <MudButton Variant="Variant.Filled" OnClick="OpenAddGrpDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" /> New Entry
+                </MudHidden>
+                <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" />
+                </MudHidden>
+            </MudButton>
+>>>>>>> Stashed changes
         </div>
     </div>
 
@@ -54,7 +80,16 @@
 
 @code {
 
+<<<<<<< Updated upstream
 
+=======
+    private bool isSearchOpen = false;
+
+    private void ToggleSearch()
+    {
+        isSearchOpen = !isSearchOpen;
+    }
+>>>>>>> Stashed changes
 
     private void navigateToAddGrp()
     {
@@ -62,6 +97,7 @@
     }
 
     List<Group_List> GroupList = new List<Group_List>();
+    List<Group_List> FilteredEntries = new List<Group_List>();
 
      protected override async Task OnInitializedAsync()
     {

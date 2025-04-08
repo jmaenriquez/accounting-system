@@ -1071,6 +1071,7 @@ E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\re
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.pdb
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.genruntimeconfig.cache
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
+<<<<<<< Updated upstream
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\appsettings.json
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
@@ -1250,6 +1251,10 @@ C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\Accountin
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.pdb
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\AccountingSystem.genruntimeconfig.cache
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
+=======
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Statement.razor.rz.scp.css
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Sheet.razor.rz.scp.css
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\appsettings.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
@@ -1406,12 +1411,20 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AddGrp.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\AddRecord.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Balance.razor.rz.scp.css
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\COA.razor.rz.scp.css
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Dashboard.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\GrpList.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Journal.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Ledger.razor.rz.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Reports.razor.rz.scp.css
+<<<<<<< Updated upstream
+=======
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Sheet.razor.rz.scp.css
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Statement.razor.rz.scp.css
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\bundle\AccountingSystem.styles.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\projectbundle\AccountingSystem.bundle.scp.css
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\staticwebassets.build.json

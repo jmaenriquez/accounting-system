@@ -9012,6 +9012,7 @@ E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\ne
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\refint\AccountingSystem.Client.dll
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\AccountingSystem.Client.pdb
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\ref\AccountingSystem.Client.dll
+<<<<<<< Updated upstream
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\kl7l7kt9xd-e6k7xfdaau.gz
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\ylak63tsw7-tnan68zf6t.gz
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\lxtd0ose4z-40gf29hf51.gz
@@ -10527,6 +10528,17 @@ C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\Accountin
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\refint\AccountingSystem.Client.dll
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\AccountingSystem.Client.pdb
 C:\Users\djeme\Downloads\accounting-system-main\accounting-system-main\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\ref\AccountingSystem.Client.dll
+=======
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\kl7l7kt9xd-rjv86n1vnh.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\ylak63tsw7-fehcz0phpj.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\lxtd0ose4z-xby11c49lh.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\ms0rfq5wae-o87b29klf7.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\bhve0afk7a-91rxfhehz3.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\8ucegbjme3-f0wmdzjb9o.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\205k65ensj-y2o3sdqmcf.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\sstrphxzxk-n3yyl5aaxn.gz
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\xn7xnh5fw2-1t67ijzro9.gz
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Blazored.Modal.wasm
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\cs\Microsoft.CodeAnalysis.CSharp.resources.wasm
@@ -10889,7 +10901,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileSystemGlobbing.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Relational.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.EventBasedAsync.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.CodeAnalysis.CSharp.wasm.gz
@@ -10917,7 +10932,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.ServiceModel.Web.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Primitives.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Formats.Tar.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\ja\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Tools.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebSockets.wasm.gz
@@ -10993,7 +11011,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.WebHeaderCollection.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Xml.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Overlapped.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Json.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\fr\Microsoft.CodeAnalysis.resources.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.Calendars.wasm.gz
@@ -11006,7 +11027,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.Brotli.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\cs\Microsoft.CodeAnalysis.resources.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.js.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Build.Locator.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Metadata.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encoding.Extensions.wasm.gz
@@ -11017,7 +11041,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\pl\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Microsoft.JSInterop.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\ru\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\Humanizer.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XDocument.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\ja\Microsoft.CodeAnalysis.resources.wasm.gz
@@ -11108,7 +11135,10 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Composition.Convention.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Csp.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
+=======
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Net.HttpListener.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\System.Linq.wasm.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\fr\Microsoft.CodeAnalysis.Workspaces.resources.wasm.gz
@@ -11123,8 +11153,19 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\AccountingSystem.Client.wasm
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\AccountingSystem.Client.wasm.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\AccountingSystem.Client.pdb.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json.gz
+=======
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.js.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\AccountingSystem.Client.pdb.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\AccountingSystem.Client.staticwebassets.runtime.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\AccountingSystem.Client.staticwebassets.endpoints.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\bin\Debug\net8.0\AccountingSystem.Client.dll
@@ -12016,9 +12057,15 @@ C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\Acco
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\i1w7k0cos2-tptq2av103.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\919tv8d1e2-lfu7j35m59.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\93g3ri1nhd-oyz0vx2fzb.gz
+<<<<<<< Updated upstream
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\205k65ensj-eq2avi2o5j.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\sstrphxzxk-40qt5hyvm7.gz
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\xn7xnh5fw2-x0lo90u1e0.gz
+=======
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\205k65ensj-3b8vch2bqj.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\sstrphxzxk-4dy0iwrklo.gz
+C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\compressed\xn7xnh5fw2-5se2udx90o.gz
+>>>>>>> Stashed changes
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\djeme\OneDrive\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem.Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json

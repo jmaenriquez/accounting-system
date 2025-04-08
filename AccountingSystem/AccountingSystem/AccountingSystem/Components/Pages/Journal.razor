@@ -3,6 +3,7 @@
 @using AccountingSystem.Services
 @inject JournalService jservice
 @inject NavigationManager Navigate
+<<<<<<< Updated upstream
 @inject IModalService Modal
 
 <PageTitle>Journal Entries</PageTitle>
@@ -61,6 +62,73 @@
                 }
 
 
+=======
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+
+<PageTitle>Journal Entries</PageTitle>
+
+<div class="rounded-3">
+    <div class="top-container">
+        <h4 class="m-3 w-25">Journal Entries</h4>
+
+        <div class="buttons" style="display: flex; align-items: center;">
+            
+            <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                <input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
+            </MudHidden>
+
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <div class="mobile-search">
+                    <MudButton Variant="Variant.Filled" OnClick="ToggleSearch" Style=" width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                        <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search"/>
+                    </MudButton>
+                    <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="Search..." @oninput="FilterEntries" autofocus />
+                </div>
+            </MudHidden>
+
+            <MudButton Variant="Variant.Filled" OnClick="OpenAddRecDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" /> New Entry
+                </MudHidden>
+                <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" />
+                </MudHidden>
+            </MudButton>
+        </div>
+    </div>
+
+    <div id="Tables" class="mt-3">
+        <MudTable Items="FilteredEntries" Class="table-responsive container-fluid" Dense="true">
+            <HeaderContent>
+                <MudTh Class="fw-bold">Date</MudTh>
+                <MudTh Class="fw-bold">Journal Code</MudTh>
+                <MudTh Class="fw-bold">Description</MudTh>
+                <MudTh Class="fw-bold">Account Name</MudTh>
+                <MudTh Class="fw-bold">Debit</MudTh>
+                <MudTh Class="fw-bold">Credit</MudTh>
+                <MudTh Class="fw-bold">Comments</MudTh>
+                <MudTh Class="fw-bold">Actions</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd DataLabel="Date">@context.datetime.ToString("MM-dd-yyyy")</MudTd>
+                <MudTd DataLabel="Journal Code">@context.TransactId</MudTd>
+                <MudTd DataLabel="Description">@context.description</MudTd>
+                <MudTd DataLabel="Account Name">@context.AccName?.name</MudTd>
+                <MudTd DataLabel="Debit">@((context.debit > 0) ? $"{context.debit:N2}" : "")</MudTd>
+                <MudTd DataLabel="Credit">@((context.credit > 0) ? $"{context.credit:N2}" : "")</MudTd>
+                <MudTd DataLabel="Comments">@context.enterRemark</MudTd>
+                <MudTd DataLabel="Actions">
+                    <MudMenu Icon="@Icons.Material.Filled.MoreVert">
+                        <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context.TransactId)" />
+                        <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="() => Delete(context.TransactId)" />
+                    </MudMenu>
+                </MudTd>
+            </RowTemplate>
+        </MudTable>
+    </div>
+</div>
+>>>>>>> Stashed changes
 
             </tbody>
         </table>
@@ -69,6 +137,7 @@
 </div>
 
 @code {
+<<<<<<< Updated upstream
 	private void goToAddRec()
 	{
 		Navigate.NavigateTo("/addrecords");
@@ -77,12 +146,101 @@
     private void ShowModal()
     {
         Modal.Show<AddRecord>("/addrecords");
+=======
+    private bool isSearchOpen = false;
+
+    private void ToggleSearch()
+    {
+        isSearchOpen = !isSearchOpen;
+    }
+
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Entries = (await jservice.journalentries())
+            .Where(x => !x.isDeleted)
+            .ToList();
+        FilteredEntries = Entries;
+    }
+
+    private void FilterEntries(ChangeEventArgs e)
+    {
+        var searchTerm = e.Value?.ToString();
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredEntries = Entries;
+        }
+        else
+        {
+            FilteredEntries = Entries.Where(entry =>
+                entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+>>>>>>> Stashed changes
     }
 
     List<Journal_Entry> Entries = new List<Journal_Entry>();
 
     protected override async Task OnInitializedAsync()
     {
+<<<<<<< Updated upstream
         Entries = (await jservice.journalentries()).ToList();
+=======
+        var entriesToRemove = Entries.Where(e => e.TransactId == transactId).ToList();
+        foreach (var entry in entriesToRemove)
+        {
+            entry.isDeleted = true;
+        }
+
+        await jservice.UpdateJournalEntries(entriesToRemove);
+        Entries = Entries.Where(e => !e.isDeleted).ToList();
+        FilteredEntries = Entries;
+        StateHasChanged();
+
+        Snackbar.Add("An Entry has been marked as Deleted", Severity.Success);
+    }
+
+    private async Task Edit(Guid transactId)
+    {
+        var entryToEdit = Entries.FirstOrDefault(e => e.TransactId == transactId);
+        var parameters = new DialogParameters
+        {
+            { "journalRecord", entryToEdit }
+        };
+
+        var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Medium,
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                BackdropClick = true
+            };
+
+        var dialog = await DialogService.ShowAsync<AddRecord>("Edit Records", parameters, options);
+        var result = await dialog.Result;
+    }
+
+    private async Task OpenAddRecDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Medium,
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                BackdropClick = true
+            };
+
+        var dialog = await DialogService.ShowAsync<AddRecord>("Add New Record", parameters, options);
+        var result = await dialog.Result;
+>>>>>>> Stashed changes
     }
 }

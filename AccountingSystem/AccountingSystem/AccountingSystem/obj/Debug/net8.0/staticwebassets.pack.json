@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
+<<<<<<< Updated upstream
       "PackagePath": "staticwebassets\\AccountingSystem.1vkzjzoe5a.bundle.scp.css"
+=======
+      "PackagePath": "staticwebassets\\AccountingSystem.r26yp9zwqf.bundle.scp.css"
+>>>>>>> Stashed changes
     },
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
@@ -13,8 +17,13 @@
       "PackagePath": "staticwebassets\\Metalong.png"
     },
     {
+<<<<<<< Updated upstream
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 Transparent.png",
       "PackagePath": "staticwebassets\\MetaverseLogo3 Transparent.png"
+=======
+      "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3 transparent.png",
+      "PackagePath": "staticwebassets\\MetaverseLogo3 transparent.png"
+>>>>>>> Stashed changes
     },
     {
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\app.css",
@@ -29,8 +38,13 @@
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
+<<<<<<< Updated upstream
       "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\metasmol.png",
       "PackagePath": "staticwebassets\\metasmol.png"
+=======
+      "Id": "C:\\Users\\djeme\\OneDrive\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+>>>>>>> Stashed changes
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AccountingSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
