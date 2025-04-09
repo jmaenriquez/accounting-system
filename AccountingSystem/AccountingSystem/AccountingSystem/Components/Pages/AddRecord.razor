@@ -33,7 +33,7 @@
                 <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
                     @foreach (var gnames in GroupList)
                     {
-                        <MudSelectItem T="Group_List" Value="@gnames">@gnames.name</MudSelectItem>
+                        <MudSelectItem T="Group_List" Value="@gnames">@gnames.name (@gnames.type)</MudSelectItem>
                     }
                 </MudSelect>
 
@@ -102,10 +102,13 @@
     List<Account_List> AccountNames = new List<Account_List>();
 
     [Parameter]
-    public Journal_Entry journalRecord { get; set; }
+    public EventCallback OnSubmit{ get; set; }
+
+    [Parameter]
+    public List<Journal_Entry> journalRecord { get; set; }
 
     public List<Journal_Entry> FilteredEntries => Entries
-        .Where(a => a.TransactId == journalRecord?.TransactId)
+        .Where(a => a.TransactId == journalRecord?.FirstOrDefault()?.TransactId)
         .ToList();
 
 
@@ -131,6 +134,8 @@
         StateHasChanged();
     }
 
+
+
     List<Journal_Entry> Entries = new List<Journal_Entry>();
     public Journal_Entry newEntry = new Journal_Entry();
 
@@ -138,8 +143,9 @@
     private async Task Save()
     {
         newEntry.datetime = dateTime ?? newEntry.datetime;
-        newEntry.debit = newEntry.Type == AccountType.Debit ? tempAcc ?? 0 : 0;
-        newEntry.credit = newEntry.Type == AccountType.Credit ? tempAcc ?? 0 : 0;
+        var accType = newEntry.AccGrp?.type ?? AccountType.Debit;
+        newEntry.debit = accType == AccountType.Debit ? tempAcc ?? 0 : 0;
+        newEntry.credit = accType == AccountType.Credit ? tempAcc ?? 0 : 0;
 
         if (journalRecord != null)
         {
@@ -148,11 +154,11 @@
             {
                 existingEntry.datetime = newEntry.datetime;
                 existingEntry.description = newEntry.description;
-                existingEntry.AccName = newEntry.AccName;
-                existingEntry.AccGrp = newEntry.AccGrp;
+                existingEntry.AccNameId = newEntry.AccNameId;
+                existingEntry.AccGrpId = newEntry.AccGrpId;
                 existingEntry.debit = newEntry.debit;
                 existingEntry.credit = newEntry.credit;
-            };
+            }
 
             newEntry = new Journal_Entry();
             tempAcc = null;
@@ -167,29 +173,23 @@
                 Snackbar.Add("Please Fill the Empty Fields", Severity.Warning);
                 return;
             }
-            else
-            {
-                Entries.Add(new Journal_Entry
-                    {
-                        datetime = newEntry.datetime,
-                        description = newEntry.description,
-                        AccName = newEntry.AccName,
-                        AccGrp = newEntry.AccGrp,
-                        debit = newEntry.debit,
-                        credit = newEntry.credit,
-                    });
 
+            Entries.Add(new Journal_Entry
+                {
+                    datetime = newEntry.datetime,
+                    description = newEntry.description,
+                    AccName = newEntry.AccName,
+                    AccGrp = newEntry.AccGrp,
+                    debit = newEntry.debit,
+                    credit = newEntry.credit,
+                });
 
-                newEntry = new Journal_Entry();
-                tempAcc = null;
-                StateHasChanged();
+            newEntry = new Journal_Entry();
+            tempAcc = null;
+            StateHasChanged();
 
-                await Task.CompletedTask;
-            }
+            await Task.CompletedTask;
         }
-
-
-
     }
 
 
@@ -222,10 +222,11 @@
 
                 await DbContext.SaveChangesAsync();
                 Snackbar.Add("New Entry Added", Severity.Success);
-
+                await OnSubmit.InvokeAsync();
 
                 Entries.Clear();
                 tempAcc = null;
+                
 
             }
             else
@@ -240,26 +241,35 @@
             if (Overall == 0)
             {
                 var existingEntries = await DbContext.Journal
-                    .Where(j => j.TransactId == journalRecord.TransactId)
+                    .Where(j => j.TransactId == journalRecord!.FirstOrDefault()!.TransactId)
                     .ToListAsync();
 
-                if (Entries != null)
+                if (journalRecord != null)
                 {
-                    foreach (var entry in existingEntries)
+                    foreach (var existing in existingEntries)
                     {
-                        entry.datetime = newEntry.datetime;
-                        entry.description = newEntry.description;
-                        entry.AccGrpId = newEntry.AccGrp?.id ?? 0;
-                        entry.AccNameId = newEntry.AccName?.id ?? 0;
-                        entry.debit = newEntry.debit;
-                        entry.credit = newEntry.credit;
+                        var updated = Entries.FirstOrDefault(e => e.id == existing.id);
+                        if (updated != null)
+                        {
+                            existing.datetime = updated.datetime;
+                            existing.description = updated.description;
+                            existing.AccGrpId = updated.AccGrp!.id;
+                            existing.AccNameId = updated.AccName!.id;
+                            existing.debit = updated.debit;
+                            existing.credit = updated.credit;
+                        }
                     }
+
 
                     await DbContext.SaveChangesAsync();
                     StateHasChanged();
                     Snackbar.Add("Edit successfully!", Severity.Success);
                 }
+
+
                 Navigate.NavigateTo("/journal");
+                StateHasChanged();
+                await OnSubmit.InvokeAsync();
             }
         }
 
@@ -271,18 +281,18 @@
         {
             newEntry = new Journal_Entry
                 {
-                    datetime = journalRecord.datetime,
-                    id = journalRecord.id,
-                    TransactId = journalRecord.TransactId,
-                    description = journalRecord.description,
-                    AccNameId = journalRecord.AccName!.id,
-                    AccGrpId = journalRecord.AccGrp!.id,
-                    debit = journalRecord.debit,
-                    credit = journalRecord.credit
+                    datetime = journalRecord.FirstOrDefault()?.datetime ?? DateTime.Now,
+                    id = journalRecord.FirstOrDefault()?.id ?? 0,
+                    TransactId = journalRecord.FirstOrDefault()?.TransactId ?? Guid.NewGuid(),
+                    description = journalRecord.FirstOrDefault()?.description ?? string.Empty,
+                    AccNameId = journalRecord.FirstOrDefault()?.AccName?.id ?? 0,
+                    AccGrpId = journalRecord.FirstOrDefault()?.AccGrp?.id ?? 0,
+                    debit = journalRecord.FirstOrDefault()?.debit ?? 0,
+                    credit = journalRecord.FirstOrDefault()?.credit ?? 0
                 };
 
             Entries = await DbContext.Journal
-                .Where(j => j.TransactId == journalRecord.TransactId)
+                .Where(j => j.TransactId == journalRecord!.FirstOrDefault()!.TransactId)
                 .Include(j => j.AccGrp)
                 .Include(j => j.AccName)
                 .ToListAsync();
@@ -310,18 +320,19 @@
     {
         var selectedEntry = e.Item;
 
-        if (selectedEntry != null)
+        if (selectedEntry != null && journalRecord != null)
         {
-            var accName = selectedEntry.AccName!.name;
-            var accGrp = selectedEntry.AccGrp!.name;
             newEntry = new Journal_Entry
                 {
                     datetime = selectedEntry.datetime,
                     id = selectedEntry.id,
                     TransactId = selectedEntry.TransactId,
                     description = selectedEntry.description,
-                    AccName = selectedEntry.AccName,
-                    AccGrp = selectedEntry.AccGrp,
+
+                    // Find the exact reference from the existing lists
+                    AccName = AccountNames.FirstOrDefault(a => a.id == selectedEntry.AccName?.id),
+                    AccGrp = GroupList.FirstOrDefault(g => g.id == selectedEntry.AccGrp?.id),
+
                     debit = selectedEntry.debit,
                     credit = selectedEntry.credit
                 };
@@ -332,6 +343,5 @@
             StateHasChanged();
         }
     }
-
 
 }

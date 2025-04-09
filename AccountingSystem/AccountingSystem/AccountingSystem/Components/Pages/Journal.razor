@@ -6,12 +6,14 @@
 @inject ISnackbar Snackbar  
 @inject IDialogService DialogService
 
+<AddRecord OnSubmit="HandleSubmit" />
+
 <PageTitle>Journal Entries</PageTitle>  
 
 <div class = "rounded-3">  
 
     <div class="top-container">  
- 
+
         <h4 class="m-3 w-100">Journal Entries</h4>
 
         <div class="buttons" style="display: flex; align-items: center;">
@@ -108,6 +110,7 @@
         isSearchOpen = !isSearchOpen;
     }
 
+
     List<Journal_Entry> Entries = new List<Journal_Entry>();  
     List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
 
@@ -130,7 +133,7 @@
         }  
         else  
         {  
-            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
             ).ToList();
         }  
     }
@@ -153,7 +156,7 @@
 
     private async Task Edit(Guid transactId)
     {
-        
+
         var entryToEdit = Entries.Where(e => e.TransactId == transactId).ToList();
         var parameters = new DialogParameters
     {
@@ -169,7 +172,12 @@
         };
         var dialog = await DialogService.ShowAsync<AddRecord>("Edit Records", parameters, options);
         var result = await dialog.Result;
-        
+
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
+
     }
 
     private async Task OpenAddRecDialog()
@@ -185,5 +193,23 @@
         var dialog = await DialogService.ShowAsync<AddRecord>("Add New Record", parameters, options);
         var result = await dialog.Result;
 
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
+
+       
     }
+
+    private async Task HandleSubmit()
+    {
+        Entries = (await jservice.journalentries())
+            .Where(e => !e.isDeleted)
+            .ToList();
+        FilteredEntries = Entries;
+
+        StateHasChanged();
+    }
+
+
 }
