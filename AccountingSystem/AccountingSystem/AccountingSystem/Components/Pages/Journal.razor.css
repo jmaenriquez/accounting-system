@@ -20,21 +20,29 @@
 }
 
 .buttons {
-  display:flex;
-  justify-content: end;
-  width:100%;
-  margin-right: 2rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
 }
 
-.searchbar, .add {
+.searchbar {
     display: flex;
     display: inline-block;
     justify-content: end;
-    border:none;
     font-size: 12px;
-    margin:5px;
-    
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
 }
+
+    .searchbar::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
 
 .add {
     width: 120px;
@@ -42,15 +50,192 @@
     color: #ffffff;
     border-radius: 10px;
     height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
+
+.mobile-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
+
+.rounded-3 {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.top-container {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar {
-    width:200px;
-    height:33px;
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    font-size: 12px;
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+    .searchbar::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
+
+.add {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+    margin-left: 10px;
 }
 
 
+/* Base search input in mobile view (collapsed) */
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
 
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
 
+    /* Optional: consistent placeholder look */
+    .search-input::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
 
+.search-icon-inside {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
 
+.mobile-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }

@@ -104,6 +104,10 @@
     [Parameter]
     public Journal_Entry journalRecord { get; set; }
 
+    public List<Journal_Entry> FilteredEntries => Entries
+        .Where(a => a.TransactId == journalRecord?.TransactId)
+        .ToList();
+
 
     private decimal TotalDebit => Entries.Where(a => a.AccGrp?.type == AccountType.Debit).Sum(a => a.debit ?? 0);
     private decimal TotalCredit => Entries.Where(a => a.AccGrp?.type == AccountType.Credit).Sum(a => a.credit ?? 0);
@@ -239,7 +243,7 @@
                     .Where(j => j.TransactId == journalRecord.TransactId)
                     .ToListAsync();
 
-                if (existingEntries.Any())
+                if (Entries != null)
                 {
                     foreach (var entry in existingEntries)
                     {

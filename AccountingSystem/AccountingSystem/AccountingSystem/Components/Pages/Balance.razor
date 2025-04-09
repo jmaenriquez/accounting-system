@@ -6,43 +6,41 @@
 <PageTitle>Trial Balance</PageTitle>
 
 <div class="rounded-3">
+    <div class="top-container">
+        <h4 class="m-3 w-100">Trial Balance</h4>
+    </div>
 
-	<div class="top-container">
+    <div class="rounded-3 trial-balance-container">
+        @if (Entries.Count > 0)
+        {
+            <div class="container-fluid mt-3">
+                <MudTable Items="Entries">
+                    <HeaderContent>
+                        <MudTh Align="Left" Class="fw-bold">Account</MudTh>
+                        <MudTh Align="Right" Class="fw-bold">Sum of Debit</MudTh>
+                        <MudTh Align="Right" Class="fw-bold">Sum of Credit</MudTh>
+                        <MudTh Align="Right" Class="fw-bold">Sum of Balance</MudTh>
+                    </HeaderContent>
+                    <RowTemplate Context="balance">
+                        <MudTd Align="Left" DataLabel="Account">@balance.AccountName</MudTd>
+                        <MudTd Align="Right" DataLabel="Sum of Debit">@(balance.Debit > 0 ? $"{balance.Debit:N2}" : "")</MudTd>
+                        <MudTd Align="Right" DataLabel="Sum of Credit">@(balance.Credit > 0 ? $"{balance.Credit:N2}" : "")</MudTd>
+                        <MudTd Align="Right" DataLabel="Sum of Balance">@balance.SumOfBalance.ToString("N2")</MudTd>
+                    </RowTemplate>
 
-		<h4 class="m-3 w-25">Trial Balance</h4>
 
-		<div class="buttons">
-			<input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
-		</div>
-
-	</div>
-
-	@if(Entries.Count > 0)
-	{
-		<div class="container-fluid mt-3">
-			<MudTable Items ="Entries">
-				<HeaderContent>
-					<MudTh Class="fw-bold">Account</MudTh>
-					<MudTh Class="fw-bold">Sum of Debit</MudTh>
-					<MudTh Class="fw-bold">Sum of Credit</MudTh>
-					<MudTh Class="fw-bold">Sum of Balance</MudTh>
-				</HeaderContent>
-
-				<RowTemplate Context="balance">
-					<MudTd>@balance.AccountName</MudTd>
-					<MudTd>@(balance.Debit > 0 ? $"{balance.Debit}" : "")</MudTd>
-					<MudTd>@(balance.Credit > 0 ? $"{balance.Credit}" : "")</MudTd>
-					<MudTd>@(balance.SumOfBalance)</MudTd>
-				</RowTemplate>
-				<FooterContent>
-					<MudTd Class="fw-bold">Grand Total</MudTd>
-					<MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
-					<MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
-				</FooterContent>
-			</MudTable>
-		</div>
-	}
+                    <FooterContent>
+                        <MudTd Align="Left" Class="fw-bold">Grand Total</MudTd>
+                        <MudTd Align="Right" Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
+                        <MudTd Align="Right" Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
+                        <MudTd></MudTd>
+                    </FooterContent>
+                </MudTable>
+            </div>
+        }
+    </div>
 </div>
+
 
 
 

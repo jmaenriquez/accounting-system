@@ -12,13 +12,30 @@
 
     <div class="top-container">  
  
-        <h4 class="m-3 w-25">Journal Entries</h4>  
+        <h4 class="m-3 w-100">Journal Entries</h4>
 
-        <div class="buttons">  
-            <input class = "searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />  
-            <button class="btn add" @onclick="OpenAddRecDialog">Add New Record</button>
+        <div class="buttons" style="display: flex; align-items: center;">
+            <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                <input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
+            </MudHidden>
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <div class="mobile-search">
+                    <MudButton Variant="Variant.Filled" OnClick="ToggleSearch" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                        <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" />
+                    </MudButton>
+                    <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="  Search..." @oninput="FilterEntries" autofocus />
+                </div>
+            </MudHidden>
 
-        </div>  
+            <MudButton Variant="Variant.Filled" OnClick="OpenAddRecDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" /> New Entry
+                </MudHidden>
+                <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" />
+                </MudHidden>
+            </MudButton>
+        </div>
     </div>
 
     <div id="Tables" class="mt-3">
@@ -84,11 +101,12 @@
 
 @code {
 
-    private void goToAddRec()  
-    {  
-        Navigate.NavigateTo("/addrecords");  
-    }   
+    private bool isSearchOpen = false;
 
+    private void ToggleSearch()
+    {
+        isSearchOpen = !isSearchOpen;
+    }
 
     List<Journal_Entry> Entries = new List<Journal_Entry>();  
     List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
@@ -136,7 +154,7 @@
     private async Task Edit(Guid transactId)
     {
         
-        var entryToEdit = Entries.FirstOrDefault(e => e.TransactId == transactId);
+        var entryToEdit = Entries.Where(e => e.TransactId == transactId).ToList();
         var parameters = new DialogParameters
     {
         { "journalRecord", entryToEdit }

@@ -8,7 +8,7 @@ namespace AccountingSystem.Data
     {
         public DateTime datetime { get; set; } = DateTime.Now;
         public int id { get; set; }
-        public string description { get; set; }
+        public string? description { get; set; }
         public int AccGrpId { get; set; }
         public int AccNameId { get; set; }
 

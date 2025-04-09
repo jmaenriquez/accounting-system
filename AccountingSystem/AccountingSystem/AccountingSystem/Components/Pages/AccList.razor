@@ -16,15 +16,33 @@
 
         <h4 class="m-4 w-25">Account List</h4>
 
-        <div class="buttons">
-            <input class="searchbar" type="text" placeholder="Search..." />
-            <button class="btn add" @onclick="OpenAddAccDialog">Add New Account</button>
+        <div class="buttons" style="display: flex; align-items: center;">
+            <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                <input class="searchbar" type="text" placeholder="Search..." @oninput="FilterEntries" />
+            </MudHidden>
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <div class="mobile-search">
+                    <MudButton Variant="Variant.Filled" OnClick="ToggleSearch" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                        <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" />
+                    </MudButton>
+                    <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="Search..." @oninput="FilterEntries" autofocus />
+                </div>
+            </MudHidden>
+
+            <MudButton Variant="Variant.Filled" OnClick="OpenAddAccDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" /> New Entry
+                </MudHidden>
+                <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                    <MudIcon Icon="@Icons.Material.Filled.Add" />
+                </MudHidden>
+            </MudButton>
         </div>
     </div>
 
     <div>
         <div class="container-fluid">
-            <MudTable Class="mt-4" Items="@AccountList" Dense="true"
+            <MudTable Class="mt-4" Items="@FilteredEntries" Dense="true"
             Breakpoint="Breakpoint.Sm">
                 <HeaderContent>
                     <MudTh Class="fw-bold">Account Id</MudTh>
@@ -34,10 +52,10 @@
                     <MudTh></MudTh>
                 </HeaderContent>
                 <RowTemplate>
-                    <MudTd>@context.id</MudTd>
-                    <MudTd>@context.name</MudTd>
-                    <MudTd>@context.description</MudTd>
-                    <MudTd>@context.status</MudTd>
+                    <MudTd data-label="Account Id">@context.id</MudTd>
+                    <MudTd data-label="Account Name">@context.name</MudTd>
+                    <MudTd data-label="Description">@context.description</MudTd>
+                    <MudTd data-label="Status">@context.status</MudTd>
                     <MudTd>
                         <MudMenu Icon="@Icons.Material.Filled.MoreVert">
                             <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context)" />
@@ -45,20 +63,26 @@
                         </MudMenu>
                     </MudTd>
                 </RowTemplate>
+
             </MudTable>
         </div>
     </div>
 </div>
 
-@code {
-    public bool Overlay = false;
 
-    public void navigateToAddAcc()
+
+
+@code {
+    private bool isSearchOpen = false;
+
+    private void ToggleSearch()
     {
-        Navigate.NavigateTo("/addacc");
+        isSearchOpen = !isSearchOpen;
     }
 
+
     List<Account_List> AccountList = new List<Account_List>();
+    List<Account_List> FilteredEntries = new List<Account_List>();
 
     public Account_List updateAcc = new Account_List
    {
@@ -72,6 +96,7 @@
         AccountList = (await accountService.GetAllAccounts())
         .Where(a => !a.isDeleted)
         .ToList();
+        FilteredEntries = AccountList;
 
     }
 
@@ -81,11 +106,13 @@
         if (account != null)
         {
             account.isDeleted = true;
-            await accountService.UpdateAccount(new List<Account_List> { account });
-            AccountList = AccountList.Where(e => !e.isDeleted).ToList();
-            StateHasChanged();
-            Snackbar.Add("An Account has been marked as Deleted", Severity.Success);
         }
+        await accountService.UpdateAccount(new List<Account_List> { account! });
+        AccountList = AccountList.Where(e => !e.isDeleted).ToList();
+        StateHasChanged();
+        FilteredEntries = AccountList;
+
+        Snackbar.Add("An Account has been marked as Deleted", Severity.Success);
     }
 
     private async Task Edit(Account_List accs)
@@ -120,4 +147,18 @@
        var result = await dialog.Result;
 
    }
+
+    private void FilterEntries(ChangeEventArgs e)
+    {
+        var searchTerm = e.Value?.ToString();
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredEntries = AccountList;
+        }
+        else
+        {
+            FilteredEntries = AccountList.Where(entry => entry.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.date.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) 
+            ).ToList();
+        }
+    }
 }

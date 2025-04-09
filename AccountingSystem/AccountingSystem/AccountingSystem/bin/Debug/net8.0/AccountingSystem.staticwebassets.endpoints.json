@@ -3,7 +3,7 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
-      "Route": "AccountingSystem.sculkmc1e1.styles.css",
+      "Route": "AccountingSystem.1w0t60zdns.styles.css",
       "AssetFile": "AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -17,7 +17,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13579"
+          "Value": "29049"
         },
         {
           "Name": "Content-Type",
@@ -25,11 +25,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg=\""
+          "Value": "\"wd8NkFJAwiURRwfXh4ZgiK7bEGsLdieUP3HjSkbux7Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
+          "Value": "Tue, 08 Apr 2025 08:33:59 GMT"
         },
         {
           "Name": "Link",
@@ -39,11 +39,11 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sculkmc1e1"
+          "Value": "1w0t60zdns"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg="
+          "Value": "sha256-wd8NkFJAwiURRwfXh4ZgiK7bEGsLdieUP3HjSkbux7Q="
         },
         {
           "Name": "label",
@@ -66,7 +66,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13579"
+          "Value": "29049"
         },
         {
           "Name": "Content-Type",
@@ -74,11 +74,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg=\""
+          "Value": "\"wd8NkFJAwiURRwfXh4ZgiK7bEGsLdieUP3HjSkbux7Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 01:32:21 GMT"
+          "Value": "Tue, 08 Apr 2025 08:33:59 GMT"
         },
         {
           "Name": "Link",
@@ -88,7 +88,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7DifuVSuBKRtOH2pJaltDAgpAKPzA1Eo2/O/5WdRyTg="
+          "Value": "sha256-wd8NkFJAwiURRwfXh4ZgiK7bEGsLdieUP3HjSkbux7Q="
         }
       ]
     },

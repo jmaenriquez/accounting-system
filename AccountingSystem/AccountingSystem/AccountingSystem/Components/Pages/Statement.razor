@@ -8,7 +8,7 @@
 
 <div class="rounded-3">
     <div class="top-container">
-        <h4 class="m-3 w-25">Income Statement</h4>
+        <h4 class="m-3 w-100">Income Statement</h4>
     </div>
 
     <div class="container-fluid mt-3">
@@ -21,26 +21,27 @@
                     <MudTh Align="Right">Amount</MudTh>
                 </HeaderContent>
 
-                <RowTemplate>
+                <RowTemplate Context="context">
                     @if (context.IsSectionHeader)
                     {
-                        <MudTd ColSpan="2" Class="fw-bold">@context.AccountName</MudTd>
+                        <MudTd ColSpan="2" Class="fw-bold" DataLabel="Account Name">@context.AccountName</MudTd>
                     }
                     else if (context.IsSubtotal)
                     {
-                        <MudTd Class="fw-bold">@context.AccountName</MudTd>
-                        <MudTd Align="Right" Class="fw-bold">@($"{context.Amount:N2}")</MudTd>
+                        <MudTd Class="fw-bold" DataLabel="Account Name">@context.AccountName</MudTd>
+                        <MudTd Align="Right" Class="fw-bold" DataLabel="Amount">@($"{context.Amount:N2}")</MudTd>
                     }
                     else
                     {
-                        <MudTd>@context.AccountName</MudTd>
-                        <MudTd Align="Right">@($"{context.Amount:N2}")</MudTd>
+                        <MudTd DataLabel="Account Name">@context.AccountName</MudTd>
+                        <MudTd Align="Right" DataLabel="Amount">@($"{context.Amount:N2}")</MudTd>
                     }
                 </RowTemplate>
             </MudTable>
         </MudPaper>
     </div>
 </div>
+
 
 @code {
     public class IncomeRow

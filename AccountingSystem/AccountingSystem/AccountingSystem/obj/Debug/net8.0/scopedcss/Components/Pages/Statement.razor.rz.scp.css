@@ -35,3 +35,27 @@
     width: 200px;
     height: 33px;
 }
+
+@media screen and (max-width: 768px) {
+    .mud-table td[b-n2ah7os6g4] {
+        display: block;
+        padding-left: 20px;
+        border-top: 1px solid #ddd;
+        position: relative;
+    }
+
+        .mud-table td[b-n2ah7os6g4]::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: #555;
+            text-transform: capitalize;
+            padding-right: 10px;
+        }
+
+    .mud-table th[b-n2ah7os6g4] {
+        display: none;
+    }
+}

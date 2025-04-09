@@ -181,7 +181,7 @@ main[b-sy38zyqdxq] {
     overflow: hidden;
     height: 100%;
     overflow-y: auto;
-    max-height: 75vh;
+    max-height: 80vh;
 }
 
 .top-container[b-itkg4wyyqc] {
@@ -200,17 +200,26 @@ main[b-sy38zyqdxq] {
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right:2rem;
+    margin-right: 2rem;
 }
 
-.searchbar[b-itkg4wyyqc], .add[b-itkg4wyyqc] {
+.searchbar[b-itkg4wyyqc] {
     display: flex;
     display: inline-block;
     justify-content: end;
-    border: none;
     font-size: 12px;
-    margin: 5px;
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
 }
+
+    .searchbar[b-itkg4wyyqc]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
 
 .add[b-itkg4wyyqc] {
     width: 120px;
@@ -218,11 +227,226 @@ main[b-sy38zyqdxq] {
     color: #ffffff;
     border-radius: 10px;
     height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input[b-itkg4wyyqc] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-itkg4wyyqc] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input[b-itkg4wyyqc]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside[b-itkg4wyyqc] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
+
+.mobile-search[b-itkg4wyyqc] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-itkg4wyyqc] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-itkg4wyyqc] {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
+
+.rounded-3[b-itkg4wyyqc] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.top-container[b-itkg4wyyqc] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.buttons[b-itkg4wyyqc] {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar[b-itkg4wyyqc] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    font-size: 12px;
+    margin: 3px;
+    border-radius: 5px;
     width: 200px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+    .searchbar[b-itkg4wyyqc]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
+
+.add[b-itkg4wyyqc] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
     height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input[b-itkg4wyyqc] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-itkg4wyyqc] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input[b-itkg4wyyqc]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside[b-itkg4wyyqc] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none;
+}
+
+.mobile-search[b-itkg4wyyqc] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-itkg4wyyqc] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-itkg4wyyqc] {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
+
+@media screen and (max-width: 768px) {
+    .mud-table[b-itkg4wyyqc] {
+        width: 100%;
+    }
+
+        .mud-table td[b-itkg4wyyqc] {
+            display: block;
+            padding-left: 20px;
+            border-top: 1px solid #ddd;
+            position: relative;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+
+            .mud-table td[b-itkg4wyyqc]::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-weight: bold;
+                color: #555;
+                text-transform: capitalize;
+                padding-right: 10px;
+            }
+
+        .mud-table th[b-itkg4wyyqc] {
+            display: none;
+        }
 }
 /* _content/AccountingSystem/Components/Pages/AddAcc.razor.rz.scp.css */
 .form-group[b-405pd1o2ng] {
@@ -274,17 +498,67 @@ body[b-jx5ziyf1f7] {
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right: 2rem
+    margin-right: 2rem;
 }
 
-.searchbar[b-fw64h8oam3] {
-    display: flex;
-    display: inline-block;
-    border: none;
+.mud-table th[b-fw64h8oam3], .mud-table td[b-fw64h8oam3] {
     font-size: 12px;
-    margin: 5px;
-    width: 200px;
-    height: 33px;
+    min-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mud-table td[b-fw64h8oam3] {
+    padding: 8px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mud-table td[b-fw64h8oam3] {
+        display: block;
+        padding-left: 20px;
+        border-top: 1px solid #ddd;
+    }
+
+        .mud-table td[b-fw64h8oam3]::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: #555;
+            text-transform: capitalize;
+        }
+
+    .mud-table th[b-fw64h8oam3] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mud-table td[b-fw64h8oam3] {
+        display: block;
+        padding-left: 20px;
+        border-top: 1px solid #ddd;
+        position: relative;
+    }
+
+
+        .mud-table td[b-fw64h8oam3]::before {
+            content: attr(data-label);
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: #555;
+            text-transform: capitalize;
+            padding-right: 10px;
+        }
+
+    .mud-table th[b-fw64h8oam3] {
+        display: none;
+    }
 }
 /* _content/AccountingSystem/Components/Pages/Dashboard.razor.rz.scp.css */
 body[b-tquthsc8me] {
@@ -495,21 +769,29 @@ body[b-tquthsc8me] {
 }
 
 .buttons[b-c16h26qowt] {
-  display:flex;
-  justify-content: end;
-  width:100%;
-  margin-right: 2rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
 }
 
-.searchbar[b-c16h26qowt], .add[b-c16h26qowt] {
+.searchbar[b-c16h26qowt] {
     display: flex;
     display: inline-block;
     justify-content: end;
-    border:none;
     font-size: 12px;
-    margin:5px;
-    
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
 }
+
+    .searchbar[b-c16h26qowt]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
 
 .add[b-c16h26qowt] {
     width: 120px;
@@ -517,18 +799,195 @@ body[b-tquthsc8me] {
     color: #ffffff;
     border-radius: 10px;
     height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input[b-c16h26qowt] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-c16h26qowt] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input[b-c16h26qowt]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside[b-c16h26qowt] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
+
+.mobile-search[b-c16h26qowt] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-c16h26qowt] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-c16h26qowt] {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
+
+.rounded-3[b-c16h26qowt] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.top-container[b-c16h26qowt] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.buttons[b-c16h26qowt] {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
 }
 
 .searchbar[b-c16h26qowt] {
-    width:200px;
-    height:33px;
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    font-size: 12px;
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+    .searchbar[b-c16h26qowt]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
+
+.add[b-c16h26qowt] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+    margin-left: 10px;
 }
 
 
+/* Base search input in mobile view (collapsed) */
+.search-input[b-c16h26qowt] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
 
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-c16h26qowt] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
 
+    /* Optional: consistent placeholder look */
+    .search-input[b-c16h26qowt]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
 
+.search-icon-inside[b-c16h26qowt] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
 
+.mobile-search[b-c16h26qowt] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-c16h26qowt] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-c16h26qowt] {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
 /* _content/AccountingSystem/Components/Pages/Ledger.razor.rz.scp.css */
 .rounded-3[b-dtvkh2wzg0] {
     width: 100%;
@@ -555,20 +1014,222 @@ body[b-tquthsc8me] {
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-right: 2rem
+    margin-right: 2rem;
 }
 
 .searchbar[b-dtvkh2wzg0] {
     display: flex;
     display: inline-block;
     justify-content: end;
-    border: none;
     font-size: 12px;
-    margin: 5px;
+    margin: 3px;
+    border-radius: 5px;
     width: 200px;
-    height: 33px;
+    height: 38px;
+    margin-right: 10px;
 }
 
+    .searchbar[b-dtvkh2wzg0]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
+
+.add[b-dtvkh2wzg0] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input[b-dtvkh2wzg0] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-dtvkh2wzg0] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input[b-dtvkh2wzg0]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside[b-dtvkh2wzg0] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
+
+.mobile-search[b-dtvkh2wzg0] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-dtvkh2wzg0] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-dtvkh2wzg0] {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
+
+.rounded-3[b-dtvkh2wzg0] {
+    width: 100%;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    height: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.top-container[b-dtvkh2wzg0] {
+    width: 100%;
+    height: 65px;
+    background-color: #00AAC1;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.buttons[b-dtvkh2wzg0] {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-right: 2rem;
+}
+
+.searchbar[b-dtvkh2wzg0] {
+    display: flex;
+    display: inline-block;
+    justify-content: end;
+    font-size: 12px;
+    margin: 3px;
+    border-radius: 5px;
+    width: 200px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+    .searchbar[b-dtvkh2wzg0]::placeholder {
+        color: #999;
+        font-style: italic;
+        margin-right: 20px;
+    }
+
+.add[b-dtvkh2wzg0] {
+    width: 120px;
+    background-color: #00828F;
+    color: #ffffff;
+    border-radius: 10px;
+    height: 33px;
+    margin-left: 10px;
+}
+
+
+/* Base search input in mobile view (collapsed) */
+.search-input[b-dtvkh2wzg0] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+    font-size: 12px;
+    height: 0;
+    border-radius: 5px;
+}
+
+    /* Expanded state: mimic .searchbar */
+    .search-input.expanded[b-dtvkh2wzg0] {
+        width: 200px;
+        opacity: 1;
+        padding: 4px 8px;
+        height: 38px;
+        border: 1px solid #ccc;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    /* Optional: consistent placeholder look */
+    .search-input[b-dtvkh2wzg0]::placeholder {
+        color: #999;
+        font-style: italic;
+    }
+/*    .search-input.expanded {
+        width: 150px;
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px 4px 35px;
+    }*/
+
+.search-icon-inside[b-dtvkh2wzg0] {
+    position: absolute;
+    left: 20px;
+    color: #999;
+    pointer-events: none; /* so it doesn't interfere with typing */
+}
+
+.mobile-search[b-dtvkh2wzg0] {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input[b-dtvkh2wzg0] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    margin-left: 5px;
+    border: none;
+    padding: 0;
+}
+
+    .search-input.expanded[b-dtvkh2wzg0] {
+        width: 150px; /* Adjust to desired width */
+        opacity: 1;
+        border: 1px solid #ccc;
+        padding: 4px 8px;
+    }
 /* _content/AccountingSystem/Components/Pages/Reports.razor.rz.scp.css */
 body[b-q559me807p] {
 }
@@ -639,4 +1300,28 @@ body[b-q559me807p] {
     margin: 5px;
     width: 200px;
     height: 33px;
+}
+
+@media screen and (max-width: 768px) {
+    .mud-table td[b-n2ah7os6g4] {
+        display: block;
+        padding-left: 20px;
+        border-top: 1px solid #ddd;
+        position: relative;
+    }
+
+        .mud-table td[b-n2ah7os6g4]::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: #555;
+            text-transform: capitalize;
+            padding-right: 10px;
+        }
+
+    .mud-table th[b-n2ah7os6g4] {
+        display: none;
+    }
 }
