@@ -1,14 +1,12 @@
-﻿@page "/addrecords"
+﻿@* @page "/addrecords" *@
 @using Microsoft.EntityFrameworkCore;
 @using AccountingSystem.Data
 @using AccountingSystem.Services
-@inject NavigationManager Navigate
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
 @inject Data.AppDbContext DbContext
 @inject GroupService grpService
 @inject AccountService accountService;
-
 
 <MudDialog>
     <DialogContent>
@@ -21,16 +19,16 @@
 
                 <MudTextField Label="Description"
                 @bind-Value="newEntry.description"
-                Required="true" MaxLength="50" />
+                Required="true" MaxLength="100" />
 
-                <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName">
+                <MudSelect T="Account_List" Label="Account Name" @bind-Value="newEntry.AccName" Required = "true">
                     @foreach (var accs in AccountNames)
                     {
                         <MudSelectItem T="Account_List" Value="@accs">@accs.name</MudSelectItem>
                     }
                 </MudSelect>
 
-                <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp">
+                <MudSelect T="Group_List" Label="Account Group" @bind-Value="newEntry.AccGrp" Required="true">
                     @foreach (var gnames in GroupList)
                     {
                         <MudSelectItem T="Group_List" Value="@gnames">@gnames.name (@gnames.type)</MudSelectItem>
@@ -53,6 +51,22 @@
                     <MudButton Class="mt-4" OnClick="Save" Style="background-color: #F9F9F9;">Confirm</MudButton>
                 }
             </MudContainer>
+
+            <MudContainer Class="mt-3">
+                @if (Entries != null && Entries.Count > 0 && Overall == 0)
+                {
+                    <MudTextField Label="Comments"
+                    @bind-Value="newEntry.enterRemark"
+                    MaxLength="200" />
+                }
+                else
+                {
+                    <MudTextField Label="Description"
+                    @bind-Value="newEntry.enterRemark"
+                    MaxLength="200" Disabled="true" />
+                }
+            </MudContainer>
+
         </MudForm>
 
         <MudTable T="Journal_Entry" Items="@Entries" Class="mt-3" Dense="true" Hover="true"
@@ -78,6 +92,8 @@
                 <MudTd>@Overall.ToString("N2")</MudTd>
             </FooterContent>
         </MudTable>
+
+
     </DialogContent>
 
     <DialogActions>
@@ -101,6 +117,9 @@
     List<Group_List> GroupList = new List<Group_List>();
     List<Account_List> AccountNames = new List<Account_List>();
 
+    [CascadingParameter]
+    private IMudDialogInstance MudDialogInstance { get; set; }
+
     [Parameter]
     public EventCallback OnSubmit{ get; set; }
 
@@ -123,7 +142,7 @@
 
     private void goBack()
     {
-        Navigate.NavigateTo("/journal");
+        MudDialogInstance.Close(DialogResult.Cancel());
     }
 
 
@@ -158,6 +177,7 @@
                 existingEntry.AccGrpId = newEntry.AccGrpId;
                 existingEntry.debit = newEntry.debit;
                 existingEntry.credit = newEntry.credit;
+                existingEntry.enterRemark = newEntry.enterRemark;
             }
 
             newEntry = new Journal_Entry();
@@ -182,6 +202,7 @@
                     AccGrp = newEntry.AccGrp,
                     debit = newEntry.debit,
                     credit = newEntry.credit,
+                    enterRemark = newEntry.enterRemark
                 });
 
             newEntry = new Journal_Entry();
@@ -214,6 +235,7 @@
                             AccNameId = entry.AccName!.id,
                             debit = entry.debit,
                             credit = entry.credit,
+                            enterRemark = entry.enterRemark
 
                         };
 
@@ -222,11 +244,13 @@
 
                 await DbContext.SaveChangesAsync();
                 Snackbar.Add("New Entry Added", Severity.Success);
+
+                MudDialogInstance.Close(DialogResult.Ok(""));
                 await OnSubmit.InvokeAsync();
 
                 Entries.Clear();
                 tempAcc = null;
-                
+
 
             }
             else
@@ -257,6 +281,7 @@
                             existing.AccNameId = updated.AccName!.id;
                             existing.debit = updated.debit;
                             existing.credit = updated.credit;
+                            
                         }
                     }
 
@@ -266,9 +291,9 @@
                     Snackbar.Add("Edit successfully!", Severity.Success);
                 }
 
-
-                Navigate.NavigateTo("/journal");
                 StateHasChanged();
+                MudDialogInstance.Close(DialogResult.Ok(Entries[0]));
+
                 await OnSubmit.InvokeAsync();
             }
         }
@@ -279,17 +304,6 @@
     {
         if (journalRecord != null)
         {
-            newEntry = new Journal_Entry
-                {
-                    datetime = journalRecord.FirstOrDefault()?.datetime ?? DateTime.Now,
-                    id = journalRecord.FirstOrDefault()?.id ?? 0,
-                    TransactId = journalRecord.FirstOrDefault()?.TransactId ?? Guid.NewGuid(),
-                    description = journalRecord.FirstOrDefault()?.description ?? string.Empty,
-                    AccNameId = journalRecord.FirstOrDefault()?.AccName?.id ?? 0,
-                    AccGrpId = journalRecord.FirstOrDefault()?.AccGrp?.id ?? 0,
-                    debit = journalRecord.FirstOrDefault()?.debit ?? 0,
-                    credit = journalRecord.FirstOrDefault()?.credit ?? 0
-                };
 
             Entries = await DbContext.Journal
                 .Where(j => j.TransactId == journalRecord!.FirstOrDefault()!.TransactId)
@@ -328,11 +342,8 @@
                     id = selectedEntry.id,
                     TransactId = selectedEntry.TransactId,
                     description = selectedEntry.description,
-
-                    // Find the exact reference from the existing lists
                     AccName = AccountNames.FirstOrDefault(a => a.id == selectedEntry.AccName?.id),
                     AccGrp = GroupList.FirstOrDefault(g => g.id == selectedEntry.AccGrp?.id),
-
                     debit = selectedEntry.debit,
                     credit = selectedEntry.credit
                 };

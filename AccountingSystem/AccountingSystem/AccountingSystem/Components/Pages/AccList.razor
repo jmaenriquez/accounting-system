@@ -41,8 +41,8 @@
     </div>
 
     <div>
-        <div class="container-fluid">
-            <MudTable Class="mt-4" Items="@FilteredEntries" Dense="true"
+        <div class="container-fluid mb-3">
+            <MudTable Class="mt-4 table-responsive" Items="@FilteredEntries" Dense="true"
             Breakpoint="Breakpoint.Sm">
                 <HeaderContent>
                     <MudTh Class="fw-bold">Account Id</MudTh>
@@ -52,10 +52,10 @@
                     <MudTh></MudTh>
                 </HeaderContent>
                 <RowTemplate>
-                    <MudTd data-label="Account Id">@context.id</MudTd>
-                    <MudTd data-label="Account Name">@context.name</MudTd>
-                    <MudTd data-label="Description">@context.description</MudTd>
-                    <MudTd data-label="Status">@context.status</MudTd>
+                    <MudTd>@context.id</MudTd>
+                    <MudTd>@context.name</MudTd>
+                    <MudTd>@context.description</MudTd>
+                    <MudTd>@context.status</MudTd>
                     <MudTd>
                         <MudMenu Icon="@Icons.Material.Filled.MoreVert">
                             <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(context)" />
@@ -73,6 +73,7 @@
 
 
 @code {
+
     private bool isSearchOpen = false;
 
     private void ToggleSearch()
@@ -131,22 +132,32 @@
             };
         var dialog = await DialogService.ShowAsync<AddAcc>("Edit Account", parameters, options);
         var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
     }
 
-   private async Task OpenAddAccDialog()
-   {
-       var parameters = new DialogParameters();
-       var options = new DialogOptions { 
+    private async Task OpenAddAccDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions { 
            CloseButton = true, 
            MaxWidth = MaxWidth.Small, 
            FullWidth = true,
            Position = DialogPosition.Center,
            BackdropClick = true
        };
-       var dialog = await DialogService.ShowAsync<AddAcc>("Add New Account", parameters, options);
-       var result = await dialog.Result;
+        var dialog = await DialogService.ShowAsync<AddAcc>("Add New Account", parameters, options);
+        var result = await dialog.Result;
 
-   }
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
+
+    }
 
     private void FilterEntries(ChangeEventArgs e)
     {
@@ -160,5 +171,15 @@
             FilteredEntries = AccountList.Where(entry => entry.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.date.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) 
             ).ToList();
         }
+    }
+
+    private async Task HandleSubmit()
+    {
+        AccountList = (await accountService.GetAllAccounts())
+            .Where(a => !a.isDeleted)
+            .ToList();
+        FilteredEntries = AccountList;
+
+        StateHasChanged();
     }
 }

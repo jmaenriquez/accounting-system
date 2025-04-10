@@ -11,7 +11,7 @@
         <h4 class="m-3 w-100">Income Statement</h4>
     </div>
 
-    <div class="container-fluid mt-3">
+    <div class="container-fluid mt-3 mb-3">
         <MudPaper Class="p-4">
             <MudText Typo="Typo.h5" Align="Align.Center">Metaverse Holdings Corporation</MudText>
 
@@ -24,17 +24,17 @@
                 <RowTemplate Context="context">
                     @if (context.IsSectionHeader)
                     {
-                        <MudTd ColSpan="2" Class="fw-bold" DataLabel="Account Name">@context.AccountName</MudTd>
+                        <MudTd ColSpan="2" Class="fw-bold">@context.AccountName</MudTd>
                     }
                     else if (context.IsSubtotal)
                     {
-                        <MudTd Class="fw-bold" DataLabel="Account Name">@context.AccountName</MudTd>
-                        <MudTd Align="Right" Class="fw-bold" DataLabel="Amount">@($"{context.Amount:N2}")</MudTd>
+                        <MudTd Class="fw-bold">@context.AccountName</MudTd>
+                        <MudTd Class="fw-bold">@($"{context.Amount:N2}")</MudTd>
                     }
                     else
                     {
-                        <MudTd DataLabel="Account Name">@context.AccountName</MudTd>
-                        <MudTd Align="Right" DataLabel="Amount">@($"{context.Amount:N2}")</MudTd>
+                        <MudTd>@context.AccountName</MudTd>
+                        <MudTd >@($"{context.Amount:N2}")</MudTd>
                     }
                 </RowTemplate>
             </MudTable>

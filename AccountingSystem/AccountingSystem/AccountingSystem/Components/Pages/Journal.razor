@@ -6,7 +6,7 @@
 @inject ISnackbar Snackbar  
 @inject IDialogService DialogService
 
-<AddRecord OnSubmit="HandleSubmit" />
+@* <AddRecord OnSubmit="HandleSubmit" /> *@
 
 <PageTitle>Journal Entries</PageTitle>  
 
@@ -22,21 +22,20 @@
             </MudHidden>
             <MudHidden Breakpoint="Breakpoint.MdAndUp">
                 <div class="mobile-search">
-                    <MudButton Variant="Variant.Filled" OnClick="ToggleSearch" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
-                        <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" />
-                    </MudButton>
+
+                    <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" @onclick = "ToggleSearch" />
                     <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="  Search..." @oninput="FilterEntries" autofocus />
                 </div>
             </MudHidden>
 
-            <MudButton Variant="Variant.Filled" OnClick="OpenAddRecDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
-                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+            <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                <MudButton Variant="Variant.Filled" OnClick="OpenAddRecDialog" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
                     <MudIcon Icon="@Icons.Material.Filled.Add" /> New Entry
-                </MudHidden>
-                <MudHidden Breakpoint="Breakpoint.MdAndUp">
-                    <MudIcon Icon="@Icons.Material.Filled.Add" />
-                </MudHidden>
-            </MudButton>
+                </MudButton>
+            </MudHidden>
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <MudIcon Icon="@Icons.Material.Filled.Add" @onclick="OpenAddRecDialog" />
+            </MudHidden>
         </div>
     </div>
 
@@ -159,9 +158,9 @@
 
         var entryToEdit = Entries.Where(e => e.TransactId == transactId).ToList();
         var parameters = new DialogParameters
-    {
-        { "journalRecord", entryToEdit }
-    };
+        {
+            { "journalRecord", entryToEdit} 
+        };
 
         var options = new DialogOptions { 
             CloseButton = true, 
@@ -177,7 +176,6 @@
         {
             await HandleSubmit();
         }
-
     }
 
     private async Task OpenAddRecDialog()
@@ -198,7 +196,7 @@
             await HandleSubmit();
         }
 
-       
+
     }
 
     private async Task HandleSubmit()
@@ -207,7 +205,6 @@
             .Where(e => !e.isDeleted)
             .ToList();
         FilteredEntries = Entries;
-
         StateHasChanged();
     }
 

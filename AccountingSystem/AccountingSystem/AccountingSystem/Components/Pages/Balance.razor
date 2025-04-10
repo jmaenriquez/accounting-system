@@ -13,26 +13,26 @@
     <div class="rounded-3 trial-balance-container">
         @if (Entries.Count > 0)
         {
-            <div class="container-fluid mt-3">
+            <div class="container-fluid mt-3 mb-3">
                 <MudTable Items="Entries">
                     <HeaderContent>
-                        <MudTh Align="Left" Class="fw-bold">Account</MudTh>
-                        <MudTh Align="Right" Class="fw-bold">Sum of Debit</MudTh>
-                        <MudTh Align="Right" Class="fw-bold">Sum of Credit</MudTh>
-                        <MudTh Align="Right" Class="fw-bold">Sum of Balance</MudTh>
+                        <MudTh Class="fw-bold">Account</MudTh>
+                        <MudTh Class="fw-bold">Sum of Debit</MudTh>
+                        <MudTh Class="fw-bold">Sum of Credit</MudTh>
+                        <MudTh Class="fw-bold">Sum of Balance</MudTh>
                     </HeaderContent>
                     <RowTemplate Context="balance">
-                        <MudTd Align="Left" DataLabel="Account">@balance.AccountName</MudTd>
-                        <MudTd Align="Right" DataLabel="Sum of Debit">@(balance.Debit > 0 ? $"{balance.Debit:N2}" : "")</MudTd>
-                        <MudTd Align="Right" DataLabel="Sum of Credit">@(balance.Credit > 0 ? $"{balance.Credit:N2}" : "")</MudTd>
-                        <MudTd Align="Right" DataLabel="Sum of Balance">@balance.SumOfBalance.ToString("N2")</MudTd>
+                        <MudTd>@balance.AccountName</MudTd>
+                        <MudTd>@(balance.Debit > 0 ? $"{balance.Debit:N2}" : "")</MudTd>
+                        <MudTd>@(balance.Credit > 0 ? $"{balance.Credit:N2}" : "")</MudTd>
+                        <MudTd>@balance.SumOfBalance.ToString("N2")</MudTd>
                     </RowTemplate>
 
 
                     <FooterContent>
-                        <MudTd Align="Left" Class="fw-bold">Grand Total</MudTd>
-                        <MudTd Align="Right" Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
-                        <MudTd Align="Right" Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
+                        <MudTd Class="fw-bold">Grand Total</MudTd>
+                        <MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
+                        <MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
                         <MudTd></MudTd>
                     </FooterContent>
                 </MudTable>
@@ -68,7 +68,7 @@
 		}
 		else
 		{
-			FilteredEntries = Journal.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
+			FilteredEntries = Journal.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)).ToList();
 		}
 	}
 }

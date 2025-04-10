@@ -1,4 +1,4 @@
-@page "/addgrp"
+
 @using AccountingSystem.Data
 @using MudBlazor
 @inject Data.AppDbContext Database
@@ -50,6 +50,12 @@
 
 @code {
 
+    [CascadingParameter]
+    private IMudDialogInstance MudDialogInstance { get; set; }
+
+    [Parameter]
+    public EventCallback OnSubmit { get; set; }
+
     public void goBack()
     {
         Navigate.NavigateTo("/accgrp");
@@ -98,7 +104,7 @@
             {
                 Database.Groups.Add(newGroup);
                 await Database.SaveChangesAsync();
-                Snackbar.Add("Transaction successful!", Severity.Success);
+                Snackbar.Add("Account Group Added!", Severity.Success);
 
                 newGroup = new Group_List
                     {
@@ -107,7 +113,9 @@
                         name = "",
                         description = "",
                     };
-                StateHasChanged();
+                
+                MudDialogInstance.Close(DialogResult.Ok(true));
+                await OnSubmit.InvokeAsync();
             }
         }
         else
@@ -132,7 +140,9 @@
                     StateHasChanged();
                     Snackbar.Add("Edit successful!", Severity.Success);
                 }
-                Navigate.NavigateTo("/accgrp");
+
+                MudDialogInstance.Close(DialogResult.Ok(true));
+                await OnSubmit.InvokeAsync();
                 
             }
         }

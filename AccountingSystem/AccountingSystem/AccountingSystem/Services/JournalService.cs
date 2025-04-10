@@ -16,6 +16,28 @@ namespace AccountingSystem.Services
             _dbContextFactory = dbContextFactory;
         }
 
+        //DTO for Dashboard
+        public async Task<IEnumerable<StatementDTO>> Dashboard()
+        {
+            using var dbContext = _dbContextFactory.CreateDbContext();
+            return await dbContext.Journal
+                .Include(j => j.AccName)
+                .Include(j => j.AccGrp)
+                .Where(j => !j.isDeleted)
+                .Where(j => j.AccGrp!.name == "Asset")
+                .Where(j => j.AccName!.name == "Capital" || j.AccName!.name == "Payables" ||
+                        j.AccName!.name == "Receivables")
+                .GroupBy(j => j.AccNameId)
+                .Select(entries => new StatementDTO
+                {
+                    AccountName = entries.First().AccName!.name,
+                    AccountGroup = entries.First().AccGrp!.name,
+                    Debit = entries.Sum(e => e.debit ?? 0),
+                    Credit = entries.Sum(e => e.credit ?? 0)
+                })
+                .ToListAsync();
+        }
+
         //DTO for Trial Balance Page
         public async Task<IEnumerable<LedgerDto>> GetLedger()
         {

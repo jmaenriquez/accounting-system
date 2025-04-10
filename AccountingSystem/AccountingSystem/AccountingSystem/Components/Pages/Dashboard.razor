@@ -1,76 +1,124 @@
 ﻿@page "/"
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@using AccountingSystem.DTOs
+@inject JournalService jservice
+@inject NavigationManager Navigate
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
 
-<div class="rounded-3">
-    <div class="top-container">
-        <h4 class="m-3 w-25">Dashboard</h4>
+
+<div class="rounded-3 mb-3">
+    <div class="top-container"> <h4 class="m-3 w-100%">Payables and Receivables</h4> </div>
+
+    <div class="mt-3 mb-3 container-fluid justify-content-center">
+        <div class="d-flex flex-wrap flex-md-nowrap">
+            <MudCard class="w-100 w-md-50 rounded-3 shadow-sm me-md-3 mb-3" Style="min-width: 300px;">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <MudIcon Icon="@Icons.Material.Filled.CreditCard" Size="Size.Large" Style="background-color:#00828F; color:white; border-radius: 15%; padding: 8px;" />
+                            <MudCardActions>
+                                <MudButton Href="/ledger" Size="Size.Small" Color="Color.Primary">View Payables</MudButton>
+                            </MudCardActions>
+                        </div>
+                        <MudText Typo="Typo.caption" Class="mt-1">Payables</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent class="text-end">
+                    <MudText Typo="Typo.body1">Amount</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">
+                        @((totals.Count > 0 && totals[0].Amount.HasValue) ? $"₱{totals[0].Amount.Value:N2}" : "₱0.00")
+                    </MudText>
+                </MudCardContent>
+            </MudCard>
+
+            <MudCard class="w-100 w-md-50 rounded-3 shadow-sm mb-3" Style="min-width: 300px;">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <MudIcon Icon="@Icons.Material.Filled.CreditCard" Size="Size.Large" Style="background-color:#00828F; color:white; border-radius: 15%; padding: 8px;" />
+                            <MudCardActions>
+                                <MudButton Href="/ledger" Size="Size.Small" Color="Color.Primary">View Receivables</MudButton>
+                            </MudCardActions>
+                        </div>
+                        <MudText Typo="Typo.caption" Class="mt-1">Receivables</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent class="text-end">
+                    <MudText Typo="Typo.body1">Amount</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                </MudCardContent>
+            </MudCard>
+        </div>
+    </div>
+</div>
+
+<div class="rounded-3 mb-3">
+    <div class="top-container"><h4 class="m-3 w-100%">Capital and Total Assets</h4></div>
+
+    <div class="mt-3 mb-3 container-fluid justify-content-center">
+        <div class="d-flex flex-wrap flex-md-nowrap">
+            <MudCard class="w-100 w-md-50 rounded-3 shadow-sm me-md-3 mb-3" Style="min-width: 300px;">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Class="mt-1">Current Capital</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent class="text-end">
+                    <MudText Typo="Typo.body1">Amount</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                </MudCardContent>
+            </MudCard>
+
+            <MudCard class="w-100 w-md-50 rounded-3 shadow-sm mb-3" Style="min-width: 300px;">
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h5" Class="mt-1">Total Asset</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent class="text-end">
+                    <MudText Typo="Typo.body1">Amount</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                </MudCardContent>
+            </MudCard>
+        </div>
     </div>
 </div>
 
 
-<div class="mt-3 container-fluid justify-content-center">
-
-    <div class="w-100">
-
-        <MudCard class="w-50 text-center rounded-3 shadow-lg">
-            <MudCardHeader>
-                <CardHeaderContent>
-                    <MudText Typo="Typo.h5">Current Capital</MudText>
-                </CardHeaderContent>
-            </MudCardHeader>
-            <MudCardContent>
-                <MudText>Status:</MudText>
-                <MudText Typo="Typo.h5">₱0.00</MudText>
-            </MudCardContent>
-        </MudCard>
-
-        <MudCard class="w-50 text-center rounded-3 shadow-lg">
-            <MudCardHeader>
-                <CardHeaderContent>
-                    <MudText Typo="Typo.h5">Total Asset</MudText>
-                </CardHeaderContent>
-            </MudCardHeader>
-            <MudCardContent>
-                <MudText>Status:</MudText>
-                <MudText Typo="Typo.h5">₱0.00</MudText>
-            </MudCardContent>
-        </MudCard>
-    </div>
-
-    <div>
-        <MudCard class="w-50 text-center rounded-3 shadow-lg">
-            <MudCardHeader>
-                <CardHeaderContent>
-                    <MudText Typo="Typo.h5">Payables</MudText>
-                </CardHeaderContent>
-            </MudCardHeader>
-            <MudCardContent>
-                <MudText>Status:</MudText>
-                <MudText Typo="Typo.h5">₱0.00</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Href="/ledger">Go to Payables</MudButton>
-            </MudCardActions>
-        </MudCard>
-
-        <MudCard class="w-50 text-center rounded-3 shadow-lg">
-            <MudCardHeader>
-                <CardHeaderContent>
-                    <MudText Typo="Typo.h5">Receivables</MudText>
-                </CardHeaderContent>
-            </MudCardHeader>
-            <MudCardContent>
-                <MudText>Status:</MudText>
-                <MudText Typo="Typo.h5">₱0.00</MudText>
-            </MudCardContent>
-            <MudCardActions>
-                <MudButton Href="/ledger">Go to Receivables</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </div>
-
-</div>
 
 @code {
- 
+    public class dashboardList
+    {
+        public decimal? Amount { get; set; }
+    }
+
+    List<StatementDTO> Data = new();
+    List<dashboardList> totals = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Payables();
+    }
+
+    private async Task Payables()
+    {
+        Data = (await jservice.Dashboard()).ToList();
+
+        var payables = Data
+            .Where(d => d.AccountName == "Payables")
+            .Select(d => new dashboardList { Amount = ((d.Credit) - (d.Debit))});
+
+        var allPayables = payables.Sum(p=> p.Amount ?? 0);
+
+        totals.Add(new dashboardList { Amount = allPayables });
+    }
+
+    private void Receivables(){}
+    private void CurrentCapital(){}
+    private void TotalAsset(){}
+
 
 }

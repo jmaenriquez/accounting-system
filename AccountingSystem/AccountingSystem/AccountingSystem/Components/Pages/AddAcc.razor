@@ -1,4 +1,4 @@
-﻿@page "/addacc"
+﻿
 @using AccountingSystem.Data
 @using System.ComponentModel.DataAnnotations
 @using MudBlazor
@@ -45,9 +45,15 @@
 
 @code {
 
+    [CascadingParameter]
+    private IMudDialogInstance MudDialogInstance { get; set; }
+
+    [Parameter]
+    public EventCallback OnSubmit { get; set; }
+
     public void goBack()
     {
-        Nav.NavigateTo("/acclist");
+        MudDialogInstance.Close();
     }
 
     public Account_List newAccount = new Account_List
@@ -60,9 +66,6 @@
 
     [Parameter]
     public Account_List? accs { get; set; }
-
-    public bool submitted = false;
-
 
     protected override void OnInitialized()
     {
@@ -100,20 +103,22 @@
             {
                 DbContext.Accounts.Add(newAccount);
                 await DbContext.SaveChangesAsync();
-                submitted = true;
-                Snackbar.Add("Transaction successful!", Severity.Success);
+
+                Snackbar.Add("Account Name Added!", Severity.Success);
 
                 newAccount = new Account_List
-                    {
+                {
                         date = DateOnly.FromDateTime(DateTime.Now),
                         name = "",
                         description = "",
-                    };
+                };
+
+                MudDialogInstance.Close(DialogResult.Ok(true));
+                await OnSubmit.InvokeAsync();
 
                 StateHasChanged();
 
             }
-            StateHasChanged();
         }
         else
         {
@@ -136,8 +141,8 @@
 
                     Snackbar.Add("Edit successful!", Severity.Success);
                 }
-                StateHasChanged();
-                Nav.NavigateTo("/acclist");
+                MudDialogInstance.Close(DialogResult.Ok(true));
+                await OnSubmit.InvokeAsync();
                 
             }
         }

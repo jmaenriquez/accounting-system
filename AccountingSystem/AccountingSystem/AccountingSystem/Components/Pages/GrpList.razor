@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-3">
         <MudTable Class="mt-4" Items="@FilteredEntries" Dense="true" Breakpoint="Breakpoint.Sm">
             <HeaderContent>
                 <MudTh Class="fw-bold">Account Id</MudTh>
@@ -104,7 +104,7 @@
         await grpService.UpdateGrpList(group);
         GroupList = GroupList.Where(g => !g.isDeleted).ToList();
         StateHasChanged();
-
+        FilteredEntries = GroupList;
         Snackbar.Add("A Group has been marked as Deleted", Severity.Success);
     }
 
@@ -123,8 +123,12 @@
             BackdropClick = true
         };
         var dialog = await DialogService.ShowAsync<AddGrp>("Edit Group", parameters, options);
-
         var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
     }
 
     private async Task OpenAddGrpDialog()
@@ -139,6 +143,21 @@
         };
         var dialog = await DialogService.ShowAsync<AddGrp>("Add New Group", parameters, options);
         var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            await HandleSubmit();
+        }
+    }
+
+
+    private async Task HandleSubmit()
+    {
+        GroupList = (await grpService.GroupItems())
+            .Where(g => !g.isDeleted)
+            .ToList();
+        FilteredEntries = GroupList;
+        StateHasChanged();
     }
 
     private void FilterEntries(ChangeEventArgs e)
