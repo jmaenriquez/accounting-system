@@ -24,9 +24,6 @@ namespace AccountingSystem.Services
                 .Include(j => j.AccName)
                 .Include(j => j.AccGrp)
                 .Where(j => !j.isDeleted)
-                .Where(j => j.AccGrp!.name == "Asset")
-                .Where(j => j.AccName!.name == "Capital" || j.AccName!.name == "Payables" ||
-                        j.AccName!.name == "Receivables")
                 .GroupBy(j => j.AccNameId)
                 .Select(entries => new StatementDTO
                 {
@@ -37,6 +34,8 @@ namespace AccountingSystem.Services
                 })
                 .ToListAsync();
         }
+        
+        
 
         //DTO for Trial Balance Page
         public async Task<IEnumerable<LedgerDto>> GetLedger()
@@ -100,21 +99,12 @@ namespace AccountingSystem.Services
 
             foreach (var item in groups)
             {
-                switch (item.AccountGroup)
+                item.SumOfBalance = item.AccountGroup switch
                 {
-                    case "Asset":
-                    case "Expense":
-                        item.SumOfBalance = item.Debit - item.Credit;
-                        break;
-                    case "Liability":
-                    case "Equity":
-                    case "Revenue":
-                        item.SumOfBalance = item.Credit - item.Debit;
-                        break;
-                    default:
-                        item.SumOfBalance = 0;
-                        break;
-                }
+                    "Asset" or "Expense" => item.Debit - item.Credit,
+                    "Liability" or "Equity" or "Revenue" => item.Credit - item.Debit,
+                    _ => 0,
+                };
             }
 
             return groups;

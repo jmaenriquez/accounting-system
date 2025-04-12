@@ -27,9 +27,7 @@
                 </MudCardHeader>
                 <MudCardContent class="text-end">
                     <MudText Typo="Typo.body1">Amount</MudText>
-                    <MudText Typo="Typo.h4" Class="mt-2">
-                        @((totals.Count > 0 && totals[0].Amount.HasValue) ? $"₱{totals[0].Amount.Value:N2}" : "₱0.00")
-                    </MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱@($"{PayablesAmount ?? 0:N2}")</MudText>
                 </MudCardContent>
             </MudCard>
 
@@ -47,7 +45,7 @@
                 </MudCardHeader>
                 <MudCardContent class="text-end">
                     <MudText Typo="Typo.body1">Amount</MudText>
-                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱@($"{ReceivablesAmount ?? 0:N2}")</MudText>
                 </MudCardContent>
             </MudCard>
         </div>
@@ -67,7 +65,7 @@
                 </MudCardHeader>
                 <MudCardContent class="text-end">
                     <MudText Typo="Typo.body1">Amount</MudText>
-                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱@($"{CapitalAmount ?? 0:N2}")</MudText>
                 </MudCardContent>
             </MudCard>
 
@@ -79,7 +77,7 @@
                 </MudCardHeader>
                 <MudCardContent class="text-end">
                     <MudText Typo="Typo.body1">Amount</MudText>
-                    <MudText Typo="Typo.h4" Class="mt-2">₱100,000.00</MudText>
+                    <MudText Typo="Typo.h4" Class="mt-2">₱@($"{AssetAmount ?? 0:N2}")</MudText>
                 </MudCardContent>
             </MudCard>
         </div>
@@ -91,8 +89,13 @@
 @code {
     public class dashboardList
     {
-        public decimal? Amount { get; set; }
+
     }
+
+    public decimal? PayablesAmount { get; set; }
+    public decimal? ReceivablesAmount { get; set; }
+    public decimal? AssetAmount { get; set; }
+    public decimal? CapitalAmount { get; set; }
 
     List<StatementDTO> Data = new();
     List<dashboardList> totals = new();
@@ -101,24 +104,63 @@
     protected override async Task OnInitializedAsync()
     {
         await Payables();
+        await Receivables();
+        await CurrentCapital();
+        await TotalAsset();
     }
 
     private async Task Payables()
     {
         Data = (await jservice.Dashboard()).ToList();
 
-        var payables = Data
+        PayablesAmount = Data
             .Where(d => d.AccountName == "Payables")
-            .Select(d => new dashboardList { Amount = ((d.Credit) - (d.Debit))});
-
-        var allPayables = payables.Sum(p=> p.Amount ?? 0);
-
-        totals.Add(new dashboardList { Amount = allPayables });
+            .Sum(d => d.Credit - d.Debit);
     }
 
-    private void Receivables(){}
-    private void CurrentCapital(){}
-    private void TotalAsset(){}
+    private async Task Receivables()
+    {
+        Data = (await jservice.Dashboard()).ToList();
+
+        ReceivablesAmount = Data
+            .Where(d => d.AccountName == "Receivables")
+            .Sum(d => d.Debit - d.Credit);
+    }
+
+    private async Task CurrentCapital()
+    {
+        Data = (await jservice.Dashboard()).ToList();
+
+        var capital = Data
+            .Where(c => c.AccountName == "Capital")
+            .Sum(c => c.Credit - c.Debit);
+
+        var expense = Data
+            .Where(a => a.AccountGroup == "Expense")
+            .Sum(a => a.Debit - a.Credit);        
+
+        var withdraw = Data
+            .Where(a => a.AccountGroup == "Withdrawal")
+            .Sum(a => a.Debit - a.Credit);
+
+        var revenue = Data
+            .Where(a => a.AccountGroup == "Revenue")
+            .Sum(a => a.Credit - a.Debit);
+
+
+        var semiTotal = capital - expense - withdraw;
+
+        CapitalAmount = semiTotal + revenue;
+    }
+
+    private async Task TotalAsset()
+    {
+        Data = (await jservice.Dashboard()).ToList();
+
+        AssetAmount = Data
+            .Where(d => d.AccountGroup == "Asset")
+            .Sum(d => d.Debit - d.Credit);
+    }
 
 
 }
