@@ -2,8 +2,74 @@
 
 <PageTitle>Reports</PageTitle>
 
-<h3>Reports</h3>
+<div class="rounded-3">
+    <div class="top-container">
+        <h4 class="m-3 w-100">Reports</h4>
+
+        <div class="buttons" style="display: flex; align-items: center;">
+
+            <MudSelect T="int" Label="Select Report" @bind-Value="selectReport" Style="width: 100px;">
+                <MudSelectItem Value="1">Journal Entry</MudSelectItem>
+                <MudSelectItem Value="2">General Ledger</MudSelectItem>
+                <MudSelectItem Value="3">Trial Balance</MudSelectItem>
+                <MudSelectItem Value="4">Income Statement</MudSelectItem>
+                <MudSelectItem Value="5">Balance Sheet</MudSelectItem>
+            </MudSelect>
+
+            <MudButton Variant="Variant.Filled" OnClick="printReports" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
+                <MudHidden Breakpoint="Breakpoint.SmAndDown">
+                    <MudIcon Icon="@Icons.Material.Filled.Print" />   Generate Report
+                </MudHidden>
+                <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                    <MudIcon Icon="@Icons.Material.Filled.Print" />
+                </MudHidden>
+            </MudButton>
+
+        </div>
+    </div>
+
+    <div class="container-fluid mt-3 mb-3">
+
+        @if (selectReport == 1){
+            <h5>Journal Entry</h5>
+            <Journal />
+        }
+        else if (selectReport == 2)
+        {
+            <h5>General Ledger</h5>
+            <Ledger />
+        }
+        else if (selectReport == 3)
+        {
+            <h5>Trial Balance</h5>
+            <Balance />
+        }
+        else if (selectReport == 4)
+        {
+            <h5>Income Statement</h5>
+            <Statement />
+        }
+        else if (selectReport == 5)
+        {
+            <h5>Balance Sheet</h5>
+            <Sheet />
+        }
+        else{
+            <p>Select a report from dropdown</p>
+        }
+    </div>
+</div>
+
+
+
 
 @code {
+    private int selectReport;
+
+
+    private async Task printReports()
+    {
+        await Task.CompletedTask;
+    }
 
 }
