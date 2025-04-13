@@ -1,5 +1,4 @@
-﻿@* @page "/addrecords" *@
-@using Microsoft.EntityFrameworkCore;
+﻿@using Microsoft.EntityFrameworkCore;
 @using AccountingSystem.Data
 @using AccountingSystem.Services
 @inject ISnackbar Snackbar
@@ -10,10 +9,8 @@
 
 <MudDialog>
     <DialogContent>
-        <MudForm Model="@newEntry" Class="mt-5">
-
+        <MudForm Model="@newEntry" Class="mt-5" hidden="@(SelectEntry)">
             <MudContainer>
-
                 <MudDatePicker Label="Date" @bind-Date="dateTime"
                 DateFormat="MM-dd-yyyy" Required="true" Clearable="true" />
 
@@ -53,20 +50,12 @@
             </MudContainer>
 
             <MudContainer Class="mt-3">
-                @if (Entries != null && Entries.Count > 0 && Overall == 0)
-                {
-                    <MudTextField Label="Comments"
-                    @bind-Value="newEntry.enterRemark"
-                    MaxLength="200" />
-                }
-                else
-                {
-                    <MudTextField Label="Description"
-                    @bind-Value="newEntry.enterRemark"
-                    MaxLength="200" Disabled="true" />
-                }
-            </MudContainer>
 
+                <MudTextField Label="Comments"
+                              @bind-Value="comments"
+                              MaxLength="200"
+                              Disabled="@(Entries.Count == 0 && Overall == 0)" />
+            </MudContainer>
         </MudForm>
 
         <MudTable T="Journal_Entry" Items="@Entries" Class="mt-3" Dense="true" Hover="true"
@@ -107,15 +96,17 @@
             <MudButton Onclick="Submit" Style="background-color: #00828F; color:#ffffff;">Save</MudButton>
             <MudButton Class="ml-2" OnClick="goBack" Color="Color.Error" Variant="Variant.Outlined">Cancel</MudButton>
         }
-
     </DialogActions>
 </MudDialog>
+
 
 
 @code {
 
     List<Group_List> GroupList = new List<Group_List>();
     List<Account_List> AccountNames = new List<Account_List>();
+
+    private string comments;
 
     [CascadingParameter]
     private IMudDialogInstance MudDialogInstance { get; set; }
@@ -139,20 +130,16 @@
     DateTime? dateTime;
 
 
-
     private void goBack()
     {
         MudDialogInstance.Close(DialogResult.Cancel());
     }
-
-
 
     private void RemoveTrial(Journal_Entry trial)
     {
         Entries.Remove(trial);
         StateHasChanged();
     }
-
 
 
     List<Journal_Entry> Entries = new List<Journal_Entry>();
@@ -173,11 +160,11 @@
             {
                 existingEntry.datetime = newEntry.datetime;
                 existingEntry.description = newEntry.description;
-                existingEntry.AccNameId = newEntry.AccNameId;
-                existingEntry.AccGrpId = newEntry.AccGrpId;
+                existingEntry.AccNameId = newEntry.AccName!.id;
+                existingEntry.AccGrpId = newEntry.AccGrp!.id;
                 existingEntry.debit = newEntry.debit;
                 existingEntry.credit = newEntry.credit;
-                existingEntry.enterRemark = newEntry.enterRemark;
+                existingEntry.enterRemark = comments;
             }
 
             newEntry = new Journal_Entry();
@@ -202,7 +189,7 @@
                     AccGrp = newEntry.AccGrp,
                     debit = newEntry.debit,
                     credit = newEntry.credit,
-                    enterRemark = newEntry.enterRemark
+                    enterRemark = comments
                 });
 
             newEntry = new Journal_Entry();
@@ -235,7 +222,7 @@
                             AccNameId = entry.AccName!.id,
                             debit = entry.debit,
                             credit = entry.credit,
-                            enterRemark = entry.enterRemark
+                            enterRemark = comments
 
                         };
 
@@ -281,7 +268,7 @@
                             existing.AccNameId = updated.AccName!.id;
                             existing.debit = updated.debit;
                             existing.credit = updated.credit;
-                            
+                            existing.enterRemark = comments;
                         }
                     }
 
@@ -345,7 +332,8 @@
                     AccName = AccountNames.FirstOrDefault(a => a.id == selectedEntry.AccName?.id),
                     AccGrp = GroupList.FirstOrDefault(g => g.id == selectedEntry.AccGrp?.id),
                     debit = selectedEntry.debit,
-                    credit = selectedEntry.credit
+                    credit = selectedEntry.credit,
+                    enterRemark = comments
                 };
 
             dateTime = newEntry.datetime;
