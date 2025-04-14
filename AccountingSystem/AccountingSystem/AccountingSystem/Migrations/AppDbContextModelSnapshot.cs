@@ -112,11 +112,9 @@ namespace AccountingSystem.Migrations
                         .HasColumnType("numeric");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("enterRemark")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("isDeleted")

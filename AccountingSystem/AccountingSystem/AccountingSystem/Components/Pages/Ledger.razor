@@ -1,4 +1,4 @@
-﻿@page "/ledger"
+﻿@page "/ledger/{accName?}"
 @using AccountingSystem.Data
 @using AccountingSystem.Services
 @inject JournalService jservice
@@ -30,7 +30,7 @@
         <div class="container-fluid mb-3">
             @foreach(var ledgerGroup in FilteredEntries.GroupBy(l => l.AccName!.name))
             {
-                <MudTable Class ="mt-3" Items="ledgerGroup">
+                <MudTable Class="mt-3" Items="ledgerGroup" id="@("ledger-" + ledgerGroup.Key)">
                     <ToolBarContent>
                         <MudText Typo = "Typo.h5">@ledgerGroup.Key</MudText>
                     </ToolBarContent>
@@ -65,6 +65,23 @@
 @code {
 
     private bool isSearchOpen = false;
+    [Parameter]
+    public string accName { get; set; } = string.Empty;
+
+    void initialize()
+    {
+        Snackbar.Add(accName);
+    }
+
+    protected override void OnInitialized()
+    {
+        initialize();
+    }
+
+    protected override void OnParametersSet()
+    {
+        initialize();
+    }
 
     private void ToggleSearch()
     {

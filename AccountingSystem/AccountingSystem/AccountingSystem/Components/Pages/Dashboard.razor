@@ -19,7 +19,7 @@
                         <div class="d-flex align-items-center justify-content-between w-100">
                             <MudIcon Icon="@Icons.Material.Filled.CreditCard" Size="Size.Large" Style="background-color:#00828F; color:white; border-radius: 15%; padding: 8px;" />
                             <MudCardActions>
-                                <MudButton Href="/ledger" Size="Size.Small" Color="Color.Primary">View Payables</MudButton>
+                                <MudButton Href="/ledger/Payables" Size="Size.Small" Color="Color.Primary">View Payables</MudButton>
                             </MudCardActions>
                         </div>
                         <MudText Typo="Typo.caption" Class="mt-1">Payables</MudText>
@@ -124,7 +124,7 @@
 
         ReceivablesAmount = Data
             .Where(d => d.AccountName == "Receivables")
-            .Sum(d => d.Debit - d.Credit);
+            .Sum(d => d.Credit - d.Debit);
     }
 
     private async Task CurrentCapital()
@@ -145,12 +145,17 @@
 
         var revenue = Data
             .Where(a => a.AccountGroup == "Revenue")
-            .Sum(a => a.Credit - a.Debit);
+            .Sum(a => a.Credit);
+
+        var contraRevenue = Data
+            .Where(a => a.AccountGroup == "Contra Revenue")
+            .Sum(a => a.Debit);
 
 
+        var totalRev = revenue - contraRevenue;
         var semiTotal = capital - expense - withdraw;
 
-        CapitalAmount = semiTotal + revenue;
+        CapitalAmount = semiTotal + totalRev;
     }
 
     private async Task TotalAsset()
