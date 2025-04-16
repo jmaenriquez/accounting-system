@@ -1,4 +1,4 @@
-﻿@page "/ledger/{accName?}"
+﻿@page "/ledger"
 @using AccountingSystem.Data
 @using AccountingSystem.Services
 @inject JournalService jservice
@@ -30,7 +30,7 @@
         <div class="container-fluid mb-3">
             @foreach(var ledgerGroup in FilteredEntries.GroupBy(l => l.AccName!.name))
             {
-                <MudTable Class="mt-3" Items="ledgerGroup" id="@("ledger-" + ledgerGroup.Key)">
+                <MudTable Class="mt-3" Items="ledgerGroup">
                     <ToolBarContent>
                         <MudText Typo = "Typo.h5">@ledgerGroup.Key</MudText>
                     </ToolBarContent>

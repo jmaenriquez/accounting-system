@@ -60,25 +60,25 @@
         State = (await jservice.BalanceSheet()).ToList();
 
         var asset = State
-            .Where(s => s.AccountGroup == "Asset" || s.AccountGroup == "Asset (Credit)")
-            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance});
+            .Where(s => s.AccountGroup == "Asset")
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Debit - s.Credit});
 
         var liability = State
             .Where(s => s.AccountGroup == "Liability")
-            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Credit - s.Debit});
 
         var equity = State
             .Where(s => s.AccountGroup == "Equity")
-            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.SumOfBalance });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Credit - s.Debit });
 
 
         var revenue = State
             .Where(s => s.AccountGroup == "Revenue")
-            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Credit });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Credit - s.Debit });
 
         var expenses = State
             .Where(s => s.AccountGroup == "Expense")
-            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Debit });
+            .Select(s => new Balancesheet { AccountName = s.AccountName, Amount = s.Debit - s.Credit });
 
         var totalRevenue = revenue.Sum(r => r.Amount ?? 0);
         var totalExpenses = expenses.Sum(e => e.Amount ?? 0);

@@ -81,12 +81,10 @@ namespace AccountingSystem.Services
         {
             using var dbContext = _dbContextFactory.CreateDbContext();
 
-            var groups = await dbContext.Journal
+            return await dbContext.Journal
                 .Include(j => j.AccName)
                 .Include(j => j.AccGrp)
                 .Where(j => !j.isDeleted)
-                .Where(j => j.AccGrp!.name == "Asset" || j.AccGrp.name == "Liability" ||
-                            j.AccGrp.name == "Equity" || j.AccGrp.name == "Revenue" || j.AccGrp.name == "Expense")
                 .GroupBy(j => j.AccNameId)
                 .Select(entries => new StatementDTO
                 {
@@ -96,18 +94,6 @@ namespace AccountingSystem.Services
                     Credit = entries.Sum(e => e.credit ?? 0)
                 })
                 .ToListAsync();
-
-            foreach (var item in groups)
-            {
-                item.SumOfBalance = item.AccountGroup switch
-                {
-                    "Asset" or "Expense" => item.Debit - item.Credit,
-                    "Liability" or "Equity" or "Revenue" => item.Credit - item.Debit,
-                    _ => 0,
-                };
-            }
-
-            return groups;
         }
 
 
