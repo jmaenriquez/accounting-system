@@ -1072,3 +1072,9 @@ E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\Ac
 E:\Github\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\ref\AccountingSystem.dll
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Statement.razor.rz.scp.css
 C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\obj\Debug\net8.0\scopedcss\Components\Pages\Sheet.razor.rz.scp.css
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\EPPlus.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\Kuro\Documents\GitHub\accounting-system\AccountingSystem\AccountingSystem\AccountingSystem\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

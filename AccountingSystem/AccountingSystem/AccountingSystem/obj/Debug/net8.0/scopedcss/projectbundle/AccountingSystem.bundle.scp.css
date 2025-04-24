@@ -748,10 +748,7 @@ body[b-tquthsc8me] {
 .rounded-3[b-c16h26qowt] {
     width: 100%;
     background-color: #f9f9f9;
-    overflow: hidden;
     height: 100%;
-    overflow-y: auto;
-    max-height: 80vh;
 }
 
 .top-container[b-c16h26qowt] {
@@ -761,9 +758,7 @@ body[b-tquthsc8me] {
     color: #ffffff;
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+;
 }
 
 .buttons[b-c16h26qowt] {
@@ -986,6 +981,50 @@ body[b-tquthsc8me] {
         border: 1px solid #ccc;
         padding: 4px 8px;
     }
+
+
+.custom-pagination[b-c16h26qowt] {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Buttons */
+.pagination-btn[b-c16h26qowt] {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .pagination-btn:hover:not(:disabled)[b-c16h26qowt] {
+        background-color: #00828F;
+        color: white;
+        border-color: #00828F;
+    }
+
+    .pagination-btn:disabled[b-c16h26qowt] {
+        background-color: #f1f1f1;
+        color: #999;
+        cursor: not-allowed;
+        border-color: #e0e0e0;
+    }
+
+/* Text Info */
+.page-info[b-c16h26qowt] {
+    font-weight: 500;
+    color: #555;
+}
 /* _content/AccountingSystem/Components/Pages/Ledger.razor.rz.scp.css */
 .rounded-3[b-dtvkh2wzg0] {
     width: 100%;

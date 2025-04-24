@@ -1,0 +1,56 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="theme"/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+<AuthorizeView>
+    <Authorized>
+        <MudLayout Style="height:100vh; justify-content:center; display:flex;">
+            <MudMainContent Style="width:100vw; max-width:100vw;min-width:90%; height:100vh;margin:0px;padding:0px;background-color:azure;overflow:hidden;">
+                <CascadingValue Name="authenticationStateTask" Value="authenticationStateTask">
+                    @Body
+                </CascadingValue>
+
+            </MudMainContent>
+
+        </MudLayout>
+    </Authorized>
+    <NotAuthorized>
+        <MudLayout Style="height:100vh; justify-content:center; display:flex;">
+            <MudMainContent Style="width:100vw; max-width:100vw;min-width:90%; height:100vh;margin:0px;padding:0px;background-color:azure;overflow:hidden;">
+                <CascadingValue Name="authenticationStateTask" Value="authenticationStateTask">
+                    @Body
+                </CascadingValue>
+
+            </MudMainContent>
+
+        </MudLayout>
+    </NotAuthorized>
+    <Authorizing>
+        <LoaderMessage Visible="true"/>
+    </Authorizing>
+</AuthorizeView>
+
+
+
+@code {
+
+    [CascadingParameter] private Task<AuthenticationState> authenticationStateTask { get; set; }
+
+    MudTheme theme = new MudTheme()
+        {
+            PaletteLight = new PaletteLight()
+            {
+                Primary = Colors.Cyan.Darken1,
+                Secondary = Colors.Green.Accent4,
+                Tertiary = Colors.Purple.Lighten2,
+                AppbarBackground = "#34495e",
+            },
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        };
+}

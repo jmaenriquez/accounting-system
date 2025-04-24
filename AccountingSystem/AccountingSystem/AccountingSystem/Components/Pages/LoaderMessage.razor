@@ -1,0 +1,21 @@
+﻿
+
+<MudOverlay @bind-Visible="Visible" DarkBackground="true" ZIndex="25000">
+
+    <div class="d-flex flex-column justify-content-center align-items-center" style="text-align:center;gap:20px;">
+        <MudProgressCircular Style="color:white;height:75px;width:75px;" Size="Size.Large" Indeterminate="true" />
+        <h4 style="color:white;">@Message</h4>
+    </div>
+
+</MudOverlay>
+
+
+@code {
+    [Parameter]
+    public bool Visible { get; set; }
+    [Parameter]
+    public string Message { get; set; } = "Loading...";
+
+
+
+}

@@ -1,18 +1,18 @@
-﻿@page "/journal"  
-@using AccountingSystem.Data  
-@using AccountingSystem.Services  
-@inject JournalService jservice  
-@inject NavigationManager Navigate    
-@inject ISnackbar Snackbar  
+﻿@page "/journal"
+@using AccountingSystem.Data
+@using AccountingSystem.Services
+@inject JournalService jservice
+@inject NavigationManager Navigate
+@inject ISnackbar Snackbar
 @inject IDialogService DialogService
 
-@* <AddRecord OnSubmit="HandleSubmit" /> *@
+@layout MainLayout
 
-<PageTitle>Journal Entries</PageTitle>  
+<PageTitle>Journal Entries</PageTitle>
 
-<div class = "rounded-3">  
+<div class="rounded-3">
 
-    <div class="top-container">  
+    <div class="top-container">
 
         <h4 class="m-3 w-100">Journal Entries</h4>
 
@@ -23,7 +23,7 @@
             <MudHidden Breakpoint="Breakpoint.MdAndUp">
                 <div class="mobile-search">
 
-                    <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" @onclick = "ToggleSearch" />
+                    <MudIcon Class="search-icon" Icon="@Icons.Material.Filled.Search" @onclick="ToggleSearch" />
                     <input class="search-input @(isSearchOpen ? "expanded" : "")" type="text" placeholder="  Search..." @oninput="FilterEntries" autofocus />
                 </div>
             </MudHidden>
@@ -52,55 +52,73 @@
                     <MudTh Class="fw-bold">Comments</MudTh>
                     <MudTh Class="fw-bold"></MudTh>
                 </thead>
+
+
+
+
                 <tbody>
-                    @foreach (var group in FilteredEntries.GroupBy(j => j.TransactId))
+                    @foreach (var group in PaginatedEntries)
                     {
-                        bool firstRow = true;
+                        var first = true;
 
                         foreach (var jlist in group)
                         {
                             <tr>
-                                @if (firstRow)
+                                @if (first)
                                 {
-                                    <td rowspan="@group.Count()">
-                                        @group.First().datetime.ToString("MM-dd-yyyy")
-                                    </td>
-
-                                    <td rowspan="@group.Count()">
-                                        @group.Key
-                                    </td>
+                                    <td rowspan="@group.Count()">@group.First().datetime.ToString("MM-dd-yyyy")</td>
+                                    <td rowspan="@group.Count()">@group.Key</td>
                                 }
                                 <td>@jlist.description</td>
                                 <td>@jlist.AccName?.name</td>
                                 <td>@((jlist.debit > 0) ? $"{jlist.debit:N2}" : "")</td>
                                 <td>@((jlist.credit > 0) ? $"{jlist.credit:N2}" : "")</td>
 
-
-                                @if(firstRow)
+                                @if (first)
                                 {
                                     <td rowspan="@group.Count()">@jlist.enterRemark</td>
                                     <td rowspan="@group.Count()">
                                         <MudMenu Icon="@Icons.Material.Filled.MoreVert">
-                                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="() => Edit(group.Key)"></MudMenuItem>
-                                            <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete"
-                                            OnClick="() => Delete(group.Key)" />
+                                            <MudMenuItem Icon="@Icons.Material.Filled.Edit" Label="Edit" OnClick="@(() => Edit(group.Key))" />
+                                            <MudMenuItem Icon="@Icons.Material.Filled.Delete" Label="Delete" OnClick="@(() => Delete(group.Key))" />
                                         </MudMenu>
                                     </td>
-
-                                    firstRow = false;
+                                    first = false;
                                 }
                             </tr>
                         }
                     }
                 </tbody>
+
+
             </table>
+            <div class="custom-pagination d-flex align-items-center gap-2 mb-2">
+                <MudIconButton Icon="@Icons.Material.Filled.ArrowBack"
+                               Disabled="@(currentPage == 1)"
+                               OnClick="@(() => ChangePage(currentPage - 1))"
+                               Color="Color.Primary"
+                               Size="Size.Medium"
+                               Variant="Variant.Text" />
+
+                <span class="page-info">Page @currentPage of @totalPages</span>
+
+                <MudIconButton Icon="@Icons.Material.Filled.ArrowForward"
+                               Disabled="@(currentPage >= totalPages)"
+                               OnClick="@(() => ChangePage(currentPage + 1))"
+                               Color="Color.Primary"
+                               Size="Size.Medium"
+                               Variant="Variant.Text" />
+            </div>
+
+
         </div>
     </div>
-</div>  
+</div>
 
 
 
 @code {
+
 
     private bool isSearchOpen = false;
 
@@ -110,32 +128,41 @@
     }
 
 
-    List<Journal_Entry> Entries = new List<Journal_Entry>();  
-    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();  
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
+    List<Journal_Entry> FilteredEntries = new List<Journal_Entry>();
 
-    protected override async Task OnInitializedAsync()  
-    {  
-        Entries = (await jservice.journalentries())  
-        .Where(x => !x.isDeleted)  
+    protected override async Task OnInitializedAsync()
+    {
+        Entries = (await jservice.journalentries())
+        .Where(x => !x.isDeleted)
         .ToList();
         FilteredEntries = Entries;
 
         Console.WriteLine($"Entries Count{Entries.Count}");
-    }  
-
-    private void FilterEntries(ChangeEventArgs e)  
-    {  
-        var searchTerm = e.Value?.ToString();  
-        if (string.IsNullOrEmpty(searchTerm))  
-        {  
-            FilteredEntries = Entries;  
-        }  
-        else  
-        {  
-            FilteredEntries = Entries.Where(entry => entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.description!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) || entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
-            ).ToList();
-        }  
     }
+
+    private void FilterEntries(ChangeEventArgs e)
+    {
+        var searchTerm = e.Value?.ToString();
+
+        if (string.IsNullOrEmpty(searchTerm))
+        {
+            FilteredEntries = Entries;
+        }
+        else
+        {
+            FilteredEntries = Entries.Where(entry =>
+                entry.AccName!.name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.description!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.datetime.ToString("MM-dd-yyyy").Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.debit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                entry.credit.ToString()!.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
+            ).ToList();
+        }
+
+        currentPage = 1; // Reset page on filter
+    }
+
 
     private async Task Delete(Guid transactId)
     {
@@ -159,16 +186,17 @@
         var entryToEdit = Entries.Where(e => e.TransactId == transactId).ToList();
         var parameters = new DialogParameters
         {
-            { "journalRecord", entryToEdit} 
+            { "journalRecord", entryToEdit}
         };
 
-        var options = new DialogOptions { 
-            CloseButton = true, 
-            MaxWidth = MaxWidth.Medium, 
-            FullWidth = true,
-            Position = DialogPosition.Center,
-            BackdropClick = true
-        };
+        var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Medium,
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                BackdropClick = true
+            };
         var dialog = await DialogService.ShowAsync<AddRecord>("Edit Records", parameters, options);
         var result = await dialog.Result;
 
@@ -181,13 +209,14 @@
     private async Task OpenAddRecDialog()
     {
         var parameters = new DialogParameters();
-        var options = new DialogOptions { 
-            CloseButton = true, 
-            MaxWidth = MaxWidth.Medium, 
-            FullWidth = true,
-            Position = DialogPosition.Center,
-            BackdropClick = true
-        };
+        var options = new DialogOptions
+            {
+                CloseButton = true,
+                MaxWidth = MaxWidth.Medium,
+                FullWidth = true,
+                Position = DialogPosition.Center,
+                BackdropClick = true
+            };
         var dialog = await DialogService.ShowAsync<AddRecord>("Add New Record", parameters, options);
         var result = await dialog.Result;
 
@@ -208,5 +237,20 @@
         StateHasChanged();
     }
 
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private int totalPages =>
+        (int)Math.Ceiling((double)FilteredEntries.GroupBy(j => j.TransactId).Count() / pageSize);
+
+    private IEnumerable<IGrouping<Guid, Journal_Entry>> PaginatedEntries =>
+        FilteredEntries
+            .GroupBy(j => j.TransactId)
+            .Skip((currentPage - 1) * pageSize)
+            .Take(pageSize);
+
+    private void ChangePage(int newPage)
+    {
+        currentPage = newPage;
+    }
 
 }

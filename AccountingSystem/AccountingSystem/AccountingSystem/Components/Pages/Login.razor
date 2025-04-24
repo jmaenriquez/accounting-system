@@ -1,0 +1,78 @@
+﻿@page "/Login"
+@using MudBlazor
+
+<style>
+    .grecaptcha-badge {
+        visibility: visible;
+        z-index: 2;
+    }
+</style>
+
+<PageTitle>MHC Accounting</PageTitle>
+
+<MudContainer Style="width:100%; height:80%; max-width:100%; display:flex;justify-content:center;align-items:center;">
+    <MudImage Src="/MetaverseLogoOnly.png" Style="filter: blur(12px);
+ -webkit-filter: blur(12px);height:100%;display: block;background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;" />
+</MudContainer>
+
+<div style="margin:0px;padding:0px;width:100%;max-width:100%;height:100%;display:flex;justify-content:center;align-items:center;
+   background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+     color: white;
+     font-weight: bold;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 2;
+     padding: 20px;
+     text-align: center;">
+
+    <MudPaper Elevation="5" Style="border-radius:10px;max-width:90%;">
+
+        <MudContainer Style="margin:0px;padding:20px;text-align:center;display:flex; flex-direction:column;gap:10px;justify-content:center;align-items:center;">
+            <MudImage Src="/MetaverseLogo3.png" Style="max-width:300px;"></MudImage>
+        </MudContainer>
+
+        <MudContainer Class="d-flex justify-content-center align-items-center" Style="padding-bottom:20px;">
+            <MudContainer Style="margin:0px;padding:10px;width:100%;max-width:100%;display:flex;justify-content:start;align-items:center;flex-direction:column;gap:10px;text-align:start;">
+
+                <MudTextField T="string" Style="flex:none;" FullWidth="true" Label="Email address" Required="true" Variant="Variant.Outlined" />
+
+                <MudTextField T="string" Style="flex:none;" FullWidth="true" Label="Password" MaxLength="32" HelperText="Enter your password"
+                              Required="true" HelperTextOnFocus="true" Variant="Variant.Outlined"
+                              InputType="InputType.Password" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Visibility"
+                              AdornmentAriaLabel="Show Password" />
+
+                <MudButton Variant="Variant.Filled" Color="Color.Primary" Style="width: 100%;padding: 10px;">Log in</MudButton>
+            </MudContainer>
+        </MudContainer>
+    </MudPaper>
+</div>
+
+<style>
+    .icon-social {
+        height: 25px;
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #424242;
+    }
+
+    .button-social {
+        width: 100%;
+        justify-content: start;
+        padding: 10px;
+        min-width: 280px;
+    }
+
+    .vl {
+        border-left: 1px solid #b2b2b2;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        top: 0;
+    }
+</style>

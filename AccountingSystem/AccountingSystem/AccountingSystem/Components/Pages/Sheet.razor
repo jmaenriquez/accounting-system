@@ -4,6 +4,8 @@
 @using AccountingSystem.Services
 @inject JournalService jservice
 
+@layout MainLayout
+
 <PageTitle>Balance Sheet</PageTitle>
 
 <div class="rounded-3">
@@ -87,7 +89,7 @@
         var totalAsset = asset.Sum(a => a.Amount ?? 0);
         var totalLiab = liability.Sum(l => l.Amount ?? 0);
         var totalEquity = equity.Sum(e => e.Amount ?? 0);
-        
+
 
         IncomeRows.Add(new Balancesheet { AccountName = "Asset", IsSectionHeader = true });
         IncomeRows.AddRange(asset);
@@ -96,8 +98,8 @@
         IncomeRows.Add(new Balancesheet { AccountName = "Liability and Equity", IsSectionHeader = true });
         IncomeRows.AddRange(liability);
         IncomeRows.AddRange(equity);
-        
- 
+
+        IncomeRows.Add(new Balancesheet { AccountName = "Net Income", Amount = netIncome });
         IncomeRows.Add(new Balancesheet { AccountName = "Total Liabilities and Equity", Amount = totalLiab + totalEquity + netIncome, IsSubtotal = true });
 
     }

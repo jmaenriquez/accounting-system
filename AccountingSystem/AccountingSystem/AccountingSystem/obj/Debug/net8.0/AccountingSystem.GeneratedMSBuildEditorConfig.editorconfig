@@ -35,8 +35,28 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbXB0eUxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/LoaderMessage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2FkZXJNZXNzYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/PageNotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYWdlTm90Rm91bmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Pages/Unauthorized.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVbmF1dGhvcml6ZWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kuro/Documents/GitHub/accounting-system/AccountingSystem/AccountingSystem/AccountingSystem/Components/Routes.razor]

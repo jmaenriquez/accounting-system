@@ -3,42 +3,42 @@
 @using AccountingSystem.Services
 @inject JournalService jservice
 
+@layout MainLayout
+
 <PageTitle>Trial Balance</PageTitle>
 
 <div class="rounded-3">
-    <div class="top-container">
-        <h4 class="m-3 w-100">Trial Balance</h4>
-    </div>
+	<div class="top-container">
+		<h4 class="m-3 w-100">Trial Balance</h4>
+	</div>
 
-    <div class="rounded-3 trial-balance-container">
-        @if (Entries.Count > 0)
-        {
-            <div class="container-fluid mt-3 mb-3">
-                <MudTable Items="Entries">
-                    <HeaderContent>
-                        <MudTh Class="fw-bold">Account</MudTh>
-                        <MudTh Class="fw-bold">Sum of Debit</MudTh>
-                        <MudTh Class="fw-bold">Sum of Credit</MudTh>
-                        <MudTh Class="fw-bold">Sum of Balance</MudTh>
-                    </HeaderContent>
-                    <RowTemplate Context="balance">
-                        <MudTd>@balance.AccountName</MudTd>
-                        <MudTd>@(balance.Debit > 0 ? $"{balance.Debit:N2}" : "")</MudTd>
-                        <MudTd>@(balance.Credit > 0 ? $"{balance.Credit:N2}" : "")</MudTd>
-                        <MudTd>@balance.SumOfBalance.ToString("N2")</MudTd>
-                    </RowTemplate>
+	<div class="container-fluid mt-3 mb-3">
+		@if (Entries.Count > 0)
+		{
+			<MudTable Items="Entries">
+				<HeaderContent>
+					<MudTh Class="fw-bold">Account</MudTh>
+					<MudTh Class="fw-bold">Sum of Debit</MudTh>
+					<MudTh Class="fw-bold">Sum of Credit</MudTh>
+					<MudTh Class="fw-bold">Sum of Balance</MudTh>
+				</HeaderContent>
+				<RowTemplate Context="balance">
+					<MudTd>@balance.AccountName</MudTd>
+					<MudTd>@(balance.Debit > 0 ? $"{balance.Debit:N2}" : "")</MudTd>
+					<MudTd>@(balance.Credit > 0 ? $"{balance.Credit:N2}" : "")</MudTd>
+					<MudTd>@balance.SumOfBalance.ToString("N2")</MudTd>
+				</RowTemplate>
 
 
-                    <FooterContent>
-                        <MudTd Class="fw-bold">Grand Total</MudTd>
-                        <MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
-                        <MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
-                        <MudTd></MudTd>
-                    </FooterContent>
-                </MudTable>
-            </div>
-        }
-    </div>
+				<FooterContent>
+					<MudTd Class="fw-bold">Grand Total</MudTd>
+					<MudTd Class="fw-bold">@Entries.Sum(t => t.Debit).ToString("N2")</MudTd>
+					<MudTd Class="fw-bold">@Entries.Sum(t => t.Credit).ToString("N2")</MudTd>
+					<MudTd></MudTd>
+				</FooterContent>
+			</MudTable>
+		}
+	</div>
 </div>
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "adTMLi4Qp389CW/y+TpL0J6GlQjUwXikNW/kRmtV6jQ=",
+  "Hash": "FCZS9G0KTdDdKxAXUvyzLVoSejCre+TdsRSiRf/vgyE=",
   "Source": "AccountingSystem",
   "BasePath": "_content/AccountingSystem",
   "Mode": "Default",
@@ -134,8 +134,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "rwylgeeyuq",
-      "Integrity": "+wt8ddIJL7xpU3eQaSmb8wegbt9aUS7N7rb2id4gGfY=",
+      "Fingerprint": "hn1e5n0sk9",
+      "Integrity": "Ix9aZd5Vj03fCu7IbpFnDQyBmJormIcVOaUWlVtNHgQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.pdb"
@@ -155,8 +155,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "rb9qm3l3p4",
-      "Integrity": "SXwpxn61/zHTHZZixuZg9Hsw9ZkB/Ad85sy6BmMu1Ng=",
+      "Fingerprint": "an90nyswx5",
+      "Integrity": "1i/ad07uqwQxOZDZo/peC189lriFzjEpWZz238Y0qt0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.wasm"
@@ -176,8 +176,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "vu2o1yovdv",
-      "Integrity": "d82goyV0Oa4+i8FWr41dYSLXNTsGa9SSDxRPyuKiI3w=",
+      "Fingerprint": "3k3jjed584",
+      "Integrity": "w5PcsMDasJsMaueFWV1iJZEd6+Z8GL9lpy1MF/n1JwM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -580,6 +580,48 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\emcc-props.json"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.Interfaces.wasm",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/EPPlus.Interfaces.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "x6wt0k9dm5",
+      "Integrity": "OejkJKtaV+kGlNq01osM+pqQwDxt8Q9gqW2P2ynl3dY=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.Interfaces.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.wasm",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/EPPlus.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "rz1nxhar8v",
+      "Integrity": "126+tJWgyosCbgv1sE7RyPgBQA7qUKALdLPnYjG1/5s=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.wasm"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\es\\Microsoft.CodeAnalysis.CSharp.resources.wasm",
@@ -1987,6 +2029,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.IO.RecyclableMemoryStream.wasm",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IO.RecyclableMemoryStream.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "k69j9tcsp2",
+      "Integrity": "PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.IO.RecyclableMemoryStream.wasm"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.JSInterop.wasm",
@@ -5202,6 +5265,27 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.OpenSsl.wasm"
     },
     {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Pkcs.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "71x3j8ea4m",
+      "Integrity": "+zwMb/5gF/oM+U0k/lHsnzsIcU5y53QRPRDvfVjCPg4=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm"
+    },
+    {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
@@ -5263,6 +5347,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.X509Certificates.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Xml.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "8sq4av8b8p",
+      "Integrity": "aDnhpWTN1jiXUYFeSWiNxAY4jLE3k0lqcl9JMLYUW74=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Principal.wasm",
@@ -6588,7 +6693,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\1uqz9prcrr-itrvy704bc.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-rb9qm3l3p4.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-an90nyswx5.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -6602,11 +6707,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ixelwhrm1q",
-      "Integrity": "1nJxFdoqTPIBUabmSVig271cvdScSkOyPZbvPTdt0bQ=",
+      "Fingerprint": "0vl4jbi5nd",
+      "Integrity": "rKZAAvqNJAs9hG2bGs7P/4/201lSqsThY+YcyBcEOq4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-rb9qm3l3p4.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-an90nyswx5.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\21p1m8rdcf-73vu9r2x77.gz",
@@ -9108,6 +9213,27 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fhhmsi2ybm-etpmz9ntmu.gz"
     },
     {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fls9am3nzw-x6wt0k9dm5.gz",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/EPPlus.Interfaces.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.Interfaces.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "pdwx90pujx",
+      "Integrity": "0yRWE1wSuxrV07/0fScQp0NFRTVpikZiok80fovXmdw=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fls9am3nzw-x6wt0k9dm5.gz"
+    },
+    {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fmlu45st6u-vylskahzzd.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
@@ -9547,6 +9673,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\hr2sb66rz4-zorauptvam.gz"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\hrj2xni8ar-71x3j8ea4m.gz",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Pkcs.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "wvckjx8ks6",
+      "Integrity": "xOrRcGRH0CqK8tyajnwdnqErLZBXvSzL8qq4fBpuycE=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\hrj2xni8ar-71x3j8ea4m.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\i1l3rlr0ia-51zzkdie8g.gz",
@@ -11376,7 +11523,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sounnm5m0u-q7dusk3ciy.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-rwylgeeyuq.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-hn1e5n0sk9.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -11390,11 +11537,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\AccountingSystem.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zg0e8ebtgk",
-      "Integrity": "HRYhXt8nTY6r1zsoGsa2lxkSc73Y7qhFKVNzDNLi5cY=",
+      "Fingerprint": "owtbo800sq",
+      "Integrity": "KKT4be21slsJByg8lQVdSl0KRPE7bCoHHsq9usiHsnM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-rwylgeeyuq.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-hn1e5n0sk9.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sv1kij4a7o-e1cup4w8dy.gz",
@@ -11500,6 +11647,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t099ble40e-cish8n4kn8.gz"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t0ez4t3w6o-rz1nxhar8v.gz",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/EPPlus.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "kf4d5btwac",
+      "Integrity": "UKc6aLisl/CmY84663WqOeiAHSc8aVSjG946upM/fjM=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t0ez4t3w6o-rz1nxhar8v.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t81j7kszef-7bbobxbepg.gz",
@@ -11689,6 +11857,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\uazbidmjhn-v8q67u76mf.gz"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\uj2yf7obye-8sq4av8b8p.gz",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.Xml.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "qgo4nezwu4",
+      "Integrity": "Jgx1L9Uqt9ugoF+cX/085cV93f2l05nkJ9cc4tlqgQs=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\uj2yf7obye-8sq4av8b8p.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\urxx0m4jky-1m4c920cpk.gz",
@@ -11899,6 +12088,27 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "false",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vpecmb4bao-6n8brj49y6.gz"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vpva0uad68-k69j9tcsp2.gz",
+      "SourceId": "AccountingSystem.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.IO.RecyclableMemoryStream.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.IO.RecyclableMemoryStream.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "dpc5xnwh2x",
+      "Integrity": "b3N/mrT2/oWx2CFT9PuEXwMAlaUY56XEg7rl5o+ELa4=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vpva0uad68-k69j9tcsp2.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vt6p9fc18h-vs00eslycy.gz",
@@ -12237,7 +12447,7 @@
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xir9tj7y7l-xhtdgvk1iw.gz"
     },
     {
-      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-vu2o1yovdv.gz",
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-3k3jjed584.gz",
       "SourceId": "AccountingSystem.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -12251,11 +12461,11 @@
       "RelatedAsset": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "2zqqaohsea",
-      "Integrity": "8jpIK1pbIFrBOCdvsaqwxVO7QYg03asK9pj3pabYwrw=",
+      "Fingerprint": "z9ohbnyebx",
+      "Integrity": "J9xBGhQ82zMc3dCUguJ8B51WpSJkVboxGVrgsG4oiDc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-vu2o1yovdv.gz"
+      "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-3k3jjed584.gz"
     },
     {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xo8fadjtpu-j0owt1qd8i.gz",
@@ -12734,8 +12944,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "bs7uquacco",
-      "Integrity": "FUvDxc1HyFD+7ktpkA0yB03dC5p29ZPepBos/ZXNTTk=",
+      "Fingerprint": "1ncdhpf2y1",
+      "Integrity": "PaYrmEZmbDZJ/NjBTLz2qo/vlJc9TrzG9ssYd2g2xy0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css"
@@ -12755,8 +12965,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "q8stx8b665",
-      "Integrity": "OkXNjZN1JkIlIbVVFlJKvNIn8U4a8hfhIUxx5PfN2Yc=",
+      "Fingerprint": "2rid76x2gs",
+      "Integrity": "Lm9qBRGg87N0E/NbU5BFcSNzsteG86tvUHkmGPDcYZc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css"
@@ -12846,6 +13056,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\js\\download.js",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "js/download#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0el7u67zob",
+      "Integrity": "+LG5p+v5D6awTQTtH9+FfDWnBpzw9b9NXTGlrtNsR0Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\download.js"
+    },
+    {
       "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
       "SourceId": "AccountingSystem",
       "SourceType": "Discovered",
@@ -12907,6 +13138,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MetaverseLogo3 transparent.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3.png",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "MetaverseLogo3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l9jmlwoxoi",
+      "Integrity": "938B6X2WJzzhwHOOMHKy0Tt+kMnFnYydBRvRyu1bP3k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MetaverseLogo3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogoOnly.png",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "MetaverseLogoOnly#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpmadkvfh6",
+      "Integrity": "bz4rcC0quhVkYKecJdG65dOH9NAEQE3GmaPJR3gmw10=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MetaverseLogoOnly.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\pagenotfound.png",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "pagenotfound#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hub73qy65v",
+      "Integrity": "uWK9++W4OW1iFiWMOeiZHk9UjestBkiq1qMJnd9gaS8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pagenotfound.png"
+    },
+    {
+      "Identity": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\unauthorized.png",
+      "SourceId": "AccountingSystem",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\",
+      "BasePath": "_content/AccountingSystem",
+      "RelativePath": "unauthorized#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7b927wxxkv",
+      "Integrity": "XS0vJh+dF9ePk1ktmjvxTNiAB5/MsjJ8giUiWTXVIfA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\unauthorized.png"
     }
   ],
   "Endpoints": [
@@ -13163,7 +13478,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "16204"
+          "Value": "16480"
         },
         {
           "Name": "Content-Type",
@@ -13171,28 +13486,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+wt8ddIJL7xpU3eQaSmb8wegbt9aUS7N7rb2id4gGfY=\""
+          "Value": "\"Ix9aZd5Vj03fCu7IbpFnDQyBmJormIcVOaUWlVtNHgQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 01:52:12 GMT"
+          "Value": "Wed, 23 Apr 2025 03:23:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+wt8ddIJL7xpU3eQaSmb8wegbt9aUS7N7rb2id4gGfY="
+          "Value": "sha256-Ix9aZd5Vj03fCu7IbpFnDQyBmJormIcVOaUWlVtNHgQ="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.pdb",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-rwylgeeyuq.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-hn1e5n0sk9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000100050025"
+          "Quality": "0.000098473658"
         }
       ],
       "ResponseHeaders": [
@@ -13210,15 +13525,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9994"
+          "Value": "10154"
         },
         {
           "Name": "ETag",
-          "Value": "\"HRYhXt8nTY6r1zsoGsa2lxkSc73Y7qhFKVNzDNLi5cY=\""
+          "Value": "\"KKT4be21slsJByg8lQVdSl0KRPE7bCoHHsq9usiHsnM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:50 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
         },
         {
           "Name": "Vary",
@@ -13230,19 +13545,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+wt8ddIJL7xpU3eQaSmb8wegbt9aUS7N7rb2id4gGfY=\""
+          "Value": "W/\"Ix9aZd5Vj03fCu7IbpFnDQyBmJormIcVOaUWlVtNHgQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+wt8ddIJL7xpU3eQaSmb8wegbt9aUS7N7rb2id4gGfY="
+          "Value": "sha256-Ix9aZd5Vj03fCu7IbpFnDQyBmJormIcVOaUWlVtNHgQ="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-rwylgeeyuq.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\sstrphxzxk-hn1e5n0sk9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13259,7 +13574,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9994"
+          "Value": "10154"
         },
         {
           "Name": "Content-Type",
@@ -13267,11 +13582,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HRYhXt8nTY6r1zsoGsa2lxkSc73Y7qhFKVNzDNLi5cY=\""
+          "Value": "\"KKT4be21slsJByg8lQVdSl0KRPE7bCoHHsq9usiHsnM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:50 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
         },
         {
           "Name": "Vary",
@@ -13281,7 +13596,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HRYhXt8nTY6r1zsoGsa2lxkSc73Y7qhFKVNzDNLi5cY="
+          "Value": "sha256-KKT4be21slsJByg8lQVdSl0KRPE7bCoHHsq9usiHsnM="
         }
       ]
     },
@@ -13308,28 +13623,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SXwpxn61/zHTHZZixuZg9Hsw9ZkB/Ad85sy6BmMu1Ng=\""
+          "Value": "\"1i/ad07uqwQxOZDZo/peC189lriFzjEpWZz238Y0qt0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:51 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SXwpxn61/zHTHZZixuZg9Hsw9ZkB/Ad85sy6BmMu1Ng="
+          "Value": "sha256-1i/ad07uqwQxOZDZo/peC189lriFzjEpWZz238Y0qt0="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.wasm",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-rb9qm3l3p4.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-an90nyswx5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000269687163"
+          "Quality": "0.000269179004"
         }
       ],
       "ResponseHeaders": [
@@ -13347,15 +13662,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3707"
+          "Value": "3714"
         },
         {
           "Name": "ETag",
-          "Value": "\"1nJxFdoqTPIBUabmSVig271cvdScSkOyPZbvPTdt0bQ=\""
+          "Value": "\"rKZAAvqNJAs9hG2bGs7P/4/201lSqsThY+YcyBcEOq4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:51 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
         },
         {
           "Name": "Vary",
@@ -13367,19 +13682,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SXwpxn61/zHTHZZixuZg9Hsw9ZkB/Ad85sy6BmMu1Ng=\""
+          "Value": "W/\"1i/ad07uqwQxOZDZo/peC189lriFzjEpWZz238Y0qt0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SXwpxn61/zHTHZZixuZg9Hsw9ZkB/Ad85sy6BmMu1Ng="
+          "Value": "sha256-1i/ad07uqwQxOZDZo/peC189lriFzjEpWZz238Y0qt0="
         }
       ]
     },
     {
       "Route": "_framework/AccountingSystem.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-rb9qm3l3p4.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\205k65ensj-an90nyswx5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13396,7 +13711,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3707"
+          "Value": "3714"
         },
         {
           "Name": "Content-Type",
@@ -13404,11 +13719,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"1nJxFdoqTPIBUabmSVig271cvdScSkOyPZbvPTdt0bQ=\""
+          "Value": "\"rKZAAvqNJAs9hG2bGs7P/4/201lSqsThY+YcyBcEOq4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:51 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
         },
         {
           "Name": "Vary",
@@ -13418,7 +13733,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-1nJxFdoqTPIBUabmSVig271cvdScSkOyPZbvPTdt0bQ="
+          "Value": "sha256-rKZAAvqNJAs9hG2bGs7P/4/201lSqsThY+YcyBcEOq4="
         }
       ]
     },
@@ -13437,7 +13752,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30715"
+          "Value": "31193"
         },
         {
           "Name": "Content-Type",
@@ -13445,28 +13760,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"d82goyV0Oa4+i8FWr41dYSLXNTsGa9SSDxRPyuKiI3w=\""
+          "Value": "\"w5PcsMDasJsMaueFWV1iJZEd6+Z8GL9lpy1MF/n1JwM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 01:52:13 GMT"
+          "Value": "Wed, 23 Apr 2025 03:23:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-d82goyV0Oa4+i8FWr41dYSLXNTsGa9SSDxRPyuKiI3w="
+          "Value": "sha256-w5PcsMDasJsMaueFWV1iJZEd6+Z8GL9lpy1MF/n1JwM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-vu2o1yovdv.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-3k3jjed584.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000078777375"
+          "Quality": "0.000077435341"
         }
       ],
       "ResponseHeaders": [
@@ -13484,15 +13799,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12693"
+          "Value": "12913"
         },
         {
           "Name": "ETag",
-          "Value": "\"8jpIK1pbIFrBOCdvsaqwxVO7QYg03asK9pj3pabYwrw=\""
+          "Value": "\"J9xBGhQ82zMc3dCUguJ8B51WpSJkVboxGVrgsG4oiDc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:52 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:23 GMT"
         },
         {
           "Name": "Vary",
@@ -13504,19 +13819,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"d82goyV0Oa4+i8FWr41dYSLXNTsGa9SSDxRPyuKiI3w=\""
+          "Value": "W/\"w5PcsMDasJsMaueFWV1iJZEd6+Z8GL9lpy1MF/n1JwM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-d82goyV0Oa4+i8FWr41dYSLXNTsGa9SSDxRPyuKiI3w="
+          "Value": "sha256-w5PcsMDasJsMaueFWV1iJZEd6+Z8GL9lpy1MF/n1JwM="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-vu2o1yovdv.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\xn7xnh5fw2-3k3jjed584.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13533,7 +13848,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12693"
+          "Value": "12913"
         },
         {
           "Name": "Content-Type",
@@ -13541,11 +13856,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"8jpIK1pbIFrBOCdvsaqwxVO7QYg03asK9pj3pabYwrw=\""
+          "Value": "\"J9xBGhQ82zMc3dCUguJ8B51WpSJkVboxGVrgsG4oiDc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 14 Apr 2025 00:00:52 GMT"
+          "Value": "Fri, 18 Apr 2025 09:53:23 GMT"
         },
         {
           "Name": "Vary",
@@ -13555,7 +13870,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-8jpIK1pbIFrBOCdvsaqwxVO7QYg03asK9pj3pabYwrw="
+          "Value": "sha256-J9xBGhQ82zMc3dCUguJ8B51WpSJkVboxGVrgsG4oiDc="
         }
       ]
     },
@@ -16159,6 +16474,280 @@
         {
           "Name": "integrity",
           "Value": "sha256-7t6AVk6lvrWEqY7hRavzlgS107PQ4doQEFxFK3dDtRQ="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.Interfaces.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.Interfaces.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OejkJKtaV+kGlNq01osM+pqQwDxt8Q9gqW2P2ynl3dY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OejkJKtaV+kGlNq01osM+pqQwDxt8Q9gqW2P2ynl3dY="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.Interfaces.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fls9am3nzw-x6wt0k9dm5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000261711594"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3820"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0yRWE1wSuxrV07/0fScQp0NFRTVpikZiok80fovXmdw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"OejkJKtaV+kGlNq01osM+pqQwDxt8Q9gqW2P2ynl3dY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OejkJKtaV+kGlNq01osM+pqQwDxt8Q9gqW2P2ynl3dY="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.Interfaces.wasm.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\fls9am3nzw-x6wt0k9dm5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0yRWE1wSuxrV07/0fScQp0NFRTVpikZiok80fovXmdw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0yRWE1wSuxrV07/0fScQp0NFRTVpikZiok80fovXmdw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\EPPlus.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4246809"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"126+tJWgyosCbgv1sE7RyPgBQA7qUKALdLPnYjG1/5s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-126+tJWgyosCbgv1sE7RyPgBQA7qUKALdLPnYjG1/5s="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t0ez4t3w6o-rz1nxhar8v.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000000543637"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1839463"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UKc6aLisl/CmY84663WqOeiAHSc8aVSjG946upM/fjM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"126+tJWgyosCbgv1sE7RyPgBQA7qUKALdLPnYjG1/5s=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-126+tJWgyosCbgv1sE7RyPgBQA7qUKALdLPnYjG1/5s="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/EPPlus.wasm.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\t0ez4t3w6o-rz1nxhar8v.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1839463"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UKc6aLisl/CmY84663WqOeiAHSc8aVSjG946upM/fjM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UKc6aLisl/CmY84663WqOeiAHSc8aVSjG946upM/fjM="
         }
       ]
     },
@@ -25338,6 +25927,143 @@
         {
           "Name": "integrity",
           "Value": "sha256-VXif+d8llcvt+N2pU6LUABQr1EUvnwTg27PGFGjJoWo="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.IO.RecyclableMemoryStream.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.IO.RecyclableMemoryStream.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55573"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.IO.RecyclableMemoryStream.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vpva0uad68-k69j9tcsp2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000033764392"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29616"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b3N/mrT2/oWx2CFT9PuEXwMAlaUY56XEg7rl5o+ELa4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PLLNYyORp9p97V0x5KgrbBal9u/7enJGj68o7bI3pgU="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.IO.RecyclableMemoryStream.wasm.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\vpva0uad68-k69j9tcsp2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29616"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b3N/mrT2/oWx2CFT9PuEXwMAlaUY56XEg7rl5o+ELa4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b3N/mrT2/oWx2CFT9PuEXwMAlaUY56XEg7rl5o+ELa4="
         }
       ]
     },
@@ -46303,6 +47029,143 @@
       ]
     },
     {
+      "Route": "_framework/System.Security.Cryptography.Pkcs.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Pkcs.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "254229"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+zwMb/5gF/oM+U0k/lHsnzsIcU5y53QRPRDvfVjCPg4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+zwMb/5gF/oM+U0k/lHsnzsIcU5y53QRPRDvfVjCPg4="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/System.Security.Cryptography.Pkcs.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\hrj2xni8ar-71x3j8ea4m.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000010643733"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93951"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOrRcGRH0CqK8tyajnwdnqErLZBXvSzL8qq4fBpuycE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"+zwMb/5gF/oM+U0k/lHsnzsIcU5y53QRPRDvfVjCPg4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+zwMb/5gF/oM+U0k/lHsnzsIcU5y53QRPRDvfVjCPg4="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/System.Security.Cryptography.Pkcs.wasm.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\hrj2xni8ar-71x3j8ea4m.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "93951"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOrRcGRH0CqK8tyajnwdnqErLZBXvSzL8qq4fBpuycE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOrRcGRH0CqK8tyajnwdnqErLZBXvSzL8qq4fBpuycE="
+        }
+      ]
+    },
+    {
       "Route": "_framework/System.Security.Cryptography.Primitives.wasm",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm",
       "Selectors": [],
@@ -46710,6 +47573,143 @@
         {
           "Name": "integrity",
           "Value": "sha256-SKYsPRyYahUpZMXp1Rm0pqh2lx2fFGvzC6rSDBgeEck="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/System.Security.Cryptography.Xml.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Xml.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "187669"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aDnhpWTN1jiXUYFeSWiNxAY4jLE3k0lqcl9JMLYUW74=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aDnhpWTN1jiXUYFeSWiNxAY4jLE3k0lqcl9JMLYUW74="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/System.Security.Cryptography.Xml.wasm",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\uj2yf7obye-8sq4av8b8p.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000014678899"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68124"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jgx1L9Uqt9ugoF+cX/085cV93f2l05nkJ9cc4tlqgQs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"aDnhpWTN1jiXUYFeSWiNxAY4jLE3k0lqcl9JMLYUW74=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aDnhpWTN1jiXUYFeSWiNxAY4jLE3k0lqcl9JMLYUW74="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/System.Security.Cryptography.Xml.wasm.gz",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem.Client\\obj\\Debug\\net8.0\\compressed\\uj2yf7obye-8sq4av8b8p.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jgx1L9Uqt9ugoF+cX/085cV93f2l05nkJ9cc4tlqgQs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 09:53:22 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jgx1L9Uqt9ugoF+cX/085cV93f2l05nkJ9cc4tlqgQs="
         }
       ]
     },
@@ -54112,7 +55112,7 @@
       ]
     },
     {
-      "Route": "AccountingSystem.bs7uquacco.styles.css",
+      "Route": "AccountingSystem.1ncdhpf2y1.styles.css",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AccountingSystem.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -54126,7 +55126,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30125"
+          "Value": "30942"
         },
         {
           "Name": "Content-Type",
@@ -54134,11 +55134,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"FUvDxc1HyFD+7ktpkA0yB03dC5p29ZPepBos/ZXNTTk=\""
+          "Value": "\"PaYrmEZmbDZJ/NjBTLz2qo/vlJc9TrzG9ssYd2g2xy0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 23:53:26 GMT"
+          "Value": "Thu, 24 Apr 2025 07:52:24 GMT"
         },
         {
           "Name": "Link",
@@ -54148,15 +55148,60 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "bs7uquacco"
+          "Value": "1ncdhpf2y1"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-FUvDxc1HyFD+7ktpkA0yB03dC5p29ZPepBos/ZXNTTk="
+          "Value": "sha256-PaYrmEZmbDZJ/NjBTLz2qo/vlJc9TrzG9ssYd2g2xy0="
         },
         {
           "Name": "label",
           "Value": "AccountingSystem.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "AccountingSystem.2rid76x2gs.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30874"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lm9qBRGg87N0E/NbU5BFcSNzsteG86tvUHkmGPDcYZc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 07:52:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2rid76x2gs"
+        },
+        {
+          "Name": "label",
+          "Value": "AccountingSystem.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lm9qBRGg87N0E/NbU5BFcSNzsteG86tvUHkmGPDcYZc="
         }
       ]
     },
@@ -54171,7 +55216,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30057"
+          "Value": "30874"
         },
         {
           "Name": "Content-Type",
@@ -54179,11 +55224,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OkXNjZN1JkIlIbVVFlJKvNIn8U4a8hfhIUxx5PfN2Yc=\""
+          "Value": "\"Lm9qBRGg87N0E/NbU5BFcSNzsteG86tvUHkmGPDcYZc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 23:53:26 GMT"
+          "Value": "Thu, 24 Apr 2025 07:52:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -54193,52 +55238,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OkXNjZN1JkIlIbVVFlJKvNIn8U4a8hfhIUxx5PfN2Yc="
-        }
-      ]
-    },
-    {
-      "Route": "AccountingSystem.q8stx8b665.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AccountingSystem.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "30057"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OkXNjZN1JkIlIbVVFlJKvNIn8U4a8hfhIUxx5PfN2Yc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 23:53:26 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "q8stx8b665"
-        },
-        {
-          "Name": "label",
-          "Value": "AccountingSystem.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OkXNjZN1JkIlIbVVFlJKvNIn8U4a8hfhIUxx5PfN2Yc="
+          "Value": "sha256-Lm9qBRGg87N0E/NbU5BFcSNzsteG86tvUHkmGPDcYZc="
         }
       ]
     },
@@ -54257,7 +55257,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30125"
+          "Value": "30942"
         },
         {
           "Name": "Content-Type",
@@ -54265,11 +55265,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"FUvDxc1HyFD+7ktpkA0yB03dC5p29ZPepBos/ZXNTTk=\""
+          "Value": "\"PaYrmEZmbDZJ/NjBTLz2qo/vlJc9TrzG9ssYd2g2xy0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 13 Apr 2025 23:53:26 GMT"
+          "Value": "Thu, 24 Apr 2025 07:52:24 GMT"
         },
         {
           "Name": "Link",
@@ -54279,7 +55279,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-FUvDxc1HyFD+7ktpkA0yB03dC5p29ZPepBos/ZXNTTk="
+          "Value": "sha256-PaYrmEZmbDZJ/NjBTLz2qo/vlJc9TrzG9ssYd2g2xy0="
         }
       ]
     },
@@ -54776,6 +55776,88 @@
       ]
     },
     {
+      "Route": "js/download.0el7u67zob.js",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\js\\download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+LG5p+v5D6awTQTtH9+FfDWnBpzw9b9NXTGlrtNsR0Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 01:07:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0el7u67zob"
+        },
+        {
+          "Name": "label",
+          "Value": "js/download.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+LG5p+v5D6awTQTtH9+FfDWnBpzw9b9NXTGlrtNsR0Q="
+        }
+      ]
+    },
+    {
+      "Route": "js/download.js",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\js\\download.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "333"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+LG5p+v5D6awTQTtH9+FfDWnBpzw9b9NXTGlrtNsR0Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 01:07:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+LG5p+v5D6awTQTtH9+FfDWnBpzw9b9NXTGlrtNsR0Q="
+        }
+      ]
+    },
+    {
       "Route": "Metalogo.i0p7nuuv6r.png",
       "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\Metalogo.png",
       "Selectors": [],
@@ -55018,6 +56100,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-QITGPlbqjkojF3BKt1vveYZGJjRvhvZv+NtgLmYawAg="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogo3.l9jmlwoxoi.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"938B6X2WJzzhwHOOMHKy0Tt+kMnFnYydBRvRyu1bP3k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l9jmlwoxoi"
+        },
+        {
+          "Name": "label",
+          "Value": "MetaverseLogo3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-938B6X2WJzzhwHOOMHKy0Tt+kMnFnYydBRvRyu1bP3k="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogo3.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogo3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"938B6X2WJzzhwHOOMHKy0Tt+kMnFnYydBRvRyu1bP3k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-938B6X2WJzzhwHOOMHKy0Tt+kMnFnYydBRvRyu1bP3k="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogoOnly.bpmadkvfh6.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogoOnly.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32608"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bz4rcC0quhVkYKecJdG65dOH9NAEQE3GmaPJR3gmw10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpmadkvfh6"
+        },
+        {
+          "Name": "label",
+          "Value": "MetaverseLogoOnly.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bz4rcC0quhVkYKecJdG65dOH9NAEQE3GmaPJR3gmw10="
+        }
+      ]
+    },
+    {
+      "Route": "MetaverseLogoOnly.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\MetaverseLogoOnly.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32608"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bz4rcC0quhVkYKecJdG65dOH9NAEQE3GmaPJR3gmw10=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bz4rcC0quhVkYKecJdG65dOH9NAEQE3GmaPJR3gmw10="
+        }
+      ]
+    },
+    {
+      "Route": "pagenotfound.hub73qy65v.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\pagenotfound.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "141668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uWK9++W4OW1iFiWMOeiZHk9UjestBkiq1qMJnd9gaS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hub73qy65v"
+        },
+        {
+          "Name": "label",
+          "Value": "pagenotfound.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uWK9++W4OW1iFiWMOeiZHk9UjestBkiq1qMJnd9gaS8="
+        }
+      ]
+    },
+    {
+      "Route": "pagenotfound.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\pagenotfound.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "141668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uWK9++W4OW1iFiWMOeiZHk9UjestBkiq1qMJnd9gaS8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uWK9++W4OW1iFiWMOeiZHk9UjestBkiq1qMJnd9gaS8="
+        }
+      ]
+    },
+    {
+      "Route": "unauthorized.7b927wxxkv.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\unauthorized.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XS0vJh+dF9ePk1ktmjvxTNiAB5/MsjJ8giUiWTXVIfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7b927wxxkv"
+        },
+        {
+          "Name": "label",
+          "Value": "unauthorized.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XS0vJh+dF9ePk1ktmjvxTNiAB5/MsjJ8giUiWTXVIfA="
+        }
+      ]
+    },
+    {
+      "Route": "unauthorized.png",
+      "AssetFile": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\wwwroot\\unauthorized.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XS0vJh+dF9ePk1ktmjvxTNiAB5/MsjJ8giUiWTXVIfA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 07 Mar 2025 08:57:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XS0vJh+dF9ePk1ktmjvxTNiAB5/MsjJ8giUiWTXVIfA="
         }
       ]
     }

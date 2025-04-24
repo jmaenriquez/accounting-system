@@ -1,4 +1,5 @@
 ﻿@page "/reports"
+@layout MainLayout
 
 <PageTitle>Reports</PageTitle>
 
@@ -7,14 +8,6 @@
         <h4 class="m-3 w-100">Reports</h4>
 
         <div class="buttons" style="display: flex; align-items: center;">
-
-            <MudSelect T="int" Label="Select Report" @bind-Value="selectReport" Style="width: 100px;">
-                <MudSelectItem Value="1">Journal Entry</MudSelectItem>
-                <MudSelectItem Value="2">General Ledger</MudSelectItem>
-                <MudSelectItem Value="3">Trial Balance</MudSelectItem>
-                <MudSelectItem Value="4">Income Statement</MudSelectItem>
-                <MudSelectItem Value="5">Balance Sheet</MudSelectItem>
-            </MudSelect>
 
             <MudButton Variant="Variant.Filled" OnClick="printReports" Style="width:fit-content; background-color:#00828F; color:white; margin-left: 10px;">
                 <MudHidden Breakpoint="Breakpoint.SmAndDown">
@@ -29,47 +22,96 @@
     </div>
 
     <div class="container-fluid mt-3 mb-3">
+        <div class="w-100 d-inline-flex">
 
-        @if (selectReport == 1){
-            <h5>Journal Entry</h5>
-            <Journal />
-        }
-        else if (selectReport == 2)
-        {
-            <h5>General Ledger</h5>
-            <Ledger />
-        }
-        else if (selectReport == 3)
-        {
-            <h5>Trial Balance</h5>
-            <Balance />
-        }
-        else if (selectReport == 4)
-        {
-            <h5>Income Statement</h5>
-            <Statement />
-        }
-        else if (selectReport == 5)
-        {
-            <h5>Balance Sheet</h5>
-            <Sheet />
-        }
-        else{
-            <p>Select a report from dropdown</p>
-        }
+            <div class="w-50">
+                <MudItem xs="12" sm="12" md="4">
+                    <MudSelect Variant="Variant.Filled" T="int" @bind-Value="selectReport" Style="width: 100px;">
+                        <MudSelectItem Value="1">Journal Entry</MudSelectItem>
+                        <MudSelectItem Value="2">General Ledger</MudSelectItem>
+                        <MudSelectItem Value="3">Trial Balance</MudSelectItem>
+                        <MudSelectItem Value="4">Income Statement</MudSelectItem>
+                        <MudSelectItem Value="5">Balance Sheet</MudSelectItem>
+                    </MudSelect>
+                </MudItem>
+            </div>
+
+            <div class="w-100">
+                @if (selectReport == 1)
+                {
+                    <h5>Journal Entry</h5>
+                    <Journal @ref="journalRef" />
+                }
+                else if (selectReport == 2)
+                {
+                    <h5>General Ledger</h5>
+                    <Ledger />
+                }
+                else if (selectReport == 3)
+                {
+                    <h5>Trial Balance</h5>
+                    <Balance />
+                }
+                else if (selectReport == 4)
+                {
+                    <h5>Income Statement</h5>
+                    <Statement />
+                }
+                else if (selectReport == 5)
+                {
+                    <h5>Balance Sheet</h5>
+                    <Sheet />
+                }
+                else
+                {
+                    <p>Select a report from dropdown</p>
+                }
+            </div>
+        </div>
     </div>
 </div>
 
 
 
 
+
 @code {
+    private Journal journalRef;
+
     private int selectReport;
 
+    List<Journal_Entry> Entries = new List<Journal_Entry>();
 
     private async Task printReports()
     {
-        await Task.CompletedTask;
+        ExcelPackage.License.SetNonCommercialOrganization("MHC");
+        using var print = new ExcelPackage();
+
+
+        var worksheet = print.Workbook.Worksheets.Add("Sheet1");
+
+        worksheet.Cells.Style.Font.Name = "Aptos";
+
+
+        worksheet.Cells["A1"].Value = "Hello Infinity";
+        worksheet.Cells["B1"].Value = "Hello Infinity";
+        worksheet.Cells["C1"].Value = "Hello Infinity";
+        
+
+
+
+
+        var stream = new MemoryStream();
+        print.SaveAs(stream);
+        stream.Position = 0;
+
+        var bytes = stream.ToArray();
+        var base64 = Convert.ToBase64String(bytes);
+        var fileName = "Accounting Reports.xlsx";
+
+        await JS.InvokeVoidAsync("downloadFile", fileName, base64);
     }
 
+    [Inject] 
+    IJSRuntime JS { get; set; }
 }
