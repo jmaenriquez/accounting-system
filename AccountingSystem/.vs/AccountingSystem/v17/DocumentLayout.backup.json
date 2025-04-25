@@ -46,8 +46,7 @@
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\_Imports.razor",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-25T05:19:08.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T05:19:08.279Z"
             },
             {
               "$type": "Document",
@@ -59,8 +58,7 @@
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-04-24T07:45:34.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T07:45:34.489Z"
             },
             {
               "$type": "Document",
@@ -72,8 +70,7 @@
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Journal.razor",
               "ViewState": "AgIAAGsAAAAAAAAAAAAAAPAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T07:43:45.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T07:43:45.393Z"
             },
             {
               "$type": "Document",
@@ -83,7 +80,7 @@
               "RelativeDocumentMoniker": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Reports.razor",
               "ToolTip": "C:\\Users\\Kuro\\Documents\\GitHub\\accounting-system\\AccountingSystem\\AccountingSystem\\AccountingSystem\\Components\\Pages\\Reports.razor",
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Reports.razor",
-              "ViewState": "AgIAACkAAAAAAAAAAADwvzYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAIwHwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-21T01:21:01.482Z",
               "EditorCaption": ""
@@ -98,8 +95,7 @@
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAABoAAAAAAAAAAAAkwCQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T01:18:32.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T01:18:32.679Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "AccountingSystem\\AccountingSystem\\Components\\Pages\\Login.razor",
               "ViewState": "AgIAADAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-24T06:09:31.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-24T06:09:31.005Z"
             }
           ]
         }
