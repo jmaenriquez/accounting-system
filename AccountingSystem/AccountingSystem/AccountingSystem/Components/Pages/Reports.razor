@@ -1,4 +1,6 @@
 ﻿@page "/reports"
+@using System.Drawing
+
 @layout MainLayout
 
 <PageTitle>Reports</PageTitle>
@@ -24,6 +26,15 @@
     <div class="container-fluid mt-3 mb-3">
         <div class="w-100 d-inline-flex">
 
+
+            <div class="w-25">
+
+                @if (selectReport == 0)
+                {
+                    <p>Select a report from dropdown</p>
+                }
+            </div>
+
             <div class="w-50">
                 <MudItem xs="12" sm="12" md="4">
                     <MudSelect Variant="Variant.Filled" T="int" @bind-Value="selectReport" Style="width: 100px;">
@@ -36,36 +47,14 @@
                 </MudItem>
             </div>
 
-            <div class="w-100">
-                @if (selectReport == 1)
-                {
-                    <h5>Journal Entry</h5>
-                    <Journal @ref="journalRef" />
-                }
-                else if (selectReport == 2)
-                {
-                    <h5>General Ledger</h5>
-                    <Ledger />
-                }
-                else if (selectReport == 3)
-                {
-                    <h5>Trial Balance</h5>
-                    <Balance />
-                }
-                else if (selectReport == 4)
-                {
-                    <h5>Income Statement</h5>
-                    <Statement />
-                }
-                else if (selectReport == 5)
-                {
-                    <h5>Balance Sheet</h5>
-                    <Sheet />
-                }
-                else
-                {
-                    <p>Select a report from dropdown</p>
-                }
+            <div class="d-inline-flex">
+                @*Set Filter *@
+
+                <MudDatePicker Label="Start"></MudDatePicker>
+                <div>
+                    <p>To</p>
+                </div>
+                <MudDatePicker Label="End"></MudDatePicker>
             </div>
         </div>
     </div>
@@ -82,8 +71,38 @@
 
     List<Journal_Entry> Entries = new List<Journal_Entry>();
 
+    public void MergeAndCenter(ExcelRange range)
+    {
+        range.Merge = true;
+        range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+    }
+
+    public void SetAllBorders(ExcelRange range, ExcelBorderStyle excelBorderStyle, System.Drawing.Color color)
+    {
+        range.Style.Border.Top.Style = excelBorderStyle;
+        range.Style.Border.Left.Style = excelBorderStyle;
+        range.Style.Border.Right.Style = excelBorderStyle;
+        range.Style.Border.Bottom.Style = excelBorderStyle;
+
+        range.Style.Border.Top.Color.SetColor(color);
+        range.Style.Border.Left.Color.SetColor(color);
+        range.Style.Border.Right.Color.SetColor(color);
+        range.Style.Border.Bottom.Color.SetColor(color);
+    }
+
+    public void SetTopBorder(ExcelRange range, ExcelBorderStyle excelBorderStyle, System.Drawing.Color color)
+    {
+        range.Style.Border.Top.Style = excelBorderStyle;
+        range.Style.Border.Top.Color.SetColor(color);
+    }
+
+
+
     private async Task printReports()
     {
+         
+        
+
         ExcelPackage.License.SetNonCommercialOrganization("MHC");
         using var print = new ExcelPackage();
 
@@ -92,14 +111,20 @@
 
         worksheet.Cells.Style.Font.Name = "Aptos";
 
+        worksheet.Cells.AutoFitColumns();
+        worksheet.Cells.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+        worksheet.Cells.Style.Fill.PatternType = ExcelFillStyle.Solid;
+        worksheet.Cells.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
 
-        worksheet.Cells["A1"].Value = "Hello Infinity";
-        worksheet.Cells["B1"].Value = "Hello Infinity";
-        worksheet.Cells["C1"].Value = "Hello Infinity";
+        worksheet.SetValue("A1", "DAILY TIME RECORD");       
+        MergeAndCenter(worksheet.Cells["A1:D2"]);
+        worksheet.Cells["A1:D2"].Style.Font.Bold = true;
+        SetTopBorder(worksheet.Cells["A1:D2"], ExcelBorderStyle.Thin, System.Drawing.Color.Black);
+
+        worksheet.Cells["A4"].Value = "Hello Infinity";
+        worksheet.Cells["A5"].Value = "Hello Infinity";
+        worksheet.Cells["A6"].Value = "Hello Infinity";
         
-
-
-
 
         var stream = new MemoryStream();
         print.SaveAs(stream);
