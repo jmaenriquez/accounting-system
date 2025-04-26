@@ -79,7 +79,7 @@
     public void MergeAndCenter(ExcelRange range)
     {
         range.Merge = true;
-        range.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+        range.Style.VerticalAlignment = ExcelVerticalAlignment.Justify;
     }
 
     public void SetAllBorders(ExcelRange range, ExcelBorderStyle excelBorderStyle, System.Drawing.Color color)
@@ -121,19 +121,22 @@
         worksheet.Cells.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.White);
 
         worksheet.SetValue("A1", "METAVERSE HOLDINGS CORPORATION");       
-        worksheet.Cells["A1:F1"].Style.Font.Bold = true;
-        MergeAndCenter(worksheet.Cells["A1:D1"]);
-        SetBottomBorder(worksheet.Cells["A1:F1"], ExcelBorderStyle.Thick, System.Drawing.Color.Black);
+        worksheet.Cells["A1:J1"].Style.Font.Bold = true;
+        MergeAndCenter(worksheet.Cells["A1:E1"]);
+        SetBottomBorder(worksheet.Cells["A1:J1"], ExcelBorderStyle.Thick, System.Drawing.Color.Black);
 
         worksheet.SetValue("A2", "STATEMENTS of ____");
         worksheet.SetValue("A3", "(Amounts in Philippine Peso)");
-        worksheet.Cells["A2:F3"].Style.Font.Bold = true;
-        MergeAndCenter(worksheet.Cells["A1:D1"]);
-        SetBottomBorder(worksheet.Cells["A3:F3"], ExcelBorderStyle.Thick, System.Drawing.Color.Black);
+        worksheet.Cells["A2:J3"].Style.Font.Bold = true;
+        MergeAndCenter(worksheet.Cells["A2:E2"]);
+        MergeAndCenter(worksheet.Cells["A3:E3"]);
+        SetBottomBorder(worksheet.Cells["A3:J3"], ExcelBorderStyle.Thick, System.Drawing.Color.Black);
 
-        worksheet.Cells["B4"].Value = "Hello Infinity";
-        worksheet.Cells["B5"].Value = "Hello Infinity";
-        worksheet.Cells["B6"].Value = "Hello Infinity";
+
+        //This section is for the data fetching
+        worksheet.Cells["A4"].Value = "Hello Infinity";
+        worksheet.Cells["A5"].Value = "Hello Infinity";
+        worksheet.Cells["A6"].Value = "Hello Infinity";
         
 
         var stream = new MemoryStream();
